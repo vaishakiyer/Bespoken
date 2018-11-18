@@ -1,0 +1,6 @@
+framework module Pods_Bespoken {
+  umbrella header "Pods-Bespoken-umbrella.h"
+
+  export *
+  module * { export * }
+}

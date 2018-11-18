@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+enum LINE_POSITION {
+    case LINE_POSITION_TOP
+    case LINE_POSITION_BOTTOM
+}
+
 class Helper{
     
     class func dropShadowOnTableView(table: UITableView){
@@ -21,12 +26,8 @@ class Helper{
         
     }
     
-    enum LINE_POSITION {
-        case LINE_POSITION_TOP
-        case LINE_POSITION_BOTTOM
-    }
     
-    func addLineToView(view : UIView, position : LINE_POSITION, color: UIColor, width: Double) {
+    class func addLineToView(view : UIView, position : LINE_POSITION, color: UIColor, width: Double) {
         let lineView = UIView()
         lineView.backgroundColor = color
         lineView.translatesAutoresizingMaskIntoConstraints = false // This is important!
@@ -45,6 +46,27 @@ class Helper{
             break
         }
     }
+    
+}
+
+
+extension UITextField{
+    
+    func addImageAndPlaceHolder(img: String, placeHolder: String){
+        
+        
+        self.attributedPlaceholder = NSAttributedString(string: placeHolder,
+                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.groupTableViewBackground])
+        self.leftViewMode = UITextField.ViewMode.always
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: img)
+        imageView.image = image
+        self.leftView = imageView
+    }
+    
+    
     
 }
 

@@ -35,13 +35,15 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         
          GifView.loadGif(name: "welcomeGif")
          setup()
-        
+         self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
     
     //MARK: Intialisation
     
     func setup(){
+        
+        
         loginView.isHidden = true
         bottomLabel.isHidden = true
         bottomSignIn.isHidden = true
@@ -54,6 +56,7 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         createNavBar()
     }
     
+        
     //MARK: GIF Work
     
     func GifAnimation(){
@@ -121,7 +124,7 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         
         usernameField.addImageAndPlaceHolder(img: "Group377", placeHolder: "USERNAME")
         emailPassField.addImageAndPlaceHolder(img: "Group381", placeHolder: "EMAIL ID")
-        passwordField.addImageAndPlaceHolder(img: "Group382", placeHolder: "PASSWORD")
+        passwordField.addImageAndPlaceHolder(img: "Group382", placeHolder: "PHONE NUMBER")
     }
     
     func customiseSignButton(){
@@ -149,7 +152,7 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
             bottomSignIn.setTitle("Sign Up!", for: .normal)
             signInSignUpField.setTitle("SIGN IN", for: .normal)
             passwordField.isHidden = true
-            emailPassField.addImageAndPlaceHolder(img: "Group382", placeHolder: "PASSWORD")
+            emailPassField.addImageAndPlaceHolder(img: "Group382", placeHolder: "INVITE CODE")
             
             break
             

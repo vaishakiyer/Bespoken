@@ -36,7 +36,7 @@ class PersonalisationController: UIViewController {
         
         dummyArray = ["THE STYLE I LIKE MOST","MY BODY TYPE IS","I VALUE"]
         tableviewCustomisation()
-        updateButton.roundCorners(corners: .allCorners, radius: 12)
+        updateButton.roundCorners(corners: .allCorners, radius: 20)
         
     }
     

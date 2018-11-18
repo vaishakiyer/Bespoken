@@ -50,6 +50,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="editButton" destination="8MK-gd-EeU" id="5uU-IR-96d"/>
                 <outlet property="sectionTitle" destination="tue-cg-JBp" id="AEG-sA-GhQ"/>
             </connections>
             <point key="canvasLocation" x="56" y="56.221889055472268"/>

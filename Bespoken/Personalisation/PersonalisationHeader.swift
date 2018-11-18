@@ -11,9 +11,11 @@ import UIKit
 class PersonalisationHeader: UITableViewCell {
 
     @IBOutlet weak var sectionTitle: UILabel!
+    @IBOutlet weak var editButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        editButton.isHidden = true
         // Initialization code
     }
 

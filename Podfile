@@ -6,6 +6,7 @@ target 'Bespoken' do
   use_frameworks!
 
   pod 'Alamofire', '~> 4.7'
+  pod 'AlamofireImage', '~> 3.4'
 
   target 'BespokenTests' do
     inherit! :search_paths

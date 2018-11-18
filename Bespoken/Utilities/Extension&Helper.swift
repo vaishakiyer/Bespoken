@@ -21,8 +21,6 @@ class Helper{
         
     }
     
-    
-
 }
 
 extension UIView {

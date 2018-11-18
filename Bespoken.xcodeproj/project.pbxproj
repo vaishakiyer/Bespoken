@@ -16,7 +16,8 @@
 		A5082D7D21A15905005EBA41 /* PersonalisationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5082D7B21A15905005EBA41 /* PersonalisationCell.xib */; };
 		A5082D8021A15A49005EBA41 /* OptionsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D7E21A15A49005EBA41 /* OptionsViewCell.swift */; };
 		A5082D8121A15A49005EBA41 /* OptionsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5082D7F21A15A49005EBA41 /* OptionsViewCell.xib */; };
-		A5082D8421A15E75005EBA41 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8321A15E75005EBA41 /* Extensions.swift */; };
+		A5082D8421A15E75005EBA41 /* Extension&Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8321A15E75005EBA41 /* Extension&Helper.swift */; };
+		A5082D8621A1838A005EBA41 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8521A1838A005EBA41 /* Router.swift */; };
 		A594F5EC21A1446F001BD710 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A594F5EB21A1446F001BD710 /* AppDelegate.swift */; };
 		A594F5F121A1446F001BD710 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A594F5EF21A1446F001BD710 /* Main.storyboard */; };
 		A594F5F421A1446F001BD710 /* Bespoken.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A594F5F221A1446F001BD710 /* Bespoken.xcdatamodeld */; };
@@ -57,7 +58,8 @@
 		A5082D7B21A15905005EBA41 /* PersonalisationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalisationCell.xib; sourceTree = "<group>"; };
 		A5082D7E21A15A49005EBA41 /* OptionsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewCell.swift; sourceTree = "<group>"; };
 		A5082D7F21A15A49005EBA41 /* OptionsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsViewCell.xib; sourceTree = "<group>"; };
-		A5082D8321A15E75005EBA41 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A5082D8321A15E75005EBA41 /* Extension&Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension&Helper.swift"; sourceTree = "<group>"; };
+		A5082D8521A1838A005EBA41 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A594F5E821A1446F001BD710 /* Bespoken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bespoken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A594F5EB21A1446F001BD710 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A594F5F021A1446F001BD710 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,7 +137,8 @@
 		A5082D8221A15E67005EBA41 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				A5082D8321A15E75005EBA41 /* Extensions.swift */,
+				A5082D8321A15E75005EBA41 /* Extension&Helper.swift */,
+				A5082D8521A1838A005EBA41 /* Router.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -352,10 +355,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bespoken/Pods-Bespoken-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -498,9 +503,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5082D8621A1838A005EBA41 /* Router.swift in Sources */,
 				A594F5F421A1446F001BD710 /* Bespoken.xcdatamodeld in Sources */,
 				A5082D8021A15A49005EBA41 /* OptionsViewCell.swift in Sources */,
-				A5082D8421A15E75005EBA41 /* Extensions.swift in Sources */,
+				A5082D8421A15E75005EBA41 /* Extension&Helper.swift in Sources */,
 				A5082D7C21A15905005EBA41 /* PersonalisationCell.swift in Sources */,
 				A594F5EC21A1446F001BD710 /* AppDelegate.swift in Sources */,
 				A5082D7821A15737005EBA41 /* PersonalisationHeader.swift in Sources */,

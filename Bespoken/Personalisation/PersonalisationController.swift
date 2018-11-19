@@ -32,12 +32,18 @@ class PersonalisationController: UIViewController {
     
     //MARK: Initialisation and UI Setup
     
+    
     func setup(){
         
         dummyArray = ["THE STYLE I LIKE MOST","MY BODY TYPE IS","I VALUE"]
         tableviewCustomisation()
         updateButton.roundCorners(corners: .allCorners, radius: 20)
+        createNavbar()
         
+    }
+    
+    func createNavbar(){
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     func tableviewCustomisation(){

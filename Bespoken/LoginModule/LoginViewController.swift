@@ -39,6 +39,12 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         // Do any additional setup after loading the view.
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         createNavBar()
+    }
+    
     //MARK: Intialisation
     
     func setup(){
@@ -52,8 +58,10 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         emailPassField.delegate = self
         passwordField.delegate = self
         
+        signInSignUpField.addTarget(self, action: #selector(signInOrSignUpPressed), for: .touchUpInside)
+        
         GifAnimation()
-        createNavBar()
+       
     }
     
         
@@ -167,6 +175,16 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
             
         }
         
+    }
+    
+    
+    @objc func signInOrSignUpPressed(){
+    
+      let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+      let nextVC = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
+    
+        self.navigationController?.pushViewController(nextVC!, animated: true)
+    
     }
     
 

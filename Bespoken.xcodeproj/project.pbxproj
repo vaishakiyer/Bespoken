@@ -19,6 +19,13 @@
 		A5082D8421A15E75005EBA41 /* Extension&Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8321A15E75005EBA41 /* Extension&Helper.swift */; };
 		A5082D8621A1838A005EBA41 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8521A1838A005EBA41 /* Router.swift */; };
 		A511931921A1BFB900453C89 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A511931821A1BFB900453C89 /* CustomTextField.swift */; };
+		A529D5C521A2E857005A221A /* Homepage.gif in Resources */ = {isa = PBXBuildFile; fileRef = A529D5C421A2E857005A221A /* Homepage.gif */; };
+		A529D5C821A2E9B5005A221A /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529D5C721A2E9B5005A221A /* HomepageViewController.swift */; };
+		A529D5CD21A2FE9B005A221A /* HomePageOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529D5CB21A2FE9B005A221A /* HomePageOptionCell.swift */; };
+		A529D5CE21A2FE9B005A221A /* HomePageOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A529D5CC21A2FE9B005A221A /* HomePageOptionCell.xib */; };
+		A529D5D121A30F54005A221A /* QuestionnaireController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529D5D021A30F53005A221A /* QuestionnaireController1.swift */; };
+		A529D5D421A31210005A221A /* CurationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529D5D221A31210005A221A /* CurationViewCell.swift */; };
+		A529D5D521A31210005A221A /* CurationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A529D5D321A31210005A221A /* CurationViewCell.xib */; };
 		A594F5EC21A1446F001BD710 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A594F5EB21A1446F001BD710 /* AppDelegate.swift */; };
 		A594F5F121A1446F001BD710 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A594F5EF21A1446F001BD710 /* Main.storyboard */; };
 		A594F5F421A1446F001BD710 /* Bespoken.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A594F5F221A1446F001BD710 /* Bespoken.xcdatamodeld */; };
@@ -65,6 +72,13 @@
 		A5082D8321A15E75005EBA41 /* Extension&Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension&Helper.swift"; sourceTree = "<group>"; };
 		A5082D8521A1838A005EBA41 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A511931821A1BFB900453C89 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A529D5C421A2E857005A221A /* Homepage.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Homepage.gif; sourceTree = "<group>"; };
+		A529D5C721A2E9B5005A221A /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
+		A529D5CB21A2FE9B005A221A /* HomePageOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageOptionCell.swift; sourceTree = "<group>"; };
+		A529D5CC21A2FE9B005A221A /* HomePageOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageOptionCell.xib; sourceTree = "<group>"; };
+		A529D5D021A30F53005A221A /* QuestionnaireController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireController1.swift; sourceTree = "<group>"; };
+		A529D5D221A31210005A221A /* CurationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurationViewCell.swift; sourceTree = "<group>"; };
+		A529D5D321A31210005A221A /* CurationViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurationViewCell.xib; sourceTree = "<group>"; };
 		A594F5E821A1446F001BD710 /* Bespoken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bespoken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A594F5EB21A1446F001BD710 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A594F5F021A1446F001BD710 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,6 +167,26 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		A529D5C621A2E920005A221A /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				A529D5C721A2E9B5005A221A /* HomepageViewController.swift */,
+				A529D5CB21A2FE9B005A221A /* HomePageOptionCell.swift */,
+				A529D5CC21A2FE9B005A221A /* HomePageOptionCell.xib */,
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		A529D5CF21A30F1B005A221A /* CuratingForUser */ = {
+			isa = PBXGroup;
+			children = (
+				A529D5D021A30F53005A221A /* QuestionnaireController1.swift */,
+				A529D5D221A31210005A221A /* CurationViewCell.swift */,
+				A529D5D321A31210005A221A /* CurationViewCell.xib */,
+			);
+			path = CuratingForUser;
+			sourceTree = "<group>";
+		};
 		A594F5DF21A1446F001BD710 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +212,8 @@
 		A594F5EA21A1446F001BD710 /* Bespoken */ = {
 			isa = PBXGroup;
 			children = (
+				A529D5CF21A30F1B005A221A /* CuratingForUser */,
+				A529D5C621A2E920005A221A /* Homepage */,
 				A5A38A8121A1921200ED1088 /* LocalGifs+Videos */,
 				A5082D8221A15E67005EBA41 /* Utilities */,
 				A5A38A7C21A18B3D00ED1088 /* LoginModule */,
@@ -222,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				A5A38A8221A1922800ED1088 /* welcomeGif.gif */,
+				A529D5C421A2E857005A221A /* Homepage.gif */,
 			);
 			path = "LocalGifs+Videos";
 			sourceTree = "<group>";
@@ -353,8 +390,11 @@
 				A594F5F921A14471001BD710 /* LaunchScreen.storyboard in Resources */,
 				A594F5F621A14471001BD710 /* Assets.xcassets in Resources */,
 				A5082D7921A15737005EBA41 /* PersonalisationHeader.xib in Resources */,
+				A529D5CE21A2FE9B005A221A /* HomePageOptionCell.xib in Resources */,
+				A529D5D521A31210005A221A /* CurationViewCell.xib in Resources */,
 				A5A38A8321A1922800ED1088 /* welcomeGif.gif in Resources */,
 				A594F5F121A1446F001BD710 /* Main.storyboard in Resources */,
+				A529D5C521A2E857005A221A /* Homepage.gif in Resources */,
 				A5082D8121A15A49005EBA41 /* OptionsViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,11 +577,15 @@
 				A5A38A7E21A18B7F00ED1088 /* LoginViewController.swift in Sources */,
 				A511931921A1BFB900453C89 /* CustomTextField.swift in Sources */,
 				A5082D8621A1838A005EBA41 /* Router.swift in Sources */,
+				A529D5D121A30F54005A221A /* QuestionnaireController1.swift in Sources */,
 				A594F5F421A1446F001BD710 /* Bespoken.xcdatamodeld in Sources */,
+				A529D5CD21A2FE9B005A221A /* HomePageOptionCell.swift in Sources */,
 				A5082D8021A15A49005EBA41 /* OptionsViewCell.swift in Sources */,
 				A5A38A8021A18ED500ED1088 /* Swift+Gif.swift in Sources */,
 				A5082D8421A15E75005EBA41 /* Extension&Helper.swift in Sources */,
 				A5082D7C21A15905005EBA41 /* PersonalisationCell.swift in Sources */,
+				A529D5D421A31210005A221A /* CurationViewCell.swift in Sources */,
+				A529D5C821A2E9B5005A221A /* HomepageViewController.swift in Sources */,
 				A594F5EC21A1446F001BD710 /* AppDelegate.swift in Sources */,
 				A5082D7821A15737005EBA41 /* PersonalisationHeader.swift in Sources */,
 				A5082D7521A14CB2005EBA41 /* PersonalisationController.swift in Sources */,

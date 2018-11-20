@@ -150,6 +150,11 @@ class QuestionnaireController1: UIViewController {
             titleArray = ["ANGULAR & SLIM","LEAN STRUCTURE","IDEAL HOURGLASS","FULL & CURVY","TALL & PROPRTIONATE","STRONG BONE STRUCTURE"]
             title1.text = "MY BODY"
             title2.text = "TYPE IS"
+        }else{
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
+            self.navigationController?.pushViewController(nextVC!, animated: true)
+            
         }
         
         

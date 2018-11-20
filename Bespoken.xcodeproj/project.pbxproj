@@ -40,6 +40,8 @@
 		A5B0C95A21A4473F0058A064 /* Homecenter1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B0C95921A4473F0058A064 /* Homecenter1.xib */; };
 		A5B0C95C21A450760058A064 /* Homecenter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0C95B21A450760058A064 /* Homecenter1.swift */; };
 		A5FA1A2D21A4617D00743D73 /* TinderSwipeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A2C21A4617D00743D73 /* TinderSwipeControllerViewController.swift */; };
+		A5FA1A3121A4747E00743D73 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A2F21A4747E00743D73 /* GradientView.swift */; };
+		A5FA1A3221A4747E00743D73 /* TinderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A3021A4747E00743D73 /* TinderCard.swift */; };
 		E11ACFF9ABB5427F37CF4D40 /* Pods_BespokenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F417B68EB3A4B509CA7DB933 /* Pods_BespokenUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,8 @@
 		A5B0C95921A4473F0058A064 /* Homecenter1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Homecenter1.xib; sourceTree = "<group>"; };
 		A5B0C95B21A450760058A064 /* Homecenter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homecenter1.swift; sourceTree = "<group>"; };
 		A5FA1A2C21A4617D00743D73 /* TinderSwipeControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderSwipeControllerViewController.swift; sourceTree = "<group>"; };
+		A5FA1A2F21A4747E00743D73 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		A5FA1A3021A4747E00743D73 /* TinderCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderCard.swift; sourceTree = "<group>"; };
 		B6B88244009E8354EA4E3AC9 /* Pods-BespokenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BespokenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BespokenUITests/Pods-BespokenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C57CD40E2D4649F060EF7998 /* Pods-BespokenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BespokenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BespokenUITests/Pods-BespokenUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D7B6277E946FA762B7B89412 /* Pods-Bespoken.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bespoken.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bespoken/Pods-Bespoken.debug.xcconfig"; sourceTree = "<group>"; };
@@ -278,6 +282,8 @@
 		A5FA1A2E21A4618800743D73 /* TinderView */ = {
 			isa = PBXGroup;
 			children = (
+				A5FA1A2F21A4747E00743D73 /* GradientView.swift */,
+				A5FA1A3021A4747E00743D73 /* TinderCard.swift */,
 				A5FA1A2C21A4617D00743D73 /* TinderSwipeControllerViewController.swift */,
 			);
 			path = TinderView;
@@ -595,8 +601,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5FA1A3121A4747E00743D73 /* GradientView.swift in Sources */,
 				A5A38A7E21A18B7F00ED1088 /* LoginViewController.swift in Sources */,
 				A511931921A1BFB900453C89 /* CustomTextField.swift in Sources */,
+				A5FA1A3221A4747E00743D73 /* TinderCard.swift in Sources */,
 				A5082D8621A1838A005EBA41 /* Router.swift in Sources */,
 				A529D5D121A30F54005A221A /* QuestionnaireController1.swift in Sources */,
 				A5B0C95721A4446B0058A064 /* DummyContent.swift in Sources */,

@@ -7,87 +7,63 @@
 //
 
 import UIKit
+import SwiftVideoBackground
 
 class HomepageViewController: UIViewController,CAAnimationDelegate {
 
     @IBOutlet weak var GifImgView: UIImageView!
     @IBOutlet weak var optionCollection: UICollectionView!
+    @IBOutlet weak var videoBackgroudView: UIView!
+    @IBOutlet weak var ballView: Homecenter1!
     
     //MARK: Declare Variables
     
-    let loginGif = UIImage.gif(name: "Homepage")
     var listArray = ["TRUNCK SHOW","COLLECTION","PERSONALISATION"]
+    let videoPlay = VideoBackground()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GifImgView.loadGif(name: "Homepage")
+        
         setup()
-        optionCollection.isHidden = true
+        optionCollection.isHidden = false
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+       
     }
     
     
     func setup(){
         
+        playVideoInBackgroud()
         optionCollection.register(UINib(nibName: "HomePageOptionCell", bundle: nil), forCellWithReuseIdentifier: "HomePageOptionCell")
         optionCollection.delegate = self
         optionCollection.dataSource = self
-        GifAnimation()
         createNavbar()
+    }
+    
+    func createNavbar(){
+        
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
     }
     
     
     //MARK: Animation
     
-    func createNavbar(){
-        self.navigationController?.navigationBar.isHidden = false
+    
+    func playVideoInBackgroud(){
+        
+       try? videoPlay.play(view: videoBackgroudView, videoName: "videoplayback", videoType: "mp4", isMuted: true, darkness: 0.1, willLoopVideo: true, setAudioSessionAmbient: true)
+        
     }
     
-    func GifAnimation(){
-        
-        GifImgView.animationImages = loginGif?.images
-        // Set the duration of the UIImage
-        GifImgView.animationDuration = loginGif!.duration
-        // Set the repetitioncount
-        GifImgView.animationRepeatCount = 0
-        // Start the animation
-        GifImgView.startAnimating()
-        
-        
-        var values = [CGImage]()
-        for image in loginGif!.images! {
-            values.append(image.cgImage!)
-        }
-        
-        // Create animation and set SwiftGif values and duration
-        let animation = CAKeyframeAnimation(keyPath: "contents")
-        animation.calculationMode = CAAnimationCalculationMode.discrete
-        animation.duration = loginGif!.duration
-        animation.values = values
-        // Set the repeat count
-        animation.repeatCount = 0
-        // Other stuff
-        animation.isRemovedOnCompletion = false
-        animation.fillMode = CAMediaTimingFillMode.forwards
-        // Set the delegate
-        animation.delegate = self
-        GifImgView.layer.add(animation, forKey: "animation")
-    }
-    
-    
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        
-        if flag{
-            UIView.transition(with: optionCollection, duration: 2, options: .transitionFlipFromLeft, animations: {
-                self.optionCollection.isHidden = false
-                self.optionCollection.backgroundColor = UIColor.clear
-            }, completion: nil)
-           
-           
-        }
-        
-    }
     
 
     /*

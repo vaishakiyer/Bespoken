@@ -32,13 +32,14 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        playVideoInBackgroud()
        
     }
     
     
     func setup(){
         
-        playVideoInBackgroud()
+        
         optionCollection.register(UINib(nibName: "HomePageOptionCell", bundle: nil), forCellWithReuseIdentifier: "HomePageOptionCell")
         optionCollection.delegate = self
         optionCollection.dataSource = self

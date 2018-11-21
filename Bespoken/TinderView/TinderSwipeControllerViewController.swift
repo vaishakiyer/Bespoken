@@ -26,18 +26,82 @@ class TinderSwipeControllerViewController: UIViewController {
     var allCardsArray = [TinderCard]()
     var valueArray = ["1","2","3","4","5","6","7","8","9","10"]
     var imageArray = ["Mask Group 68","Mask Group 22","Mask Group 68","Group 732","Mask Group 68","Mask Group 68","Mask Group 22","Group 732","Mask Group 68","Mask Group 22"]
+    var controlFLow : FlowAnalysis?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialDataSetup()
+        footerLabel.isHidden = true
         nextButton.roundCorners(corners: .allCorners, radius: 16)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         view.layoutIfNeeded()
-        loadCardValues()
+       
+        
     }
     
+    
+    
+    @objc func nextPressed(){
+        
+        switch controlFLow {
+            
+        case .Flow1_SelectBrand?:
+            
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
+            nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Garment")
+           DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.navigationController?.pushViewController(nextVC!, animated: true)
+           }
+           
+            
+            
+        case .Flow1_SelectGarment?:
+            
+            BSLoader.showLoading("CURATING YOUR STYLE STATEMENT NOW", disableUI: true, image: "Group 376")
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                BSLoader.hide()
+                let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
+                  self.navigationController!.popToViewController(viewControllers[viewControllers.count - 4], animated: true)
+            }
+            
+            
+           break
+            
+        case .none:
+            print("case not identified")
+        }
+    }
+    
+    func initialDataSetup(){
+        
+        BSLoader.activityTextFontName = UIFont.boldSystemFont(ofSize: 15)
+        BSLoader.activityTextColor = .white
+        BSLoader.activityBackgroundColor = .darkGray
+        nextButton.addTarget(self, action: #selector(nextPressed), for: .touchUpInside)
+        loadCardValues()
+    
+        switch controlFLow! {
+        case .Flow1_SelectBrand:
+            headerLabel.text = "Let us know you preference for brands"
+            createNavBar(title: "BRANDS")
+           
+        case .Flow1_SelectGarment:
+            createNavBar(title: "GARMENTS")
+             headerLabel.text = "Let us know you preference for garments"
+            
+        }
+        
+    }
+    
+    
+    func createNavBar(title: String){
+        self.navigationItem.title = title
+    }
     
     func loadCardValues() {
         

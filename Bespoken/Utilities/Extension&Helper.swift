@@ -14,6 +14,13 @@ enum LINE_POSITION {
     case LINE_POSITION_BOTTOM
 }
 
+enum FlowAnalysis: String{
+    
+    case Flow1_SelectBrand = "F1Brand"
+    case Flow1_SelectGarment = "F1Garment"
+    
+}
+
 class Helper{
     
     class func dropShadowOnTableView(table: UITableView){

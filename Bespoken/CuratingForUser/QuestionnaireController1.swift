@@ -151,8 +151,11 @@ class QuestionnaireController1: UIViewController {
             title1.text = "MY BODY"
             title2.text = "TYPE IS"
         }else{
+            
+            nextCountPress -= 1
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
+            nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Brand")
             self.navigationController?.pushViewController(nextVC!, animated: true)
             
         }

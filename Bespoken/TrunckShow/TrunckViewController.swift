@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import AVFoundation
+import QRCodeReader
 
 class TrunckViewController: UIViewController {
 
     @IBOutlet weak var trunckCollection: UICollectionView!
     var tap = UITapGestureRecognizer()
-    
+    lazy var readerVC: QRCodeReaderViewController = {
+        let builder = QRCodeReaderViewControllerBuilder {
+            $0.reader = QRCodeReader(metadataObjectTypes: [.qr], captureDevicePosition: .back)
+        }
+        
+        return QRCodeReaderViewController(builder: builder)
+    }()
     var previewButtonPressed: Bool? = false
     
     override func viewDidLoad() {
@@ -138,5 +146,35 @@ extension TrunckViewController: TrunckViewDelegate{
         }, completion: nil)
 
     }
+    
+    func scanButtonPressed(sender: TrunckViewCell){
+        
+        readerVC.delegate = self
+        // Presents the readerVC as modal form sheet
+        readerVC.modalPresentationStyle = .formSheet
+        present(readerVC, animated: true, completion: nil)
+        
+    }
+    
+    
+}
+
+extension TrunckViewController: QRCodeReaderViewControllerDelegate{
+    
+    func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
+        print(result.value)
+        reader.stopScanning()
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func readerDidCancel(_ reader: QRCodeReaderViewController) {
+        print("Action Cancelled")
+         dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
     
 }

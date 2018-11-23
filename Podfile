@@ -8,6 +8,7 @@ target 'Bespoken' do
   pod 'Alamofire', '~> 4.7'
   pod 'AlamofireImage', '~> 3.4'
   pod 'SwiftVideoBackground', '~> 3.0'
+  pod 'QRCodeReader.swift', '~> 9.0.1'
 
 
   target 'BespokenTests' do

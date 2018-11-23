@@ -83,6 +83,7 @@
             <connections>
                 <outlet property="outerView" destination="nyo-QC-wSr" id="JgJ-aK-Jl6"/>
                 <outlet property="previewButton" destination="g4g-5m-myP" id="a5M-Dl-Otr"/>
+                <outlet property="scannerButton" destination="bNN-e9-Nmk" id="3cN-mz-6Qw"/>
                 <outlet property="scannerView" destination="uSH-8z-Ue4" id="8Dd-Pu-ejy"/>
             </connections>
             <point key="canvasLocation" x="-34" y="-81"/>

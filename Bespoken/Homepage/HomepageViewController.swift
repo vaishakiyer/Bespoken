@@ -48,6 +48,8 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     func createNavbar(){
         
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "profile"), style: .plain, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Path 842"), style: .plain, target: self, action: nil)
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -109,7 +111,13 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
             let nextVC = storyBoard.instantiateViewController(withIdentifier: "PersonalisationController") as? PersonalisationController
             
             self.navigationController?.pushViewController(nextVC!, animated: true)
-        }else{
+        }else if indexPath.item == 0{
+            
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let nextVC = storyBoard.instantiateViewController(withIdentifier: "TrunckViewController") as? TrunckViewController
+            self.navigationController?.pushViewController(nextVC!, animated: true)
+        }
+        else{
          
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1

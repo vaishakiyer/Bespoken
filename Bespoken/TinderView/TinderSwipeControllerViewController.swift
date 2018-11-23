@@ -43,7 +43,6 @@ class TinderSwipeControllerViewController: UIViewController {
     }
     
     
-    
     @objc func nextPressed(){
         
         switch controlFLow {
@@ -63,7 +62,7 @@ class TinderSwipeControllerViewController: UIViewController {
             
             BSLoader.showLoading("CURATING YOUR STYLE STATEMENT NOW", disableUI: true, image: "Group 376")
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
                 BSLoader.hide()
                 let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
                   self.navigationController!.popToViewController(viewControllers[viewControllers.count - 4], animated: true)
@@ -72,9 +71,14 @@ class TinderSwipeControllerViewController: UIViewController {
             
            break
             
+        case .Flow2_TrunckShow?:
+            
+            break
+        
         case .none:
             print("case not identified")
         }
+        
     }
     
     func initialDataSetup(){
@@ -87,13 +91,16 @@ class TinderSwipeControllerViewController: UIViewController {
     
         switch controlFLow! {
         case .Flow1_SelectBrand:
-            headerLabel.text = "Let us know you preference for brands"
+            headerLabel.text = "Let us know your preference for brands"
             createNavBar(title: "BRANDS")
            
         case .Flow1_SelectGarment:
             createNavBar(title: "GARMENTS")
-             headerLabel.text = "Let us know you preference for garments"
+             headerLabel.text = "Let us know your preference for garments"
             
+        case .Flow2_TrunckShow:
+            createNavBar(title: "Trunck Collection")
+            headerLabel.text = "Let us know your favourites from the Trunck Show"
         }
         
     }

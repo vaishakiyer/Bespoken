@@ -19,6 +19,11 @@
 		A5082D8421A15E75005EBA41 /* Extension&Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8321A15E75005EBA41 /* Extension&Helper.swift */; };
 		A5082D8621A1838A005EBA41 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8521A1838A005EBA41 /* Router.swift */; };
 		A511931921A1BFB900453C89 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A511931821A1BFB900453C89 /* CustomTextField.swift */; };
+		A5231BA421A8432300463AE4 /* TrunckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5231BA321A8432300463AE4 /* TrunckViewController.swift */; };
+		A5231BA921A84FBE00463AE4 /* TrunckViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5231BA721A84FBE00463AE4 /* TrunckViewCell.swift */; };
+		A5231BAA21A84FBE00463AE4 /* TrunckViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5231BA821A84FBE00463AE4 /* TrunckViewCell.xib */; };
+		A5231BAD21A8645C00463AE4 /* PreviewImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5231BAB21A8645C00463AE4 /* PreviewImageCollectionViewCell.swift */; };
+		A5231BAE21A8645C00463AE4 /* PreviewImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5231BAC21A8645C00463AE4 /* PreviewImageCollectionViewCell.xib */; };
 		A529D5C821A2E9B5005A221A /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529D5C721A2E9B5005A221A /* HomepageViewController.swift */; };
 		A529D5CD21A2FE9B005A221A /* HomePageOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529D5CB21A2FE9B005A221A /* HomePageOptionCell.swift */; };
 		A529D5CE21A2FE9B005A221A /* HomePageOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A529D5CC21A2FE9B005A221A /* HomePageOptionCell.xib */; };
@@ -79,6 +84,11 @@
 		A5082D8321A15E75005EBA41 /* Extension&Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension&Helper.swift"; sourceTree = "<group>"; };
 		A5082D8521A1838A005EBA41 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A511931821A1BFB900453C89 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A5231BA321A8432300463AE4 /* TrunckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrunckViewController.swift; sourceTree = "<group>"; };
+		A5231BA721A84FBE00463AE4 /* TrunckViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrunckViewCell.swift; sourceTree = "<group>"; };
+		A5231BA821A84FBE00463AE4 /* TrunckViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrunckViewCell.xib; sourceTree = "<group>"; };
+		A5231BAB21A8645C00463AE4 /* PreviewImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		A5231BAC21A8645C00463AE4 /* PreviewImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		A529D5C721A2E9B5005A221A /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		A529D5CB21A2FE9B005A221A /* HomePageOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageOptionCell.swift; sourceTree = "<group>"; };
 		A529D5CC21A2FE9B005A221A /* HomePageOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageOptionCell.xib; sourceTree = "<group>"; };
@@ -182,6 +192,18 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		A5231BA221A82BD200463AE4 /* TrunckShow */ = {
+			isa = PBXGroup;
+			children = (
+				A5231BA321A8432300463AE4 /* TrunckViewController.swift */,
+				A5231BA721A84FBE00463AE4 /* TrunckViewCell.swift */,
+				A5231BA821A84FBE00463AE4 /* TrunckViewCell.xib */,
+				A5231BAB21A8645C00463AE4 /* PreviewImageCollectionViewCell.swift */,
+				A5231BAC21A8645C00463AE4 /* PreviewImageCollectionViewCell.xib */,
+			);
+			path = TrunckShow;
+			sourceTree = "<group>";
+		};
 		A529D5C621A2E920005A221A /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +251,7 @@
 		A594F5EA21A1446F001BD710 /* Bespoken */ = {
 			isa = PBXGroup;
 			children = (
+				A5231BA221A82BD200463AE4 /* TrunckShow */,
 				A5FA1A2E21A4618800743D73 /* TinderView */,
 				A529D5CF21A30F1B005A221A /* CuratingForUser */,
 				A529D5C621A2E920005A221A /* Homepage */,
@@ -416,11 +439,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5B0C95821A4454E0058A064 /* videoplayback.mp4 in Resources */,
+				A5231BAA21A84FBE00463AE4 /* TrunckViewCell.xib in Resources */,
 				A5082D7D21A15905005EBA41 /* PersonalisationCell.xib in Resources */,
 				A594F5F921A14471001BD710 /* LaunchScreen.storyboard in Resources */,
 				A594F5F621A14471001BD710 /* Assets.xcassets in Resources */,
 				A5B0C95A21A4473F0058A064 /* Homecenter1.xib in Resources */,
 				A5082D7921A15737005EBA41 /* PersonalisationHeader.xib in Resources */,
+				A5231BAE21A8645C00463AE4 /* PreviewImageCollectionViewCell.xib in Resources */,
 				A529D5CE21A2FE9B005A221A /* HomePageOptionCell.xib in Resources */,
 				A529D5D521A31210005A221A /* CurationViewCell.xib in Resources */,
 				A5A38A8321A1922800ED1088 /* welcomeGif.gif in Resources */,
@@ -608,6 +633,7 @@
 				A5A38A7E21A18B7F00ED1088 /* LoginViewController.swift in Sources */,
 				A5779BDF21A5AFEB001CE009 /* BSLoader.swift in Sources */,
 				A511931921A1BFB900453C89 /* CustomTextField.swift in Sources */,
+				A5231BA921A84FBE00463AE4 /* TrunckViewCell.swift in Sources */,
 				A5FA1A3221A4747E00743D73 /* TinderCard.swift in Sources */,
 				A5082D8621A1838A005EBA41 /* Router.swift in Sources */,
 				A529D5D121A30F54005A221A /* QuestionnaireController1.swift in Sources */,
@@ -621,6 +647,8 @@
 				A5082D7C21A15905005EBA41 /* PersonalisationCell.swift in Sources */,
 				A529D5D421A31210005A221A /* CurationViewCell.swift in Sources */,
 				A5FA1A2D21A4617D00743D73 /* TinderSwipeControllerViewController.swift in Sources */,
+				A5231BA421A8432300463AE4 /* TrunckViewController.swift in Sources */,
+				A5231BAD21A8645C00463AE4 /* PreviewImageCollectionViewCell.swift in Sources */,
 				A529D5C821A2E9B5005A221A /* HomepageViewController.swift in Sources */,
 				A594F5EC21A1446F001BD710 /* AppDelegate.swift in Sources */,
 				A5082D7821A15737005EBA41 /* PersonalisationHeader.swift in Sources */,

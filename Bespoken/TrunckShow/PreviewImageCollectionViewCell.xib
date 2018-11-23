@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PreviewImageCollectionViewCell" id="gTV-IL-0wX" customClass="PreviewImageCollectionViewCell" customModule="Bespoken" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="389"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="389"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4f-U3-YqO">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="389"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group 22" translatesAutoresizingMaskIntoConstraints="NO" id="nR8-6N-UJD">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="389"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COUNTDOWN TIMER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3P-GD-9yA">
+                                <rect key="frame" x="25" y="70" width="224" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.94585920859080219" green="0.99081888686131392" blue="0.78507433111438663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nR8-6N-UJD" firstAttribute="centerX" secondItem="o4f-U3-YqO" secondAttribute="centerX" id="7ss-0k-ekg"/>
+                            <constraint firstItem="r3P-GD-9yA" firstAttribute="leading" secondItem="o4f-U3-YqO" secondAttribute="leading" constant="25" id="GDf-zx-U31"/>
+                            <constraint firstAttribute="bottom" secondItem="nR8-6N-UJD" secondAttribute="bottom" id="KcF-ZD-kM8"/>
+                            <constraint firstItem="nR8-6N-UJD" firstAttribute="leading" secondItem="o4f-U3-YqO" secondAttribute="leading" id="LKo-DM-Wvw"/>
+                            <constraint firstAttribute="trailing" secondItem="nR8-6N-UJD" secondAttribute="trailing" id="VJV-yR-fEH"/>
+                            <constraint firstItem="nR8-6N-UJD" firstAttribute="centerY" secondItem="o4f-U3-YqO" secondAttribute="centerY" id="Ydk-QL-1Fn"/>
+                            <constraint firstAttribute="trailing" secondItem="r3P-GD-9yA" secondAttribute="trailing" constant="31" id="YoT-hJ-4xl"/>
+                            <constraint firstItem="nR8-6N-UJD" firstAttribute="top" secondItem="o4f-U3-YqO" secondAttribute="top" id="cUQ-Dw-Nag"/>
+                            <constraint firstItem="r3P-GD-9yA" firstAttribute="top" secondItem="o4f-U3-YqO" secondAttribute="top" constant="70" id="tO1-8e-9B4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="o4f-U3-YqO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="SIO-Rd-zoM"/>
+                <constraint firstAttribute="trailing" secondItem="o4f-U3-YqO" secondAttribute="trailing" id="dqE-OX-CqK"/>
+                <constraint firstAttribute="bottom" secondItem="o4f-U3-YqO" secondAttribute="bottom" id="p0b-Hu-zUi"/>
+                <constraint firstItem="o4f-U3-YqO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pFG-Lg-W7v"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="280" height="389"/>
+            <connections>
+                <outlet property="countDownLabel" destination="r3P-GD-9yA" id="6z0-W5-2qa"/>
+                <outlet property="previewImage" destination="nR8-6N-UJD" id="mxO-RL-N2n"/>
+            </connections>
+            <point key="canvasLocation" x="-114" y="126"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Mask Group 22" width="235" height="365"/>
+    </resources>
+</document>

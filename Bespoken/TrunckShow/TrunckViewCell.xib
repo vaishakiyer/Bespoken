@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TrunckViewCell" id="gTV-IL-0wX" customClass="TrunckViewCell" customModule="Bespoken" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="287" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="287" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyo-QC-wSr">
+                        <rect key="frame" x="0.0" y="0.0" width="287" height="50"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path 1103" translatesAutoresizingMaskIntoConstraints="NO" id="db1-4U-i91">
+                                <rect key="frame" x="0.0" y="0.0" width="287" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4g-5m-myP">
+                                <rect key="frame" x="18" y="14" width="30" height="22"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="O9p-Wd-GSb"/>
+                                    <constraint firstAttribute="height" constant="22" id="ODu-d5-2Br"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="Path 989"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSH-8z-Ue4">
+                                <rect key="frame" x="164" y="11" width="91" height="28"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNN-e9-Nmk">
+                                        <rect key="frame" x="67" y="5" width="17" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="17" id="B5M-a6-pO2"/>
+                                            <constraint firstAttribute="height" constant="19" id="T7X-4Z-rgD"/>
+                                        </constraints>
+                                        <state key="normal" image="qrcode"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bNN-e9-Nmk" secondAttribute="bottom" constant="4" id="225-VC-OBn"/>
+                                    <constraint firstItem="bNN-e9-Nmk" firstAttribute="leading" secondItem="uSH-8z-Ue4" secondAttribute="leading" constant="67" id="Llx-1o-eid"/>
+                                    <constraint firstItem="bNN-e9-Nmk" firstAttribute="top" secondItem="uSH-8z-Ue4" secondAttribute="top" constant="5" id="OmI-Bz-cbw"/>
+                                    <constraint firstAttribute="trailing" secondItem="bNN-e9-Nmk" secondAttribute="trailing" constant="7" id="Ui1-Nf-Pai"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="db1-4U-i91" firstAttribute="top" secondItem="nyo-QC-wSr" secondAttribute="top" id="7g6-BJ-yPx"/>
+                            <constraint firstAttribute="bottom" secondItem="g4g-5m-myP" secondAttribute="bottom" constant="14" id="H4R-Ox-wLS"/>
+                            <constraint firstItem="g4g-5m-myP" firstAttribute="leading" secondItem="nyo-QC-wSr" secondAttribute="leading" constant="18" id="IDB-r3-in5"/>
+                            <constraint firstAttribute="trailing" secondItem="uSH-8z-Ue4" secondAttribute="trailing" constant="32" id="QkR-cS-4NN"/>
+                            <constraint firstAttribute="bottom" secondItem="uSH-8z-Ue4" secondAttribute="bottom" constant="11" id="WDS-eN-2cY"/>
+                            <constraint firstAttribute="trailing" secondItem="db1-4U-i91" secondAttribute="trailing" id="e8q-cy-9ys"/>
+                            <constraint firstItem="g4g-5m-myP" firstAttribute="top" secondItem="nyo-QC-wSr" secondAttribute="top" constant="14" id="gD3-HE-BFy"/>
+                            <constraint firstAttribute="bottom" secondItem="db1-4U-i91" secondAttribute="bottom" id="mGJ-JE-ces"/>
+                            <constraint firstItem="uSH-8z-Ue4" firstAttribute="top" secondItem="nyo-QC-wSr" secondAttribute="top" constant="11" id="pgf-1K-eDW"/>
+                            <constraint firstItem="db1-4U-i91" firstAttribute="leading" secondItem="nyo-QC-wSr" secondAttribute="leading" id="uMd-If-mHx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="nyo-QC-wSr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ih7-Xf-pjM"/>
+                <constraint firstAttribute="trailing" secondItem="nyo-QC-wSr" secondAttribute="trailing" id="f4V-vD-cYk"/>
+                <constraint firstItem="nyo-QC-wSr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vpb-k6-ack"/>
+                <constraint firstAttribute="bottom" secondItem="nyo-QC-wSr" secondAttribute="bottom" id="xcV-Xf-HJF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="287" height="50"/>
+            <connections>
+                <outlet property="outerView" destination="nyo-QC-wSr" id="JgJ-aK-Jl6"/>
+                <outlet property="previewButton" destination="g4g-5m-myP" id="a5M-Dl-Otr"/>
+                <outlet property="scannerView" destination="uSH-8z-Ue4" id="8Dd-Pu-ejy"/>
+            </connections>
+            <point key="canvasLocation" x="-34" y="-81"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Path 1103" width="121.5" height="22"/>
+        <image name="Path 989" width="8" height="10.5"/>
+        <image name="qrcode" width="39" height="39"/>
+    </resources>
+</document>

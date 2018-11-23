@@ -305,9 +305,9 @@
                                         <rect key="frame" x="0.0" y="54" width="343" height="1"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let us know your preferences for brands" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAO-fT-7xd">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let us know your preferences for brands" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MAO-fT-7xd">
                                         <rect key="frame" x="8" y="21" width="327" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -421,15 +421,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="3tm-oI-zJr" firstAttribute="leading" secondItem="A7t-WE-WcI" secondAttribute="leading" id="1Xh-bS-s2A"/>
+                            <constraint firstItem="3tm-oI-zJr" firstAttribute="trailing" secondItem="A7t-WE-WcI" secondAttribute="trailing" id="4mo-aW-6yN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xTx-5W-tW9" secondAttribute="bottom" constant="5" id="4mt-yR-TOW"/>
                             <constraint firstItem="A7t-WE-WcI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="6Ok-8T-VpW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3tm-oI-zJr" secondAttribute="trailing" constant="16" id="8uC-PL-m8J"/>
-                            <constraint firstItem="3tm-oI-zJr" firstAttribute="top" secondItem="A7t-WE-WcI" secondAttribute="bottom" constant="19" id="AFQ-zM-pWV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A7t-WE-WcI" secondAttribute="trailing" constant="16" id="CAW-oP-HTT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xTx-5W-tW9" secondAttribute="trailing" constant="86" id="HRq-vr-jAO"/>
                             <constraint firstItem="xTx-5W-tW9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="Mh3-F5-Zfx"/>
-                            <constraint firstItem="3tm-oI-zJr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cXh-98-oeE"/>
-                            <constraint firstItem="xTx-5W-tW9" firstAttribute="top" secondItem="3tm-oI-zJr" secondAttribute="bottom" constant="14" id="lKk-cH-06T"/>
+                            <constraint firstItem="3tm-oI-zJr" firstAttribute="top" secondItem="A7t-WE-WcI" secondAttribute="bottom" constant="19" id="d7w-kz-pH9"/>
+                            <constraint firstItem="xTx-5W-tW9" firstAttribute="top" secondItem="3tm-oI-zJr" secondAttribute="bottom" constant="14" id="fFn-p0-1fp"/>
                             <constraint firstItem="A7t-WE-WcI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ri2-fZ-6uo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -444,9 +444,54 @@
             </objects>
             <point key="canvasLocation" x="-1962" y="1003"/>
         </scene>
+        <!--Trunck View Controller-->
+        <scene sceneID="lHG-TU-2nd">
+            <objects>
+                <viewController storyboardIdentifier="TrunckViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="68O-Th-B4H" customClass="TrunckViewController" customModule="Bespoken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="agI-xJ-wSW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 733" translatesAutoresizingMaskIntoConstraints="NO" id="kGE-sp-Uap">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EEf-bt-MT6">
+                                <rect key="frame" x="16" y="50" width="343" height="597"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a9b-rl-nuo">
+                                    <size key="itemSize" width="315" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kGE-sp-Uap" firstAttribute="bottom" secondItem="TQ3-61-xrY" secondAttribute="bottom" id="3uF-TI-xfA"/>
+                            <constraint firstItem="TQ3-61-xrY" firstAttribute="trailing" secondItem="EEf-bt-MT6" secondAttribute="trailing" constant="16" id="Feo-xk-M0g"/>
+                            <constraint firstItem="kGE-sp-Uap" firstAttribute="leading" secondItem="TQ3-61-xrY" secondAttribute="leading" id="FpS-jP-Pkv"/>
+                            <constraint firstItem="EEf-bt-MT6" firstAttribute="leading" secondItem="TQ3-61-xrY" secondAttribute="leading" constant="16" id="HDY-XN-yxM"/>
+                            <constraint firstItem="TQ3-61-xrY" firstAttribute="bottom" secondItem="EEf-bt-MT6" secondAttribute="bottom" constant="20" id="OOo-SG-ed0"/>
+                            <constraint firstItem="EEf-bt-MT6" firstAttribute="top" secondItem="TQ3-61-xrY" secondAttribute="top" constant="30" id="bef-DO-yB3"/>
+                            <constraint firstItem="kGE-sp-Uap" firstAttribute="top" secondItem="agI-xJ-wSW" secondAttribute="top" id="r9O-eI-eXz"/>
+                            <constraint firstItem="kGE-sp-Uap" firstAttribute="trailing" secondItem="TQ3-61-xrY" secondAttribute="trailing" id="t4P-hk-LQz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TQ3-61-xrY"/>
+                    </view>
+                    <connections>
+                        <outlet property="trunckCollection" destination="EEf-bt-MT6" id="TeA-UQ-SdI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sGv-NU-JTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1186.4000000000001" y="1002.5487256371815"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Group 704" width="375" height="667"/>
+        <image name="Group 733" width="272" height="439"/>
         <image name="Mask Group 22" width="235" height="365"/>
     </resources>
 </document>

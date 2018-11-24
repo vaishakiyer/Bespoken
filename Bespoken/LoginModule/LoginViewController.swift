@@ -6,7 +6,10 @@
 //  Copyright © 2018 jagdish.bespoken. All rights reserved.
 //
 
+let VerifyPasscode = "987654"
+
 import UIKit
+import TOPasscodeViewController
 
 class LoginViewController: UIViewController,CAAnimationDelegate {
 
@@ -29,6 +32,7 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
     //MARK: Declare Variables
     let loginGif = UIImage.gif(name: "welcomeGif")
     var isFlipped : Bool = false
+    let nextVC = TOPasscodeSettingsViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +53,12 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
     
     func setup(){
         
+        nextVC.delegate = self
+        nextVC.requireCurrentPasscode = true
+        nextVC.setPasscodeType(.sixDigits, animated: true)
+        nextVC.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissTOPasscodeController))
+        nextVC.style = .dark
+        
         
         loginView.isHidden = true
         bottomLabel.isHidden = true
@@ -64,6 +74,9 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
        
     }
     
+    @objc func dismissTOPasscodeController(){
+        dismiss(animated: true, completion: nil)
+    }
         
     //MARK: GIF Work
     
@@ -132,7 +145,7 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         
         usernameField.addImageAndPlaceHolder(img: "Group377", placeHolder: "USERNAME")
         emailPassField.addImageAndPlaceHolder(img: "Group381", placeHolder: "EMAIL ID")
-        passwordField.addImageAndPlaceHolder(img: "Group382", placeHolder: "PHONE NUMBER")
+        passwordField.addImageAndPlaceHolder(img: "Group382", placeHolder: "PASSWORD")
     }
     
     func customiseSignButton(){
@@ -160,7 +173,7 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
             bottomSignIn.setTitle("Sign Up!", for: .normal)
             signInSignUpField.setTitle("SIGN IN", for: .normal)
             passwordField.isHidden = true
-            emailPassField.addImageAndPlaceHolder(img: "Group382", placeHolder: "INVITE CODE")
+            emailPassField.addImageAndPlaceHolder(img: "Group382", placeHolder: "PASSWORD")
             
             break
             
@@ -178,12 +191,13 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
     }
     
     
+    
+    
+    
     @objc func signInOrSignUpPressed(){
     
-      let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-      let nextVC = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
-    
-        self.navigationController?.pushViewController(nextVC!, animated: true)
+        let nc = UINavigationController.init(rootViewController: nextVC)
+        self.present(nc, animated: true, completion: nil)
     
     }
     
@@ -201,5 +215,27 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
 }
 
 extension LoginViewController: UITextFieldDelegate{
+    
+}
+
+extension LoginViewController: TOPasscodeSettingsViewControllerDelegate{
+    
+    func passcodeSettingsViewController(_ passcodeSettingsViewController: TOPasscodeSettingsViewController, didAttemptCurrentPasscode passcode: String) -> Bool {
+        
+        if passcode != VerifyPasscode{
+              return false
+            
+        }else{
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
+            passcodeSettingsViewController.navigationController?.pushViewController(nextVC1!, animated: true)
+            return true
+            
+        }
+        
+      
+        
+    }
+    
     
 }

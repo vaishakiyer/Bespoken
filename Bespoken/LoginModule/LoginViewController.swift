@@ -6,7 +6,7 @@
 //  Copyright © 2018 jagdish.bespoken. All rights reserved.
 //
 
-let VerifyPasscode = "987654"
+let VerifyPasscode = "1234"
 
 import UIKit
 import TOPasscodeViewController
@@ -33,6 +33,7 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
     let loginGif = UIImage.gif(name: "welcomeGif")
     var isFlipped : Bool = false
     let nextVC = TOPasscodeSettingsViewController()
+    let firstTimeVC = TOPasscodeViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +55,12 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
     func setup(){
         
         nextVC.delegate = self
-        nextVC.requireCurrentPasscode = true
-        nextVC.setPasscodeType(.sixDigits, animated: true)
+        nextVC.passcodeType = .customAlphanumeric
         nextVC.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissTOPasscodeController))
         nextVC.style = .dark
+        
+        firstTimeVC.delegate = self
+        firstTimeVC.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissTOPasscodeController))
         
         
         loginView.isHidden = true
@@ -196,7 +199,7 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
     
     @objc func signInOrSignUpPressed(){
     
-        let nc = UINavigationController.init(rootViewController: nextVC)
+        let nc = UINavigationController.init(rootViewController: firstTimeVC)
         self.present(nc, animated: true, completion: nil)
     
     }
@@ -218,24 +221,54 @@ extension LoginViewController: UITextFieldDelegate{
     
 }
 
-extension LoginViewController: TOPasscodeSettingsViewControllerDelegate{
+extension LoginViewController: TOPasscodeSettingsViewControllerDelegate,TOPasscodeViewControllerDelegate{
     
-    func passcodeSettingsViewController(_ passcodeSettingsViewController: TOPasscodeSettingsViewController, didAttemptCurrentPasscode passcode: String) -> Bool {
+    
+    func passcodeSettingsViewController(_ passcodeSettingsViewController: TOPasscodeSettingsViewController, didChangeToNewPasscode passcode: String, of type: TOPasscodeType) {
         
-        if passcode != VerifyPasscode{
-              return false
-            
-        }else{
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
-            passcodeSettingsViewController.navigationController?.pushViewController(nextVC1!, animated: true)
-            return true
-            
-        }
-        
-      
-        
+        print(passcode)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
+        passcodeSettingsViewController.navigationController?.pushViewController(nextVC1!, animated: true)
+
     }
+    
+    func didInputCorrectPasscode(in passcodeViewController: TOPasscodeViewController) {
+        
+        let nc = UINavigationController.init(rootViewController: nextVC)
+        passcodeViewController.present(nc, animated: true, completion: nil)
+    }
+    
+    func passcodeViewController(_ passcodeViewController: TOPasscodeViewController, isCorrectCode code: String) -> Bool {
+        if code != VerifyPasscode{
+            
+            let actionController = UIAlertController(title: "", message: "Enter the correct Invite Code", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            actionController.addAction(okAction)
+            passcodeViewController.present(actionController, animated: true, completion: nil)
+            return false
+        }else{
+            
+            return true
+        }
+    }
+    
+//    func passcodeSettingsViewController(_ passcodeSettingsViewController: TOPasscodeSettingsViewController, didAttemptCurrentPasscode passcode: String) -> Bool {
+//
+//        if passcode != VerifyPasscode{
+//              return false
+//
+//        }else{
+//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//            let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
+//            passcodeSettingsViewController.navigationController?.pushViewController(nextVC1!, animated: true)
+//            return true
+//
+//        }
+//
+//
+//
+//    }
     
     
 }

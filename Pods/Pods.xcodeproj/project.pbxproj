@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -158,7 +158,7 @@
 		01E3E07CB011AEB0BB3B17D66CB5B824 /* TOPasscodeVariableInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeVariableInputView.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeVariableInputView.h; sourceTree = "<group>"; };
 		0429917D0F17FC0B1E4CAAC788ABA9C8 /* TOPasscodeFixedInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeFixedInputView.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeFixedInputView.h; sourceTree = "<group>"; };
 		0586E63656BA17A64E070181F59F0B03 /* ToggleTorchButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToggleTorchButton.swift; path = Sources/ToggleTorchButton.swift; sourceTree = "<group>"; };
-		07BAF42C74CD90A7ACA2172639418F42 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BAF42C74CD90A7ACA2172639418F42 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0965C6AF2A9DE1A6E7A6C63D1B3D3A3D /* Pods-BespokenTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BespokenTests.modulemap"; sourceTree = "<group>"; };
 		0988BA3FCBB80AB8DD9F6F5D65C4492A /* TOPasscodeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeViewController.m; path = TOPasscodeViewController/TOPasscodeViewController.m; sourceTree = "<group>"; };
 		09A73E6A59F317A098A70F0DF171446C /* TOPasscodeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeView.m; path = TOPasscodeViewController/Views/Main/TOPasscodeView.m; sourceTree = "<group>"; };
@@ -172,12 +172,12 @@
 		124E50B9BA8E870EBAD665B479AB49D0 /* QRCodeReaderViewControllerBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewControllerBuilder.swift; path = Sources/QRCodeReaderViewControllerBuilder.swift; sourceTree = "<group>"; };
 		13F2D336A8F2319DD8E4F989F38FBFFC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14053F6E42D34588F14371F0FAEF2DAE /* TOPasscodeCircleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeCircleView.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeCircleView.h; sourceTree = "<group>"; };
-		159A79AD3A4E331C837C84FFF5E28802 /* Pods_BespokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BespokenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		159A79AD3A4E331C837C84FFF5E28802 /* Pods_BespokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BespokenUITests.framework; path = "Pods-BespokenUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16980CE318B49687C3EB556E334DD6FB /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		1B38C919EBF4A3ECF9330E69FA8AD7C7 /* TOPasscodeButtonLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeButtonLabel.m; path = TOPasscodeViewController/Views/Shared/TOPasscodeButtonLabel.m; sourceTree = "<group>"; };
 		1E79870FDBA7F544634CBED891AB3D6C /* SwiftVideoBackground.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftVideoBackground.h; path = SwiftVideoBackground/Sources/SwiftVideoBackground.h; sourceTree = "<group>"; };
 		224B0860AE4D6D182EC45DFD266C63EA /* Pods-BespokenTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BespokenTests-resources.sh"; sourceTree = "<group>"; };
-		23D1E2C2B1155BDBCD0484B7F65B6BBC /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRCodeReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D1E2C2B1155BDBCD0484B7F65B6BBC /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QRCodeReader.framework; path = QRCodeReader.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		244258A3F71A4D32382447C46C0C51C6 /* ReaderOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReaderOverlayView.swift; path = Sources/ReaderOverlayView.swift; sourceTree = "<group>"; };
 		244F501E89700BDF2F07557137CEB4BF /* TOPasscodeSettingsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeSettingsViewController.m; path = TOPasscodeViewController/TOPasscodeSettingsViewController.m; sourceTree = "<group>"; };
 		24C76383E727464A0DD065ACEEAB5B95 /* TOPasscodeCircleButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeCircleButton.h; path = TOPasscodeViewController/Views/Main/TOPasscodeCircleButton.h; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 		3CB047BCF3935EF396B2AB80E9F48114 /* TOPasscodeSettingsKeypadView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeSettingsKeypadView.m; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsKeypadView.m; sourceTree = "<group>"; };
 		3CC11908706FA5F5FF7F8B5E25BD957E /* QRCodeReader.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-umbrella.h"; sourceTree = "<group>"; };
 		3E12065598625D838FBB4F4595A45465 /* TOPasscodeSettingsKeypadButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeSettingsKeypadButton.m; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsKeypadButton.m; sourceTree = "<group>"; };
-		428CB4D97776597CC45A153357521C88 /* Pods_Bespoken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bespoken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		428CB4D97776597CC45A153357521C88 /* Pods_Bespoken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Bespoken.framework; path = "Pods-Bespoken.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		443C3684A9E945DD2125586B23B8A312 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		4593DBDCB8295F0E13BC8DE292945922 /* TOPasscodeViewContentLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeViewContentLayout.h; path = TOPasscodeViewController/Models/TOPasscodeViewContentLayout.h; sourceTree = "<group>"; };
 		4A287E423BF846036FD5AA4CDFBCE5AC /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewController.swift; path = Sources/QRCodeReaderViewController.swift; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 		4E7B219180C71982A20C068512B7798E /* QRCodeReader.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QRCodeReader.swift.modulemap; sourceTree = "<group>"; };
 		4E9392CCDE30F6CC9FEC64D857D87814 /* UIImage+AlamofireImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+AlamofireImage.swift"; path = "Source/UIImage+AlamofireImage.swift"; sourceTree = "<group>"; };
 		4F26841662C7D1F92089CE530B605EBB /* UIImageView+AlamofireImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+AlamofireImage.swift"; path = "Source/UIImageView+AlamofireImage.swift"; sourceTree = "<group>"; };
-		53634C8DF817DC8169B100B2A035C54D /* Pods_BespokenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BespokenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53634C8DF817DC8169B100B2A035C54D /* Pods_BespokenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BespokenTests.framework; path = "Pods-BespokenTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		576A28154FF53425C5ECC5DC8DB63D0A /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Source/ImageCache.swift; sourceTree = "<group>"; };
 		57C22823E730F8A12C3BB50CF6369989 /* TOPasscodeSettingsKeypadView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeSettingsKeypadView.h; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsKeypadView.h; sourceTree = "<group>"; };
 		58462C23D6A4BFF71DF15185C98C6B09 /* QRCodeReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReader.swift; path = Sources/QRCodeReader.swift; sourceTree = "<group>"; };
@@ -215,8 +215,8 @@
 		5A2F2BCDAA10BF74AC59888E7100C526 /* Pods-BespokenUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BespokenUITests-dummy.m"; sourceTree = "<group>"; };
 		5B856F428FE2623B15280788248B5FC5 /* TOSettingsKeypadImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOSettingsKeypadImage.h; path = TOPasscodeViewController/Models/TOSettingsKeypadImage.h; sourceTree = "<group>"; };
 		5D200DD3D0D3757165B6F010FD64B582 /* SwiftVideoBackground-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftVideoBackground-dummy.m"; sourceTree = "<group>"; };
-		5EBA799D8C55D1FD8D5EF60680958E77 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EED0F2FE5D4011746968979D94CB4AF /* TOPasscodeViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TOPasscodeViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EBA799D8C55D1FD8D5EF60680958E77 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AlamofireImage.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EED0F2FE5D4011746968979D94CB4AF /* TOPasscodeViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TOPasscodeViewController.framework; path = TOPasscodeViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F2FEF6C732F7C64EFE0F6C7598437FC /* TOPasscodeViewContentLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeViewContentLayout.m; path = TOPasscodeViewController/Models/TOPasscodeViewContentLayout.m; sourceTree = "<group>"; };
 		6063289A598822626FEC6978DA7EEB05 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		65EF369007A8AE884870C288400975D7 /* TOPasscodeViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TOPasscodeViewController-dummy.m"; sourceTree = "<group>"; };
@@ -240,7 +240,7 @@
 		8F1C13478DB29E5DCFB59DB1406D5CC6 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		904A32CBA6610AC28DD6C5E140DA7748 /* TOPasscodeCircleButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeCircleButton.m; path = TOPasscodeViewController/Views/Main/TOPasscodeCircleButton.m; sourceTree = "<group>"; };
 		910D0B078F3740F478AB7CF92550DED6 /* Pods-BespokenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BespokenTests.release.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96BA4E31509FEFC7B4E9A5A566B20B3D /* TOPasscodeViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOPasscodeViewController-prefix.pch"; sourceTree = "<group>"; };
 		974AEA827103A2E4668161C2BE7EAB93 /* TOPasscodeViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TOPasscodeViewController.xcconfig; sourceTree = "<group>"; };
 		9C7CD3587CF3858FAA1A81CF78237B9F /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
@@ -254,7 +254,7 @@
 		A9C41B189568160FE4ABB41C71F97AE6 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		A9D1E0751351F52F9CEA4B0445D1890D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB1CCFA5E5EDFDF4457A4AB90152886A /* TOPasscodeKeypadView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeKeypadView.h; path = TOPasscodeViewController/Views/Main/TOPasscodeKeypadView.h; sourceTree = "<group>"; };
-		AB4895D57A0EC32CDA3C14D3C81915C4 /* SwiftVideoBackground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVideoBackground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB4895D57A0EC32CDA3C14D3C81915C4 /* SwiftVideoBackground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftVideoBackground.framework; path = SwiftVideoBackground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4ECAE5EB415D6114ED0E31444BB9C8 /* Pods-Bespoken-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Bespoken-resources.sh"; sourceTree = "<group>"; };
 		AB6BA1A0E86854706FB98C63B14795DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB8ACB9A53E4376CCC1B3E92D0A74E19 /* Pods-Bespoken-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Bespoken-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -513,6 +513,7 @@
 				4F26841662C7D1F92089CE530B605EBB /* UIImageView+AlamofireImage.swift */,
 				3FDF17B976F7B6499C9C5E1B5F593B03 /* Support Files */,
 			);
+			name = AlamofireImage;
 			path = AlamofireImage;
 			sourceTree = "<group>";
 		};
@@ -556,6 +557,7 @@
 				CA7F8C92F4886C969192C71F1CB9C733 /* VideoBackgroundError.swift */,
 				1A936A9300C5894A244CEC9E3E3B0EEF /* Support Files */,
 			);
+			name = SwiftVideoBackground;
 			path = SwiftVideoBackground;
 			sourceTree = "<group>";
 		};
@@ -599,6 +601,7 @@
 				BBFA4AC8142EF0AAD46659E8175C2285 /* TOSettingsKeypadImage.m */,
 				EB2B7FA34AEF7222D57EFBBC97C7E786 /* Support Files */,
 			);
+			name = TOPasscodeViewController;
 			path = TOPasscodeViewController;
 			sourceTree = "<group>";
 		};
@@ -617,6 +620,7 @@
 				0586E63656BA17A64E070181F59F0B03 /* ToggleTorchButton.swift */,
 				8D53DFE6ECA3B4F2DB2CC40EA5026FD5 /* Support Files */,
 			);
+			name = QRCodeReader.swift;
 			path = QRCodeReader.swift;
 			sourceTree = "<group>";
 		};
@@ -674,6 +678,7 @@
 				F01D24B050F846C723EA92FB3EAF3F98 /* Validation.swift */,
 				40DBACB729707123EB17A17122FB231C /* Support Files */,
 			);
+			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1281,7 +1286,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TOPasscodeViewController/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController.modulemap";
 				PRODUCT_NAME = TOPasscodeViewController;
@@ -1727,7 +1732,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TOPasscodeViewController/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController.modulemap";
 				PRODUCT_NAME = TOPasscodeViewController;

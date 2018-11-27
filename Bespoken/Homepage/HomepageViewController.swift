@@ -9,6 +9,7 @@
 import UIKit
 import SwiftVideoBackground
 
+
 class HomepageViewController: UIViewController,CAAnimationDelegate {
 
     @IBOutlet weak var GifImgView: UIImageView!
@@ -119,10 +120,25 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
         }
         else{
          
+            
+            
+//            let view1 = Example2View()
+//            let malert = Malert(customView: view1)
+//
+//            let action = MalertAction(title: "OK")
+//            action.tintColor = UIColor(red:0.15, green:0.64, blue:0.85, alpha:1.0)
+//
+//
+//            malert.addAction(action)
+//
+//            present(malert, animated: true)
+
+            
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
+
             self.navigationController?.pushViewController(nextVC!, animated: true)
-            
+
         }
     }
     

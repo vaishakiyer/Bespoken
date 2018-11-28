@@ -14,14 +14,16 @@ import Alamofire
  
  enum Router: URLRequestConvertible{
  
- static let baseURLString = "Http://Creating a network Layer"
+ static let baseURLString = "http://13.232.8.9/api/"
  
- case configureURL(urlString: String)
- case getBPMProcess()
+ case inviteUser(firstN: String,phone: String,email:String)
+ case confirmUser(email: String,invitecode: String,password:String)
+    case signIn(email: String,password: String)
+ case getQuestions()
  
  var method: Alamofire.HTTPMethod {
  switch self {
- case .configureURL:
+ case .inviteUser,.getQuestions,.signIn,.confirmUser:
  return .post
  default:
  return .get
@@ -31,10 +33,18 @@ import Alamofire
  var path: String{
  
  switch self {
- case .configureURL(let urlString):
- return "configuration?organisationUrl=\(urlString)"
+ case .inviteUser:
+ return "inviteUser"
+ 
+ case .confirmUser:
+    return "confirmUser"
+ case .getQuestions:
+    
+    return "getQuestions"
+    
  default:
- return "api/v1/bpmTasks"
+    return "getQuestions"
+    break
  }
  }
  
@@ -46,13 +56,19 @@ import Alamofire
  var urlRequest = URLRequest(url: URL(string: urlString)!)
  urlRequest.httpMethod = method.rawValue
  
- urlRequest.setValue("Incture Technologies", forHTTPHeaderField: "organization")
+// urlRequest.setValue("Incture Technologies", forHTTPHeaderField: "organization")
  
  switch self {
- case .configureURL(let email):
+ case .inviteUser(let fName,let phone,let email):
  
- let parameters = ["email": email]
+    let parameters = ["email": email,"firstName": fName,"phone": phone]
  return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
+    
+ case .confirmUser(let email, let invitecode, let password):
+    
+    let parameters = ["email": email,"invitecode": invitecode,"password": password]
+    return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
+    
  default:
  return try Alamofire.JSONEncoding.default.encode(urlRequest, with: nil)
  }
@@ -66,28 +82,28 @@ import Alamofire
  var name,address : String?
  }
  
- class ExecuteNetworkClass{
- 
- func getRequest(){
- 
- Alamofire.request(Router.configureURL(urlString: "user")).responseJSON { (response) in
- switch response.result{
- 
- case .success(let JSON):
- print(JSON)
- 
- let x = try? JSONDecoder().decode(DemoStruct.self, from: response.data!)
- print(x!)
- 
- case.failure(_):
- break
- }
- }
- 
- }
- 
- }
- 
+// class ExecuteNetworkClass{
+//
+// func getRequest(){
+//
+// Alamofire.request(Router.configureURL(urlString: "user")).responseJSON { (response) in
+// switch response.result{
+//
+// case .success(let JSON):
+// print(JSON)
+//
+// let x = try? JSONDecoder().decode(DemoStruct.self, from: response.data!)
+// print(x!)
+//
+// case.failure(_):
+// break
+// }
+// }
+//
+// }
+//
+// }
+
 
 
 

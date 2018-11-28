@@ -30,6 +30,11 @@
 		A529D5D121A30F54005A221A /* QuestionnaireController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529D5D021A30F53005A221A /* QuestionnaireController1.swift */; };
 		A529D5D421A31210005A221A /* CurationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529D5D221A31210005A221A /* CurationViewCell.swift */; };
 		A529D5D521A31210005A221A /* CurationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A529D5D321A31210005A221A /* CurationViewCell.xib */; };
+		A53D596C21AEED62009F993F /* sizeChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53D596A21AEED62009F993F /* sizeChartCell.swift */; };
+		A53D596D21AEED62009F993F /* sizeChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53D596B21AEED62009F993F /* sizeChartCell.xib */; };
+		A53D596F21AF09D8009F993F /* BSUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53D596E21AF09D8009F993F /* BSUserDefault.swift */; };
+		A53D597221AF144A009F993F /* Questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53D597121AF144A009F993F /* Questionnaire.swift */; };
+		A56CDF9D21ADB24000113997 /* MeasurementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56CDF9C21ADB24000113997 /* MeasurementViewController.swift */; };
 		A5779BDF21A5AFEB001CE009 /* BSLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5779BDE21A5AFEB001CE009 /* BSLoader.swift */; };
 		A594F5EC21A1446F001BD710 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A594F5EB21A1446F001BD710 /* AppDelegate.swift */; };
 		A594F5F121A1446F001BD710 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A594F5EF21A1446F001BD710 /* Main.storyboard */; };
@@ -45,6 +50,7 @@
 		A5B0C95821A4454E0058A064 /* videoplayback.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A5B0C95521A443FF0058A064 /* videoplayback.mp4 */; };
 		A5B0C95A21A4473F0058A064 /* Homecenter1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B0C95921A4473F0058A064 /* Homecenter1.xib */; };
 		A5B0C95C21A450760058A064 /* Homecenter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0C95B21A450760058A064 /* Homecenter1.swift */; };
+		A5BE55F021AEAB5800A8A285 /* ProductCheckoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BE55EF21AEAB5800A8A285 /* ProductCheckoutController.swift */; };
 		A5FA1A2D21A4617D00743D73 /* TinderSwipeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A2C21A4617D00743D73 /* TinderSwipeControllerViewController.swift */; };
 		A5FA1A3121A4747E00743D73 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A2F21A4747E00743D73 /* GradientView.swift */; };
 		A5FA1A3221A4747E00743D73 /* TinderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A3021A4747E00743D73 /* TinderCard.swift */; };
@@ -95,6 +101,11 @@
 		A529D5D021A30F53005A221A /* QuestionnaireController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireController1.swift; sourceTree = "<group>"; };
 		A529D5D221A31210005A221A /* CurationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurationViewCell.swift; sourceTree = "<group>"; };
 		A529D5D321A31210005A221A /* CurationViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurationViewCell.xib; sourceTree = "<group>"; };
+		A53D596A21AEED62009F993F /* sizeChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sizeChartCell.swift; sourceTree = "<group>"; };
+		A53D596B21AEED62009F993F /* sizeChartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sizeChartCell.xib; sourceTree = "<group>"; };
+		A53D596E21AF09D8009F993F /* BSUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSUserDefault.swift; sourceTree = "<group>"; };
+		A53D597121AF144A009F993F /* Questionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questionnaire.swift; sourceTree = "<group>"; };
+		A56CDF9C21ADB24000113997 /* MeasurementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementViewController.swift; sourceTree = "<group>"; };
 		A5779BDE21A5AFEB001CE009 /* BSLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSLoader.swift; sourceTree = "<group>"; };
 		A594F5E821A1446F001BD710 /* Bespoken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bespoken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A594F5EB21A1446F001BD710 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +127,7 @@
 		A5B0C95621A4446B0058A064 /* DummyContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyContent.swift; sourceTree = "<group>"; };
 		A5B0C95921A4473F0058A064 /* Homecenter1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Homecenter1.xib; sourceTree = "<group>"; };
 		A5B0C95B21A450760058A064 /* Homecenter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homecenter1.swift; sourceTree = "<group>"; };
+		A5BE55EF21AEAB5800A8A285 /* ProductCheckoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCheckoutController.swift; sourceTree = "<group>"; };
 		A5FA1A2C21A4617D00743D73 /* TinderSwipeControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderSwipeControllerViewController.swift; sourceTree = "<group>"; };
 		A5FA1A2F21A4747E00743D73 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A5FA1A3021A4747E00743D73 /* TinderCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderCard.swift; sourceTree = "<group>"; };
@@ -188,6 +200,7 @@
 				A5A38A7F21A18ED500ED1088 /* Swift+Gif.swift */,
 				A511931821A1BFB900453C89 /* CustomTextField.swift */,
 				A5779BDE21A5AFEB001CE009 /* BSLoader.swift */,
+				A53D596E21AF09D8009F993F /* BSUserDefault.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -226,9 +239,21 @@
 			path = CuratingForUser;
 			sourceTree = "<group>";
 		};
+		A53D597021AF1437009F993F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A53D597121AF144A009F993F /* Questionnaire.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A54DDA5C21AC05580065BA95 /* CheckoutProcess */ = {
 			isa = PBXGroup;
 			children = (
+				A56CDF9C21ADB24000113997 /* MeasurementViewController.swift */,
+				A5BE55EF21AEAB5800A8A285 /* ProductCheckoutController.swift */,
+				A53D596A21AEED62009F993F /* sizeChartCell.swift */,
+				A53D596B21AEED62009F993F /* sizeChartCell.xib */,
 			);
 			path = CheckoutProcess;
 			sourceTree = "<group>";
@@ -258,6 +283,7 @@
 		A594F5EA21A1446F001BD710 /* Bespoken */ = {
 			isa = PBXGroup;
 			children = (
+				A53D597021AF1437009F993F /* Models */,
 				A54DDA5C21AC05580065BA95 /* CheckoutProcess */,
 				A5231BA221A82BD200463AE4 /* TrunckShow */,
 				A5FA1A2E21A4618800743D73 /* TinderView */,
@@ -457,6 +483,7 @@
 				A529D5CE21A2FE9B005A221A /* HomePageOptionCell.xib in Resources */,
 				A529D5D521A31210005A221A /* CurationViewCell.xib in Resources */,
 				A5A38A8321A1922800ED1088 /* welcomeGif.gif in Resources */,
+				A53D596D21AEED62009F993F /* sizeChartCell.xib in Resources */,
 				A594F5F121A1446F001BD710 /* Main.storyboard in Resources */,
 				A5082D8121A15A49005EBA41 /* OptionsViewCell.xib in Resources */,
 			);
@@ -646,12 +673,15 @@
 				A5779BDF21A5AFEB001CE009 /* BSLoader.swift in Sources */,
 				A511931921A1BFB900453C89 /* CustomTextField.swift in Sources */,
 				A5231BA921A84FBE00463AE4 /* TrunckViewCell.swift in Sources */,
+				A53D597221AF144A009F993F /* Questionnaire.swift in Sources */,
 				A5FA1A3221A4747E00743D73 /* TinderCard.swift in Sources */,
 				A5082D8621A1838A005EBA41 /* Router.swift in Sources */,
 				A529D5D121A30F54005A221A /* QuestionnaireController1.swift in Sources */,
 				A5B0C95721A4446B0058A064 /* DummyContent.swift in Sources */,
 				A594F5F421A1446F001BD710 /* Bespoken.xcdatamodeld in Sources */,
 				A529D5CD21A2FE9B005A221A /* HomePageOptionCell.swift in Sources */,
+				A5BE55F021AEAB5800A8A285 /* ProductCheckoutController.swift in Sources */,
+				A56CDF9D21ADB24000113997 /* MeasurementViewController.swift in Sources */,
 				A5082D8021A15A49005EBA41 /* OptionsViewCell.swift in Sources */,
 				A5B0C95C21A450760058A064 /* Homecenter1.swift in Sources */,
 				A5A38A8021A18ED500ED1088 /* Swift+Gif.swift in Sources */,
@@ -661,6 +691,8 @@
 				A5FA1A2D21A4617D00743D73 /* TinderSwipeControllerViewController.swift in Sources */,
 				A5231BA421A8432300463AE4 /* TrunckViewController.swift in Sources */,
 				A5231BAD21A8645C00463AE4 /* PreviewImageCollectionViewCell.swift in Sources */,
+				A53D596C21AEED62009F993F /* sizeChartCell.swift in Sources */,
+				A53D596F21AF09D8009F993F /* BSUserDefault.swift in Sources */,
 				A529D5C821A2E9B5005A221A /* HomepageViewController.swift in Sources */,
 				A594F5EC21A1446F001BD710 /* AppDelegate.swift in Sources */,
 				A5082D7821A15737005EBA41 /* PersonalisationHeader.swift in Sources */,
@@ -843,7 +875,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KXX5V299J5;
 				INFOPLIST_FILE = Bespoken/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.Bespoken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -859,7 +894,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KXX5V299J5;
 				INFOPLIST_FILE = Bespoken/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.Bespoken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -875,7 +913,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -892,7 +934,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -908,7 +954,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -924,7 +974,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

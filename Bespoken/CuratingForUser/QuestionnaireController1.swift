@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+var myQuestions = Questionnaire()
+
 class QuestionnaireController1: UIViewController {
     
     //MARK: IBOutlets
@@ -93,6 +96,7 @@ class QuestionnaireController1: UIViewController {
     
     @objc func backPressed(){
         
+    
          nextCountPress -= 1
         
         if nextCountPress != 0{
@@ -107,24 +111,27 @@ class QuestionnaireController1: UIViewController {
             titleArray = ["SENSUOS","ELEGANT","SOPHISTICATED","CREATIVE & UNIQUE","COMFORTABLE","BOLD"]
             title1.text = "THE STYLE"
             title2.text = "I LIKE MOST"
+             optionCollection.reloadData()
             
         }else if nextCountPress == 1{
             
             titleArray = ["WEDDING PARTY","BRIDAL TROUSSEAU","COCKTAIL","SEASONAL","RESORT","DAY"]
             title1.text = "MY OCCASION DRESSING"
             title2.text = "OPTION ARE"
+             optionCollection.reloadData()
             
         }else if nextCountPress == 2{
             
             titleArray = ["ANGULAR & SLIM","LEAN STRUCTURE","IDEAL HOURGLASS","FULL & CURVY","TALL & PROPRTIONATE","STRONG BONE STRUCTURE"]
             title1.text = "MY BODY"
             title2.text = "TYPE IS"
+             optionCollection.reloadData()
             
         }else{
             self.navigationController?.popViewController(animated: true)
         }
         
-        optionCollection.reloadData()
+       
         
         
         
@@ -133,7 +140,17 @@ class QuestionnaireController1: UIViewController {
     
     @objc func nextPressed(){
         
-        nextCountPress += 1
+        
+        if nextCountPress < myQuestions.count - 1{
+            nextCountPress += 1
+        }else{
+            
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
+            nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Brand")
+            self.navigationController?.pushViewController(nextVC!, animated: true)
+        }
+        
         
         if nextCountPress != 0{
             createNavBar(leftButton: "PREVIOUS")
@@ -142,22 +159,15 @@ class QuestionnaireController1: UIViewController {
             createNavBar(leftButton: "HOMEPAGE")
         }
         
+        
         if nextCountPress == 1{
-            titleArray = ["WEDDING PARTY","BRIDAL TROUSSEAU","COCKTAIL","SEASONAL","RESORT","DAY"]
+           
             title1.text = "MY OCCASION DRESSING"
             title2.text = "OPTION ARE"
         }else if nextCountPress == 2{
-            titleArray = ["ANGULAR & SLIM","LEAN STRUCTURE","IDEAL HOURGLASS","FULL & CURVY","TALL & PROPRTIONATE","STRONG BONE STRUCTURE"]
+            
             title1.text = "MY BODY"
             title2.text = "TYPE IS"
-        }else{
-            
-            nextCountPress -= 1
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
-            nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Brand")
-            self.navigationController?.pushViewController(nextVC!, animated: true)
-            
         }
         
         
@@ -179,13 +189,13 @@ class QuestionnaireController1: UIViewController {
 
 extension QuestionnaireController1: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return titleArray.count
+        return myQuestions[nextCountPress].options?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = optionCollection.dequeueReusableCell(withReuseIdentifier: "CurationViewCell", for: indexPath) as? CurationViewCell
-        cell?.titleText.text = titleArray[indexPath.item]
+        cell?.titleText.text = myQuestions[nextCountPress].options?[indexPath.row].text
         return cell!
         
     }

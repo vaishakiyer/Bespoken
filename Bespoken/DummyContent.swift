@@ -54,4 +54,31 @@ func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
     }
     
 }
+ 
+ 
+ override func viewDidLoad() {
+ super.viewDidLoad()
+ 
+ 
+ measurementSlider.minimumValue = 0
+ measurementSlider.maximumValue = 64
+ measurementSlider.setThumbImage(UIImage(named: "Symbol 2 – 1"), for: .normal)
+ 
+ measurementSlider.addTarget(self, action: #selector(updateLinearProgressView), for: .valueChanged)
+ 
+ 
+ // Do any additional setup after loading the view.
+ }
+ 
+ 
+ @objc func updateLinearProgressView(sender: UISlider) {
+ 
+ let step = 5
+ let roundedValue = round(sender.value / step) * step
+ sender.value = roundedValue
+ valueLabel.text = sender.value.description
+ }
+ 
+ 
+ 
 */

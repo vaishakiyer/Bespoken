@@ -10,6 +10,22 @@ let VerifyPasscode = "1234"
 
 import UIKit
 import TOPasscodeViewController
+import Alamofire
+
+
+class UserCredentials {
+    
+    var firstName: String?
+    var email: String?
+    var phoneNumber: String?
+    var inviteCode: String?
+    var password: String?
+    
+    
+    deinit {
+        print("class Deinitialised")
+    }
+}
 
 class LoginViewController: UIViewController,CAAnimationDelegate {
 
@@ -34,6 +50,8 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
     var isFlipped : Bool = false
     let nextVC = TOPasscodeSettingsViewController()
     let firstTimeVC = TOPasscodeViewController()
+    
+     var loginInfo = UserCredentials()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,8 +89,13 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         emailPassField.delegate = self
         passwordField.delegate = self
         
-        signInSignUpField.addTarget(self, action: #selector(signInOrSignUpPressed), for: .touchUpInside)
         
+        usernameField.tag = 0
+        emailPassField.tag = 1
+        passwordField.tag = 2
+        
+        signInSignUpField.addTarget(self, action: #selector(signInOrSignUpPressed), for: .touchUpInside)
+        getQuestions()
         GifAnimation()
        
     }
@@ -146,9 +169,9 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         Helper.addLineToView(view: passwordField, position: .LINE_POSITION_BOTTOM, color: .white, width: 0.5)
         
         
-        usernameField.addImageAndPlaceHolder(img: "Group377", placeHolder: "USERNAME")
+        usernameField.addImageAndPlaceHolder(img: "Group377", placeHolder: "HOW MAY I CALL YOU")
         emailPassField.addImageAndPlaceHolder(img: "Group381", placeHolder: "EMAIL ID")
-        passwordField.addImageAndPlaceHolder(img: "Group382", placeHolder: "PASSWORD")
+        passwordField.addImageAndPlaceHolder(img: "Group382", placeHolder: "PHONENUMBER")
     }
     
     func customiseSignButton(){
@@ -198,10 +221,112 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
     
     
     @objc func signInOrSignUpPressed(){
+        
+        self.view.endEditing(true)
+        
+        switch isFlipped {
+        case false:
+            
+         //   loginIsPressedSignUp()
+            let nc = UINavigationController.init(rootViewController: self.firstTimeVC)
+            self.present(nc, animated: true, completion: nil)
+            
+            break
+        case true:
+            break
+        }
+        
+        
+        
     
-        let nc = UINavigationController.init(rootViewController: firstTimeVC)
-        self.present(nc, animated: true, completion: nil)
+    }
     
+    
+    //MARK:- Network Operation
+    
+    func getQuestions(){
+        
+        Alamofire.request(Router.getQuestions()).responseJSON { (response) in
+            
+            switch response.result{
+            case .success( _):
+                
+                let question = try? JSONDecoder().decode(Questionnaire.self, from: response.data!)
+                myQuestions = question!
+        
+            break
+            
+            case .failure(let error):
+                print(error)
+                
+            }
+            
+            
+        }
+        
+        
+        
+    }
+    
+    
+    
+    func loginIsPressedSignUp(){
+      
+
+        Alamofire.request(Router.inviteUser(firstN:  (loginInfo.firstName!), phone: (loginInfo.phoneNumber!), email: (loginInfo.email!))).responseJSON { (response) in
+            
+            switch response.result{
+                
+            case .success(let JSON):
+                
+                print(JSON)
+                
+                guard let requiredInfo = (JSON as AnyObject).value(forKey: "requesterInformation") as? NSDictionary else {return}
+                
+                guard let receivedParam = requiredInfo.value(forKey: "receivedParams") as? NSDictionary else {return}
+                
+                if let inviteC = receivedParam.value(forKey: "invitecode") as? Int{
+                    self.loginInfo.inviteCode = inviteC.description
+                    
+                    let nc = UINavigationController.init(rootViewController: self.firstTimeVC)
+                    self.present(nc, animated: true, completion: nil)
+                }
+                
+                
+                
+            case .failure(let error):
+                
+                print(error)
+                
+                
+            }
+            
+            
+        }
+        
+    }
+    
+    
+    func confirmUser(){
+        
+        Alamofire.request(Router.confirmUser(email: loginInfo.email!, invitecode: loginInfo.inviteCode!, password: loginInfo.password!)).responseJSON { (response) in
+            switch response.result{
+                
+            case .success(let JSON):
+                
+                print(JSON)
+                
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
+                self.nextVC.navigationController?.pushViewController(nextVC1!, animated: true)
+                
+            case .failure(let error):
+                
+                print(error)
+                
+            }
+        }
+        
     }
     
 
@@ -219,7 +344,39 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
 
 extension LoginViewController: UITextFieldDelegate{
     
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        textField.text = ""
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField){
+        
+      
+        switch isFlipped {
+        case false:
+            switch textField.tag{
+            case 0:
+                loginInfo.firstName = textField.text
+                break
+            case 1:
+                loginInfo.email = textField.text
+                break
+            default:
+                loginInfo.phoneNumber = textField.text
+                break
+            }
+            
+        default:
+            break
+        }
+        
+    }
+    
+    
 }
+
+
 
 extension LoginViewController: TOPasscodeSettingsViewControllerDelegate,TOPasscodeViewControllerDelegate{
     
@@ -227,9 +384,14 @@ extension LoginViewController: TOPasscodeSettingsViewControllerDelegate,TOPassco
     func passcodeSettingsViewController(_ passcodeSettingsViewController: TOPasscodeSettingsViewController, didChangeToNewPasscode passcode: String, of type: TOPasscodeType) {
         
         print(passcode)
+        loginInfo.password = passcode
+        
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
-        passcodeSettingsViewController.navigationController?.pushViewController(nextVC1!, animated: true)
+        self.nextVC.navigationController?.pushViewController(nextVC1!, animated: true)
+        
+      //  confirmUser()
+        
 
     }
     

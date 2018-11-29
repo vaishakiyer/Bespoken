@@ -3,154 +3,168 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01C83EF581818A9713F50FAD05CCEAF4 /* SwiftVideoBackground.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E79870FDBA7F544634CBED891AB3D6C /* SwiftVideoBackground.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03B2467B7B836CEF288141D4FE91DDB3 /* TOPasscodeSettingsKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB047BCF3935EF396B2AB80E9F48114 /* TOPasscodeSettingsKeypadView.m */; };
-		045203B0D7ABEB8A5DB7618B7119780F /* QRCodeReaderViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E50B9BA8E870EBAD665B479AB49D0 /* QRCodeReaderViewControllerBuilder.swift */; };
-		04823ABC80989B024D213B5C71C89C1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
-		05006BDD7301FCF2678618DEDCC69B94 /* UIImage+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9392CCDE30F6CC9FEC64D857D87814 /* UIImage+AlamofireImage.swift */; };
-		05B31E0F2ADE8121B9AB1B199BF6607C /* TOPasscodeSettingsWarningLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1074082396137CD64F064FF3411B90EF /* TOPasscodeSettingsWarningLabel.m */; };
-		07BD999BCF3064A9104E454C78B37349 /* TOPasscodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C4C41E938D0A85BC4032798FC83C75A /* TOPasscodeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09A2C5147F85BA7D98DB2BDDCD79C14B /* TOPasscodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A73E6A59F317A098A70F0DF171446C /* TOPasscodeView.m */; };
-		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C41B189568160FE4ABB41C71F97AE6 /* Timeline.swift */; };
-		1130E41B69119BB816D08C52E4341E5C /* QRCodeReaderViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6003D6F3E46FA6CC786171D4E12F5E /* QRCodeReaderViewContainer.swift */; };
-		19669F4B631BEF995CD0F7B51471E29A /* TOPasscodeFixedInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FC5B6F73BBB8605DD1D0C5B82AB087 /* TOPasscodeFixedInputView.m */; };
-		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7175CAF22D687A35CC5FE97A493774 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		202822E4668C16D115A8F68F3ADF0E0F /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB27AC90007B0E7C3B8078F5D21E9BA /* ImageDownloader.swift */; };
-		216F646474D972DA6D0F0B45256497CF /* TOPasscodeButtonLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B38C919EBF4A3ECF9330E69FA8AD7C7 /* TOPasscodeButtonLabel.m */; };
-		26479B07464784F3BF8C0853CA049976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
-		27996F52CCABBD6D0874B79D1B913598 /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D48333FE8A5F6611DEC81842706DE6E /* ImageFilter.swift */; };
-		2A13605E4CCD0BAAC5AF58A039B536C4 /* TOPasscodeFixedInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0429917D0F17FC0B1E4CAAC788ABA9C8 /* TOPasscodeFixedInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B97B5D58AC964581D4E78811A19399D /* TOSettingsKeypadImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B856F428FE2623B15280788248B5FC5 /* TOSettingsKeypadImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B9E4E90933F6CB7229013B1D8B8F2E1 /* VideoBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735AB3A2F0224694555C1153EA159730 /* VideoBackground.swift */; };
-		2BD7CFD41DACC439E8C0A527F1643495 /* Request+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691DD5E1797BEDDAE0173F3ABE7BC35F /* Request+AlamofireImage.swift */; };
-		2EA0415A1A8A4FFC7403E201F915F9A4 /* AFIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E728E033730892ECF6DC96D12129FE5 /* AFIError.swift */; };
-		2FAAD2A3BF7D33ECF90167480D49D8DC /* Pods-BespokenTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5839F7789E24B3B1B785F392556907D /* Pods-BespokenTests-dummy.m */; };
-		304C5736AC5D49B526C709397D0CF048 /* UIImageView+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F26841662C7D1F92089CE530B605EBB /* UIImageView+AlamofireImage.swift */; };
-		32EDA9ED83F4442303A46839027E152E /* AlamofireImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE450084C321A723663A32B0D6B6AEDE /* AlamofireImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		338561B857E4A9F1F68B953B9578AD77 /* TOPasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0988BA3FCBB80AB8DD9F6F5D65C4492A /* TOPasscodeViewController.m */; };
-		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7CD3587CF3858FAA1A81CF78237B9F /* TaskDelegate.swift */; };
-		37F951F2BDB75BD682C2999EB7B51A35 /* AlamofireImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33811E71D884790CFF5274D5FCDF99AC /* AlamofireImage-dummy.m */; };
-		38BE787626CB5A33B1E4C244E50818E1 /* TOPasscodeInputField.h in Headers */ = {isa = PBXBuildFile; fileRef = 30AD719C05942D696CBCBBE599EC0729 /* TOPasscodeInputField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C171556BC498D781CD40FA5282D8A1D /* TOPasscodeSettingsKeypadView.h in Headers */ = {isa = PBXBuildFile; fileRef = 57C22823E730F8A12C3BB50CF6369989 /* TOPasscodeSettingsKeypadView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40E96B9867CC06617AEF5CDFF26CC926 /* VideoBackgroundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7F8C92F4886C969192C71F1CB9C733 /* VideoBackgroundError.swift */; };
-		42D3F5C3E599FE088BD1108D584E8729 /* ToggleTorchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0586E63656BA17A64E070181F59F0B03 /* ToggleTorchButton.swift */; };
-		4E369653C2D1A5B9F2D5DCDE3E32CA78 /* TOPasscodeViewContentLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 4593DBDCB8295F0E13BC8DE292945922 /* TOPasscodeViewContentLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C4178B149C1A0012AC66AFA27C20C6 /* Request.swift */; };
-		5AF5D5AF2990C1BF130D2224C3646E6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
-		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D30070A3F92384925C5045FF5731C /* DispatchQueue+Alamofire.swift */; };
-		613167D898FF421A6F75D1FE5D145B9B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F02A739100B7422F36AE23783BE8C24 /* Alamofire.framework */; };
-		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6063289A598822626FEC6978DA7EEB05 /* ServerTrustPolicy.swift */; };
-		6D6A2F078E1190210D4645FF00C948D8 /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF2D06DB872DC1D5011949DA2E95D9 /* SwitchCameraButton.swift */; };
-		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
-		75C94D9B74E900D25073D1F2EC444A6C /* TOPasscodeViewControllerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 34576417E65592E59919BA40DF1534CF /* TOPasscodeViewControllerConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		79CE1A0E3AB9A1F1DFCCB73D55123620 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
-		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8A5387D419E8E4C0D3E38EC71A951 /* SessionDelegate.swift */; };
-		7C6AEBB3D02B410CB7009C04B8F53E67 /* Pods-Bespoken-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C0EF2DEB3B8CE5DBD9EFD6E04C655E /* Pods-Bespoken-dummy.m */; };
-		7D0FDE21AADA4F22DA20E8377A5FDF64 /* TOPasscodeCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D5127B6725D2FBF9C318478DA4E27E /* TOPasscodeCircleView.m */; };
-		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103F70834994EA4F0FB8995C43DFD4BB /* Result.swift */; };
-		7F982E54F8CA45A17609D2849B01822F /* Pods-Bespoken-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28C73A67166D456516BF5BB09704BC86 /* Pods-Bespoken-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7FBD21F05196957AF802607FDBDE1B8C /* TOPasscodeInputField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4061FFE59DD03437DD1947E98A4383 /* TOPasscodeInputField.m */; };
-		8154FE7067E2F72BB4239C997977950D /* TOPasscodeSettingsWarningLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D332392F109DD9229D731B25C7CAF3B /* TOPasscodeSettingsWarningLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		824930FACC203B9CDD7173674B4F04B9 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58462C23D6A4BFF71DF15185C98C6B09 /* QRCodeReader.swift */; };
-		8AE2C9718FAF0609D0CA463762420849 /* TOPasscodeSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 244F501E89700BDF2F07557137CEB4BF /* TOPasscodeSettingsViewController.m */; };
-		8CE3D5BCD99C44FEAEC232CFA1B2EA03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
-		9003E19984A263E001BB3E7618B5D711 /* Pods-BespokenTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 11555119D0AFDCD489E20BC59C450545 /* Pods-BespokenTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93734C28551FFBB907573C00B1D290C1 /* TOPasscodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A4FB732A70DAEA57E677EF598522D2D /* TOPasscodeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		952F0E9C2B92F3ADB40E65B288183E67 /* TOPasscodeSettingsKeypadButton.h in Headers */ = {isa = PBXBuildFile; fileRef = BFD390453AA83FD3B7A91A4AB9E47427 /* TOPasscodeSettingsKeypadButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9CEE49FCB2C069B6953D54BF92598C98 /* Pods-BespokenUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E46C9DDAAEC76075C679FC99DC6884BF /* Pods-BespokenUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3504D593F8028046198FDBDD2097DAAB /* AFError.swift */; };
-		A12596CBBA466C58BE073060C35DC0D9 /* SwiftVideoBackground-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEB1A73605A6E6A97F3E4B6665D690D /* SwiftVideoBackground-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C3684A9E945DD2125586B23B8A312 /* NetworkReachabilityManager.swift */; };
-		A33C085F0A01D87EA9B774248931808B /* TOPasscodeCircleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 14053F6E42D34588F14371F0FAEF2DAE /* TOPasscodeCircleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3A88EA583B79467FE24168E45E509EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
-		A4663798F8F3C65F4D36A270B461909B /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244258A3F71A4D32382447C46C0C51C6 /* ReaderOverlayView.swift */; };
-		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 731E71D75D8498CFC54E4E05C6255F17 /* Alamofire-dummy.m */; };
-		AB5AA03885FF150423FCD8D6FC3AA1E1 /* TOPasscodeVariableInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = E994319C29A11902600D9703D88F9C9D /* TOPasscodeVariableInputView.m */; };
-		AC6B938D9B67AB223F5A3FD0F26562DA /* TOPasscodeViewControllerAnimatedTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D7F547281EF2C2E5EC0F7AC342520FF /* TOPasscodeViewControllerAnimatedTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD23898839F26A4B13CE510DA8E44131 /* TOPasscodeButtonLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = FE7A905C3DD459AE0EA583F8BA6C7CFB /* TOPasscodeButtonLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16980CE318B49687C3EB556E334DD6FB /* SessionManager.swift */; };
-		B09AE1DD7B3E210C9907F7244A731B19 /* QRCodeReaderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9B284FE1528440E3527B91D0BCF796 /* QRCodeReaderResult.swift */; };
-		B4B800A7D3F8E700D8ABECEB154CAC60 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32E1649E56B6CABEDEB89639AC33394 /* AVFoundation.framework */; };
-		B651B08DC5C9302D57FFCDD24AC74584 /* TOSettingsKeypadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFA4AC8142EF0AAD46659E8175C2285 /* TOSettingsKeypadImage.m */; };
-		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A5032C1E914C09DF3B30BD9ADE7F1 /* MultipartFormData.swift */; };
-		BB4E0943A33F1DBAFBD755EE3B1484A9 /* TOPasscodeCircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76D55E344D16E28E6544BF560F4841 /* TOPasscodeCircleImage.m */; };
-		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01D24B050F846C723EA92FB3EAF3F98 /* Validation.swift */; };
-		BDD187864FE1D51AF33C82851EC076A2 /* TOPasscodeViewContentLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FEF6C732F7C64EFE0F6C7598437FC /* TOPasscodeViewContentLayout.m */; };
-		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2FA76815975D3FAA6335D3179F8529 /* ParameterEncoding.swift */; };
-		BF2748D1E3C7FD8316FD4C40F3F60583 /* Pods-BespokenUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F2BCDAA10BF74AC59888E7100C526 /* Pods-BespokenUITests-dummy.m */; };
-		C15CDEA3873088D238E43A5ACEA2A1D1 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A287E423BF846036FD5AA4CDFBCE5AC /* QRCodeReaderViewController.swift */; };
-		C73BF39A4CCC3E450E102C23027F8FF8 /* UIButton+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB7FC9776282A99A127D027585103B /* UIButton+AlamofireImage.swift */; };
-		C9FDB5D2802E7FF6614AEC64EDE9DEEE /* QRCodeReaderViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CCF166941EE3EEB7A41A1AA3AC82FC /* QRCodeReaderViewControllerDelegate.swift */; };
-		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F69528E00B84863E9BBEF73734CD4E /* Response.swift */; };
-		CFB48518F8852990EC3711A682DC6E99 /* QRCodeReader.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CC11908706FA5F5FF7F8B5E25BD957E /* QRCodeReader.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D2B5CF6A5B446802A7F59C2BF5C39F5A /* QRCodeReader.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3AE0E808646A30B36C064F6932AA051 /* QRCodeReader.swift-dummy.m */; };
-		D3A7D5C45A4C499402B5238132133023 /* TOPasscodeViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EF369007A8AE884870C288400975D7 /* TOPasscodeViewController-dummy.m */; };
-		D45F969746F644D73F921D5A277AEEC1 /* TOPasscodeKeypadView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB1CCFA5E5EDFDF4457A4AB90152886A /* TOPasscodeKeypadView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D65B33F7F80F2CAB4DE2F719AB9654A6 /* TOPasscodeVariableInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E3E07CB011AEB0BB3B17D66CB5B824 /* TOPasscodeVariableInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D69DAD74CBAC0BCEFF21315E3572D0B4 /* TOPasscodeViewControllerAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E807DF71DB3443FF33F861DC5D69A45 /* TOPasscodeViewControllerAnimatedTransitioning.m */; };
-		D83923D0C0EECEA4BF2BBB1EFA6119A0 /* QRCodeReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2844B089658D660617A7E13A4A2107E /* QRCodeReaderView.swift */; };
-		D91C4587BD3B7DD74E4B5C2E547C4F70 /* TOPasscodeCircleButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C76383E727464A0DD065ACEEAB5B95 /* TOPasscodeCircleButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9E544B8CB42DA8DD44838F83610D8E0 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A28154FF53425C5ECC5DC8DB63D0A /* ImageCache.swift */; };
-		DF982C02444B6777F7883F80CBE7EFC8 /* TOPasscodeKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = F90349F3A5C698D22C6C329AB3DD76BB /* TOPasscodeKeypadView.m */; };
-		E1FF4985892E23B75A3381EFF830DFD5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE59D05FFB465D11D63ED73DC23EA79A /* Image.swift */; };
-		E2421C1660B75726EEA8009AA9E58730 /* TOPasscodeCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 904A32CBA6610AC28DD6C5E140DA7748 /* TOPasscodeCircleButton.m */; };
-		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA09FDF676A5C162D38FFB9FABAF06 /* Notifications.swift */; };
-		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA58D80B6A9D2F372187F832C3D193C /* ResponseSerialization.swift */; };
-		F8237F1F43E8104772C50B04C03FD3B7 /* TOPasscodeSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B2D6652161F562FB435B5842C9E7E83 /* TOPasscodeSettingsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E58B19D9C5623738B838B91102D90C /* Alamofire.swift */; };
-		FA68BF3354D3C3DC4F15E6E06BE678F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
-		FC076DCC4CBEB59DB856D9368C9502A8 /* SwiftVideoBackground-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D200DD3D0D3757165B6F010FD64B582 /* SwiftVideoBackground-dummy.m */; };
-		FCE3CF2D28B36FD63959B2343C85EEFF /* TOPasscodeSettingsKeypadButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E12065598625D838FBB4F4595A45465 /* TOPasscodeSettingsKeypadButton.m */; };
-		FE6CC867D7D4B969A29121DD04ADBAA9 /* TOPasscodeCircleImage.h in Headers */ = {isa = PBXBuildFile; fileRef = EDC130B3B29908F702D9D9449DFE507D /* TOPasscodeCircleImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FEEEE2D6D23855F98613B7B1934738BC /* TOPasscodeViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8B43843B19FD510DA68B18ABE32941 /* TOPasscodeViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0280D12AFF90C3686563AB0E7694F376 /* TOPasscodeSettingsKeypadView.h in Headers */ = {isa = PBXBuildFile; fileRef = 57C22823E730F8A12C3BB50CF6369989 /* TOPasscodeSettingsKeypadView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		074D75C8406E4233E276D1CBEC5FAE4D /* TOPasscodeSettingsKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB047BCF3935EF396B2AB80E9F48114 /* TOPasscodeSettingsKeypadView.m */; };
+		0B4F5A8E96F57FAE7E144698AA66DBC6 /* ToggleTorchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0586E63656BA17A64E070181F59F0B03 /* ToggleTorchButton.swift */; };
+		0B7FA99F7033AD8E444EADF897685678 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73679909ACF535B3CDD8201FDCCC4E51 /* Foundation.framework */; };
+		0BFB6F172162229449F8A1ADBEB0D85C /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB27AC90007B0E7C3B8078F5D21E9BA /* ImageDownloader.swift */; };
+		134ECECBD71F558342162EAA5F533D38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73679909ACF535B3CDD8201FDCCC4E51 /* Foundation.framework */; };
+		151A96CB2AF6E17DA8C06F35F581EEA6 /* TOPasscodeButtonLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B38C919EBF4A3ECF9330E69FA8AD7C7 /* TOPasscodeButtonLabel.m */; };
+		1568E8307DC42AA83365D9D227D2E238 /* Pods-BespokenUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E46C9DDAAEC76075C679FC99DC6884BF /* Pods-BespokenUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16DCD827731D131BF16D4FFD9E1414E6 /* QRCodeReaderViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6003D6F3E46FA6CC786171D4E12F5E /* QRCodeReaderViewContainer.swift */; };
+		19388A46FEB6B251708B344DBBF88247 /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244258A3F71A4D32382447C46C0C51C6 /* ReaderOverlayView.swift */; };
+		1A1DC4FC4B6FD47521586BB2CD6E7F74 /* TOPasscodeViewControllerAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E807DF71DB3443FF33F861DC5D69A45 /* TOPasscodeViewControllerAnimatedTransitioning.m */; };
+		1A39B846161DB39EF49DE43A80A4C618 /* TOPasscodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C4C41E938D0A85BC4032798FC83C75A /* TOPasscodeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B7D43DF1CF468D8CF0D9A632E9D0FED /* TOPasscodeCircleImage.h in Headers */ = {isa = PBXBuildFile; fileRef = EDC130B3B29908F702D9D9449DFE507D /* TOPasscodeCircleImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FC3FD39157C2FFFF3869A1300730086 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8A5387D419E8E4C0D3E38EC71A951 /* SessionDelegate.swift */; };
+		20F72CA5C3444FE464F3E505E7B358AF /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D48333FE8A5F6611DEC81842706DE6E /* ImageFilter.swift */; };
+		2788AE6F86C40AC7D40D4CFAA56D1A7F /* TOSettingsKeypadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFA4AC8142EF0AAD46659E8175C2285 /* TOSettingsKeypadImage.m */; };
+		2D96FABF789F172453B9DE047B4AFA06 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A287E423BF846036FD5AA4CDFBCE5AC /* QRCodeReaderViewController.swift */; };
+		2DFE86F3FE2FFEEEA68B8A4BDED2D93C /* TOPasscodeViewControllerAnimatedTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D7F547281EF2C2E5EC0F7AC342520FF /* TOPasscodeViewControllerAnimatedTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3044F8CC65360700C256FD1816EAD872 /* AlamofireImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33811E71D884790CFF5274D5FCDF99AC /* AlamofireImage-dummy.m */; };
+		36FF8853CB34A9297AFAA8F5F7456324 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7CD3587CF3858FAA1A81CF78237B9F /* TaskDelegate.swift */; };
+		396578C9442898D76F52DBF0BB7EBFD8 /* TOPasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0988BA3FCBB80AB8DD9F6F5D65C4492A /* TOPasscodeViewController.m */; };
+		39718D9C83115563BA349BDA87DEFAAA /* TOPasscodeButtonLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = FE7A905C3DD459AE0EA583F8BA6C7CFB /* TOPasscodeButtonLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B28243E6822391ECFF17DE09B238EE5 /* TOPasscodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A4FB732A70DAEA57E677EF598522D2D /* TOPasscodeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D354FD17AC123E84941A3452BB9C488 /* TOPasscodeInputField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4061FFE59DD03437DD1947E98A4383 /* TOPasscodeInputField.m */; };
+		3E87E7CB5B4A10C78BB5AA0FEBFB94C8 /* AlamofireImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE450084C321A723663A32B0D6B6AEDE /* AlamofireImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43B823C1B43D07F90622C5D1DA6DC95C /* Request+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691DD5E1797BEDDAE0173F3ABE7BC35F /* Request+AlamofireImage.swift */; };
+		4AFF40FC3AFE1ED4FBF1BC496623DE00 /* TOPasscodeKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = F90349F3A5C698D22C6C329AB3DD76BB /* TOPasscodeKeypadView.m */; };
+		4E1A913EFB404FB11524718FF0298EFE /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E58B19D9C5623738B838B91102D90C /* Alamofire.swift */; };
+		500C8EDA60C07B0F127C7FC385E17D38 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA09FDF676A5C162D38FFB9FABAF06 /* Notifications.swift */; };
+		50BCAEDDD4A4B21C9F06760A89924465 /* TOPasscodeCircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76D55E344D16E28E6544BF560F4841 /* TOPasscodeCircleImage.m */; };
+		51C2FCA4E82DC46F27720281246C572F /* TOPasscodeSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 244F501E89700BDF2F07557137CEB4BF /* TOPasscodeSettingsViewController.m */; };
+		52237C35642089F77DD4D723CEB25737 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F69528E00B84863E9BBEF73734CD4E /* Response.swift */; };
+		5227C5691672C22D9B30CE2D05C4CF50 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A28154FF53425C5ECC5DC8DB63D0A /* ImageCache.swift */; };
+		541C5B6F7D07577D8780B97F83EDD2BE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE59D05FFB465D11D63ED73DC23EA79A /* Image.swift */; };
+		54335DB80BCC84D890396126F7A0EA19 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78334A324D254E4F49BE31D649BEEFA1 /* AVFoundation.framework */; };
+		5547ED510E6A42E6AF2AD054C9712D2C /* TOPasscodeSettingsWarningLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D332392F109DD9229D731B25C7CAF3B /* TOPasscodeSettingsWarningLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58A9719584AFA2D108D9E5C585A79329 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01D24B050F846C723EA92FB3EAF3F98 /* Validation.swift */; };
+		5A38C503DF4925A8B142D76D028DB862 /* TOPasscodeVariableInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E3E07CB011AEB0BB3B17D66CB5B824 /* TOPasscodeVariableInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CFD265A54B4D03AD514D6EB92A1EC21 /* TOSettingsKeypadImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B856F428FE2623B15280788248B5FC5 /* TOSettingsKeypadImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DD53E800CE9516EA9C64A7CDE1FDA42 /* VideoBackgroundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7F8C92F4886C969192C71F1CB9C733 /* VideoBackgroundError.swift */; };
+		5EE5FED83B90A606A763CF1114D1D6FB /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA58D80B6A9D2F372187F832C3D193C /* ResponseSerialization.swift */; };
+		5F13602656E4F2E200272E87738ACA2C /* TOPasscodeCircleButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C76383E727464A0DD065ACEEAB5B95 /* TOPasscodeCircleButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F64F95700D0E01EF2CBAEEF6FC7B499 /* UIImage+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9392CCDE30F6CC9FEC64D857D87814 /* UIImage+AlamofireImage.swift */; };
+		63291FCECDDB79CCA18F9210645CFFF1 /* SwiftVideoBackground.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E79870FDBA7F544634CBED891AB3D6C /* SwiftVideoBackground.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AA3D6E2B3B91D129C2E0B712BBBE8C7 /* TOPasscodeViewContentLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FEF6C732F7C64EFE0F6C7598437FC /* TOPasscodeViewContentLayout.m */; };
+		6AEFBB5B30DC9E05A82DF28A17BDB2FD /* UIButton+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB7FC9776282A99A127D027585103B /* UIButton+AlamofireImage.swift */; };
+		6BEA14EC335E07C7063CD1383C0C443C /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6063289A598822626FEC6978DA7EEB05 /* ServerTrustPolicy.swift */; };
+		701F01FAC410609776E4310642792E53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73679909ACF535B3CDD8201FDCCC4E51 /* Foundation.framework */; };
+		7068E8A7DDC1424EE8F24BC77E8746F4 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16980CE318B49687C3EB556E334DD6FB /* SessionManager.swift */; };
+		761FAA38CBE3D0F1ECE3A34DD1D2EB59 /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF2D06DB872DC1D5011949DA2E95D9 /* SwitchCameraButton.swift */; };
+		796177DE2762F24DAC16A709FD954838 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2FA76815975D3FAA6335D3179F8529 /* ParameterEncoding.swift */; };
+		79B1EB6776B356FB329816E724A699BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73679909ACF535B3CDD8201FDCCC4E51 /* Foundation.framework */; };
+		7A40515CCD7E525312C0E103A1D66490 /* TOPasscodeVariableInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = E994319C29A11902600D9703D88F9C9D /* TOPasscodeVariableInputView.m */; };
+		7CCF764683B01BEDEDDCB1AF2E047F33 /* TOPasscodeViewControllerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 34576417E65592E59919BA40DF1534CF /* TOPasscodeViewControllerConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CD3BF40F7409CABDE4972D1E35AA466 /* TOPasscodeSettingsKeypadButton.h in Headers */ = {isa = PBXBuildFile; fileRef = BFD390453AA83FD3B7A91A4AB9E47427 /* TOPasscodeSettingsKeypadButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D38EBF09A70900FE10FEC100E6F16AD /* TOPasscodeSettingsKeypadButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E12065598625D838FBB4F4595A45465 /* TOPasscodeSettingsKeypadButton.m */; };
+		7F0D719E461B0BE5A1D82951EADCEBC3 /* QRCodeReader.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3AE0E808646A30B36C064F6932AA051 /* QRCodeReader.swift-dummy.m */; };
+		81C87377BDBAC3D06661DE36175D19A1 /* TOPasscodeKeypadView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB1CCFA5E5EDFDF4457A4AB90152886A /* TOPasscodeKeypadView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85F4AB970FF91F986006D4222FF5310D /* QRCodeReader.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CC11908706FA5F5FF7F8B5E25BD957E /* QRCodeReader.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D1E66FE754A575BFFD9E0A4AD2E5ACC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73679909ACF535B3CDD8201FDCCC4E51 /* Foundation.framework */; };
+		8D82EFD461A2579EB956249A6B314ED7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F02A739100B7422F36AE23783BE8C24 /* Alamofire.framework */; };
+		9606C6613B750D400B5FCEB7D6BBB949 /* QRCodeReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2844B089658D660617A7E13A4A2107E /* QRCodeReaderView.swift */; };
+		965DACF3DC02857ECBE66C5CBA3DA5D4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C4178B149C1A0012AC66AFA27C20C6 /* Request.swift */; };
+		9E9C44A4F31B27B30AC9B1626F2602D2 /* SwiftVideoBackground-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D200DD3D0D3757165B6F010FD64B582 /* SwiftVideoBackground-dummy.m */; };
+		9E9CD18896F22EE8999B48EA6475CFB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73679909ACF535B3CDD8201FDCCC4E51 /* Foundation.framework */; };
+		9F8D86763FE8D748B58EC783EE7124B3 /* Pods-Bespoken-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28C73A67166D456516BF5BB09704BC86 /* Pods-Bespoken-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FAC843625F1B8990E399D202B096AD8 /* TOPasscodeInputField.h in Headers */ = {isa = PBXBuildFile; fileRef = 30AD719C05942D696CBCBBE599EC0729 /* TOPasscodeInputField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2DD8CEB96333BD96C28A0493EB59421 /* TOPasscodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A73E6A59F317A098A70F0DF171446C /* TOPasscodeView.m */; };
+		A5C7BE71B99AE838E02ED9CB467D66FF /* SwiftVideoBackground-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEB1A73605A6E6A97F3E4B6665D690D /* SwiftVideoBackground-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA4A00F64B7B36403F12338A5560890A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73679909ACF535B3CDD8201FDCCC4E51 /* Foundation.framework */; };
+		AFB4E4CD33F0AF930DAF7F708E16E9E9 /* TOPasscodeCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 904A32CBA6610AC28DD6C5E140DA7748 /* TOPasscodeCircleButton.m */; };
+		AFD8895E25F1EE27D4CA90747AABEE7D /* QRCodeReaderViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CCF166941EE3EEB7A41A1AA3AC82FC /* QRCodeReaderViewControllerDelegate.swift */; };
+		B00226F4458041DAD78FBD05769662A7 /* QRCodeReaderViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E50B9BA8E870EBAD665B479AB49D0 /* QRCodeReaderViewControllerBuilder.swift */; };
+		B0A642249BCBB8070C42635D25A6F939 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58462C23D6A4BFF71DF15185C98C6B09 /* QRCodeReader.swift */; };
+		B109C48DA0E56805961ADE809851AF9B /* QRCodeReaderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9B284FE1528440E3527B91D0BCF796 /* QRCodeReaderResult.swift */; };
+		B3956056B0D510B8B0E3F0368D66AFE5 /* TOPasscodeSettingsWarningLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1074082396137CD64F064FF3411B90EF /* TOPasscodeSettingsWarningLabel.m */; };
+		B424F524BBBE34E685129945993809A8 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C41B189568160FE4ABB41C71F97AE6 /* Timeline.swift */; };
+		B77705737566AE83ED7E448923D7FA60 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C3684A9E945DD2125586B23B8A312 /* NetworkReachabilityManager.swift */; };
+		BC3A31E7806C74872D4721B9D5CE35FC /* TOPasscodeFixedInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FC5B6F73BBB8605DD1D0C5B82AB087 /* TOPasscodeFixedInputView.m */; };
+		BE4BA1EDE444A770F834605F4B65348E /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3504D593F8028046198FDBDD2097DAAB /* AFError.swift */; };
+		BE73130FA52685939A3D2CC914710D4F /* TOPasscodeViewContentLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 4593DBDCB8295F0E13BC8DE292945922 /* TOPasscodeViewContentLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFAEBF05CFA2A2E63A6B74EC97BAE441 /* TOPasscodeCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D5127B6725D2FBF9C318478DA4E27E /* TOPasscodeCircleView.m */; };
+		C01A7F0691AFD94A9631C34FE5AE9CD3 /* Pods-BespokenUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F2BCDAA10BF74AC59888E7100C526 /* Pods-BespokenUITests-dummy.m */; };
+		C4832C451B039DAF26BEF07D9D212272 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73679909ACF535B3CDD8201FDCCC4E51 /* Foundation.framework */; };
+		C6AD40F936517F79781DE5C7C9203840 /* Pods-Bespoken-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C0EF2DEB3B8CE5DBD9EFD6E04C655E /* Pods-Bespoken-dummy.m */; };
+		D0CDC98324468A4975984A5ABAB920DF /* TOPasscodeViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8B43843B19FD510DA68B18ABE32941 /* TOPasscodeViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D45D4B7C78D3DCB6313DF562761B5EE9 /* UIImageView+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F26841662C7D1F92089CE530B605EBB /* UIImageView+AlamofireImage.swift */; };
+		D4C3899574E9D5DF5E5DA52310560BCC /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 731E71D75D8498CFC54E4E05C6255F17 /* Alamofire-dummy.m */; };
+		D8B86013CE31427BF30B1922196C26BC /* Pods-BespokenTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 11555119D0AFDCD489E20BC59C450545 /* Pods-BespokenTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9FAB80927724DF644BDC1201CCD20EB /* TOPasscodeFixedInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0429917D0F17FC0B1E4CAAC788ABA9C8 /* TOPasscodeFixedInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBE6E2E4D205545E7988CFA5057C31D6 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D30070A3F92384925C5045FF5731C /* DispatchQueue+Alamofire.swift */; };
+		DD55056D9CA62A21DD873975AF4CA453 /* AFIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E728E033730892ECF6DC96D12129FE5 /* AFIError.swift */; };
+		E1814A4D1754F2FE66B3C6D22ADAAC16 /* TOPasscodeSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B2D6652161F562FB435B5842C9E7E83 /* TOPasscodeSettingsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E667DEC6EA1F451E8A9969EA3F62D75C /* Pods-BespokenTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5839F7789E24B3B1B785F392556907D /* Pods-BespokenTests-dummy.m */; };
+		EF1461221681BCA12A4147900A704727 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7175CAF22D687A35CC5FE97A493774 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0D5C91E2478818DD87D8BA152259FDB /* TOPasscodeViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EF369007A8AE884870C288400975D7 /* TOPasscodeViewController-dummy.m */; };
+		F749218C1B5BD79E4D8DA86A7DB0AA2B /* VideoBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735AB3A2F0224694555C1153EA159730 /* VideoBackground.swift */; };
+		F86B648E2CAA4823A2F09C8E67D5B854 /* TOPasscodeCircleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 14053F6E42D34588F14371F0FAEF2DAE /* TOPasscodeCircleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9EA61D484CC15FDDAB0D8C0D26D7949 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103F70834994EA4F0FB8995C43DFD4BB /* Result.swift */; };
+		FF9C7BC64DB23D2CED48197DE67F0335 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A5032C1E914C09DF3B30BD9ADE7F1 /* MultipartFormData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0E89645AA0AAF24510EAB98AEF6099EA /* PBXContainerItemProxy */ = {
+		2CA43A421122FD91114FFB3A87952DCA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BFFA931CCA9E420723FA95DC69F9AB96;
-			remoteInfo = QRCodeReader.swift;
+			remoteGlobalIDString = 3041A0DD3AB419D35E7F657E253819F0;
+			remoteInfo = "Pods-Bespoken";
 		};
-		2763A7C337C412C3680DD05549E61EA0 /* PBXContainerItemProxy */ = {
+		53ED8B9367F9CBCD28B06FCAE75FB9E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F8DC4C15F1DE2D75359DE7B83FD68E56;
+			remoteGlobalIDString = 325658AE83BC23A5AF53EE6F8FC9859E;
 			remoteInfo = TOPasscodeViewController;
 		};
-		788E4DB55F92B993730127FFA3A57A7D /* PBXContainerItemProxy */ = {
+		7B868AF33D2D776DD0792C9816544136 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
-			remoteInfo = Alamofire;
-		};
-		A1758AA696D56310AA192B587162169A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
-			remoteInfo = Alamofire;
-		};
-		B15DC3C9E9F6C5C67A65F4EBAC70D560 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 137C6B7796533C929DBACC2F36C47DA5;
+			remoteGlobalIDString = 4844D52A7B8207D6BB2DCCA4C1AA3C5D;
 			remoteInfo = SwiftVideoBackground;
 		};
-		FF7E1E49C6ECAD94750E2249C6830C57 /* PBXContainerItemProxy */ = {
+		7C0AD88992C62371A310348D78B805A5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9EFE4C70245EE2857D336B8B9FA4E825;
+			remoteGlobalIDString = 13CBF874F256E0A754E652464EE68E54;
+			remoteInfo = QRCodeReader.swift;
+		};
+		816B834AEBF1973506A4AA7F92D927EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F4BA8B4D605B684ABBD2FB009E45151;
 			remoteInfo = AlamofireImage;
+		};
+		84DE9D25FE685AFA1B87C7FACEEDB4B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E76458C58C9140B6A16D60547E68E80C;
+			remoteInfo = Alamofire;
+		};
+		9A8576CB41AB2570539C027E190A1B62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E76458C58C9140B6A16D60547E68E80C;
+			remoteInfo = Alamofire;
+		};
+		E7372340E1711A28F48F293D1A06972F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3041A0DD3AB419D35E7F657E253819F0;
+			remoteInfo = "Pods-Bespoken";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -158,7 +172,7 @@
 		01E3E07CB011AEB0BB3B17D66CB5B824 /* TOPasscodeVariableInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeVariableInputView.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeVariableInputView.h; sourceTree = "<group>"; };
 		0429917D0F17FC0B1E4CAAC788ABA9C8 /* TOPasscodeFixedInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeFixedInputView.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeFixedInputView.h; sourceTree = "<group>"; };
 		0586E63656BA17A64E070181F59F0B03 /* ToggleTorchButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToggleTorchButton.swift; path = Sources/ToggleTorchButton.swift; sourceTree = "<group>"; };
-		07BAF42C74CD90A7ACA2172639418F42 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BAF42C74CD90A7ACA2172639418F42 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0965C6AF2A9DE1A6E7A6C63D1B3D3A3D /* Pods-BespokenTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BespokenTests.modulemap"; sourceTree = "<group>"; };
 		0988BA3FCBB80AB8DD9F6F5D65C4492A /* TOPasscodeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeViewController.m; path = TOPasscodeViewController/TOPasscodeViewController.m; sourceTree = "<group>"; };
 		09A73E6A59F317A098A70F0DF171446C /* TOPasscodeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeView.m; path = TOPasscodeViewController/Views/Main/TOPasscodeView.m; sourceTree = "<group>"; };
@@ -172,12 +186,12 @@
 		124E50B9BA8E870EBAD665B479AB49D0 /* QRCodeReaderViewControllerBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewControllerBuilder.swift; path = Sources/QRCodeReaderViewControllerBuilder.swift; sourceTree = "<group>"; };
 		13F2D336A8F2319DD8E4F989F38FBFFC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14053F6E42D34588F14371F0FAEF2DAE /* TOPasscodeCircleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeCircleView.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeCircleView.h; sourceTree = "<group>"; };
-		159A79AD3A4E331C837C84FFF5E28802 /* Pods_BespokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BespokenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		159A79AD3A4E331C837C84FFF5E28802 /* Pods_BespokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BespokenUITests.framework; path = "Pods-BespokenUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16980CE318B49687C3EB556E334DD6FB /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		1B38C919EBF4A3ECF9330E69FA8AD7C7 /* TOPasscodeButtonLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeButtonLabel.m; path = TOPasscodeViewController/Views/Shared/TOPasscodeButtonLabel.m; sourceTree = "<group>"; };
 		1E79870FDBA7F544634CBED891AB3D6C /* SwiftVideoBackground.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftVideoBackground.h; path = SwiftVideoBackground/Sources/SwiftVideoBackground.h; sourceTree = "<group>"; };
 		224B0860AE4D6D182EC45DFD266C63EA /* Pods-BespokenTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BespokenTests-resources.sh"; sourceTree = "<group>"; };
-		23D1E2C2B1155BDBCD0484B7F65B6BBC /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRCodeReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D1E2C2B1155BDBCD0484B7F65B6BBC /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QRCodeReader.framework; path = QRCodeReader.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		244258A3F71A4D32382447C46C0C51C6 /* ReaderOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReaderOverlayView.swift; path = Sources/ReaderOverlayView.swift; sourceTree = "<group>"; };
 		244F501E89700BDF2F07557137CEB4BF /* TOPasscodeSettingsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeSettingsViewController.m; path = TOPasscodeViewController/TOPasscodeSettingsViewController.m; sourceTree = "<group>"; };
 		24C76383E727464A0DD065ACEEAB5B95 /* TOPasscodeCircleButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeCircleButton.h; path = TOPasscodeViewController/Views/Main/TOPasscodeCircleButton.h; sourceTree = "<group>"; };
@@ -198,7 +212,7 @@
 		3CB047BCF3935EF396B2AB80E9F48114 /* TOPasscodeSettingsKeypadView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeSettingsKeypadView.m; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsKeypadView.m; sourceTree = "<group>"; };
 		3CC11908706FA5F5FF7F8B5E25BD957E /* QRCodeReader.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-umbrella.h"; sourceTree = "<group>"; };
 		3E12065598625D838FBB4F4595A45465 /* TOPasscodeSettingsKeypadButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeSettingsKeypadButton.m; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsKeypadButton.m; sourceTree = "<group>"; };
-		428CB4D97776597CC45A153357521C88 /* Pods_Bespoken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bespoken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		428CB4D97776597CC45A153357521C88 /* Pods_Bespoken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Bespoken.framework; path = "Pods-Bespoken.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		443C3684A9E945DD2125586B23B8A312 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		4593DBDCB8295F0E13BC8DE292945922 /* TOPasscodeViewContentLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeViewContentLayout.h; path = TOPasscodeViewController/Models/TOPasscodeViewContentLayout.h; sourceTree = "<group>"; };
 		4A287E423BF846036FD5AA4CDFBCE5AC /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewController.swift; path = Sources/QRCodeReaderViewController.swift; sourceTree = "<group>"; };
@@ -207,7 +221,7 @@
 		4E7B219180C71982A20C068512B7798E /* QRCodeReader.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QRCodeReader.swift.modulemap; sourceTree = "<group>"; };
 		4E9392CCDE30F6CC9FEC64D857D87814 /* UIImage+AlamofireImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+AlamofireImage.swift"; path = "Source/UIImage+AlamofireImage.swift"; sourceTree = "<group>"; };
 		4F26841662C7D1F92089CE530B605EBB /* UIImageView+AlamofireImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+AlamofireImage.swift"; path = "Source/UIImageView+AlamofireImage.swift"; sourceTree = "<group>"; };
-		53634C8DF817DC8169B100B2A035C54D /* Pods_BespokenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BespokenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53634C8DF817DC8169B100B2A035C54D /* Pods_BespokenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BespokenTests.framework; path = "Pods-BespokenTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		576A28154FF53425C5ECC5DC8DB63D0A /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Source/ImageCache.swift; sourceTree = "<group>"; };
 		57C22823E730F8A12C3BB50CF6369989 /* TOPasscodeSettingsKeypadView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeSettingsKeypadView.h; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsKeypadView.h; sourceTree = "<group>"; };
 		58462C23D6A4BFF71DF15185C98C6B09 /* QRCodeReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReader.swift; path = Sources/QRCodeReader.swift; sourceTree = "<group>"; };
@@ -215,8 +229,8 @@
 		5A2F2BCDAA10BF74AC59888E7100C526 /* Pods-BespokenUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BespokenUITests-dummy.m"; sourceTree = "<group>"; };
 		5B856F428FE2623B15280788248B5FC5 /* TOSettingsKeypadImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOSettingsKeypadImage.h; path = TOPasscodeViewController/Models/TOSettingsKeypadImage.h; sourceTree = "<group>"; };
 		5D200DD3D0D3757165B6F010FD64B582 /* SwiftVideoBackground-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftVideoBackground-dummy.m"; sourceTree = "<group>"; };
-		5EBA799D8C55D1FD8D5EF60680958E77 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EED0F2FE5D4011746968979D94CB4AF /* TOPasscodeViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TOPasscodeViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EBA799D8C55D1FD8D5EF60680958E77 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AlamofireImage.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EED0F2FE5D4011746968979D94CB4AF /* TOPasscodeViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TOPasscodeViewController.framework; path = TOPasscodeViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F2FEF6C732F7C64EFE0F6C7598437FC /* TOPasscodeViewContentLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeViewContentLayout.m; path = TOPasscodeViewController/Models/TOPasscodeViewContentLayout.m; sourceTree = "<group>"; };
 		6063289A598822626FEC6978DA7EEB05 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		65EF369007A8AE884870C288400975D7 /* TOPasscodeViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TOPasscodeViewController-dummy.m"; sourceTree = "<group>"; };
@@ -224,10 +238,11 @@
 		687AC5558B0DBA1EA92DE43C44184174 /* Pods-BespokenTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BespokenTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		691DD5E1797BEDDAE0173F3ABE7BC35F /* Request+AlamofireImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Request+AlamofireImage.swift"; path = "Source/Request+AlamofireImage.swift"; sourceTree = "<group>"; };
 		6B024ECA567E0686D622DDA781837203 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		731E71D75D8498CFC54E4E05C6255F17 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		735AB3A2F0224694555C1153EA159730 /* VideoBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoBackground.swift; path = SwiftVideoBackground/Sources/VideoBackground.swift; sourceTree = "<group>"; };
+		73679909ACF535B3CDD8201FDCCC4E51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		773D30070A3F92384925C5045FF5731C /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		78334A324D254E4F49BE31D649BEEFA1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		7956F3883019BFC441E00E13BCF96D15 /* SwiftVideoBackground.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftVideoBackground.xcconfig; sourceTree = "<group>"; };
 		7A4FB732A70DAEA57E677EF598522D2D /* TOPasscodeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeViewController.h; path = TOPasscodeViewController/TOPasscodeViewController.h; sourceTree = "<group>"; };
 		7ABF2D06DB872DC1D5011949DA2E95D9 /* SwitchCameraButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchCameraButton.swift; path = Sources/SwitchCameraButton.swift; sourceTree = "<group>"; };
@@ -240,7 +255,7 @@
 		8F1C13478DB29E5DCFB59DB1406D5CC6 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		904A32CBA6610AC28DD6C5E140DA7748 /* TOPasscodeCircleButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeCircleButton.m; path = TOPasscodeViewController/Views/Main/TOPasscodeCircleButton.m; sourceTree = "<group>"; };
 		910D0B078F3740F478AB7CF92550DED6 /* Pods-BespokenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BespokenTests.release.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96BA4E31509FEFC7B4E9A5A566B20B3D /* TOPasscodeViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOPasscodeViewController-prefix.pch"; sourceTree = "<group>"; };
 		974AEA827103A2E4668161C2BE7EAB93 /* TOPasscodeViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TOPasscodeViewController.xcconfig; sourceTree = "<group>"; };
 		9C7CD3587CF3858FAA1A81CF78237B9F /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
@@ -254,7 +269,7 @@
 		A9C41B189568160FE4ABB41C71F97AE6 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		A9D1E0751351F52F9CEA4B0445D1890D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB1CCFA5E5EDFDF4457A4AB90152886A /* TOPasscodeKeypadView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeKeypadView.h; path = TOPasscodeViewController/Views/Main/TOPasscodeKeypadView.h; sourceTree = "<group>"; };
-		AB4895D57A0EC32CDA3C14D3C81915C4 /* SwiftVideoBackground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVideoBackground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB4895D57A0EC32CDA3C14D3C81915C4 /* SwiftVideoBackground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftVideoBackground.framework; path = SwiftVideoBackground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4ECAE5EB415D6114ED0E31444BB9C8 /* Pods-Bespoken-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Bespoken-resources.sh"; sourceTree = "<group>"; };
 		AB6BA1A0E86854706FB98C63B14795DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB8ACB9A53E4376CCC1B3E92D0A74E19 /* Pods-Bespoken-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Bespoken-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -262,7 +277,6 @@
 		AE554BEE9F09F9B86C442CE79B61E262 /* Pods-BespokenTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BespokenTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AF7358BA93897C6EA55C10D9C50AE67B /* AlamofireImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlamofireImage-prefix.pch"; sourceTree = "<group>"; };
 		B313DA6BA7C1CB7D7B4F2DAEFA0FE086 /* Pods-BespokenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BespokenTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B32E1649E56B6CABEDEB89639AC33394 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		BB2D30190374FEFA1B195FC35302F124 /* QRCodeReader.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRCodeReader.swift.xcconfig; sourceTree = "<group>"; };
 		BBFA4AC8142EF0AAD46659E8175C2285 /* TOSettingsKeypadImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOSettingsKeypadImage.m; path = TOPasscodeViewController/Models/TOSettingsKeypadImage.m; sourceTree = "<group>"; };
 		BE59D05FFB465D11D63ED73DC23EA79A /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Source/Image.swift; sourceTree = "<group>"; };
@@ -304,69 +318,69 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5DC322287068CD30FA76AF20CD533132 /* Frameworks */ = {
+		004BFAE29A0AF8C7466B0FE10E0C3E44 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79CE1A0E3AB9A1F1DFCCB73D55123620 /* Foundation.framework in Frameworks */,
+				701F01FAC410609776E4310642792E53 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E1A6B4185E2E0F9DB252CCAEEDCB518 /* Frameworks */ = {
+		163EC99ADB33DDFC460B62C6AE4BEE99 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CE3D5BCD99C44FEAEC232CFA1B2EA03 /* Foundation.framework in Frameworks */,
+				54335DB80BCC84D890396126F7A0EA19 /* AVFoundation.framework in Frameworks */,
+				134ECECBD71F558342162EAA5F533D38 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99195E4207764744AEC07ECCBCD550EB /* Frameworks */ = {
+		2C1047F6C4EE52C8AA60B562CA27EF88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */,
+				8D82EFD461A2579EB956249A6B314ED7 /* Alamofire.framework in Frameworks */,
+				79B1EB6776B356FB329816E724A699BB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6866549B7DA81656614FDE607CFAC0E /* Frameworks */ = {
+		3D56117BA91E18D908070F34900DEC6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4B800A7D3F8E700D8ABECEB154CAC60 /* AVFoundation.framework in Frameworks */,
-				04823ABC80989B024D213B5C71C89C1A /* Foundation.framework in Frameworks */,
+				9E9CD18896F22EE8999B48EA6475CFB1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BA4B8DE3457E6CCE3F7749E577B9BB49 /* Frameworks */ = {
+		6E8AF668A2161F7D6F680F721DB65D2D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA68BF3354D3C3DC4F15E6E06BE678F3 /* Foundation.framework in Frameworks */,
+				8D1E66FE754A575BFFD9E0A4AD2E5ACC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF98FBBDC964E0CC738F6B323B4C1BB8 /* Frameworks */ = {
+		8426FD1B711A41E11F6ECE0E00CE3F3B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				613167D898FF421A6F75D1FE5D145B9B /* Alamofire.framework in Frameworks */,
-				26479B07464784F3BF8C0853CA049976 /* Foundation.framework in Frameworks */,
+				0B7FA99F7033AD8E444EADF897685678 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D4EF7AC0D9A258BE0288AA7598683C07 /* Frameworks */ = {
+		EC9E37FFE47A39383D2BAD47671E50EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3A88EA583B79467FE24168E45E509EB /* Foundation.framework in Frameworks */,
+				AA4A00F64B7B36403F12338A5560890A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA4AC7021A8ADFE99A1BA61C430628EB /* Frameworks */ = {
+		FA85153F3D21066EF0BEC1ECB541794E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AF5D5AF2990C1BF130D2224C3646E6B /* Foundation.framework in Frameworks */,
+				C4832C451B039DAF26BEF07D9D212272 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,15 +402,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		11C89C98BB448CD9D7EFEE7DCC748C17 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				B32E1649E56B6CABEDEB89639AC33394 /* AVFoundation.framework */,
-				721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		1A936A9300C5894A244CEC9E3E3B0EEF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +414,15 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftVideoBackground";
+			sourceTree = "<group>";
+		};
+		24736D3A17B47AAE508216597B0CC3AD /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				78334A324D254E4F49BE31D649BEEFA1 /* AVFoundation.framework */,
+				73679909ACF535B3CDD8201FDCCC4E51 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		34AF4645FE96A39C57343F9787F11A63 /* Pods */ = {
@@ -483,7 +497,7 @@
 			isa = PBXGroup;
 			children = (
 				9F02A739100B7422F36AE23783BE8C24 /* Alamofire.framework */,
-				11C89C98BB448CD9D7EFEE7DCC748C17 /* iOS */,
+				24736D3A17B47AAE508216597B0CC3AD /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -513,6 +527,7 @@
 				4F26841662C7D1F92089CE530B605EBB /* UIImageView+AlamofireImage.swift */,
 				3FDF17B976F7B6499C9C5E1B5F593B03 /* Support Files */,
 			);
+			name = AlamofireImage;
 			path = AlamofireImage;
 			sourceTree = "<group>";
 		};
@@ -556,6 +571,7 @@
 				CA7F8C92F4886C969192C71F1CB9C733 /* VideoBackgroundError.swift */,
 				1A936A9300C5894A244CEC9E3E3B0EEF /* Support Files */,
 			);
+			name = SwiftVideoBackground;
 			path = SwiftVideoBackground;
 			sourceTree = "<group>";
 		};
@@ -599,6 +615,7 @@
 				BBFA4AC8142EF0AAD46659E8175C2285 /* TOSettingsKeypadImage.m */,
 				EB2B7FA34AEF7222D57EFBBC97C7E786 /* Support Files */,
 			);
+			name = TOPasscodeViewController;
 			path = TOPasscodeViewController;
 			sourceTree = "<group>";
 		};
@@ -617,6 +634,7 @@
 				0586E63656BA17A64E070181F59F0B03 /* ToggleTorchButton.swift */,
 				8D53DFE6ECA3B4F2DB2CC40EA5026FD5 /* Support Files */,
 			);
+			name = QRCodeReader.swift;
 			path = QRCodeReader.swift;
 			sourceTree = "<group>";
 		};
@@ -674,196 +692,107 @@
 				F01D24B050F846C723EA92FB3EAF3F98 /* Validation.swift */,
 				40DBACB729707123EB17A17122FB231C /* Support Files */,
 			);
+			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1E595139FF178274DE6F5C917B975DF4 /* Headers */ = {
+		1F1451B503DDAA60097C9803F6573E6B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A12596CBBA466C58BE073060C35DC0D9 /* SwiftVideoBackground-umbrella.h in Headers */,
-				01C83EF581818A9713F50FAD05CCEAF4 /* SwiftVideoBackground.h in Headers */,
+				D8B86013CE31427BF30B1922196C26BC /* Pods-BespokenTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6CCDF5157B1583F44CD0B1FA48021FA2 /* Headers */ = {
+		371900067E9AADA02C0E325A1456DF3F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CEE49FCB2C069B6953D54BF92598C98 /* Pods-BespokenUITests-umbrella.h in Headers */,
+				1568E8307DC42AA83365D9D227D2E238 /* Pods-BespokenUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7B02FE3815C9A0D4ADF3F16A02AD3AA5 /* Headers */ = {
+		4590C294C16DD1755B2F2C877E48CA13 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFB48518F8852990EC3711A682DC6E99 /* QRCodeReader.swift-umbrella.h in Headers */,
+				39718D9C83115563BA349BDA87DEFAAA /* TOPasscodeButtonLabel.h in Headers */,
+				5F13602656E4F2E200272E87738ACA2C /* TOPasscodeCircleButton.h in Headers */,
+				1B7D43DF1CF468D8CF0D9A632E9D0FED /* TOPasscodeCircleImage.h in Headers */,
+				F86B648E2CAA4823A2F09C8E67D5B854 /* TOPasscodeCircleView.h in Headers */,
+				D9FAB80927724DF644BDC1201CCD20EB /* TOPasscodeFixedInputView.h in Headers */,
+				9FAC843625F1B8990E399D202B096AD8 /* TOPasscodeInputField.h in Headers */,
+				81C87377BDBAC3D06661DE36175D19A1 /* TOPasscodeKeypadView.h in Headers */,
+				7CD3BF40F7409CABDE4972D1E35AA466 /* TOPasscodeSettingsKeypadButton.h in Headers */,
+				0280D12AFF90C3686563AB0E7694F376 /* TOPasscodeSettingsKeypadView.h in Headers */,
+				E1814A4D1754F2FE66B3C6D22ADAAC16 /* TOPasscodeSettingsViewController.h in Headers */,
+				5547ED510E6A42E6AF2AD054C9712D2C /* TOPasscodeSettingsWarningLabel.h in Headers */,
+				5A38C503DF4925A8B142D76D028DB862 /* TOPasscodeVariableInputView.h in Headers */,
+				1A39B846161DB39EF49DE43A80A4C618 /* TOPasscodeView.h in Headers */,
+				BE73130FA52685939A3D2CC914710D4F /* TOPasscodeViewContentLayout.h in Headers */,
+				D0CDC98324468A4975984A5ABAB920DF /* TOPasscodeViewController-umbrella.h in Headers */,
+				3B28243E6822391ECFF17DE09B238EE5 /* TOPasscodeViewController.h in Headers */,
+				2DFE86F3FE2FFEEEA68B8A4BDED2D93C /* TOPasscodeViewControllerAnimatedTransitioning.h in Headers */,
+				7CCF764683B01BEDEDDCB1AF2E047F33 /* TOPasscodeViewControllerConstants.h in Headers */,
+				5CFD265A54B4D03AD514D6EB92A1EC21 /* TOSettingsKeypadImage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8E018ED5CDF023ACCE64EC20B4A69B23 /* Headers */ = {
+		A5FCF66F977B6B6BFAD6A7EE7450A7F0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9003E19984A263E001BB3E7618B5D711 /* Pods-BespokenTests-umbrella.h in Headers */,
+				9F8D86763FE8D748B58EC783EE7124B3 /* Pods-Bespoken-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		985DEC98E54D17D26295E8AC26090523 /* Headers */ = {
+		A6A607506FEAAC7C41268D3E5CF4E5FE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD23898839F26A4B13CE510DA8E44131 /* TOPasscodeButtonLabel.h in Headers */,
-				D91C4587BD3B7DD74E4B5C2E547C4F70 /* TOPasscodeCircleButton.h in Headers */,
-				FE6CC867D7D4B969A29121DD04ADBAA9 /* TOPasscodeCircleImage.h in Headers */,
-				A33C085F0A01D87EA9B774248931808B /* TOPasscodeCircleView.h in Headers */,
-				2A13605E4CCD0BAAC5AF58A039B536C4 /* TOPasscodeFixedInputView.h in Headers */,
-				38BE787626CB5A33B1E4C244E50818E1 /* TOPasscodeInputField.h in Headers */,
-				D45F969746F644D73F921D5A277AEEC1 /* TOPasscodeKeypadView.h in Headers */,
-				952F0E9C2B92F3ADB40E65B288183E67 /* TOPasscodeSettingsKeypadButton.h in Headers */,
-				3C171556BC498D781CD40FA5282D8A1D /* TOPasscodeSettingsKeypadView.h in Headers */,
-				F8237F1F43E8104772C50B04C03FD3B7 /* TOPasscodeSettingsViewController.h in Headers */,
-				8154FE7067E2F72BB4239C997977950D /* TOPasscodeSettingsWarningLabel.h in Headers */,
-				D65B33F7F80F2CAB4DE2F719AB9654A6 /* TOPasscodeVariableInputView.h in Headers */,
-				07BD999BCF3064A9104E454C78B37349 /* TOPasscodeView.h in Headers */,
-				4E369653C2D1A5B9F2D5DCDE3E32CA78 /* TOPasscodeViewContentLayout.h in Headers */,
-				FEEEE2D6D23855F98613B7B1934738BC /* TOPasscodeViewController-umbrella.h in Headers */,
-				93734C28551FFBB907573C00B1D290C1 /* TOPasscodeViewController.h in Headers */,
-				AC6B938D9B67AB223F5A3FD0F26562DA /* TOPasscodeViewControllerAnimatedTransitioning.h in Headers */,
-				75C94D9B74E900D25073D1F2EC444A6C /* TOPasscodeViewControllerConstants.h in Headers */,
-				2B97B5D58AC964581D4E78811A19399D /* TOSettingsKeypadImage.h in Headers */,
+				EF1461221681BCA12A4147900A704727 /* Alamofire-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */ = {
+		CC4BD7DC3B6C66E0D660E5AE137D5EFA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */,
+				3E87E7CB5B4A10C78BB5AA0FEBFB94C8 /* AlamofireImage-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9F59F7D0F63F9FEB6F604FFC2BBC57B /* Headers */ = {
+		D74658CF38A314EB9436567E28AD8CB7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F982E54F8CA45A17609D2849B01822F /* Pods-Bespoken-umbrella.h in Headers */,
+				A5C7BE71B99AE838E02ED9CB467D66FF /* SwiftVideoBackground-umbrella.h in Headers */,
+				63291FCECDDB79CCA18F9210645CFFF1 /* SwiftVideoBackground.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB21FD03B7703901958C3CE43325DAE9 /* Headers */ = {
+		D935F037400AAF136AD9C2754B1A6017 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32EDA9ED83F4442303A46839027E152E /* AlamofireImage-umbrella.h in Headers */,
+				85F4AB970FF91F986006D4222FF5310D /* QRCodeReader.swift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		137C6B7796533C929DBACC2F36C47DA5 /* SwiftVideoBackground */ = {
+		13CBF874F256E0A754E652464EE68E54 /* QRCodeReader.swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB2F298DE70457B54E77D2E758A27406 /* Build configuration list for PBXNativeTarget "SwiftVideoBackground" */;
+			buildConfigurationList = 190E178F7C3B41C3E850B5CD21DA4C20 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */;
 			buildPhases = (
-				7A64067CE09465C4ED5307BA946DF4D2 /* Sources */,
-				D4EF7AC0D9A258BE0288AA7598683C07 /* Frameworks */,
-				1E595139FF178274DE6F5C917B975DF4 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwiftVideoBackground;
-			productName = SwiftVideoBackground;
-			productReference = AB4895D57A0EC32CDA3C14D3C81915C4 /* SwiftVideoBackground.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		188CE72E0F3C436CFCA75DC7ADDECABF /* Pods-Bespoken */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 746C69FCF6B9C2CACC4DA1BF63AE33CE /* Build configuration list for PBXNativeTarget "Pods-Bespoken" */;
-			buildPhases = (
-				0FDA50DE10433E9F53BDBEA038CE2BC2 /* Sources */,
-				5DC322287068CD30FA76AF20CD533132 /* Frameworks */,
-				B9F59F7D0F63F9FEB6F604FFC2BBC57B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5C91341FE06155038D31C25BFDEA0BFF /* PBXTargetDependency */,
-				5644085A5C2D45B51A43820542E37896 /* PBXTargetDependency */,
-				1603B75CC0965549F13933B86279742B /* PBXTargetDependency */,
-				160D56B1F811A0E6475689C273BC2DC6 /* PBXTargetDependency */,
-				5AAB5296C1D443379C66150A897D18CF /* PBXTargetDependency */,
-			);
-			name = "Pods-Bespoken";
-			productName = "Pods-Bespoken";
-			productReference = 428CB4D97776597CC45A153357521C88 /* Pods_Bespoken.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */;
-			buildPhases = (
-				32B9974868188C4803318E36329C87FE /* Sources */,
-				99195E4207764744AEC07ECCBCD550EB /* Frameworks */,
-				B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Alamofire;
-			productName = Alamofire;
-			productReference = 07BAF42C74CD90A7ACA2172639418F42 /* Alamofire.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		9EFE4C70245EE2857D336B8B9FA4E825 /* AlamofireImage */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 01F2198AF9DCCF3700AE9DD21E64D480 /* Build configuration list for PBXNativeTarget "AlamofireImage" */;
-			buildPhases = (
-				DB0BE2FBB4DB070AD3C57C41C562C32B /* Sources */,
-				BF98FBBDC964E0CC738F6B323B4C1BB8 /* Frameworks */,
-				EB21FD03B7703901958C3CE43325DAE9 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8937A2057A0DAADF003B7C65E7CE115D /* PBXTargetDependency */,
-			);
-			name = AlamofireImage;
-			productName = AlamofireImage;
-			productReference = 5EBA799D8C55D1FD8D5EF60680958E77 /* AlamofireImage.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		AF8EF6C1401ECE1757DF54C4080DFE65 /* Pods-BespokenTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DD8B9E10441D70F2CA5342C06AC0EAD6 /* Build configuration list for PBXNativeTarget "Pods-BespokenTests" */;
-			buildPhases = (
-				F8590F899630BBDA9D5D3B954BF779EC /* Sources */,
-				6E1A6B4185E2E0F9DB252CCAEEDCB518 /* Frameworks */,
-				8E018ED5CDF023ACCE64EC20B4A69B23 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-BespokenTests";
-			productName = "Pods-BespokenTests";
-			productReference = 53634C8DF817DC8169B100B2A035C54D /* Pods_BespokenTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		BFFA931CCA9E420723FA95DC69F9AB96 /* QRCodeReader.swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D49DF13645DBE8A84FC09659F231F726 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */;
-			buildPhases = (
-				40E8FD8C02B9F9BA9D31E31804654FDC /* Sources */,
-				A6866549B7DA81656614FDE607CFAC0E /* Frameworks */,
-				7B02FE3815C9A0D4ADF3F16A02AD3AA5 /* Headers */,
+				D935F037400AAF136AD9C2754B1A6017 /* Headers */,
+				205B9A08281D2A5CB4BE6F5BCE49F783 /* Sources */,
+				163EC99ADB33DDFC460B62C6AE4BEE99 /* Frameworks */,
+				8DB2A1DD6057DEEE9A53C2540D731BE8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -874,30 +803,56 @@
 			productReference = 23D1E2C2B1155BDBCD0484B7F65B6BBC /* QRCodeReader.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C9020D016F8263D5D484BA68681C353E /* Pods-BespokenUITests */ = {
+		1C0C862A6B4262C6D727D5A96177E4E5 /* Pods-BespokenTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3EF45BDA5ED4ED85110BC552F2C1C42A /* Build configuration list for PBXNativeTarget "Pods-BespokenUITests" */;
+			buildConfigurationList = 29A5B9CE5E93F31D049B2FB0DA7535B0 /* Build configuration list for PBXNativeTarget "Pods-BespokenTests" */;
 			buildPhases = (
-				D45FB1D0EC6330462FF23007A83E6ED3 /* Sources */,
-				FA4AC7021A8ADFE99A1BA61C430628EB /* Frameworks */,
-				6CCDF5157B1583F44CD0B1FA48021FA2 /* Headers */,
+				1F1451B503DDAA60097C9803F6573E6B /* Headers */,
+				1416C47028F5C554C880C25D3BEC5B80 /* Sources */,
+				EC9E37FFE47A39383D2BAD47671E50EC /* Frameworks */,
+				25E17D90903FD15BC67BAE0A04FCA677 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AF5C2DA090C4C91C8550E5E1C547F3B3 /* PBXTargetDependency */,
 			);
-			name = "Pods-BespokenUITests";
-			productName = "Pods-BespokenUITests";
-			productReference = 159A79AD3A4E331C837C84FFF5E28802 /* Pods_BespokenUITests.framework */;
+			name = "Pods-BespokenTests";
+			productName = "Pods-BespokenTests";
+			productReference = 53634C8DF817DC8169B100B2A035C54D /* Pods_BespokenTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F8DC4C15F1DE2D75359DE7B83FD68E56 /* TOPasscodeViewController */ = {
+		3041A0DD3AB419D35E7F657E253819F0 /* Pods-Bespoken */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94B97CA45E44921C99AADD4B3115BB0F /* Build configuration list for PBXNativeTarget "TOPasscodeViewController" */;
+			buildConfigurationList = BBBE54EFE14E5F16D0A593C9B91E608F /* Build configuration list for PBXNativeTarget "Pods-Bespoken" */;
 			buildPhases = (
-				3A51F4B41E7BD4EA02C7DA8D373EAB62 /* Sources */,
-				BA4B8DE3457E6CCE3F7749E577B9BB49 /* Frameworks */,
-				985DEC98E54D17D26295E8AC26090523 /* Headers */,
+				A5FCF66F977B6B6BFAD6A7EE7450A7F0 /* Headers */,
+				9BC0456DB6AAD848FBAA368D908A8DA7 /* Sources */,
+				004BFAE29A0AF8C7466B0FE10E0C3E44 /* Frameworks */,
+				311F267E25F69E4992F7608B0272451F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E86597BABFF92B3F7CF4C8641C8E6E08 /* PBXTargetDependency */,
+				D9AEDD2275D0EEE821417FD3DA33A937 /* PBXTargetDependency */,
+				C48707CE574C97A84E55C46DA7CB7D49 /* PBXTargetDependency */,
+				EF1DF12194608BCF887608D323B56690 /* PBXTargetDependency */,
+				7664B71D4BBE2836FC60D978D702D73B /* PBXTargetDependency */,
+			);
+			name = "Pods-Bespoken";
+			productName = "Pods-Bespoken";
+			productReference = 428CB4D97776597CC45A153357521C88 /* Pods_Bespoken.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		325658AE83BC23A5AF53EE6F8FC9859E /* TOPasscodeViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEEA922946DB735DE0A4EC4EB5577B9C /* Build configuration list for PBXNativeTarget "TOPasscodeViewController" */;
+			buildPhases = (
+				4590C294C16DD1755B2F2C877E48CA13 /* Headers */,
+				3EA4B450849885896841887BEDBDAD8B /* Sources */,
+				FA85153F3D21066EF0BEC1ECB541794E /* Frameworks */,
+				A5F77697EB1C6E706CFB31F2CD282080 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -906,6 +861,80 @@
 			name = TOPasscodeViewController;
 			productName = TOPasscodeViewController;
 			productReference = 5EED0F2FE5D4011746968979D94CB4AF /* TOPasscodeViewController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		361EF1072F6D25DD6C104B7B30668A22 /* Pods-BespokenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A93B45EBF1DEEAE06B813EDC98C89E4 /* Build configuration list for PBXNativeTarget "Pods-BespokenUITests" */;
+			buildPhases = (
+				371900067E9AADA02C0E325A1456DF3F /* Headers */,
+				BFD505B14979E9F9DA71E7F9399157F2 /* Sources */,
+				8426FD1B711A41E11F6ECE0E00CE3F3B /* Frameworks */,
+				08FCC739D19F3242246215690E5E4862 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				549CBEDEAB6403B8649F11EC897609EB /* PBXTargetDependency */,
+			);
+			name = "Pods-BespokenUITests";
+			productName = "Pods-BespokenUITests";
+			productReference = 159A79AD3A4E331C837C84FFF5E28802 /* Pods_BespokenUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4844D52A7B8207D6BB2DCCA4C1AA3C5D /* SwiftVideoBackground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 199B1E007FE16AE293A38439160C8578 /* Build configuration list for PBXNativeTarget "SwiftVideoBackground" */;
+			buildPhases = (
+				D74658CF38A314EB9436567E28AD8CB7 /* Headers */,
+				D20D2FF47C22ACB1A4B5783FE6CD28B1 /* Sources */,
+				3D56117BA91E18D908070F34900DEC6F /* Frameworks */,
+				46D95F4261BB63609823EEB6D7C4267F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftVideoBackground;
+			productName = SwiftVideoBackground;
+			productReference = AB4895D57A0EC32CDA3C14D3C81915C4 /* SwiftVideoBackground.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5F4BA8B4D605B684ABBD2FB009E45151 /* AlamofireImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FECA52B188EB8A276F28B478D92AF353 /* Build configuration list for PBXNativeTarget "AlamofireImage" */;
+			buildPhases = (
+				CC4BD7DC3B6C66E0D660E5AE137D5EFA /* Headers */,
+				CFC3605BD58A257A8D2611B01BC03F4C /* Sources */,
+				2C1047F6C4EE52C8AA60B562CA27EF88 /* Frameworks */,
+				02D2C3712053831212DD40D64DCC1E27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C1BEAD2D55745FC5FC741F8C60CBEEA /* PBXTargetDependency */,
+			);
+			name = AlamofireImage;
+			productName = AlamofireImage;
+			productReference = 5EBA799D8C55D1FD8D5EF60680958E77 /* AlamofireImage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E76458C58C9140B6A16D60547E68E80C /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 427F0F003A1AD80AE00155AFCDEFAC20 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				A6A607506FEAAC7C41268D3E5CF4E5FE /* Headers */,
+				CC399CEC576B42C962CEB290481CAF95 /* Sources */,
+				6E8AF668A2161F7D6F680F721DB65D2D /* Frameworks */,
+				3DDB7E21141D7764AE4658D5B6AFF8C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 07BAF42C74CD90A7ACA2172639418F42 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -929,181 +958,504 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
-				9EFE4C70245EE2857D336B8B9FA4E825 /* AlamofireImage */,
-				188CE72E0F3C436CFCA75DC7ADDECABF /* Pods-Bespoken */,
-				AF8EF6C1401ECE1757DF54C4080DFE65 /* Pods-BespokenTests */,
-				C9020D016F8263D5D484BA68681C353E /* Pods-BespokenUITests */,
-				BFFA931CCA9E420723FA95DC69F9AB96 /* QRCodeReader.swift */,
-				137C6B7796533C929DBACC2F36C47DA5 /* SwiftVideoBackground */,
-				F8DC4C15F1DE2D75359DE7B83FD68E56 /* TOPasscodeViewController */,
+				E76458C58C9140B6A16D60547E68E80C /* Alamofire */,
+				5F4BA8B4D605B684ABBD2FB009E45151 /* AlamofireImage */,
+				3041A0DD3AB419D35E7F657E253819F0 /* Pods-Bespoken */,
+				1C0C862A6B4262C6D727D5A96177E4E5 /* Pods-BespokenTests */,
+				361EF1072F6D25DD6C104B7B30668A22 /* Pods-BespokenUITests */,
+				13CBF874F256E0A754E652464EE68E54 /* QRCodeReader.swift */,
+				4844D52A7B8207D6BB2DCCA4C1AA3C5D /* SwiftVideoBackground */,
+				325658AE83BC23A5AF53EE6F8FC9859E /* TOPasscodeViewController */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		02D2C3712053831212DD40D64DCC1E27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08FCC739D19F3242246215690E5E4862 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25E17D90903FD15BC67BAE0A04FCA677 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		311F267E25F69E4992F7608B0272451F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DDB7E21141D7764AE4658D5B6AFF8C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46D95F4261BB63609823EEB6D7C4267F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DB2A1DD6057DEEE9A53C2540D731BE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5F77697EB1C6E706CFB31F2CD282080 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		0FDA50DE10433E9F53BDBEA038CE2BC2 /* Sources */ = {
+		1416C47028F5C554C880C25D3BEC5B80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C6AEBB3D02B410CB7009C04B8F53E67 /* Pods-Bespoken-dummy.m in Sources */,
+				E667DEC6EA1F451E8A9969EA3F62D75C /* Pods-BespokenTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		32B9974868188C4803318E36329C87FE /* Sources */ = {
+		205B9A08281D2A5CB4BE6F5BCE49F783 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */,
-				A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */,
-				F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */,
-				61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */,
-				B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */,
-				A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */,
-				EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */,
-				BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */,
-				5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */,
-				CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */,
-				F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */,
-				7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */,
-				62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */,
-				7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */,
-				AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */,
-				3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */,
-				10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */,
-				BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */,
+				B0A642249BCBB8070C42635D25A6F939 /* QRCodeReader.swift in Sources */,
+				7F0D719E461B0BE5A1D82951EADCEBC3 /* QRCodeReader.swift-dummy.m in Sources */,
+				B109C48DA0E56805961ADE809851AF9B /* QRCodeReaderResult.swift in Sources */,
+				9606C6613B750D400B5FCEB7D6BBB949 /* QRCodeReaderView.swift in Sources */,
+				16DCD827731D131BF16D4FFD9E1414E6 /* QRCodeReaderViewContainer.swift in Sources */,
+				2D96FABF789F172453B9DE047B4AFA06 /* QRCodeReaderViewController.swift in Sources */,
+				B00226F4458041DAD78FBD05769662A7 /* QRCodeReaderViewControllerBuilder.swift in Sources */,
+				AFD8895E25F1EE27D4CA90747AABEE7D /* QRCodeReaderViewControllerDelegate.swift in Sources */,
+				19388A46FEB6B251708B344DBBF88247 /* ReaderOverlayView.swift in Sources */,
+				761FAA38CBE3D0F1ECE3A34DD1D2EB59 /* SwitchCameraButton.swift in Sources */,
+				0B4F5A8E96F57FAE7E144698AA66DBC6 /* ToggleTorchButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A51F4B41E7BD4EA02C7DA8D373EAB62 /* Sources */ = {
+		3EA4B450849885896841887BEDBDAD8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				216F646474D972DA6D0F0B45256497CF /* TOPasscodeButtonLabel.m in Sources */,
-				E2421C1660B75726EEA8009AA9E58730 /* TOPasscodeCircleButton.m in Sources */,
-				BB4E0943A33F1DBAFBD755EE3B1484A9 /* TOPasscodeCircleImage.m in Sources */,
-				7D0FDE21AADA4F22DA20E8377A5FDF64 /* TOPasscodeCircleView.m in Sources */,
-				19669F4B631BEF995CD0F7B51471E29A /* TOPasscodeFixedInputView.m in Sources */,
-				7FBD21F05196957AF802607FDBDE1B8C /* TOPasscodeInputField.m in Sources */,
-				DF982C02444B6777F7883F80CBE7EFC8 /* TOPasscodeKeypadView.m in Sources */,
-				FCE3CF2D28B36FD63959B2343C85EEFF /* TOPasscodeSettingsKeypadButton.m in Sources */,
-				03B2467B7B836CEF288141D4FE91DDB3 /* TOPasscodeSettingsKeypadView.m in Sources */,
-				8AE2C9718FAF0609D0CA463762420849 /* TOPasscodeSettingsViewController.m in Sources */,
-				05B31E0F2ADE8121B9AB1B199BF6607C /* TOPasscodeSettingsWarningLabel.m in Sources */,
-				AB5AA03885FF150423FCD8D6FC3AA1E1 /* TOPasscodeVariableInputView.m in Sources */,
-				09A2C5147F85BA7D98DB2BDDCD79C14B /* TOPasscodeView.m in Sources */,
-				BDD187864FE1D51AF33C82851EC076A2 /* TOPasscodeViewContentLayout.m in Sources */,
-				D3A7D5C45A4C499402B5238132133023 /* TOPasscodeViewController-dummy.m in Sources */,
-				338561B857E4A9F1F68B953B9578AD77 /* TOPasscodeViewController.m in Sources */,
-				D69DAD74CBAC0BCEFF21315E3572D0B4 /* TOPasscodeViewControllerAnimatedTransitioning.m in Sources */,
-				B651B08DC5C9302D57FFCDD24AC74584 /* TOSettingsKeypadImage.m in Sources */,
+				151A96CB2AF6E17DA8C06F35F581EEA6 /* TOPasscodeButtonLabel.m in Sources */,
+				AFB4E4CD33F0AF930DAF7F708E16E9E9 /* TOPasscodeCircleButton.m in Sources */,
+				50BCAEDDD4A4B21C9F06760A89924465 /* TOPasscodeCircleImage.m in Sources */,
+				BFAEBF05CFA2A2E63A6B74EC97BAE441 /* TOPasscodeCircleView.m in Sources */,
+				BC3A31E7806C74872D4721B9D5CE35FC /* TOPasscodeFixedInputView.m in Sources */,
+				3D354FD17AC123E84941A3452BB9C488 /* TOPasscodeInputField.m in Sources */,
+				4AFF40FC3AFE1ED4FBF1BC496623DE00 /* TOPasscodeKeypadView.m in Sources */,
+				7D38EBF09A70900FE10FEC100E6F16AD /* TOPasscodeSettingsKeypadButton.m in Sources */,
+				074D75C8406E4233E276D1CBEC5FAE4D /* TOPasscodeSettingsKeypadView.m in Sources */,
+				51C2FCA4E82DC46F27720281246C572F /* TOPasscodeSettingsViewController.m in Sources */,
+				B3956056B0D510B8B0E3F0368D66AFE5 /* TOPasscodeSettingsWarningLabel.m in Sources */,
+				7A40515CCD7E525312C0E103A1D66490 /* TOPasscodeVariableInputView.m in Sources */,
+				A2DD8CEB96333BD96C28A0493EB59421 /* TOPasscodeView.m in Sources */,
+				6AA3D6E2B3B91D129C2E0B712BBBE8C7 /* TOPasscodeViewContentLayout.m in Sources */,
+				F0D5C91E2478818DD87D8BA152259FDB /* TOPasscodeViewController-dummy.m in Sources */,
+				396578C9442898D76F52DBF0BB7EBFD8 /* TOPasscodeViewController.m in Sources */,
+				1A1DC4FC4B6FD47521586BB2CD6E7F74 /* TOPasscodeViewControllerAnimatedTransitioning.m in Sources */,
+				2788AE6F86C40AC7D40D4CFAA56D1A7F /* TOSettingsKeypadImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		40E8FD8C02B9F9BA9D31E31804654FDC /* Sources */ = {
+		9BC0456DB6AAD848FBAA368D908A8DA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				824930FACC203B9CDD7173674B4F04B9 /* QRCodeReader.swift in Sources */,
-				D2B5CF6A5B446802A7F59C2BF5C39F5A /* QRCodeReader.swift-dummy.m in Sources */,
-				B09AE1DD7B3E210C9907F7244A731B19 /* QRCodeReaderResult.swift in Sources */,
-				D83923D0C0EECEA4BF2BBB1EFA6119A0 /* QRCodeReaderView.swift in Sources */,
-				1130E41B69119BB816D08C52E4341E5C /* QRCodeReaderViewContainer.swift in Sources */,
-				C15CDEA3873088D238E43A5ACEA2A1D1 /* QRCodeReaderViewController.swift in Sources */,
-				045203B0D7ABEB8A5DB7618B7119780F /* QRCodeReaderViewControllerBuilder.swift in Sources */,
-				C9FDB5D2802E7FF6614AEC64EDE9DEEE /* QRCodeReaderViewControllerDelegate.swift in Sources */,
-				A4663798F8F3C65F4D36A270B461909B /* ReaderOverlayView.swift in Sources */,
-				6D6A2F078E1190210D4645FF00C948D8 /* SwitchCameraButton.swift in Sources */,
-				42D3F5C3E599FE088BD1108D584E8729 /* ToggleTorchButton.swift in Sources */,
+				C6AD40F936517F79781DE5C7C9203840 /* Pods-Bespoken-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A64067CE09465C4ED5307BA946DF4D2 /* Sources */ = {
+		BFD505B14979E9F9DA71E7F9399157F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC076DCC4CBEB59DB856D9368C9502A8 /* SwiftVideoBackground-dummy.m in Sources */,
-				2B9E4E90933F6CB7229013B1D8B8F2E1 /* VideoBackground.swift in Sources */,
-				40E96B9867CC06617AEF5CDFF26CC926 /* VideoBackgroundError.swift in Sources */,
+				C01A7F0691AFD94A9631C34FE5AE9CD3 /* Pods-BespokenUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D45FB1D0EC6330462FF23007A83E6ED3 /* Sources */ = {
+		CC399CEC576B42C962CEB290481CAF95 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF2748D1E3C7FD8316FD4C40F3F60583 /* Pods-BespokenUITests-dummy.m in Sources */,
+				BE4BA1EDE444A770F834605F4B65348E /* AFError.swift in Sources */,
+				D4C3899574E9D5DF5E5DA52310560BCC /* Alamofire-dummy.m in Sources */,
+				4E1A913EFB404FB11524718FF0298EFE /* Alamofire.swift in Sources */,
+				DBE6E2E4D205545E7988CFA5057C31D6 /* DispatchQueue+Alamofire.swift in Sources */,
+				FF9C7BC64DB23D2CED48197DE67F0335 /* MultipartFormData.swift in Sources */,
+				B77705737566AE83ED7E448923D7FA60 /* NetworkReachabilityManager.swift in Sources */,
+				500C8EDA60C07B0F127C7FC385E17D38 /* Notifications.swift in Sources */,
+				796177DE2762F24DAC16A709FD954838 /* ParameterEncoding.swift in Sources */,
+				965DACF3DC02857ECBE66C5CBA3DA5D4 /* Request.swift in Sources */,
+				52237C35642089F77DD4D723CEB25737 /* Response.swift in Sources */,
+				5EE5FED83B90A606A763CF1114D1D6FB /* ResponseSerialization.swift in Sources */,
+				F9EA61D484CC15FDDAB0D8C0D26D7949 /* Result.swift in Sources */,
+				6BEA14EC335E07C7063CD1383C0C443C /* ServerTrustPolicy.swift in Sources */,
+				1FC3FD39157C2FFFF3869A1300730086 /* SessionDelegate.swift in Sources */,
+				7068E8A7DDC1424EE8F24BC77E8746F4 /* SessionManager.swift in Sources */,
+				36FF8853CB34A9297AFAA8F5F7456324 /* TaskDelegate.swift in Sources */,
+				B424F524BBBE34E685129945993809A8 /* Timeline.swift in Sources */,
+				58A9719584AFA2D108D9E5C585A79329 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB0BE2FBB4DB070AD3C57C41C562C32B /* Sources */ = {
+		CFC3605BD58A257A8D2611B01BC03F4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EA0415A1A8A4FFC7403E201F915F9A4 /* AFIError.swift in Sources */,
-				37F951F2BDB75BD682C2999EB7B51A35 /* AlamofireImage-dummy.m in Sources */,
-				E1FF4985892E23B75A3381EFF830DFD5 /* Image.swift in Sources */,
-				D9E544B8CB42DA8DD44838F83610D8E0 /* ImageCache.swift in Sources */,
-				202822E4668C16D115A8F68F3ADF0E0F /* ImageDownloader.swift in Sources */,
-				27996F52CCABBD6D0874B79D1B913598 /* ImageFilter.swift in Sources */,
-				2BD7CFD41DACC439E8C0A527F1643495 /* Request+AlamofireImage.swift in Sources */,
-				C73BF39A4CCC3E450E102C23027F8FF8 /* UIButton+AlamofireImage.swift in Sources */,
-				05006BDD7301FCF2678618DEDCC69B94 /* UIImage+AlamofireImage.swift in Sources */,
-				304C5736AC5D49B526C709397D0CF048 /* UIImageView+AlamofireImage.swift in Sources */,
+				DD55056D9CA62A21DD873975AF4CA453 /* AFIError.swift in Sources */,
+				3044F8CC65360700C256FD1816EAD872 /* AlamofireImage-dummy.m in Sources */,
+				541C5B6F7D07577D8780B97F83EDD2BE /* Image.swift in Sources */,
+				5227C5691672C22D9B30CE2D05C4CF50 /* ImageCache.swift in Sources */,
+				0BFB6F172162229449F8A1ADBEB0D85C /* ImageDownloader.swift in Sources */,
+				20F72CA5C3444FE464F3E505E7B358AF /* ImageFilter.swift in Sources */,
+				43B823C1B43D07F90622C5D1DA6DC95C /* Request+AlamofireImage.swift in Sources */,
+				6AEFBB5B30DC9E05A82DF28A17BDB2FD /* UIButton+AlamofireImage.swift in Sources */,
+				5F64F95700D0E01EF2CBAEEF6FC7B499 /* UIImage+AlamofireImage.swift in Sources */,
+				D45D4B7C78D3DCB6313DF562761B5EE9 /* UIImageView+AlamofireImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8590F899630BBDA9D5D3B954BF779EC /* Sources */ = {
+		D20D2FF47C22ACB1A4B5783FE6CD28B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FAAD2A3BF7D33ECF90167480D49D8DC /* Pods-BespokenTests-dummy.m in Sources */,
+				9E9C44A4F31B27B30AC9B1626F2602D2 /* SwiftVideoBackground-dummy.m in Sources */,
+				F749218C1B5BD79E4D8DA86A7DB0AA2B /* VideoBackground.swift in Sources */,
+				5DD53E800CE9516EA9C64A7CDE1FDA42 /* VideoBackgroundError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1603B75CC0965549F13933B86279742B /* PBXTargetDependency */ = {
+		549CBEDEAB6403B8649F11EC897609EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = QRCodeReader.swift;
-			target = BFFA931CCA9E420723FA95DC69F9AB96 /* QRCodeReader.swift */;
-			targetProxy = 0E89645AA0AAF24510EAB98AEF6099EA /* PBXContainerItemProxy */;
+			name = "Pods-Bespoken";
+			target = 3041A0DD3AB419D35E7F657E253819F0 /* Pods-Bespoken */;
+			targetProxy = 2CA43A421122FD91114FFB3A87952DCA /* PBXContainerItemProxy */;
 		};
-		160D56B1F811A0E6475689C273BC2DC6 /* PBXTargetDependency */ = {
+		6C1BEAD2D55745FC5FC741F8C60CBEEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SwiftVideoBackground;
-			target = 137C6B7796533C929DBACC2F36C47DA5 /* SwiftVideoBackground */;
-			targetProxy = B15DC3C9E9F6C5C67A65F4EBAC70D560 /* PBXContainerItemProxy */;
+			name = Alamofire;
+			target = E76458C58C9140B6A16D60547E68E80C /* Alamofire */;
+			targetProxy = 84DE9D25FE685AFA1B87C7FACEEDB4B4 /* PBXContainerItemProxy */;
 		};
-		5644085A5C2D45B51A43820542E37896 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AlamofireImage;
-			target = 9EFE4C70245EE2857D336B8B9FA4E825 /* AlamofireImage */;
-			targetProxy = FF7E1E49C6ECAD94750E2249C6830C57 /* PBXContainerItemProxy */;
-		};
-		5AAB5296C1D443379C66150A897D18CF /* PBXTargetDependency */ = {
+		7664B71D4BBE2836FC60D978D702D73B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TOPasscodeViewController;
-			target = F8DC4C15F1DE2D75359DE7B83FD68E56 /* TOPasscodeViewController */;
-			targetProxy = 2763A7C337C412C3680DD05549E61EA0 /* PBXContainerItemProxy */;
+			target = 325658AE83BC23A5AF53EE6F8FC9859E /* TOPasscodeViewController */;
+			targetProxy = 53ED8B9367F9CBCD28B06FCAE75FB9E9 /* PBXContainerItemProxy */;
 		};
-		5C91341FE06155038D31C25BFDEA0BFF /* PBXTargetDependency */ = {
+		AF5C2DA090C4C91C8550E5E1C547F3B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Bespoken";
+			target = 3041A0DD3AB419D35E7F657E253819F0 /* Pods-Bespoken */;
+			targetProxy = E7372340E1711A28F48F293D1A06972F /* PBXContainerItemProxy */;
+		};
+		C48707CE574C97A84E55C46DA7CB7D49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QRCodeReader.swift;
+			target = 13CBF874F256E0A754E652464EE68E54 /* QRCodeReader.swift */;
+			targetProxy = 7C0AD88992C62371A310348D78B805A5 /* PBXContainerItemProxy */;
+		};
+		D9AEDD2275D0EEE821417FD3DA33A937 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AlamofireImage;
+			target = 5F4BA8B4D605B684ABBD2FB009E45151 /* AlamofireImage */;
+			targetProxy = 816B834AEBF1973506A4AA7F92D927EB /* PBXContainerItemProxy */;
+		};
+		E86597BABFF92B3F7CF4C8641C8E6E08 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
-			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
-			targetProxy = 788E4DB55F92B993730127FFA3A57A7D /* PBXContainerItemProxy */;
+			target = E76458C58C9140B6A16D60547E68E80C /* Alamofire */;
+			targetProxy = 9A8576CB41AB2570539C027E190A1B62 /* PBXContainerItemProxy */;
 		};
-		8937A2057A0DAADF003B7C65E7CE115D /* PBXTargetDependency */ = {
+		EF1DF12194608BCF887608D323B56690 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
-			targetProxy = A1758AA696D56310AA192B587162169A /* PBXContainerItemProxy */;
+			name = SwiftVideoBackground;
+			target = 4844D52A7B8207D6BB2DCCA4C1AA3C5D /* SwiftVideoBackground */;
+			targetProxy = 7B868AF33D2D776DD0792C9816544136 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2D3B3EAF58C58E20D2C9DA7CFA1A71EB /* Release */ = {
+		00D42B060CCCD2E7EF0326373B915543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB2D30190374FEFA1B195FC35302F124 /* QRCodeReader.swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
+				PRODUCT_MODULE_NAME = QRCodeReader;
+				PRODUCT_NAME = QRCodeReader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1EAFDB7DE59A16060DF36FC40DC2E750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD7E453B876992604AD2D26FEEDF06D9 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		255968065BCB5FA3B07209CE17614FF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C90E794F64B5E2D880EB0D2E75E6F00 /* Pods-Bespoken.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Bespoken/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Bespoken/Pods-Bespoken.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3787E89EB6744FE0DF91078CF5D935E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7956F3883019BFC441E00E13BCF96D15 /* SwiftVideoBackground.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftVideoBackground/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground.modulemap";
+				PRODUCT_MODULE_NAME = SwiftVideoBackground;
+				PRODUCT_NAME = SwiftVideoBackground;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		385444F1E08826FBF53E56E6F2326967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 974AEA827103A2E4668161C2BE7EAB93 /* TOPasscodeViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TOPasscodeViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController.modulemap";
+				PRODUCT_MODULE_NAME = TOPasscodeViewController;
+				PRODUCT_NAME = TOPasscodeViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		39BED30E55289880AFC9E14BE3AF0A53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB2D30190374FEFA1B195FC35302F124 /* QRCodeReader.swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
+				PRODUCT_MODULE_NAME = QRCodeReader;
+				PRODUCT_NAME = QRCodeReader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4DEB5BC96D9E7D8F3620F175E8FB83C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 974AEA827103A2E4668161C2BE7EAB93 /* TOPasscodeViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TOPasscodeViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController.modulemap";
+				PRODUCT_MODULE_NAME = TOPasscodeViewController;
+				PRODUCT_NAME = TOPasscodeViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		558C11B56E3999D7D6B8BC07F77C03F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0C7E02D1677CD5A7FD18C6C84D9D3A1 /* AlamofireImage.xcconfig */;
 			buildSettings = {
@@ -1120,13 +1472,129 @@
 				INFOPLIST_FILE = "Target Support Files/AlamofireImage/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/AlamofireImage/AlamofireImage.modulemap";
+				PRODUCT_MODULE_NAME = AlamofireImage;
 				PRODUCT_NAME = AlamofireImage;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		56DFAE3BA31B945DA65456C6FADA8294 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E82909B3141B5922438B8D0D3555FB61 /* Pods-BespokenUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BespokenUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BespokenUITests/Pods-BespokenUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		57913F6A330C09188CB660F41D7CE4BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A514BFF21BB2C38E1D27F1048EBB7E51 /* Pods-BespokenUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BespokenUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BespokenUITests/Pods-BespokenUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		69C2A1ABBC028B32498E757B30AFF71C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0C7E02D1677CD5A7FD18C6C84D9D3A1 /* AlamofireImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AlamofireImage/AlamofireImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AlamofireImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AlamofireImage/AlamofireImage.modulemap";
+				PRODUCT_MODULE_NAME = AlamofireImage;
+				PRODUCT_NAME = AlamofireImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1135,7 +1603,45 @@
 			};
 			name = Release;
 		};
-		3689957E0025D075A2C0993927F9FE71 /* Debug */ = {
+		8661D212B681530EB3BCEE049ACF9769 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7A3D2F27173092F59A79A00C075DF59 /* Pods-Bespoken.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Bespoken/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Bespoken/Pods-Bespoken.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		98E98810EEEB96C99CB95CB91F4ADE0A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1167,6 +1673,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1188,249 +1695,23 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		4F2753983519C28F632860F97A0C56AB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7A3D2F27173092F59A79A00C075DF59 /* Pods-Bespoken.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Bespoken/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Bespoken/Pods-Bespoken.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Bespoken;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		58EA4E378417249190AFD97607163EAF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7956F3883019BFC441E00E13BCF96D15 /* SwiftVideoBackground.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftVideoBackground/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground.modulemap";
-				PRODUCT_NAME = SwiftVideoBackground;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		75CE52815C03C00D4BADD412DDC837FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 974AEA827103A2E4668161C2BE7EAB93 /* TOPasscodeViewController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TOPasscodeViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController.modulemap";
-				PRODUCT_NAME = TOPasscodeViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7B34F346B30F73A2633FB77AF26769D3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD7E453B876992604AD2D26FEEDF06D9 /* Alamofire.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		83C1E7BED8AACC969E2B78834C2C2B43 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E82909B3141B5922438B8D0D3555FB61 /* Pods-BespokenUITests.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-BespokenUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BespokenUITests/Pods-BespokenUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_BespokenUITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		902A89C9810FA29DC00B9E10BD86FBC7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD7E453B876992604AD2D26FEEDF06D9 /* Alamofire.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9C44E6A930EB85F75E30648B331E9D05 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C90E794F64B5E2D880EB0D2E75E6F00 /* Pods-Bespoken.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Bespoken/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Bespoken/Pods-Bespoken.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Bespoken;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A463E06DF9531DAE1FE4286BEE5AC8A0 /* Release */ = {
+		A8B2FA7AA7DE4A0B17137BCFA7CFBE79 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 910D0B078F3740F478AB7CF92550DED6 /* Pods-BespokenTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1444,14 +1725,18 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-BespokenTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-BespokenTests/Pods-BespokenTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_BespokenTests;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1461,138 +1746,11 @@
 			};
 			name = Release;
 		};
-		AFBC6B13E133B537F44D6FEABD5D9BE5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A514BFF21BB2C38E1D27F1048EBB7E51 /* Pods-BespokenUITests.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-BespokenUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BespokenUITests/Pods-BespokenUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_BespokenUITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C5C221297610BDD0D03785A0059B508C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB2D30190374FEFA1B195FC35302F124 /* QRCodeReader.swift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
-				PRODUCT_NAME = QRCodeReader;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C72E9E1CFA2CB9D3725C84ED94A244D9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0C7E02D1677CD5A7FD18C6C84D9D3A1 /* AlamofireImage.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AlamofireImage/AlamofireImage-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AlamofireImage/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AlamofireImage/AlamofireImage.modulemap";
-				PRODUCT_NAME = AlamofireImage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DD441A427472188277B06E6BD4E18088 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7956F3883019BFC441E00E13BCF96D15 /* SwiftVideoBackground.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftVideoBackground/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground.modulemap";
-				PRODUCT_NAME = SwiftVideoBackground;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E5079618D227621DFEDC7C1D7665DDED /* Debug */ = {
+		B3A8EBB13F1F2316464CE46F97A1A577 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B313DA6BA7C1CB7D7B4F2DAEFA0FE086 /* Pods-BespokenTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1606,14 +1764,18 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-BespokenTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-BespokenTests/Pods-BespokenTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_BespokenTests;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1622,7 +1784,7 @@
 			};
 			name = Debug;
 		};
-		F582AD13A9DE7F131B91568E61E9D1F8 /* Release */ = {
+		B97A7F6ACE1216BB5A2307CA83FC93C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1654,6 +1816,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1673,16 +1836,19 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		F7F5739F547888D6AD4BBF73701E1B4E /* Debug */ = {
+		E97EE9A41FFDDB0F46B48411BCFA8707 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB2D30190374FEFA1B195FC35302F124 /* QRCodeReader.swift.xcconfig */;
+			baseConfigurationReference = 7956F3883019BFC441E00E13BCF96D15 /* SwiftVideoBackground.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1693,27 +1859,32 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftVideoBackground/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
-				PRODUCT_NAME = QRCodeReader;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground.modulemap";
+				PRODUCT_MODULE_NAME = SwiftVideoBackground;
+				PRODUCT_NAME = SwiftVideoBackground;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		FDFD30DDD9BE1826028ECED741055219 /* Debug */ = {
+		F9711F223F590669E94B504F3CC44301 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 974AEA827103A2E4668161C2BE7EAB93 /* TOPasscodeViewController.xcconfig */;
+			baseConfigurationReference = DD7E453B876992604AD2D26FEEDF06D9 /* Alamofire.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1724,13 +1895,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TOPasscodeViewController/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController.modulemap";
-				PRODUCT_NAME = TOPasscodeViewController;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1744,11 +1920,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		01F2198AF9DCCF3700AE9DD21E64D480 /* Build configuration list for PBXNativeTarget "AlamofireImage" */ = {
+		190E178F7C3B41C3E850B5CD21DA4C20 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C72E9E1CFA2CB9D3725C84ED94A244D9 /* Debug */,
-				2D3B3EAF58C58E20D2C9DA7CFA1A71EB /* Release */,
+				39BED30E55289880AFC9E14BE3AF0A53 /* Debug */,
+				00D42B060CCCD2E7EF0326373B915543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		199B1E007FE16AE293A38439160C8578 /* Build configuration list for PBXNativeTarget "SwiftVideoBackground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3787E89EB6744FE0DF91078CF5D935E0 /* Debug */,
+				E97EE9A41FFDDB0F46B48411BCFA8707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29A5B9CE5E93F31D049B2FB0DA7535B0 /* Build configuration list for PBXNativeTarget "Pods-BespokenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3A8EBB13F1F2316464CE46F97A1A577 /* Debug */,
+				A8B2FA7AA7DE4A0B17137BCFA7CFBE79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1756,71 +1950,53 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3689957E0025D075A2C0993927F9FE71 /* Debug */,
-				F582AD13A9DE7F131B91568E61E9D1F8 /* Release */,
+				98E98810EEEB96C99CB95CB91F4ADE0A /* Debug */,
+				B97A7F6ACE1216BB5A2307CA83FC93C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3EF45BDA5ED4ED85110BC552F2C1C42A /* Build configuration list for PBXNativeTarget "Pods-BespokenUITests" */ = {
+		427F0F003A1AD80AE00155AFCDEFAC20 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				83C1E7BED8AACC969E2B78834C2C2B43 /* Debug */,
-				AFBC6B13E133B537F44D6FEABD5D9BE5 /* Release */,
+				F9711F223F590669E94B504F3CC44301 /* Debug */,
+				1EAFDB7DE59A16060DF36FC40DC2E750 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+		8A93B45EBF1DEEAE06B813EDC98C89E4 /* Build configuration list for PBXNativeTarget "Pods-BespokenUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7B34F346B30F73A2633FB77AF26769D3 /* Debug */,
-				902A89C9810FA29DC00B9E10BD86FBC7 /* Release */,
+				56DFAE3BA31B945DA65456C6FADA8294 /* Debug */,
+				57913F6A330C09188CB660F41D7CE4BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		746C69FCF6B9C2CACC4DA1BF63AE33CE /* Build configuration list for PBXNativeTarget "Pods-Bespoken" */ = {
+		BBBE54EFE14E5F16D0A593C9B91E608F /* Build configuration list for PBXNativeTarget "Pods-Bespoken" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F2753983519C28F632860F97A0C56AB /* Debug */,
-				9C44E6A930EB85F75E30648B331E9D05 /* Release */,
+				8661D212B681530EB3BCEE049ACF9769 /* Debug */,
+				255968065BCB5FA3B07209CE17614FF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94B97CA45E44921C99AADD4B3115BB0F /* Build configuration list for PBXNativeTarget "TOPasscodeViewController" */ = {
+		FECA52B188EB8A276F28B478D92AF353 /* Build configuration list for PBXNativeTarget "AlamofireImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FDFD30DDD9BE1826028ECED741055219 /* Debug */,
-				75CE52815C03C00D4BADD412DDC837FC /* Release */,
+				558C11B56E3999D7D6B8BC07F77C03F9 /* Debug */,
+				69C2A1ABBC028B32498E757B30AFF71C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D49DF13645DBE8A84FC09659F231F726 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */ = {
+		FEEA922946DB735DE0A4EC4EB5577B9C /* Build configuration list for PBXNativeTarget "TOPasscodeViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F7F5739F547888D6AD4BBF73701E1B4E /* Debug */,
-				C5C221297610BDD0D03785A0059B508C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DD8B9E10441D70F2CA5342C06AC0EAD6 /* Build configuration list for PBXNativeTarget "Pods-BespokenTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E5079618D227621DFEDC7C1D7665DDED /* Debug */,
-				A463E06DF9531DAE1FE4286BEE5AC8A0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FB2F298DE70457B54E77D2E758A27406 /* Build configuration list for PBXNativeTarget "SwiftVideoBackground" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DD441A427472188277B06E6BD4E18088 /* Debug */,
-				58EA4E378417249190AFD97607163EAF /* Release */,
+				385444F1E08826FBF53E56E6F2326967 /* Debug */,
+				4DEB5BC96D9E7D8F3620F175E8FB83C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

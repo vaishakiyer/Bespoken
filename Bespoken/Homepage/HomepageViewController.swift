@@ -117,6 +117,11 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
             let nextVC = storyBoard.instantiateViewController(withIdentifier: "TrunckViewController") as? TrunckViewController
             self.navigationController?.pushViewController(nextVC!, animated: true)
         }
+        else if indexPath.row == 1{
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let collectionVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as? CollectionsViewController
+            self.navigationController?.present(collectionVC!, animated: true)
+        }
         else{
          
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)

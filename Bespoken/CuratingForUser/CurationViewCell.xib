@@ -57,6 +57,7 @@
             <size key="customSize" width="140" height="106"/>
             <connections>
                 <outlet property="imageView" destination="oHa-Nu-AwV" id="zsb-bk-QWW"/>
+                <outlet property="innerView" destination="abY-Tz-3gM" id="aC8-IY-qjf"/>
                 <outlet property="titleText" destination="jEY-PY-0M2" id="BzI-zL-Yw5"/>
             </connections>
             <point key="canvasLocation" x="78.400000000000006" y="153.82308845577214"/>

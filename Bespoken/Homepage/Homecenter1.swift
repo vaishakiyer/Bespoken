@@ -13,7 +13,8 @@ class Homecenter1: UIView {
     @IBOutlet var contentView: UIView!
    
     @IBOutlet weak var firstImageView: UIImageView!
-    
+    @IBOutlet weak var firstName: UILabel!
+   
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -30,7 +31,13 @@ class Homecenter1: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
         contentView.roundCorners(corners: .allCorners, radius: firstImageView.frame.width / 2)
+        
+       
+        
     }
+    
+    
+   
 
     /*
     // Only override draw() if you perform custom drawing.

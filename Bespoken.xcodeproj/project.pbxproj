@@ -51,6 +51,7 @@
 		A5B0C95A21A4473F0058A064 /* Homecenter1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B0C95921A4473F0058A064 /* Homecenter1.xib */; };
 		A5B0C95C21A450760058A064 /* Homecenter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0C95B21A450760058A064 /* Homecenter1.swift */; };
 		A5BE55F021AEAB5800A8A285 /* ProductCheckoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BE55EF21AEAB5800A8A285 /* ProductCheckoutController.swift */; };
+		A5EB435C21B04E3E0056B24A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB435B21B04E3E0056B24A /* User.swift */; };
 		A5FA1A2D21A4617D00743D73 /* TinderSwipeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A2C21A4617D00743D73 /* TinderSwipeControllerViewController.swift */; };
 		A5FA1A3121A4747E00743D73 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A2F21A4747E00743D73 /* GradientView.swift */; };
 		A5FA1A3221A4747E00743D73 /* TinderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A3021A4747E00743D73 /* TinderCard.swift */; };
@@ -128,6 +129,7 @@
 		A5B0C95921A4473F0058A064 /* Homecenter1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Homecenter1.xib; sourceTree = "<group>"; };
 		A5B0C95B21A450760058A064 /* Homecenter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homecenter1.swift; sourceTree = "<group>"; };
 		A5BE55EF21AEAB5800A8A285 /* ProductCheckoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCheckoutController.swift; sourceTree = "<group>"; };
+		A5EB435B21B04E3E0056B24A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5FA1A2C21A4617D00743D73 /* TinderSwipeControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderSwipeControllerViewController.swift; sourceTree = "<group>"; };
 		A5FA1A2F21A4747E00743D73 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A5FA1A3021A4747E00743D73 /* TinderCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderCard.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				A53D597121AF144A009F993F /* Questionnaire.swift */,
+				A5EB435B21B04E3E0056B24A /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				A53D597221AF144A009F993F /* Questionnaire.swift in Sources */,
 				A5FA1A3221A4747E00743D73 /* TinderCard.swift in Sources */,
 				A5082D8621A1838A005EBA41 /* Router.swift in Sources */,
+				A5EB435C21B04E3E0056B24A /* User.swift in Sources */,
 				A529D5D121A30F54005A221A /* QuestionnaireController1.swift in Sources */,
 				A5B0C95721A4446B0058A064 /* DummyContent.swift in Sources */,
 				A594F5F421A1446F001BD710 /* Bespoken.xcdatamodeld in Sources */,

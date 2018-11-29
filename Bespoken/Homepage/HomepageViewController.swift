@@ -8,7 +8,7 @@
 
 import UIKit
 import SwiftVideoBackground
-
+import Alamofire
 
 class HomepageViewController: UIViewController,CAAnimationDelegate {
 
@@ -40,11 +40,22 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     func setup(){
         
-        
+        updateUI()
         optionCollection.register(UINib(nibName: "HomePageOptionCell", bundle: nil), forCellWithReuseIdentifier: "HomePageOptionCell")
         optionCollection.delegate = self
         optionCollection.dataSource = self
         createNavbar()
+        getQuestions()
+        fetchUser()
+        
+    }
+    
+    func updateUI(){
+        
+        if let firstName = BSUserDefaults.loggedName(){
+         ballView.firstName.text = "HI " + firstName
+        }
+        
     }
     
     func createNavbar(){
@@ -67,6 +78,59 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
        try? videoPlay.play(view: videoBackgroudView, videoName: "videoplayback", videoType: "mp4", isMuted: true, darkness: 0.1, willLoopVideo: true, setAudioSessionAmbient: true)
         
     }
+    
+    
+    //MARK: - Network Operation
+    
+    func fetchUser(){
+        
+        Alamofire.request(Router.getUser()).responseJSON { (response) in
+            
+            switch response.result{
+                
+            case .success(let JSON):
+                
+                print(JSON)
+                
+                guard let jsonArray = JSON as? [NSDictionary] else {return}
+                
+                let userDict = jsonArray.first
+                
+                BSUserDefaults.setLoggedInUserDict(userDict!)
+             
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
+        
+    }
+    
+    
+    func getQuestions(){
+        
+        Alamofire.request(Router.getQuestions()).responseJSON { (response) in
+            
+            switch response.result{
+            case .success( _):
+                
+                let question = try? JSONDecoder().decode(Questionnaire.self, from: response.data!)
+                myQuestions = question!
+                
+                break
+                
+            case .failure(let error):
+                print(error)
+                
+            }
+            
+            
+        }
+        
+        
+        
+    }
+
     
     
 

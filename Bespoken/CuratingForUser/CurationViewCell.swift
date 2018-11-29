@@ -12,10 +12,13 @@ class CurationViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleText: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var innerView: UIView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    
 }

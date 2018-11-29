@@ -49,6 +49,9 @@ class QuestionnaireController1: UIViewController {
         optionCollection.register(UINib(nibName: "CurationViewCell", bundle: nil), forCellWithReuseIdentifier: "CurationViewCell")
         optionCollection.delegate = self
         optionCollection.dataSource = self
+        
+       
+        
         createNavBar(leftButton: "HOMEPAGE")
         titleArray = ["SENSUOS","ELEGANT","SOPHISTICATED","CREATIVE & UNIQUE","COMFORTABLE","BOLD"]
         
@@ -195,10 +198,40 @@ extension QuestionnaireController1: UICollectionViewDelegateFlowLayout,UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = optionCollection.dequeueReusableCell(withReuseIdentifier: "CurationViewCell", for: indexPath) as? CurationViewCell
+        
+        if myQuestions[nextCountPress].options?[indexPath.row].archived == true{
+            
+           cell?.innerView.backgroundColor = UIColor.groupTableViewBackground
+        }else{
+           
+            cell?.innerView.backgroundColor = UIColor.white
+        }
+        
         cell?.titleText.text = myQuestions[nextCountPress].options?[indexPath.row].text
         return cell!
         
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+        if myQuestions[nextCountPress].options?[indexPath.row].archived == true{
+            myQuestions[nextCountPress].options?[indexPath.row].archived = false
+        }else{
+            myQuestions[nextCountPress].options?[indexPath.row].archived = true
+        }
+        
+    
+         optionCollection.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        myQuestions[nextCountPress].options?[indexPath.row].archived = false
+        optionCollection.reloadData()
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 140, height: 110)

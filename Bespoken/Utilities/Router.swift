@@ -18,12 +18,13 @@ import Alamofire
  
  case inviteUser(firstN: String,phone: String,email:String)
  case confirmUser(email: String,invitecode: String,password:String)
-    case signIn(email: String,password: String)
+ case signIn(email: String,password: String)
  case getQuestions()
- 
+ case getUser()
+    
  var method: Alamofire.HTTPMethod {
  switch self {
- case .inviteUser,.getQuestions,.signIn,.confirmUser:
+ case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser:
  return .post
  default:
  return .get
@@ -41,10 +42,11 @@ import Alamofire
  case .getQuestions:
     
     return "getQuestions"
+ case .signIn:
+    return "signIn"
+  case .getUser:
+    return "getUser"
     
- default:
-    return "getQuestions"
-    break
  }
  }
  
@@ -56,7 +58,10 @@ import Alamofire
  var urlRequest = URLRequest(url: URL(string: urlString)!)
  urlRequest.httpMethod = method.rawValue
  
-// urlRequest.setValue("Incture Technologies", forHTTPHeaderField: "organization")
+    if let token = BSUserDefaults.getAccessToken(){
+        urlRequest.setValue("Token \(token)", forHTTPHeaderField: "Authorization")
+    }
+
  
  switch self {
  case .inviteUser(let fName,let phone,let email):
@@ -67,6 +72,10 @@ import Alamofire
  case .confirmUser(let email, let invitecode, let password):
     
     let parameters = ["email": email,"invitecode": invitecode,"password": password]
+    return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
+    
+ case .signIn(let email,let password):
+    let parameters = ["email": email,"password": password]
     return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
     
  default:

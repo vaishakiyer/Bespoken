@@ -15,7 +15,7 @@ struct QuestionnaireElement: Codable {
     let v: Int?
     let archived: Bool?
     let updatedDate: String?
-    let options: [Option]?
+    var options: [Option]?
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
@@ -27,7 +27,7 @@ struct QuestionnaireElement: Codable {
 
 struct Option: Codable {
     let text, id: String?
-    let archived: Bool?
+    var archived: Bool? = false
     
     enum CodingKeys: String, CodingKey {
         case text

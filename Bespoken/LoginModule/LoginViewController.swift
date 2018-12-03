@@ -200,7 +200,8 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
             signInSignUpField.setTitle("SIGN IN", for: .normal)
             passwordField.isHidden = true
              usernameField.addImageAndPlaceHolder(img: "Group381", placeHolder: "EMAIL ID")
-            emailPassField.addImageAndPlaceHolder(img: "Group382", placeHolder: "PASSWORD")
+             emailPassField.addImageAndPlaceHolder(img: "Group382", placeHolder: "PASSWORD")
+             emailPassField.isSecureTextEntry = true
             
             break
             
@@ -213,6 +214,7 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
             passwordField.isHidden = false
              usernameField.addImageAndPlaceHolder(img: "Group377", placeHolder: "HOW MAY I CALL YOU")
             emailPassField.addImageAndPlaceHolder(img: "Group381", placeHolder: "EMAIL ID")
+             emailPassField.isSecureTextEntry = false
             
         }
         

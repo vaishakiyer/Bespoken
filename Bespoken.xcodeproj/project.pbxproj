@@ -903,7 +903,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KXX5V299J5;
+				DEVELOPMENT_TEAM = 9U7Y45UZ8Q;
 				INFOPLIST_FILE = Bespoken/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -922,7 +922,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KXX5V299J5;
+				DEVELOPMENT_TEAM = 9U7Y45UZ8Q;
 				INFOPLIST_FILE = Bespoken/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

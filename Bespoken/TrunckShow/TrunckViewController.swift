@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 import QRCodeReader
+import AlamofireImage
+import Alamofire
 
 class TrunckViewController: UIViewController {
 
@@ -22,6 +24,8 @@ class TrunckViewController: UIViewController {
         return QRCodeReaderViewController(builder: builder)
     }()
     var previewButtonPressed: Bool? = false
+    var selectedIndex: Int!
+    var myEvents = TrunckShow()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +43,7 @@ class TrunckViewController: UIViewController {
         trunckCollection.dataSource = self
         trunckCollection.register(UINib(nibName: "TrunckViewCell", bundle: nil), forCellWithReuseIdentifier: "TrunckViewCell")
         trunckCollection.register(UINib(nibName: "PreviewImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PreviewImageCollectionViewCell")
+        getEvents()
     }
     
     func addGestureToView(){
@@ -79,7 +84,7 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
         if previewButtonPressed == true{
              return 1
         }else{
-             return 5
+             return myEvents.count
         }
        
     }
@@ -90,11 +95,23 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
             
             let cell = trunckCollection.dequeueReusableCell(withReuseIdentifier: "PreviewImageCollectionViewCell", for: indexPath) as? PreviewImageCollectionViewCell
             
+            if let url = URL(string: myEvents[selectedIndex].bannerImage!){
+                cell!.previewImage.af_setImage(withURL: url)
+            }
+            if let startTime = myEvents[selectedIndex].startDate{
+                 cell!.setDate = startTime
+            }
+           
             return cell!
             
         }else{
             
             let cell = trunckCollection.dequeueReusableCell(withReuseIdentifier: "TrunckViewCell", for: indexPath) as? TrunckViewCell
+            
+            if let url = URL(string: myEvents[indexPath.item].bannerImage!){
+                cell!.bkgImage.af_setImage(withURL: url)
+            }
+            
             cell!.delegate = self
             return cell!
         }
@@ -134,8 +151,14 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
 extension TrunckViewController: TrunckViewDelegate{
     
     func buttonPreviewPressed(sender: TrunckViewCell) {
+        
+        guard let tappedIndex  = trunckCollection.indexPath(for: sender) else {return}
+        
+        selectedIndex = tappedIndex.item
         previewButtonPressed = true
          addGestureToView()
+        
+        
         UIView.transition(with: trunckCollection, duration: 0.5, options: .transitionFlipFromLeft, animations: {
             //Do the data reload here
             self.trunckCollection.performBatchUpdates({
@@ -173,8 +196,43 @@ extension TrunckViewController: QRCodeReaderViewControllerDelegate{
          dismiss(animated: true, completion: nil)
     }
     
+}
+
+//MARK: - Network Operation
+
+extension TrunckViewController{
     
-    
+    func getEvents(){
+        
+         BSLoader.showLoading("", disableUI: true, image: "Group 376")
+        
+        Alamofire.request(Router.getEvents()).responseJSON { (response) in
+            
+            BSLoader.hide()
+            
+            switch response.result{
+                
+            case .success(let JSON):
+                
+                print(JSON)
+                let events = try? JSONDecoder().decode(TrunckShow.self, from: response.data!)
+                
+                if let val = events{
+                    self.myEvents = val
+                }
+                
+                self.trunckCollection.reloadData()
+                
+            case .failure(let error):
+                print(error)
+                
+                
+            }
+            
+            
+        }
+        
+    }
     
     
 }

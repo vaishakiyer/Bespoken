@@ -15,6 +15,11 @@ class PreviewImageCollectionViewCell: UICollectionViewCell {
     
     var releaseDate: Date?
     var countdownTimer = Timer()
+    var setDate = String(){
+        didSet{
+            updateUI()
+        }
+    }
     
     @IBOutlet weak var previewImage: UIImageView!
     @IBOutlet weak var countDownLabel: UILabel!
@@ -22,15 +27,20 @@ class PreviewImageCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let releaseDateString = "2018-11-24 23:00:00"
-        let releaseDateFormatter = DateFormatter()
-        releaseDateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        releaseDate = releaseDateFormatter.date(from: releaseDateString)!  as Date
+       // let releaseDateString = "2018-11-24 23:00:00"
         
-        countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         // Initialization code
     }
     
+    func updateUI(){
+        
+        let releaseDateFormatter = DateFormatter()
+        releaseDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        releaseDate = releaseDateFormatter.date(from: setDate)!  as Date
+        
+        countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+        
+    }
     
     @objc func updateTime() {
         

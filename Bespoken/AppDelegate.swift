@@ -26,9 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let vc = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController")
             let navController = UINavigationController(rootViewController: vc)
             window?.rootViewController = navController
-            
+
         }else{
-            
+
             let vc = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
             let navController = UINavigationController(rootViewController: vc)
             window?.rootViewController = navController

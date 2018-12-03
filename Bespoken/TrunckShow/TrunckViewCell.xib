@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyo-QC-wSr">
                         <rect key="frame" x="0.0" y="0.0" width="287" height="50"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path 1103" translatesAutoresizingMaskIntoConstraints="NO" id="db1-4U-i91">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group 22" translatesAutoresizingMaskIntoConstraints="NO" id="db1-4U-i91">
                                 <rect key="frame" x="0.0" y="0.0" width="287" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -40,6 +40,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNN-e9-Nmk">
                                         <rect key="frame" x="67" y="5" width="17" height="19"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="17" id="B5M-a6-pO2"/>
                                             <constraint firstAttribute="height" constant="19" id="T7X-4Z-rgD"/>
@@ -81,6 +82,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="287" height="50"/>
             <connections>
+                <outlet property="bkgImage" destination="db1-4U-i91" id="rCj-Hr-s2m"/>
                 <outlet property="outerView" destination="nyo-QC-wSr" id="JgJ-aK-Jl6"/>
                 <outlet property="previewButton" destination="g4g-5m-myP" id="a5M-Dl-Otr"/>
                 <outlet property="scannerButton" destination="bNN-e9-Nmk" id="3cN-mz-6Qw"/>
@@ -90,7 +92,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Path 1103" width="121.5" height="22"/>
+        <image name="Mask Group 22" width="235" height="365"/>
         <image name="Path 989" width="8" height="10.5"/>
         <image name="qrcode" width="39" height="39"/>
     </resources>

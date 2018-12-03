@@ -21,6 +21,7 @@ class TrunckViewCell: UICollectionViewCell {
     @IBOutlet weak var scannerView: UIView!
     @IBOutlet weak var previewButton: UIButton!
     @IBOutlet weak var scannerButton: UIButton!
+    @IBOutlet weak var bkgImage: UIImageView!
     
     var delegate : TrunckViewDelegate?
     

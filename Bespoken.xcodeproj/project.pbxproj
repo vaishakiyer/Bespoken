@@ -45,11 +45,17 @@
 		A594F60F21A14471001BD710 /* BespokenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A594F60E21A14471001BD710 /* BespokenUITests.swift */; };
 		A5A38A7E21A18B7F00ED1088 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A38A7D21A18B7F00ED1088 /* LoginViewController.swift */; };
 		A5A38A8021A18ED500ED1088 /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A38A7F21A18ED500ED1088 /* Swift+Gif.swift */; };
-		A5A38A8321A1922800ED1088 /* welcomeGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A38A8221A1922800ED1088 /* welcomeGif.gif */; };
 		A5B0C95721A4446B0058A064 /* DummyContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0C95621A4446B0058A064 /* DummyContent.swift */; };
 		A5B0C95821A4454E0058A064 /* videoplayback.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A5B0C95521A443FF0058A064 /* videoplayback.mp4 */; };
 		A5B0C95A21A4473F0058A064 /* Homecenter1.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B0C95921A4473F0058A064 /* Homecenter1.xib */; };
 		A5B0C95C21A450760058A064 /* Homecenter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0C95B21A450760058A064 /* Homecenter1.swift */; };
+		A5B4191521B2E6090032F35C /* SizeTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4191421B2E6090032F35C /* SizeTypeViewController.swift */; };
+		A5B4191821B2E7CB0032F35C /* SizeSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4191621B2E7CB0032F35C /* SizeSliderCell.swift */; };
+		A5B4191921B2E7CB0032F35C /* SizeSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B4191721B2E7CB0032F35C /* SizeSliderCell.xib */; };
+		A5B4191C21B50E000032F35C /* customTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4191A21B50DFF0032F35C /* customTypeCell.swift */; };
+		A5B4191D21B50E000032F35C /* customTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B4191B21B50E000032F35C /* customTypeCell.xib */; };
+		A5B4191F21B539360032F35C /* welcomeGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5B4191E21B539350032F35C /* welcomeGif.gif */; };
+		A5B4192121B592920032F35C /* TrunckShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4192021B592920032F35C /* TrunckShow.swift */; };
 		A5BE55F021AEAB5800A8A285 /* ProductCheckoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BE55EF21AEAB5800A8A285 /* ProductCheckoutController.swift */; };
 		A5EB435C21B04E3E0056B24A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB435B21B04E3E0056B24A /* User.swift */; };
 		A5FA1A2D21A4617D00743D73 /* TinderSwipeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A2C21A4617D00743D73 /* TinderSwipeControllerViewController.swift */; };
@@ -123,11 +129,17 @@
 		A594F61021A14471001BD710 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5A38A7D21A18B7F00ED1088 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5A38A7F21A18ED500ED1088 /* Swift+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Gif.swift"; sourceTree = "<group>"; };
-		A5A38A8221A1922800ED1088 /* welcomeGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = welcomeGif.gif; sourceTree = "<group>"; };
 		A5B0C95521A443FF0058A064 /* videoplayback.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = videoplayback.mp4; sourceTree = "<group>"; };
 		A5B0C95621A4446B0058A064 /* DummyContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyContent.swift; sourceTree = "<group>"; };
 		A5B0C95921A4473F0058A064 /* Homecenter1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Homecenter1.xib; sourceTree = "<group>"; };
 		A5B0C95B21A450760058A064 /* Homecenter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homecenter1.swift; sourceTree = "<group>"; };
+		A5B4191421B2E6090032F35C /* SizeTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeTypeViewController.swift; sourceTree = "<group>"; };
+		A5B4191621B2E7CB0032F35C /* SizeSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSliderCell.swift; sourceTree = "<group>"; };
+		A5B4191721B2E7CB0032F35C /* SizeSliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SizeSliderCell.xib; sourceTree = "<group>"; };
+		A5B4191A21B50DFF0032F35C /* customTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTypeCell.swift; sourceTree = "<group>"; };
+		A5B4191B21B50E000032F35C /* customTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customTypeCell.xib; sourceTree = "<group>"; };
+		A5B4191E21B539350032F35C /* welcomeGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = welcomeGif.gif; sourceTree = "<group>"; };
+		A5B4192021B592920032F35C /* TrunckShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrunckShow.swift; sourceTree = "<group>"; };
 		A5BE55EF21AEAB5800A8A285 /* ProductCheckoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCheckoutController.swift; sourceTree = "<group>"; };
 		A5EB435B21B04E3E0056B24A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5FA1A2C21A4617D00743D73 /* TinderSwipeControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderSwipeControllerViewController.swift; sourceTree = "<group>"; };
@@ -246,6 +258,7 @@
 			children = (
 				A53D597121AF144A009F993F /* Questionnaire.swift */,
 				A5EB435B21B04E3E0056B24A /* User.swift */,
+				A5B4192021B592920032F35C /* TrunckShow.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -257,6 +270,11 @@
 				A5BE55EF21AEAB5800A8A285 /* ProductCheckoutController.swift */,
 				A53D596A21AEED62009F993F /* sizeChartCell.swift */,
 				A53D596B21AEED62009F993F /* sizeChartCell.xib */,
+				A5B4191421B2E6090032F35C /* SizeTypeViewController.swift */,
+				A5B4191621B2E7CB0032F35C /* SizeSliderCell.swift */,
+				A5B4191721B2E7CB0032F35C /* SizeSliderCell.xib */,
+				A5B4191A21B50DFF0032F35C /* customTypeCell.swift */,
+				A5B4191B21B50E000032F35C /* customTypeCell.xib */,
 			);
 			path = CheckoutProcess;
 			sourceTree = "<group>";
@@ -336,7 +354,7 @@
 		A5A38A8121A1921200ED1088 /* LocalGifs+Videos */ = {
 			isa = PBXGroup;
 			children = (
-				A5A38A8221A1922800ED1088 /* welcomeGif.gif */,
+				A5B4191E21B539350032F35C /* welcomeGif.gif */,
 				A5B0C95521A443FF0058A064 /* videoplayback.mp4 */,
 			);
 			path = "LocalGifs+Videos";
@@ -475,7 +493,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B4191D21B50E000032F35C /* customTypeCell.xib in Resources */,
 				A5B0C95821A4454E0058A064 /* videoplayback.mp4 in Resources */,
+				A5B4191921B2E7CB0032F35C /* SizeSliderCell.xib in Resources */,
 				A5231BAA21A84FBE00463AE4 /* TrunckViewCell.xib in Resources */,
 				A5082D7D21A15905005EBA41 /* PersonalisationCell.xib in Resources */,
 				A594F5F921A14471001BD710 /* LaunchScreen.storyboard in Resources */,
@@ -483,9 +503,9 @@
 				A5B0C95A21A4473F0058A064 /* Homecenter1.xib in Resources */,
 				A5082D7921A15737005EBA41 /* PersonalisationHeader.xib in Resources */,
 				A5231BAE21A8645C00463AE4 /* PreviewImageCollectionViewCell.xib in Resources */,
+				A5B4191F21B539360032F35C /* welcomeGif.gif in Resources */,
 				A529D5CE21A2FE9B005A221A /* HomePageOptionCell.xib in Resources */,
 				A529D5D521A31210005A221A /* CurationViewCell.xib in Resources */,
-				A5A38A8321A1922800ED1088 /* welcomeGif.gif in Resources */,
 				A53D596D21AEED62009F993F /* sizeChartCell.xib in Resources */,
 				A594F5F121A1446F001BD710 /* Main.storyboard in Resources */,
 				A5082D8121A15A49005EBA41 /* OptionsViewCell.xib in Resources */,
@@ -518,6 +538,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bespoken/Pods-Bespoken-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/PulsingHalo/PulsingHalo.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftVideoBackground/SwiftVideoBackground.framework",
 				"${BUILT_PRODUCTS_DIR}/TOPasscodeViewController/TOPasscodeViewController.framework",
@@ -526,6 +547,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PulsingHalo.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftVideoBackground.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TOPasscodeViewController.framework",
@@ -684,12 +706,15 @@
 				A5B0C95721A4446B0058A064 /* DummyContent.swift in Sources */,
 				A594F5F421A1446F001BD710 /* Bespoken.xcdatamodeld in Sources */,
 				A529D5CD21A2FE9B005A221A /* HomePageOptionCell.swift in Sources */,
+				A5B4191821B2E7CB0032F35C /* SizeSliderCell.swift in Sources */,
 				A5BE55F021AEAB5800A8A285 /* ProductCheckoutController.swift in Sources */,
+				A5B4192121B592920032F35C /* TrunckShow.swift in Sources */,
 				A56CDF9D21ADB24000113997 /* MeasurementViewController.swift in Sources */,
 				A5082D8021A15A49005EBA41 /* OptionsViewCell.swift in Sources */,
 				A5B0C95C21A450760058A064 /* Homecenter1.swift in Sources */,
 				A5A38A8021A18ED500ED1088 /* Swift+Gif.swift in Sources */,
 				A5082D8421A15E75005EBA41 /* Extension&Helper.swift in Sources */,
+				A5B4191C21B50E000032F35C /* customTypeCell.swift in Sources */,
 				A5082D7C21A15905005EBA41 /* PersonalisationCell.swift in Sources */,
 				A529D5D421A31210005A221A /* CurationViewCell.swift in Sources */,
 				A5FA1A2D21A4617D00743D73 /* TinderSwipeControllerViewController.swift in Sources */,
@@ -700,6 +725,7 @@
 				A529D5C821A2E9B5005A221A /* HomepageViewController.swift in Sources */,
 				A594F5EC21A1446F001BD710 /* AppDelegate.swift in Sources */,
 				A5082D7821A15737005EBA41 /* PersonalisationHeader.swift in Sources */,
+				A5B4191521B2E6090032F35C /* SizeTypeViewController.swift in Sources */,
 				A5082D7521A14CB2005EBA41 /* PersonalisationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,129 +7,129 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01C83EF581818A9713F50FAD05CCEAF4 /* SwiftVideoBackground.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E79870FDBA7F544634CBED891AB3D6C /* SwiftVideoBackground.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03B2467B7B836CEF288141D4FE91DDB3 /* TOPasscodeSettingsKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB047BCF3935EF396B2AB80E9F48114 /* TOPasscodeSettingsKeypadView.m */; };
-		045203B0D7ABEB8A5DB7618B7119780F /* QRCodeReaderViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E50B9BA8E870EBAD665B479AB49D0 /* QRCodeReaderViewControllerBuilder.swift */; };
-		04823ABC80989B024D213B5C71C89C1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
-		05006BDD7301FCF2678618DEDCC69B94 /* UIImage+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9392CCDE30F6CC9FEC64D857D87814 /* UIImage+AlamofireImage.swift */; };
-		05B31E0F2ADE8121B9AB1B199BF6607C /* TOPasscodeSettingsWarningLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1074082396137CD64F064FF3411B90EF /* TOPasscodeSettingsWarningLabel.m */; };
-		07BD999BCF3064A9104E454C78B37349 /* TOPasscodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C4C41E938D0A85BC4032798FC83C75A /* TOPasscodeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09A2C5147F85BA7D98DB2BDDCD79C14B /* TOPasscodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A73E6A59F317A098A70F0DF171446C /* TOPasscodeView.m */; };
-		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C41B189568160FE4ABB41C71F97AE6 /* Timeline.swift */; };
-		1130E41B69119BB816D08C52E4341E5C /* QRCodeReaderViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6003D6F3E46FA6CC786171D4E12F5E /* QRCodeReaderViewContainer.swift */; };
-		19669F4B631BEF995CD0F7B51471E29A /* TOPasscodeFixedInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FC5B6F73BBB8605DD1D0C5B82AB087 /* TOPasscodeFixedInputView.m */; };
-		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7175CAF22D687A35CC5FE97A493774 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		202822E4668C16D115A8F68F3ADF0E0F /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB27AC90007B0E7C3B8078F5D21E9BA /* ImageDownloader.swift */; };
-		216F646474D972DA6D0F0B45256497CF /* TOPasscodeButtonLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B38C919EBF4A3ECF9330E69FA8AD7C7 /* TOPasscodeButtonLabel.m */; };
-		26479B07464784F3BF8C0853CA049976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
-		27996F52CCABBD6D0874B79D1B913598 /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D48333FE8A5F6611DEC81842706DE6E /* ImageFilter.swift */; };
-		2A13605E4CCD0BAAC5AF58A039B536C4 /* TOPasscodeFixedInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0429917D0F17FC0B1E4CAAC788ABA9C8 /* TOPasscodeFixedInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B97B5D58AC964581D4E78811A19399D /* TOSettingsKeypadImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B856F428FE2623B15280788248B5FC5 /* TOSettingsKeypadImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B9E4E90933F6CB7229013B1D8B8F2E1 /* VideoBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735AB3A2F0224694555C1153EA159730 /* VideoBackground.swift */; };
-		2BD7CFD41DACC439E8C0A527F1643495 /* Request+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691DD5E1797BEDDAE0173F3ABE7BC35F /* Request+AlamofireImage.swift */; };
-		2EA0415A1A8A4FFC7403E201F915F9A4 /* AFIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E728E033730892ECF6DC96D12129FE5 /* AFIError.swift */; };
+		015921DFDB3FABB3FB360A4EE7BFE1BA /* TOPasscodeSettingsKeypadView.h in Headers */ = {isa = PBXBuildFile; fileRef = 391157CC0E1E6EB1315E72E80C7BE063 /* TOPasscodeSettingsKeypadView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05006BDD7301FCF2678618DEDCC69B94 /* UIImage+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C9F37F8A107277B89E6FFE413FC468 /* UIImage+AlamofireImage.swift */; };
+		083948F32C9A5312326B14D31B4A4524 /* TOPasscodeSettingsKeypadButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBB9059F027D2FE628307259C3A22D0 /* TOPasscodeSettingsKeypadButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A5C8BED212748EF60AA9F34C8245D7E /* TOPasscodeCircleImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED8BCEB82D059AE9C62DD21F4FE9F51 /* TOPasscodeCircleImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1004D98D3DE88BF05A79E52C657DEA7E /* TOPasscodeSettingsKeypadButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 916A09C01061279CA8CEF7EA670DD890 /* TOPasscodeSettingsKeypadButton.m */; };
+		10989357FC6B828CA68D0D7A07784170 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0598177780AD2B5CFD8F6D3E66E47C9 /* QRCodeReader.swift */; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC588A73AF39E8F11561F8CD5971390 /* Timeline.swift */; };
+		16856B9426B4E69B96A5928D8363C33C /* TOPasscodeViewControllerAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C391CBEE9F597D80B1FA027885F97 /* TOPasscodeViewControllerAnimatedTransitioning.m */; };
+		184CC37330AAFED605EEE716404CBCE7 /* TOPasscodeFixedInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 631400A5ABC19483F5520F2B1EECE0B4 /* TOPasscodeFixedInputView.m */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86EE94AB443649E5C02FBA711295C1F5 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F6E27AC6D5989D11A43B2A61B346ACE /* TOPasscodeButtonLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = BBB7618DD4FD43746BCAAC5926A64CD2 /* TOPasscodeButtonLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		201F241AAFD82EC794F575F770D2FCEB /* VideoBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D67067D554E6E8B9DE2310DD531C7E /* VideoBackground.swift */; };
+		202822E4668C16D115A8F68F3ADF0E0F /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B30717D72DDBADFE5ECD18F9B58805 /* ImageDownloader.swift */; };
+		211D908A917E7728F882B63777DE42A0 /* QRCodeReaderViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7424A934A29EC6C43A5202C8293A82 /* QRCodeReaderViewControllerBuilder.swift */; };
+		22E81998FC985419C8070A7E450DF635 /* QRCodeReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F86B347AEEBB4D69F2FA3189339C4D /* QRCodeReaderView.swift */; };
+		26479B07464784F3BF8C0853CA049976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA1C613591D834B26E32593AC73BE85 /* Foundation.framework */; };
+		27996F52CCABBD6D0874B79D1B913598 /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E28F3DBF30A5E27365B60A99F4A881 /* ImageFilter.swift */; };
+		2BD7CFD41DACC439E8C0A527F1643495 /* Request+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7277DEB00982DF6E2AF191B6317864 /* Request+AlamofireImage.swift */; };
+		2EA0415A1A8A4FFC7403E201F915F9A4 /* AFIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C208976C40DFCB33926EAE33940517C /* AFIError.swift */; };
+		2F0B3DE97F1338A078B012F9DA5C1E18 /* PulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EE75B821BC0EC607B19C8BFEDF52 /* PulsingHaloLayer.m */; };
 		2FAAD2A3BF7D33ECF90167480D49D8DC /* Pods-BespokenTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5839F7789E24B3B1B785F392556907D /* Pods-BespokenTests-dummy.m */; };
-		304C5736AC5D49B526C709397D0CF048 /* UIImageView+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F26841662C7D1F92089CE530B605EBB /* UIImageView+AlamofireImage.swift */; };
-		32EDA9ED83F4442303A46839027E152E /* AlamofireImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE450084C321A723663A32B0D6B6AEDE /* AlamofireImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		338561B857E4A9F1F68B953B9578AD77 /* TOPasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0988BA3FCBB80AB8DD9F6F5D65C4492A /* TOPasscodeViewController.m */; };
-		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7CD3587CF3858FAA1A81CF78237B9F /* TaskDelegate.swift */; };
-		37F951F2BDB75BD682C2999EB7B51A35 /* AlamofireImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33811E71D884790CFF5274D5FCDF99AC /* AlamofireImage-dummy.m */; };
-		38BE787626CB5A33B1E4C244E50818E1 /* TOPasscodeInputField.h in Headers */ = {isa = PBXBuildFile; fileRef = 30AD719C05942D696CBCBBE599EC0729 /* TOPasscodeInputField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C171556BC498D781CD40FA5282D8A1D /* TOPasscodeSettingsKeypadView.h in Headers */ = {isa = PBXBuildFile; fileRef = 57C22823E730F8A12C3BB50CF6369989 /* TOPasscodeSettingsKeypadView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40E96B9867CC06617AEF5CDFF26CC926 /* VideoBackgroundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7F8C92F4886C969192C71F1CB9C733 /* VideoBackgroundError.swift */; };
-		42D3F5C3E599FE088BD1108D584E8729 /* ToggleTorchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0586E63656BA17A64E070181F59F0B03 /* ToggleTorchButton.swift */; };
-		4E369653C2D1A5B9F2D5DCDE3E32CA78 /* TOPasscodeViewContentLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 4593DBDCB8295F0E13BC8DE292945922 /* TOPasscodeViewContentLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C4178B149C1A0012AC66AFA27C20C6 /* Request.swift */; };
-		5AF5D5AF2990C1BF130D2224C3646E6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
-		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D30070A3F92384925C5045FF5731C /* DispatchQueue+Alamofire.swift */; };
-		613167D898FF421A6F75D1FE5D145B9B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F02A739100B7422F36AE23783BE8C24 /* Alamofire.framework */; };
-		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6063289A598822626FEC6978DA7EEB05 /* ServerTrustPolicy.swift */; };
-		6D6A2F078E1190210D4645FF00C948D8 /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF2D06DB872DC1D5011949DA2E95D9 /* SwitchCameraButton.swift */; };
-		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
-		75C94D9B74E900D25073D1F2EC444A6C /* TOPasscodeViewControllerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 34576417E65592E59919BA40DF1534CF /* TOPasscodeViewControllerConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		79CE1A0E3AB9A1F1DFCCB73D55123620 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
-		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F8A5387D419E8E4C0D3E38EC71A951 /* SessionDelegate.swift */; };
-		7C6AEBB3D02B410CB7009C04B8F53E67 /* Pods-Bespoken-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C0EF2DEB3B8CE5DBD9EFD6E04C655E /* Pods-Bespoken-dummy.m */; };
-		7D0FDE21AADA4F22DA20E8377A5FDF64 /* TOPasscodeCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D5127B6725D2FBF9C318478DA4E27E /* TOPasscodeCircleView.m */; };
-		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103F70834994EA4F0FB8995C43DFD4BB /* Result.swift */; };
-		7F982E54F8CA45A17609D2849B01822F /* Pods-Bespoken-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28C73A67166D456516BF5BB09704BC86 /* Pods-Bespoken-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7FBD21F05196957AF802607FDBDE1B8C /* TOPasscodeInputField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4061FFE59DD03437DD1947E98A4383 /* TOPasscodeInputField.m */; };
-		8154FE7067E2F72BB4239C997977950D /* TOPasscodeSettingsWarningLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D332392F109DD9229D731B25C7CAF3B /* TOPasscodeSettingsWarningLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		824930FACC203B9CDD7173674B4F04B9 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58462C23D6A4BFF71DF15185C98C6B09 /* QRCodeReader.swift */; };
-		8AE2C9718FAF0609D0CA463762420849 /* TOPasscodeSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 244F501E89700BDF2F07557137CEB4BF /* TOPasscodeSettingsViewController.m */; };
-		8CE3D5BCD99C44FEAEC232CFA1B2EA03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
+		304C5736AC5D49B526C709397D0CF048 /* UIImageView+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192AE344EAEE052ADD0015B5941F7BE8 /* UIImageView+AlamofireImage.swift */; };
+		32EDA9ED83F4442303A46839027E152E /* AlamofireImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7EDD91995A614626A373903E3FC1236 /* AlamofireImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD58829994219E68BEFE51CD88DE92E /* TaskDelegate.swift */; };
+		37F951F2BDB75BD682C2999EB7B51A35 /* AlamofireImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7553ABA0E2C1463A8AC4705B800A48A8 /* AlamofireImage-dummy.m */; };
+		45FE3B91035E73046989F8BC8CEF826F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA1C613591D834B26E32593AC73BE85 /* Foundation.framework */; };
+		481FFB0520308B5462175715E6987179 /* TOPasscodeSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 19EA6836D98B4B03535F0F23B686DC8C /* TOPasscodeSettingsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		499F79AC1CCD901E7A4EEBFDD3744AA6 /* TOPasscodeViewControllerAnimatedTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 48460EDEDDAFA32BBEEE166DECE092E2 /* TOPasscodeViewControllerAnimatedTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A707FA8D8C0B7BCD0DCE3BB0FB6861D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA1C613591D834B26E32593AC73BE85 /* Foundation.framework */; };
+		4BBCEEBE09BD9D45DC9A699FE59F50EE /* TOSettingsKeypadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C4FF5C5DF8299291A8DCC2EB87D405 /* TOSettingsKeypadImage.m */; };
+		4F8B10F622BB456A7E755F8C6581CD36 /* TOPasscodeVariableInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C05B8ACBC735172181F4CEEC269646B7 /* TOPasscodeVariableInputView.m */; };
+		51BE7A58ACEB3719716D6AEF941A9B11 /* QRCodeReaderViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F28FE409BC8D6E38DA61AEFE72DA8C /* QRCodeReaderViewContainer.swift */; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D412D0C7145C0F4483AD11033AE07 /* Request.swift */; };
+		5AF5D5AF2990C1BF130D2224C3646E6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA1C613591D834B26E32593AC73BE85 /* Foundation.framework */; };
+		5C8A22896E18214720BCC210D42513D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA1C613591D834B26E32593AC73BE85 /* Foundation.framework */; };
+		5DC13FA05C318BCAFCF4DC90244E9AA5 /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D222DB4729545A99EB0FCA01CC6F90 /* SwitchCameraButton.swift */; };
+		5DF60E9552E5A9C7A2ECA81BF6D90F80 /* Pods-Bespoken-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C0EF2DEB3B8CE5DBD9EFD6E04C655E /* Pods-Bespoken-dummy.m */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C6B866B208C8EE4303B32B8E64BABA /* DispatchQueue+Alamofire.swift */; };
+		613167D898FF421A6F75D1FE5D145B9B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F06CA2E46281C39ABF8AC532C03A69 /* Alamofire.framework */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B85C92F9527F3D8675EE5D408618E68 /* ServerTrustPolicy.swift */; };
+		65BBA23A2E5B1EC0EC4F707E9636DB22 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAB444D6B577EB01D718357791EC3E7 /* AVFoundation.framework */; };
+		67711766FA1759A6BFE0902D619ACF9C /* TOPasscodeViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1DE74ADF00251E04B0C771AF8C2155 /* TOPasscodeViewController-dummy.m */; };
+		67BB4281E2182671C962E45D80BF5038 /* TOPasscodeInputField.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C764716C5E57A0BB1A5864E9325C27 /* TOPasscodeInputField.m */; };
+		6FCC38307156D325D5282BECF971DCF9 /* TOPasscodeViewContentLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2CB122364824F18093397FC9368AA4 /* TOPasscodeViewContentLayout.m */; };
+		7037BF44EAC089013E96EA3F2DC5D503 /* QRCodeReaderViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9766E9DEB7D64C2CE52E50C5D27AF2B4 /* QRCodeReaderViewControllerDelegate.swift */; };
+		70CDBC6915228F8DE0C90A4FF3CC3579 /* TOPasscodeCircleButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C1407B06C1C5E048AE18EFC46C4015E /* TOPasscodeCircleButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72E7CD002BBE85232B54B770ECC3A09F /* TOPasscodeFixedInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 12BDC68C6655531C751702DFE095218E /* TOPasscodeFixedInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA1C613591D834B26E32593AC73BE85 /* Foundation.framework */; };
+		744C64E78895B5B921B1851C4E8F973D /* TOPasscodeSettingsWarningLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C51B35DBF98A7B8DE089175B66BA2DD /* TOPasscodeSettingsWarningLabel.m */; };
+		758C2465B45AC0E8B7F6147EC495EFCA /* TOPasscodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F6E5CFFDF2E4C041104040162BCB3E80 /* TOPasscodeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7732F8CFE0A8EEE0E20AD8D9BFE77CB5 /* TOPasscodeCircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9236EDC4F72019C64B4E83B37BAF4 /* TOPasscodeCircleImage.m */; };
+		7A78A427A8C1FE0F18C70974B9F68884 /* TOPasscodeSettingsWarningLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A82B74BB2ABA8592C993683A8B929F69 /* TOPasscodeSettingsWarningLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187FF17D0C456AA0601EC648E8FC989 /* SessionDelegate.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB89BC006779715A265A3FFC5B0A1600 /* Result.swift */; };
+		7E5D36DCC124C1F577CE7EBB837D0EE3 /* TOPasscodeViewContentLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 80E7CD453FF8AF10744300B1AB2C4259 /* TOPasscodeViewContentLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80BC70EAD304D27BEB5FEE5B502FA172 /* TOPasscodeKeypadView.h in Headers */ = {isa = PBXBuildFile; fileRef = F9B86D70EBA490DE1141B88F1E068D95 /* TOPasscodeKeypadView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		879A6F311D272639BABE22B9C0B83A89 /* SwiftVideoBackground.h in Headers */ = {isa = PBXBuildFile; fileRef = 31D02FF53CA3F2F718515B1C1582CC42 /* SwiftVideoBackground.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8947AEFF580F05548E493E5CB69F4C72 /* QRCodeReader.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17A93A285AAA20D97064165317B27AD7 /* QRCodeReader.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CE3D5BCD99C44FEAEC232CFA1B2EA03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA1C613591D834B26E32593AC73BE85 /* Foundation.framework */; };
+		8D0585655DB9A0C479263D40347CCADB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7674A0ED9AF89BC34DC5F5D415C7A7 /* QuartzCore.framework */; };
 		9003E19984A263E001BB3E7618B5D711 /* Pods-BespokenTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 11555119D0AFDCD489E20BC59C450545 /* Pods-BespokenTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93734C28551FFBB907573C00B1D290C1 /* TOPasscodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A4FB732A70DAEA57E677EF598522D2D /* TOPasscodeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		952F0E9C2B92F3ADB40E65B288183E67 /* TOPasscodeSettingsKeypadButton.h in Headers */ = {isa = PBXBuildFile; fileRef = BFD390453AA83FD3B7A91A4AB9E47427 /* TOPasscodeSettingsKeypadButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9687712662AC87F164F27E1B0B703224 /* TOPasscodeView.h in Headers */ = {isa = PBXBuildFile; fileRef = C68C0FFE780904005F05F466D7D5BF90 /* TOPasscodeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99EC5F45F2B5D64365043B9B062C1DCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA1C613591D834B26E32593AC73BE85 /* Foundation.framework */; };
+		9C6D6C83A67A76A9CF0BB71F118ED810 /* TOPasscodeViewControllerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CCE1F80195D1C83882CA4BF2F1D0F19 /* TOPasscodeViewControllerConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CEE49FCB2C069B6953D54BF92598C98 /* Pods-BespokenUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E46C9DDAAEC76075C679FC99DC6884BF /* Pods-BespokenUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3504D593F8028046198FDBDD2097DAAB /* AFError.swift */; };
-		A12596CBBA466C58BE073060C35DC0D9 /* SwiftVideoBackground-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEB1A73605A6E6A97F3E4B6665D690D /* SwiftVideoBackground-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C3684A9E945DD2125586B23B8A312 /* NetworkReachabilityManager.swift */; };
-		A33C085F0A01D87EA9B774248931808B /* TOPasscodeCircleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 14053F6E42D34588F14371F0FAEF2DAE /* TOPasscodeCircleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3A88EA583B79467FE24168E45E509EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
-		A4663798F8F3C65F4D36A270B461909B /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244258A3F71A4D32382447C46C0C51C6 /* ReaderOverlayView.swift */; };
-		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 731E71D75D8498CFC54E4E05C6255F17 /* Alamofire-dummy.m */; };
-		AB5AA03885FF150423FCD8D6FC3AA1E1 /* TOPasscodeVariableInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = E994319C29A11902600D9703D88F9C9D /* TOPasscodeVariableInputView.m */; };
-		AC6B938D9B67AB223F5A3FD0F26562DA /* TOPasscodeViewControllerAnimatedTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D7F547281EF2C2E5EC0F7AC342520FF /* TOPasscodeViewControllerAnimatedTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD23898839F26A4B13CE510DA8E44131 /* TOPasscodeButtonLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = FE7A905C3DD459AE0EA583F8BA6C7CFB /* TOPasscodeButtonLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16980CE318B49687C3EB556E334DD6FB /* SessionManager.swift */; };
-		B09AE1DD7B3E210C9907F7244A731B19 /* QRCodeReaderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9B284FE1528440E3527B91D0BCF796 /* QRCodeReaderResult.swift */; };
-		B4B800A7D3F8E700D8ABECEB154CAC60 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32E1649E56B6CABEDEB89639AC33394 /* AVFoundation.framework */; };
-		B651B08DC5C9302D57FFCDD24AC74584 /* TOSettingsKeypadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFA4AC8142EF0AAD46659E8175C2285 /* TOSettingsKeypadImage.m */; };
-		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A5032C1E914C09DF3B30BD9ADE7F1 /* MultipartFormData.swift */; };
-		BB4E0943A33F1DBAFBD755EE3B1484A9 /* TOPasscodeCircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76D55E344D16E28E6544BF560F4841 /* TOPasscodeCircleImage.m */; };
-		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01D24B050F846C723EA92FB3EAF3F98 /* Validation.swift */; };
-		BDD187864FE1D51AF33C82851EC076A2 /* TOPasscodeViewContentLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FEF6C732F7C64EFE0F6C7598437FC /* TOPasscodeViewContentLayout.m */; };
-		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2FA76815975D3FAA6335D3179F8529 /* ParameterEncoding.swift */; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85129E6C69CDF858E75A70565AEEBD39 /* AFError.swift */; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1ADB6DAB2260FBCB0792113E8E7D28 /* NetworkReachabilityManager.swift */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0937C12331931C93EEFB8D5B090D8FD3 /* Alamofire-dummy.m */; };
+		A9F93F840487C6DE791638B08C800B32 /* ToggleTorchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20343AC26ED57D8B14AF1625D7B7FE8 /* ToggleTorchButton.swift */; };
+		AB79672E643ACC3883B3B71718F06A4A /* TOPasscodeVariableInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = E87B9698BD81BF15B81D81CD9DD133E7 /* TOPasscodeVariableInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06008F8E6F4A9C7F485CFD0BC0A283CF /* SessionManager.swift */; };
+		B24EEB579391940AAD00A7278A9CD903 /* TOPasscodeButtonLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED368A7103C9EE1C179CAA60223DE2E8 /* TOPasscodeButtonLabel.m */; };
+		B641D2DC9329A8384910766411A6AE58 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0236FB9A1B7FDA9311A1E632A8E3FB2 /* QRCodeReaderViewController.swift */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C56CD83E240F4C3803C2B8787BCE6C /* MultipartFormData.swift */; };
+		BB0E9BFDEF824E36DA87FCDBAC2E2099 /* TOPasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF037FDF4CFBAAF6DBC7279C2A65C7A /* TOPasscodeViewController.m */; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F1AFCEF455A1E896AFDEA9B305136 /* Validation.swift */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CB0490BCF11A125C2CB7143B582379 /* ParameterEncoding.swift */; };
 		BF2748D1E3C7FD8316FD4C40F3F60583 /* Pods-BespokenUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F2BCDAA10BF74AC59888E7100C526 /* Pods-BespokenUITests-dummy.m */; };
-		C15CDEA3873088D238E43A5ACEA2A1D1 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A287E423BF846036FD5AA4CDFBCE5AC /* QRCodeReaderViewController.swift */; };
-		C73BF39A4CCC3E450E102C23027F8FF8 /* UIButton+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB7FC9776282A99A127D027585103B /* UIButton+AlamofireImage.swift */; };
-		C9FDB5D2802E7FF6614AEC64EDE9DEEE /* QRCodeReaderViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CCF166941EE3EEB7A41A1AA3AC82FC /* QRCodeReaderViewControllerDelegate.swift */; };
-		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F69528E00B84863E9BBEF73734CD4E /* Response.swift */; };
-		CFB48518F8852990EC3711A682DC6E99 /* QRCodeReader.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CC11908706FA5F5FF7F8B5E25BD957E /* QRCodeReader.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D2B5CF6A5B446802A7F59C2BF5C39F5A /* QRCodeReader.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3AE0E808646A30B36C064F6932AA051 /* QRCodeReader.swift-dummy.m */; };
-		D3A7D5C45A4C499402B5238132133023 /* TOPasscodeViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EF369007A8AE884870C288400975D7 /* TOPasscodeViewController-dummy.m */; };
-		D45F969746F644D73F921D5A277AEEC1 /* TOPasscodeKeypadView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB1CCFA5E5EDFDF4457A4AB90152886A /* TOPasscodeKeypadView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D65B33F7F80F2CAB4DE2F719AB9654A6 /* TOPasscodeVariableInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E3E07CB011AEB0BB3B17D66CB5B824 /* TOPasscodeVariableInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D69DAD74CBAC0BCEFF21315E3572D0B4 /* TOPasscodeViewControllerAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E807DF71DB3443FF33F861DC5D69A45 /* TOPasscodeViewControllerAnimatedTransitioning.m */; };
-		D83923D0C0EECEA4BF2BBB1EFA6119A0 /* QRCodeReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2844B089658D660617A7E13A4A2107E /* QRCodeReaderView.swift */; };
-		D91C4587BD3B7DD74E4B5C2E547C4F70 /* TOPasscodeCircleButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C76383E727464A0DD065ACEEAB5B95 /* TOPasscodeCircleButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9E544B8CB42DA8DD44838F83610D8E0 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A28154FF53425C5ECC5DC8DB63D0A /* ImageCache.swift */; };
-		DF982C02444B6777F7883F80CBE7EFC8 /* TOPasscodeKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = F90349F3A5C698D22C6C329AB3DD76BB /* TOPasscodeKeypadView.m */; };
-		E1FF4985892E23B75A3381EFF830DFD5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE59D05FFB465D11D63ED73DC23EA79A /* Image.swift */; };
-		E2421C1660B75726EEA8009AA9E58730 /* TOPasscodeCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 904A32CBA6610AC28DD6C5E140DA7748 /* TOPasscodeCircleButton.m */; };
-		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA09FDF676A5C162D38FFB9FABAF06 /* Notifications.swift */; };
-		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA58D80B6A9D2F372187F832C3D193C /* ResponseSerialization.swift */; };
-		F8237F1F43E8104772C50B04C03FD3B7 /* TOPasscodeSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B2D6652161F562FB435B5842C9E7E83 /* TOPasscodeSettingsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E58B19D9C5623738B838B91102D90C /* Alamofire.swift */; };
-		FA68BF3354D3C3DC4F15E6E06BE678F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */; };
-		FC076DCC4CBEB59DB856D9368C9502A8 /* SwiftVideoBackground-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D200DD3D0D3757165B6F010FD64B582 /* SwiftVideoBackground-dummy.m */; };
-		FCE3CF2D28B36FD63959B2343C85EEFF /* TOPasscodeSettingsKeypadButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E12065598625D838FBB4F4595A45465 /* TOPasscodeSettingsKeypadButton.m */; };
-		FE6CC867D7D4B969A29121DD04ADBAA9 /* TOPasscodeCircleImage.h in Headers */ = {isa = PBXBuildFile; fileRef = EDC130B3B29908F702D9D9449DFE507D /* TOPasscodeCircleImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FEEEE2D6D23855F98613B7B1934738BC /* TOPasscodeViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD8B43843B19FD510DA68B18ABE32941 /* TOPasscodeViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C73BF39A4CCC3E450E102C23027F8FF8 /* UIButton+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A1F9C01CC406F1451BD831981285B0 /* UIButton+AlamofireImage.swift */; };
+		C76A2636F10F22E793BE5773CA6E45BE /* SwiftVideoBackground-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CF83F92FF004D16252AE27151119D5C3 /* SwiftVideoBackground-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7DE5FA011E051C687C54FF73DA71901 /* PulsingHalo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D9F8FA7232B1879DFD3E02B8C99A4B8 /* PulsingHalo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467782F95F63B94BAD88A8C442B7537 /* Response.swift */; };
+		CE71F9C5E3E0937621B0863AD4C7B5CF /* PulsingHalo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C0767485D9896830A91F8257EE0CF /* PulsingHalo-dummy.m */; };
+		CE9A697E2C0FBBF0937D268DC2B5C1D2 /* Pods-Bespoken-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28C73A67166D456516BF5BB09704BC86 /* Pods-Bespoken-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEDA670A7AB55A6FB9196316EDA5C6B8 /* PulsingHaloLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 42153713E57769183BF4FAB9C80948E6 /* PulsingHaloLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D42336A66C31C3DBBF3F527690FA64CA /* QRCodeReader.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F157A49D1D73A3C43AE0A97A837E5C2 /* QRCodeReader.swift-dummy.m */; };
+		D9E544B8CB42DA8DD44838F83610D8E0 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65276223D8A08E12BABC75B8C2496C19 /* ImageCache.swift */; };
+		E1FF4985892E23B75A3381EFF830DFD5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAABB50A212B1A760D28E07507935B9E /* Image.swift */; };
+		E2319D36807965B26DF4F91F0BB0AC3F /* TOPasscodeCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A51C8D542345CA84BBFC5C30E7908C0B /* TOPasscodeCircleView.m */; };
+		E31B08E7153B46D1E369ED13B30ADEF1 /* PulsingHalo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4165D22DAEEBCE7713534F767E1F1C38 /* PulsingHalo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E562F121AAD636ACCE0BF076C4E5C56C /* TOSettingsKeypadImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D854DAC6AC1569BD9150C9C2369DBB4 /* TOSettingsKeypadImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6BE20718951F35A35E434FE760C4622 /* TOPasscodeSettingsKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4749EBE0132C387D3966CBDF58B12839 /* TOPasscodeSettingsKeypadView.m */; };
+		E9CF07AEB2523E5F638B0233AB0F8E45 /* TOPasscodeInputField.h in Headers */ = {isa = PBXBuildFile; fileRef = 22BF6DC554FFF2C8FAF81C04D27D4FA1 /* TOPasscodeInputField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA4F14B116D3325C5CA19EB0AF65B199 /* SwiftVideoBackground-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E1715E0FA08D6E4463F687AC3AE4EC /* SwiftVideoBackground-dummy.m */; };
+		EC1D65C522CFD9368F701B9DAE4E4D7A /* TOPasscodeSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A27DDEB94447EBF1CEFEB97A28D1A6A /* TOPasscodeSettingsViewController.m */; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150F5752827D04413E4D48DF4A324905 /* Notifications.swift */; };
+		EFD629850962850B1FF09F330D67F762 /* QRCodeReaderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EC9FFFA8CC0A1CFAD5C60EF12DC73 /* QRCodeReaderResult.swift */; };
+		F03C5D1ED914E99D5BD99A8C00EEC5EC /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3723A4F923045241E7BF192632C35B /* ReaderOverlayView.swift */; };
+		F09AD01CF6F8EE2787EA68133674D1F3 /* TOPasscodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4C757ACFA6FDBD257D5E365B3DEB70 /* TOPasscodeView.m */; };
+		F4334C4D055184BC9E04279C0E3D963D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA1C613591D834B26E32593AC73BE85 /* Foundation.framework */; };
+		F4860672AA7ABB9AE0BB373111BA1E57 /* VideoBackgroundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478EA9A36347506C0F61A3FDD353A54 /* VideoBackgroundError.swift */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6F01D6813AF50C7C2816C5B396694 /* ResponseSerialization.swift */; };
+		F88FC88D09DF6D12F69D3F07721A6739 /* TOPasscodeCircleView.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B1A50F1B2EC27415B4209D57250ECF /* TOPasscodeCircleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8D7B25AFEA35AF043A287B546B9EE /* Alamofire.swift */; };
+		FB236BB46A7ECFF908CAAC47376FD9E9 /* TOPasscodeViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 796AF0C35D87508B5A14C915694ACC01 /* TOPasscodeViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB590C90782D0988F74640870E58A75F /* TOPasscodeCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D7473852D8DF7F4D73B18F455FD27B /* TOPasscodeCircleButton.m */; };
+		FDBBD45248531D9D3C91E9856FFA6521 /* TOPasscodeKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8365C48439CD6E80D31ACCC35895FE9 /* TOPasscodeKeypadView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0E89645AA0AAF24510EAB98AEF6099EA /* PBXContainerItemProxy */ = {
+		147721AC48FED16CB5E6DBDF5B4E6A6F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BFFA931CCA9E420723FA95DC69F9AB96;
-			remoteInfo = QRCodeReader.swift;
+			remoteGlobalIDString = 6339BF5961992884311D4999DAD76170;
+			remoteInfo = SwiftVideoBackground;
 		};
-		2763A7C337C412C3680DD05549E61EA0 /* PBXContainerItemProxy */ = {
+		99FACEC5402D49C45885CEE7149E7357 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F8DC4C15F1DE2D75359DE7B83FD68E56;
-			remoteInfo = TOPasscodeViewController;
-		};
-		788E4DB55F92B993730127FFA3A57A7D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
-			remoteInfo = Alamofire;
+			remoteGlobalIDString = DE774CECFD6A0BD07D591AF8036B316A;
+			remoteInfo = PulsingHalo;
 		};
 		A1758AA696D56310AA192B587162169A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -138,14 +138,28 @@
 			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
 			remoteInfo = Alamofire;
 		};
-		B15DC3C9E9F6C5C67A65F4EBAC70D560 /* PBXContainerItemProxy */ = {
+		A6F677630DC450BB60ACB06C37E87A2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 137C6B7796533C929DBACC2F36C47DA5;
-			remoteInfo = SwiftVideoBackground;
+			remoteGlobalIDString = 18EB36BEF40935CFD52AC0C10E2E5A71;
+			remoteInfo = QRCodeReader.swift;
 		};
-		FF7E1E49C6ECAD94750E2249C6830C57 /* PBXContainerItemProxy */ = {
+		BA4CEA790DA3FB39FD5DF346647A3BC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
+			remoteInfo = Alamofire;
+		};
+		C7C4461808A2D12BD12C529EEE3B2D8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F2100C674A2B51F3951B954B5A1E6BF;
+			remoteInfo = TOPasscodeViewController;
+		};
+		D658164A0363CC753EDE3E47EDD078BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -155,160 +169,180 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01E3E07CB011AEB0BB3B17D66CB5B824 /* TOPasscodeVariableInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeVariableInputView.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeVariableInputView.h; sourceTree = "<group>"; };
-		0429917D0F17FC0B1E4CAAC788ABA9C8 /* TOPasscodeFixedInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeFixedInputView.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeFixedInputView.h; sourceTree = "<group>"; };
-		0586E63656BA17A64E070181F59F0B03 /* ToggleTorchButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToggleTorchButton.swift; path = Sources/ToggleTorchButton.swift; sourceTree = "<group>"; };
-		07BAF42C74CD90A7ACA2172639418F42 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		009E94AEEE5730523EBFD7672EC6A9C3 /* QRCodeReader.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRCodeReader.swift.xcconfig; sourceTree = "<group>"; };
+		011EC9FFFA8CC0A1CFAD5C60EF12DC73 /* QRCodeReaderResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderResult.swift; path = Sources/QRCodeReaderResult.swift; sourceTree = "<group>"; };
+		04F86B347AEEBB4D69F2FA3189339C4D /* QRCodeReaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderView.swift; path = Sources/QRCodeReaderView.swift; sourceTree = "<group>"; };
+		06008F8E6F4A9C7F485CFD0BC0A283CF /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		07C9236EDC4F72019C64B4E83B37BAF4 /* TOPasscodeCircleImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeCircleImage.m; path = TOPasscodeViewController/Models/TOPasscodeCircleImage.m; sourceTree = "<group>"; };
+		0937C12331931C93EEFB8D5B090D8FD3 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		0965C6AF2A9DE1A6E7A6C63D1B3D3A3D /* Pods-BespokenTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BespokenTests.modulemap"; sourceTree = "<group>"; };
-		0988BA3FCBB80AB8DD9F6F5D65C4492A /* TOPasscodeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeViewController.m; path = TOPasscodeViewController/TOPasscodeViewController.m; sourceTree = "<group>"; };
-		09A73E6A59F317A098A70F0DF171446C /* TOPasscodeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeView.m; path = TOPasscodeViewController/Views/Main/TOPasscodeView.m; sourceTree = "<group>"; };
+		0AAB444D6B577EB01D718357791EC3E7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		0C90E794F64B5E2D880EB0D2E75E6F00 /* Pods-Bespoken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Bespoken.release.xcconfig"; sourceTree = "<group>"; };
-		0D48333FE8A5F6611DEC81842706DE6E /* ImageFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageFilter.swift; path = Source/ImageFilter.swift; sourceTree = "<group>"; };
-		0E728E033730892ECF6DC96D12129FE5 /* AFIError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFIError.swift; path = Source/AFIError.swift; sourceTree = "<group>"; };
+		0CCE1F80195D1C83882CA4BF2F1D0F19 /* TOPasscodeViewControllerConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeViewControllerConstants.h; path = TOPasscodeViewController/Supporting/TOPasscodeViewControllerConstants.h; sourceTree = "<group>"; };
+		0D94F36084C8410D7D939A16C11DB35A /* TOPasscodeViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TOPasscodeViewController.framework; path = TOPasscodeViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F7424A934A29EC6C43A5202C8293A82 /* QRCodeReaderViewControllerBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewControllerBuilder.swift; path = Sources/QRCodeReaderViewControllerBuilder.swift; sourceTree = "<group>"; };
 		0FCC05C0F93F0D716B43133095DF2954 /* Pods-BespokenUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BespokenUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		103F70834994EA4F0FB8995C43DFD4BB /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		1074082396137CD64F064FF3411B90EF /* TOPasscodeSettingsWarningLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeSettingsWarningLabel.m; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsWarningLabel.m; sourceTree = "<group>"; };
 		11555119D0AFDCD489E20BC59C450545 /* Pods-BespokenTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BespokenTests-umbrella.h"; sourceTree = "<group>"; };
-		124E50B9BA8E870EBAD665B479AB49D0 /* QRCodeReaderViewControllerBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewControllerBuilder.swift; path = Sources/QRCodeReaderViewControllerBuilder.swift; sourceTree = "<group>"; };
-		13F2D336A8F2319DD8E4F989F38FBFFC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14053F6E42D34588F14371F0FAEF2DAE /* TOPasscodeCircleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeCircleView.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeCircleView.h; sourceTree = "<group>"; };
-		159A79AD3A4E331C837C84FFF5E28802 /* Pods_BespokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BespokenUITests.framework; path = "Pods-BespokenUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		16980CE318B49687C3EB556E334DD6FB /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		1B38C919EBF4A3ECF9330E69FA8AD7C7 /* TOPasscodeButtonLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeButtonLabel.m; path = TOPasscodeViewController/Views/Shared/TOPasscodeButtonLabel.m; sourceTree = "<group>"; };
-		1E79870FDBA7F544634CBED891AB3D6C /* SwiftVideoBackground.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftVideoBackground.h; path = SwiftVideoBackground/Sources/SwiftVideoBackground.h; sourceTree = "<group>"; };
+		12BDC68C6655531C751702DFE095218E /* TOPasscodeFixedInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeFixedInputView.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeFixedInputView.h; sourceTree = "<group>"; };
+		150F5752827D04413E4D48DF4A324905 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		17A93A285AAA20D97064165317B27AD7 /* QRCodeReader.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-umbrella.h"; sourceTree = "<group>"; };
+		1826C91AE2ABF0F415C3382381E78E8D /* AlamofireImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AlamofireImage.modulemap; sourceTree = "<group>"; };
+		192AE344EAEE052ADD0015B5941F7BE8 /* UIImageView+AlamofireImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+AlamofireImage.swift"; path = "Source/UIImageView+AlamofireImage.swift"; sourceTree = "<group>"; };
+		198E5806E57E0459880F38DB5EFB634B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19EA6836D98B4B03535F0F23B686DC8C /* TOPasscodeSettingsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeSettingsViewController.h; path = TOPasscodeViewController/TOPasscodeSettingsViewController.h; sourceTree = "<group>"; };
+		1ABFD7569D6A909D619AEE444082D342 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D1DE74ADF00251E04B0C771AF8C2155 /* TOPasscodeViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TOPasscodeViewController-dummy.m"; sourceTree = "<group>"; };
+		20796856E7B8C9F2546ACB1061CF195E /* Pods_Bespoken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Bespoken.framework; path = "Pods-Bespoken.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		224B0860AE4D6D182EC45DFD266C63EA /* Pods-BespokenTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BespokenTests-resources.sh"; sourceTree = "<group>"; };
-		23D1E2C2B1155BDBCD0484B7F65B6BBC /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QRCodeReader.framework; path = QRCodeReader.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		244258A3F71A4D32382447C46C0C51C6 /* ReaderOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReaderOverlayView.swift; path = Sources/ReaderOverlayView.swift; sourceTree = "<group>"; };
-		244F501E89700BDF2F07557137CEB4BF /* TOPasscodeSettingsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeSettingsViewController.m; path = TOPasscodeViewController/TOPasscodeSettingsViewController.m; sourceTree = "<group>"; };
-		24C76383E727464A0DD065ACEEAB5B95 /* TOPasscodeCircleButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeCircleButton.h; path = TOPasscodeViewController/Views/Main/TOPasscodeCircleButton.h; sourceTree = "<group>"; };
+		22BF6DC554FFF2C8FAF81C04D27D4FA1 /* TOPasscodeInputField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeInputField.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeInputField.h; sourceTree = "<group>"; };
+		22E1715E0FA08D6E4463F687AC3AE4EC /* SwiftVideoBackground-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftVideoBackground-dummy.m"; sourceTree = "<group>"; };
 		26CB1591AFEF8B6BA340C611686C1BEE /* Pods-BespokenUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BespokenUITests.modulemap"; sourceTree = "<group>"; };
+		26F06CA2E46281C39ABF8AC532C03A69 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C73A67166D456516BF5BB09704BC86 /* Pods-Bespoken-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Bespoken-umbrella.h"; sourceTree = "<group>"; };
-		29F8A5387D419E8E4C0D3E38EC71A951 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		2B2D6652161F562FB435B5842C9E7E83 /* TOPasscodeSettingsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeSettingsViewController.h; path = TOPasscodeViewController/TOPasscodeSettingsViewController.h; sourceTree = "<group>"; };
-		30AD719C05942D696CBCBBE599EC0729 /* TOPasscodeInputField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeInputField.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeInputField.h; sourceTree = "<group>"; };
+		297132C048036D197E2E20E2700B741B /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		2C51B35DBF98A7B8DE089175B66BA2DD /* TOPasscodeSettingsWarningLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeSettingsWarningLabel.m; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsWarningLabel.m; sourceTree = "<group>"; };
+		3160156BE272006AD5F3E70751827228 /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QRCodeReader.framework; path = QRCodeReader.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31C56CD83E240F4C3803C2B8787BCE6C /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		31D02FF53CA3F2F718515B1C1582CC42 /* SwiftVideoBackground.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftVideoBackground.h; path = SwiftVideoBackground/Sources/SwiftVideoBackground.h; sourceTree = "<group>"; };
 		32005D28233576667507015C0AF0A68B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33811E71D884790CFF5274D5FCDF99AC /* AlamofireImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AlamofireImage-dummy.m"; sourceTree = "<group>"; };
-		34576417E65592E59919BA40DF1534CF /* TOPasscodeViewControllerConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeViewControllerConstants.h; path = TOPasscodeViewController/Supporting/TOPasscodeViewControllerConstants.h; sourceTree = "<group>"; };
-		3504D593F8028046198FDBDD2097DAAB /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		35C0EF2DEB3B8CE5DBD9EFD6E04C655E /* Pods-Bespoken-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Bespoken-dummy.m"; sourceTree = "<group>"; };
+		391157CC0E1E6EB1315E72E80C7BE063 /* TOPasscodeSettingsKeypadView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeSettingsKeypadView.h; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsKeypadView.h; sourceTree = "<group>"; };
 		394780BFDF19EFA4BBB7D4623DF225AB /* Pods-BespokenUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BespokenUITests-resources.sh"; sourceTree = "<group>"; };
 		3A6732F1346EAD36ADAAFDE64BBC8103 /* Pods-BespokenUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BespokenUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3B7175CAF22D687A35CC5FE97A493774 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		3BEB1A73605A6E6A97F3E4B6665D690D /* SwiftVideoBackground-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftVideoBackground-umbrella.h"; sourceTree = "<group>"; };
-		3CB047BCF3935EF396B2AB80E9F48114 /* TOPasscodeSettingsKeypadView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeSettingsKeypadView.m; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsKeypadView.m; sourceTree = "<group>"; };
-		3CC11908706FA5F5FF7F8B5E25BD957E /* QRCodeReader.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-umbrella.h"; sourceTree = "<group>"; };
-		3E12065598625D838FBB4F4595A45465 /* TOPasscodeSettingsKeypadButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeSettingsKeypadButton.m; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsKeypadButton.m; sourceTree = "<group>"; };
-		428CB4D97776597CC45A153357521C88 /* Pods_Bespoken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Bespoken.framework; path = "Pods-Bespoken.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		443C3684A9E945DD2125586B23B8A312 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		4593DBDCB8295F0E13BC8DE292945922 /* TOPasscodeViewContentLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeViewContentLayout.h; path = TOPasscodeViewController/Models/TOPasscodeViewContentLayout.h; sourceTree = "<group>"; };
-		4A287E423BF846036FD5AA4CDFBCE5AC /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewController.swift; path = Sources/QRCodeReaderViewController.swift; sourceTree = "<group>"; };
-		4C4061FFE59DD03437DD1947E98A4383 /* TOPasscodeInputField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeInputField.m; path = TOPasscodeViewController/Views/Shared/TOPasscodeInputField.m; sourceTree = "<group>"; };
-		4D7F547281EF2C2E5EC0F7AC342520FF /* TOPasscodeViewControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeViewControllerAnimatedTransitioning.h; path = TOPasscodeViewController/Models/TOPasscodeViewControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
-		4E7B219180C71982A20C068512B7798E /* QRCodeReader.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QRCodeReader.swift.modulemap; sourceTree = "<group>"; };
-		4E9392CCDE30F6CC9FEC64D857D87814 /* UIImage+AlamofireImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+AlamofireImage.swift"; path = "Source/UIImage+AlamofireImage.swift"; sourceTree = "<group>"; };
-		4F26841662C7D1F92089CE530B605EBB /* UIImageView+AlamofireImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+AlamofireImage.swift"; path = "Source/UIImageView+AlamofireImage.swift"; sourceTree = "<group>"; };
-		53634C8DF817DC8169B100B2A035C54D /* Pods_BespokenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BespokenTests.framework; path = "Pods-BespokenTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		576A28154FF53425C5ECC5DC8DB63D0A /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Source/ImageCache.swift; sourceTree = "<group>"; };
-		57C22823E730F8A12C3BB50CF6369989 /* TOPasscodeSettingsKeypadView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeSettingsKeypadView.h; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsKeypadView.h; sourceTree = "<group>"; };
-		58462C23D6A4BFF71DF15185C98C6B09 /* QRCodeReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReader.swift; path = Sources/QRCodeReader.swift; sourceTree = "<group>"; };
-		5934A74246DA1AE48E6B4DBA0C6A8DB1 /* TOPasscodeViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TOPasscodeViewController.modulemap; sourceTree = "<group>"; };
+		3CB0F67A7D8791F81148D82A38E11631 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D72EE75B821BC0EC607B19C8BFEDF52 /* PulsingHaloLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PulsingHaloLayer.m; path = PulsingHalo/PulsingHaloLayer.m; sourceTree = "<group>"; };
+		3F3C391CBEE9F597D80B1FA027885F97 /* TOPasscodeViewControllerAnimatedTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeViewControllerAnimatedTransitioning.m; path = TOPasscodeViewController/Models/TOPasscodeViewControllerAnimatedTransitioning.m; sourceTree = "<group>"; };
+		4165D22DAEEBCE7713534F767E1F1C38 /* PulsingHalo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PulsingHalo.h; path = PulsingHalo/PulsingHalo.h; sourceTree = "<group>"; };
+		42153713E57769183BF4FAB9C80948E6 /* PulsingHaloLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PulsingHaloLayer.h; path = PulsingHalo/PulsingHaloLayer.h; sourceTree = "<group>"; };
+		449E250AD6C10FFE8047DB945642937C /* TOPasscodeViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TOPasscodeViewController.xcconfig; sourceTree = "<group>"; };
+		4749EBE0132C387D3966CBDF58B12839 /* TOPasscodeSettingsKeypadView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeSettingsKeypadView.m; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsKeypadView.m; sourceTree = "<group>"; };
+		477C33CB9152A72E14B55AD197C58157 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		48460EDEDDAFA32BBEEE166DECE092E2 /* TOPasscodeViewControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeViewControllerAnimatedTransitioning.h; path = TOPasscodeViewController/Models/TOPasscodeViewControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
+		48A1F9C01CC406F1451BD831981285B0 /* UIButton+AlamofireImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+AlamofireImage.swift"; path = "Source/UIButton+AlamofireImage.swift"; sourceTree = "<group>"; };
+		4BC6F01D6813AF50C7C2816C5B396694 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		4C1407B06C1C5E048AE18EFC46C4015E /* TOPasscodeCircleButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeCircleButton.h; path = TOPasscodeViewController/Views/Main/TOPasscodeCircleButton.h; sourceTree = "<group>"; };
+		4C208976C40DFCB33926EAE33940517C /* AFIError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFIError.swift; path = Source/AFIError.swift; sourceTree = "<group>"; };
+		4DBB9059F027D2FE628307259C3A22D0 /* TOPasscodeSettingsKeypadButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeSettingsKeypadButton.h; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsKeypadButton.h; sourceTree = "<group>"; };
+		4FC8D7B25AFEA35AF043A287B546B9EE /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		58D67067D554E6E8B9DE2310DD531C7E /* VideoBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoBackground.swift; path = SwiftVideoBackground/Sources/VideoBackground.swift; sourceTree = "<group>"; };
 		5A2F2BCDAA10BF74AC59888E7100C526 /* Pods-BespokenUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BespokenUITests-dummy.m"; sourceTree = "<group>"; };
-		5B856F428FE2623B15280788248B5FC5 /* TOSettingsKeypadImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOSettingsKeypadImage.h; path = TOPasscodeViewController/Models/TOSettingsKeypadImage.h; sourceTree = "<group>"; };
-		5D200DD3D0D3757165B6F010FD64B582 /* SwiftVideoBackground-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftVideoBackground-dummy.m"; sourceTree = "<group>"; };
-		5EBA799D8C55D1FD8D5EF60680958E77 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AlamofireImage.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EED0F2FE5D4011746968979D94CB4AF /* TOPasscodeViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TOPasscodeViewController.framework; path = TOPasscodeViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F2FEF6C732F7C64EFE0F6C7598437FC /* TOPasscodeViewContentLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeViewContentLayout.m; path = TOPasscodeViewController/Models/TOPasscodeViewContentLayout.m; sourceTree = "<group>"; };
-		6063289A598822626FEC6978DA7EEB05 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		65EF369007A8AE884870C288400975D7 /* TOPasscodeViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TOPasscodeViewController-dummy.m"; sourceTree = "<group>"; };
-		67E58B19D9C5623738B838B91102D90C /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		5D9F8FA7232B1879DFD3E02B8C99A4B8 /* PulsingHalo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PulsingHalo-umbrella.h"; sourceTree = "<group>"; };
+		61CBB66A2E8D362E5BC41C8197404F66 /* AlamofireImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlamofireImage.xcconfig; sourceTree = "<group>"; };
+		631400A5ABC19483F5520F2B1EECE0B4 /* TOPasscodeFixedInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeFixedInputView.m; path = TOPasscodeViewController/Views/Shared/TOPasscodeFixedInputView.m; sourceTree = "<group>"; };
+		6334A5FB70C0A391B999EF33A6932A47 /* PulsingHalo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PulsingHalo.xcconfig; sourceTree = "<group>"; };
+		65276223D8A08E12BABC75B8C2496C19 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Source/ImageCache.swift; sourceTree = "<group>"; };
+		66C6B866B208C8EE4303B32B8E64BABA /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		687AC5558B0DBA1EA92DE43C44184174 /* Pods-BespokenTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BespokenTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		691DD5E1797BEDDAE0173F3ABE7BC35F /* Request+AlamofireImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Request+AlamofireImage.swift"; path = "Source/Request+AlamofireImage.swift"; sourceTree = "<group>"; };
-		6B024ECA567E0686D622DDA781837203 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		731E71D75D8498CFC54E4E05C6255F17 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		735AB3A2F0224694555C1153EA159730 /* VideoBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoBackground.swift; path = SwiftVideoBackground/Sources/VideoBackground.swift; sourceTree = "<group>"; };
-		773D30070A3F92384925C5045FF5731C /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		7956F3883019BFC441E00E13BCF96D15 /* SwiftVideoBackground.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftVideoBackground.xcconfig; sourceTree = "<group>"; };
-		7A4FB732A70DAEA57E677EF598522D2D /* TOPasscodeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeViewController.h; path = TOPasscodeViewController/TOPasscodeViewController.h; sourceTree = "<group>"; };
-		7ABF2D06DB872DC1D5011949DA2E95D9 /* SwitchCameraButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchCameraButton.swift; path = Sources/SwitchCameraButton.swift; sourceTree = "<group>"; };
-		7C4C41E938D0A85BC4032798FC83C75A /* TOPasscodeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeView.h; path = TOPasscodeViewController/Views/Main/TOPasscodeView.h; sourceTree = "<group>"; };
-		7CCF28EF75AF5A0E52A78C1FE775F002 /* AlamofireImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AlamofireImage.modulemap; sourceTree = "<group>"; };
-		7D332392F109DD9229D731B25C7CAF3B /* TOPasscodeSettingsWarningLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeSettingsWarningLabel.h; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsWarningLabel.h; sourceTree = "<group>"; };
-		8809C821B6517921DD8C8725FEFDCC74 /* SwiftVideoBackground.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftVideoBackground.modulemap; sourceTree = "<group>"; };
-		8B3CE028112A0E1110FD35DCAD44C474 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		6A27DDEB94447EBF1CEFEB97A28D1A6A /* TOPasscodeSettingsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeSettingsViewController.m; path = TOPasscodeViewController/TOPasscodeSettingsViewController.m; sourceTree = "<group>"; };
+		6DECD2159821A13B97A93F4CA6FA6F88 /* AlamofireImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlamofireImage-prefix.pch"; sourceTree = "<group>"; };
+		6E7C03093B85527A35193AB60A43E731 /* PulsingHalo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PulsingHalo-prefix.pch"; sourceTree = "<group>"; };
+		6ED8BCEB82D059AE9C62DD21F4FE9F51 /* TOPasscodeCircleImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeCircleImage.h; path = TOPasscodeViewController/Models/TOPasscodeCircleImage.h; sourceTree = "<group>"; };
+		6F1D7ECA7DA90F9E0DF036E7FB937504 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72B25526D85A7D86B63D81B2C427C991 /* SwiftVideoBackground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftVideoBackground.framework; path = SwiftVideoBackground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7553ABA0E2C1463A8AC4705B800A48A8 /* AlamofireImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AlamofireImage-dummy.m"; sourceTree = "<group>"; };
+		796AF0C35D87508B5A14C915694ACC01 /* TOPasscodeViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOPasscodeViewController-umbrella.h"; sourceTree = "<group>"; };
+		7B7277DEB00982DF6E2AF191B6317864 /* Request+AlamofireImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Request+AlamofireImage.swift"; path = "Source/Request+AlamofireImage.swift"; sourceTree = "<group>"; };
+		7E67C765E0424E2B0BE3BEE5F5D720C4 /* PulsingHalo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PulsingHalo.framework; path = PulsingHalo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F157A49D1D73A3C43AE0A97A837E5C2 /* QRCodeReader.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QRCodeReader.swift-dummy.m"; sourceTree = "<group>"; };
+		7FDB96FE11AF9C72060A1A56DC771260 /* QRCodeReader.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QRCodeReader.swift.modulemap; sourceTree = "<group>"; };
+		80E7CD453FF8AF10744300B1AB2C4259 /* TOPasscodeViewContentLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeViewContentLayout.h; path = TOPasscodeViewController/Models/TOPasscodeViewContentLayout.h; sourceTree = "<group>"; };
+		8478EA9A36347506C0F61A3FDD353A54 /* VideoBackgroundError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoBackgroundError.swift; path = SwiftVideoBackground/Sources/VideoBackgroundError.swift; sourceTree = "<group>"; };
+		85129E6C69CDF858E75A70565AEEBD39 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		86EE94AB443649E5C02FBA711295C1F5 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		882BA90D9EFB89945C7FFFC56B0C1290 /* SwiftVideoBackground-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftVideoBackground-prefix.pch"; sourceTree = "<group>"; };
+		88577921DA0FB1660200EB1CC0F34AD1 /* PulsingHalo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PulsingHalo.modulemap; sourceTree = "<group>"; };
+		88F28FE409BC8D6E38DA61AEFE72DA8C /* QRCodeReaderViewContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewContainer.swift; path = Sources/QRCodeReaderViewContainer.swift; sourceTree = "<group>"; };
 		8B4C9E66358E6597D62E91C4340B5257 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F1C13478DB29E5DCFB59DB1406D5CC6 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		904A32CBA6610AC28DD6C5E140DA7748 /* TOPasscodeCircleButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeCircleButton.m; path = TOPasscodeViewController/Views/Main/TOPasscodeCircleButton.m; sourceTree = "<group>"; };
+		8BF4B507942343D1649574077B9191E5 /* Pods_BespokenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BespokenTests.framework; path = "Pods-BespokenTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C7674A0ED9AF89BC34DC5F5D415C7A7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		8D1ADB6DAB2260FBCB0792113E8E7D28 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		8D854DAC6AC1569BD9150C9C2369DBB4 /* TOSettingsKeypadImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOSettingsKeypadImage.h; path = TOPasscodeViewController/Models/TOSettingsKeypadImage.h; sourceTree = "<group>"; };
+		8DF037FDF4CFBAAF6DBC7279C2A65C7A /* TOPasscodeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeViewController.m; path = TOPasscodeViewController/TOPasscodeViewController.m; sourceTree = "<group>"; };
 		910D0B078F3740F478AB7CF92550DED6 /* Pods-BespokenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BespokenTests.release.xcconfig"; sourceTree = "<group>"; };
+		916A09C01061279CA8CEF7EA670DD890 /* TOPasscodeSettingsKeypadButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeSettingsKeypadButton.m; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsKeypadButton.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96BA4E31509FEFC7B4E9A5A566B20B3D /* TOPasscodeViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOPasscodeViewController-prefix.pch"; sourceTree = "<group>"; };
-		974AEA827103A2E4668161C2BE7EAB93 /* TOPasscodeViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TOPasscodeViewController.xcconfig; sourceTree = "<group>"; };
-		9C7CD3587CF3858FAA1A81CF78237B9F /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		9E76D55E344D16E28E6544BF560F4841 /* TOPasscodeCircleImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeCircleImage.m; path = TOPasscodeViewController/Models/TOPasscodeCircleImage.m; sourceTree = "<group>"; };
-		9E807DF71DB3443FF33F861DC5D69A45 /* TOPasscodeViewControllerAnimatedTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeViewControllerAnimatedTransitioning.m; path = TOPasscodeViewController/Models/TOPasscodeViewControllerAnimatedTransitioning.m; sourceTree = "<group>"; };
-		9F02A739100B7422F36AE23783BE8C24 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FA4CB27DA902CBB621A65BD88ED6A08 /* SwiftVideoBackground-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftVideoBackground-prefix.pch"; sourceTree = "<group>"; };
-		A0C4178B149C1A0012AC66AFA27C20C6 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		9467782F95F63B94BAD88A8C442B7537 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		94C764716C5E57A0BB1A5864E9325C27 /* TOPasscodeInputField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeInputField.m; path = TOPasscodeViewController/Views/Shared/TOPasscodeInputField.m; sourceTree = "<group>"; };
+		95B21238705C3317D1449EC10540039F /* SwiftVideoBackground.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftVideoBackground.xcconfig; sourceTree = "<group>"; };
+		9766E9DEB7D64C2CE52E50C5D27AF2B4 /* QRCodeReaderViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewControllerDelegate.swift; path = Sources/QRCodeReaderViewControllerDelegate.swift; sourceTree = "<group>"; };
+		97C4FF5C5DF8299291A8DCC2EB87D405 /* TOSettingsKeypadImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOSettingsKeypadImage.m; path = TOPasscodeViewController/Models/TOSettingsKeypadImage.m; sourceTree = "<group>"; };
+		9AC588A73AF39E8F11561F8CD5971390 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		9B85C92F9527F3D8675EE5D408618E68 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		9BD58829994219E68BEFE51CD88DE92E /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		9D899D89C06637DA2CDF0E0FA763079C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A14F1AFCEF455A1E896AFDEA9B305136 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		A4308A040FAD2F9161B814D423F461B7 /* Pods-BespokenUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BespokenUITests-frameworks.sh"; sourceTree = "<group>"; };
 		A514BFF21BB2C38E1D27F1048EBB7E51 /* Pods-BespokenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BespokenUITests.release.xcconfig"; sourceTree = "<group>"; };
-		A9C41B189568160FE4ABB41C71F97AE6 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		A9D1E0751351F52F9CEA4B0445D1890D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB1CCFA5E5EDFDF4457A4AB90152886A /* TOPasscodeKeypadView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeKeypadView.h; path = TOPasscodeViewController/Views/Main/TOPasscodeKeypadView.h; sourceTree = "<group>"; };
-		AB4895D57A0EC32CDA3C14D3C81915C4 /* SwiftVideoBackground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftVideoBackground.framework; path = SwiftVideoBackground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51C8D542345CA84BBFC5C30E7908C0B /* TOPasscodeCircleView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeCircleView.m; path = TOPasscodeViewController/Views/Shared/TOPasscodeCircleView.m; sourceTree = "<group>"; };
+		A7EDD91995A614626A373903E3FC1236 /* AlamofireImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlamofireImage-umbrella.h"; sourceTree = "<group>"; };
+		A80E4AEDFF156E6A8B0AA59EFFE4A523 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A82B74BB2ABA8592C993683A8B929F69 /* TOPasscodeSettingsWarningLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeSettingsWarningLabel.h; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsWarningLabel.h; sourceTree = "<group>"; };
+		AAABB50A212B1A760D28E07507935B9E /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Source/Image.swift; sourceTree = "<group>"; };
 		AB4ECAE5EB415D6114ED0E31444BB9C8 /* Pods-Bespoken-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Bespoken-resources.sh"; sourceTree = "<group>"; };
-		AB6BA1A0E86854706FB98C63B14795DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB89BC006779715A265A3FFC5B0A1600 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		AB8ACB9A53E4376CCC1B3E92D0A74E19 /* Pods-Bespoken-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Bespoken-acknowledgements.plist"; sourceTree = "<group>"; };
-		ADC4A06E8C1FCBC35632DE271FB0F032 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE554BEE9F09F9B86C442CE79B61E262 /* Pods-BespokenTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BespokenTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AF7358BA93897C6EA55C10D9C50AE67B /* AlamofireImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlamofireImage-prefix.pch"; sourceTree = "<group>"; };
+		AF2C0767485D9896830A91F8257EE0CF /* PulsingHalo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PulsingHalo-dummy.m"; sourceTree = "<group>"; };
+		B1CB0490BCF11A125C2CB7143B582379 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		B313DA6BA7C1CB7D7B4F2DAEFA0FE086 /* Pods-BespokenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BespokenTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B32E1649E56B6CABEDEB89639AC33394 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		BB2D30190374FEFA1B195FC35302F124 /* QRCodeReader.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRCodeReader.swift.xcconfig; sourceTree = "<group>"; };
-		BBFA4AC8142EF0AAD46659E8175C2285 /* TOSettingsKeypadImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOSettingsKeypadImage.m; path = TOPasscodeViewController/Models/TOSettingsKeypadImage.m; sourceTree = "<group>"; };
-		BE59D05FFB465D11D63ED73DC23EA79A /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Source/Image.swift; sourceTree = "<group>"; };
-		BF6003D6F3E46FA6CC786171D4E12F5E /* QRCodeReaderViewContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewContainer.swift; path = Sources/QRCodeReaderViewContainer.swift; sourceTree = "<group>"; };
-		BFA58D80B6A9D2F372187F832C3D193C /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		BFD390453AA83FD3B7A91A4AB9E47427 /* TOPasscodeSettingsKeypadButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeSettingsKeypadButton.h; path = TOPasscodeViewController/Views/Settings/TOPasscodeSettingsKeypadButton.h; sourceTree = "<group>"; };
-		C2844B089658D660617A7E13A4A2107E /* QRCodeReaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderView.swift; path = Sources/QRCodeReaderView.swift; sourceTree = "<group>"; };
-		C4CCF166941EE3EEB7A41A1AA3AC82FC /* QRCodeReaderViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewControllerDelegate.swift; path = Sources/QRCodeReaderViewControllerDelegate.swift; sourceTree = "<group>"; };
-		C5FC5B6F73BBB8605DD1D0C5B82AB087 /* TOPasscodeFixedInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeFixedInputView.m; path = TOPasscodeViewController/Views/Shared/TOPasscodeFixedInputView.m; sourceTree = "<group>"; };
+		B6DCED33A2823DD3FE271D134C7E3D50 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB3723A4F923045241E7BF192632C35B /* ReaderOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReaderOverlayView.swift; path = Sources/ReaderOverlayView.swift; sourceTree = "<group>"; };
+		BBB7618DD4FD43746BCAAC5926A64CD2 /* TOPasscodeButtonLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeButtonLabel.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeButtonLabel.h; sourceTree = "<group>"; };
+		BC4C757ACFA6FDBD257D5E365B3DEB70 /* TOPasscodeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeView.m; path = TOPasscodeViewController/Views/Main/TOPasscodeView.m; sourceTree = "<group>"; };
+		BEA1C613591D834B26E32593AC73BE85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C0236FB9A1B7FDA9311A1E632A8E3FB2 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewController.swift; path = Sources/QRCodeReaderViewController.swift; sourceTree = "<group>"; };
+		C05B8ACBC735172181F4CEEC269646B7 /* TOPasscodeVariableInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeVariableInputView.m; path = TOPasscodeViewController/Views/Shared/TOPasscodeVariableInputView.m; sourceTree = "<group>"; };
+		C1E05F4920CE888420C4AAF249B32003 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		C4EF749CC939F6A5381C0FE34EE84549 /* TOPasscodeViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TOPasscodeViewController.modulemap; sourceTree = "<group>"; };
+		C68C0FFE780904005F05F466D7D5BF90 /* TOPasscodeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeView.h; path = TOPasscodeViewController/Views/Main/TOPasscodeView.h; sourceTree = "<group>"; };
 		C7D73115C2892B00B26902EA923EF724 /* Pods-Bespoken-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Bespoken-frameworks.sh"; sourceTree = "<group>"; };
-		CA7F8C92F4886C969192C71F1CB9C733 /* VideoBackgroundError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoBackgroundError.swift; path = SwiftVideoBackground/Sources/VideoBackgroundError.swift; sourceTree = "<group>"; };
-		CCAB7FC9776282A99A127D027585103B /* UIButton+AlamofireImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+AlamofireImage.swift"; path = "Source/UIButton+AlamofireImage.swift"; sourceTree = "<group>"; };
-		CD8B43843B19FD510DA68B18ABE32941 /* TOPasscodeViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOPasscodeViewController-umbrella.h"; sourceTree = "<group>"; };
-		D0C7E02D1677CD5A7FD18C6C84D9D3A1 /* AlamofireImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlamofireImage.xcconfig; sourceTree = "<group>"; };
-		D2061720228A28AA368D16008925ED2B /* QRCodeReader.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-prefix.pch"; sourceTree = "<group>"; };
+		C86E0201F2F0CAF6A5EFEF66E0F8BB5B /* SwiftVideoBackground.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftVideoBackground.modulemap; sourceTree = "<group>"; };
+		CB2CB122364824F18093397FC9368AA4 /* TOPasscodeViewContentLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeViewContentLayout.m; path = TOPasscodeViewController/Models/TOPasscodeViewContentLayout.m; sourceTree = "<group>"; };
+		CF83F92FF004D16252AE27151119D5C3 /* SwiftVideoBackground-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftVideoBackground-umbrella.h"; sourceTree = "<group>"; };
+		D0598177780AD2B5CFD8F6D3E66E47C9 /* QRCodeReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReader.swift; path = Sources/QRCodeReader.swift; sourceTree = "<group>"; };
+		D0ADBC05D4FC694C269FFAE15C7BA72A /* QRCodeReader.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-prefix.pch"; sourceTree = "<group>"; };
+		D20343AC26ED57D8B14AF1625D7B7FE8 /* ToggleTorchButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToggleTorchButton.swift; path = Sources/ToggleTorchButton.swift; sourceTree = "<group>"; };
 		D2C1FD98DEDA69E0A6EBD6BFEF7AA370 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2CA09FDF676A5C162D38FFB9FABAF06 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		D51A5032C1E914C09DF3B30BD9ADE7F1 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		D3D7473852D8DF7F4D73B18F455FD27B /* TOPasscodeCircleButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeCircleButton.m; path = TOPasscodeViewController/Views/Main/TOPasscodeCircleButton.m; sourceTree = "<group>"; };
 		D5839F7789E24B3B1B785F392556907D /* Pods-BespokenTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BespokenTests-dummy.m"; sourceTree = "<group>"; };
+		D5E28F3DBF30A5E27365B60A99F4A881 /* ImageFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageFilter.swift; path = Source/ImageFilter.swift; sourceTree = "<group>"; };
 		D61A6296D73B84927C44D9F5D314CC8E /* Pods-BespokenTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BespokenTests-frameworks.sh"; sourceTree = "<group>"; };
-		DB2FA76815975D3FAA6335D3179F8529 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		DD7E453B876992604AD2D26FEEDF06D9 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		E0F69528E00B84863E9BBEF73734CD4E /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		E2D5127B6725D2FBF9C318478DA4E27E /* TOPasscodeCircleView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeCircleView.m; path = TOPasscodeViewController/Views/Shared/TOPasscodeCircleView.m; sourceTree = "<group>"; };
-		E3AE0E808646A30B36C064F6932AA051 /* QRCodeReader.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QRCodeReader.swift-dummy.m"; sourceTree = "<group>"; };
+		D8B1A50F1B2EC27415B4209D57250ECF /* TOPasscodeCircleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeCircleView.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeCircleView.h; sourceTree = "<group>"; };
+		E187FF17D0C456AA0601EC648E8FC989 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		E1FB9583928D023C0CE3BA6947B3D6CF /* Pods_BespokenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BespokenUITests.framework; path = "Pods-BespokenUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46C9DDAAEC76075C679FC99DC6884BF /* Pods-BespokenUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BespokenUITests-umbrella.h"; sourceTree = "<group>"; };
+		E5D222DB4729545A99EB0FCA01CC6F90 /* SwitchCameraButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchCameraButton.swift; path = Sources/SwitchCameraButton.swift; sourceTree = "<group>"; };
 		E82909B3141B5922438B8D0D3555FB61 /* Pods-BespokenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BespokenUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		E994319C29A11902600D9703D88F9C9D /* TOPasscodeVariableInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeVariableInputView.m; path = TOPasscodeViewController/Views/Shared/TOPasscodeVariableInputView.m; sourceTree = "<group>"; };
-		EBB27AC90007B0E7C3B8078F5D21E9BA /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Source/ImageDownloader.swift; sourceTree = "<group>"; };
-		EDC130B3B29908F702D9D9449DFE507D /* TOPasscodeCircleImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeCircleImage.h; path = TOPasscodeViewController/Models/TOPasscodeCircleImage.h; sourceTree = "<group>"; };
-		EE450084C321A723663A32B0D6B6AEDE /* AlamofireImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlamofireImage-umbrella.h"; sourceTree = "<group>"; };
-		F01D24B050F846C723EA92FB3EAF3F98 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		E8365C48439CD6E80D31ACCC35895FE9 /* TOPasscodeKeypadView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeKeypadView.m; path = TOPasscodeViewController/Views/Main/TOPasscodeKeypadView.m; sourceTree = "<group>"; };
+		E87B9698BD81BF15B81D81CD9DD133E7 /* TOPasscodeVariableInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeVariableInputView.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeVariableInputView.h; sourceTree = "<group>"; };
+		EA5D412D0C7145C0F4483AD11033AE07 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		ED368A7103C9EE1C179CAA60223DE2E8 /* TOPasscodeButtonLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeButtonLabel.m; path = TOPasscodeViewController/Views/Shared/TOPasscodeButtonLabel.m; sourceTree = "<group>"; };
+		F2B30717D72DDBADFE5ECD18F9B58805 /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Source/ImageDownloader.swift; sourceTree = "<group>"; };
+		F398684C444DF986AD87C65EC9108FA0 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AlamofireImage.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B6A38CDC1C65A830D3A247BEAE12A3 /* Pods-Bespoken-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Bespoken-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F6C9F37F8A107277B89E6FFE413FC468 /* UIImage+AlamofireImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+AlamofireImage.swift"; path = "Source/UIImage+AlamofireImage.swift"; sourceTree = "<group>"; };
+		F6E5CFFDF2E4C041104040162BCB3E80 /* TOPasscodeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeViewController.h; path = TOPasscodeViewController/TOPasscodeViewController.h; sourceTree = "<group>"; };
 		F7A3D2F27173092F59A79A00C075DF59 /* Pods-Bespoken.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Bespoken.debug.xcconfig"; sourceTree = "<group>"; };
-		F90349F3A5C698D22C6C329AB3DD76BB /* TOPasscodeKeypadView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOPasscodeKeypadView.m; path = TOPasscodeViewController/Views/Main/TOPasscodeKeypadView.m; sourceTree = "<group>"; };
-		FD9B284FE1528440E3527B91D0BCF796 /* QRCodeReaderResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderResult.swift; path = Sources/QRCodeReaderResult.swift; sourceTree = "<group>"; };
-		FE7A905C3DD459AE0EA583F8BA6C7CFB /* TOPasscodeButtonLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeButtonLabel.h; path = TOPasscodeViewController/Views/Shared/TOPasscodeButtonLabel.h; sourceTree = "<group>"; };
+		F82B15EFB1F5AD17698ED6336C8FC64B /* TOPasscodeViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOPasscodeViewController-prefix.pch"; sourceTree = "<group>"; };
+		F9B86D70EBA490DE1141B88F1E068D95 /* TOPasscodeKeypadView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOPasscodeKeypadView.h; path = TOPasscodeViewController/Views/Main/TOPasscodeKeypadView.h; sourceTree = "<group>"; };
 		FF1FC5728F8B555644F2797CBC252A78 /* Pods-Bespoken.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Bespoken.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5DC322287068CD30FA76AF20CD533132 /* Frameworks */ = {
+		124DD0E066A19CD21C6255602F6ADC6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79CE1A0E3AB9A1F1DFCCB73D55123620 /* Foundation.framework in Frameworks */,
+				65BBA23A2E5B1EC0EC4F707E9636DB22 /* AVFoundation.framework in Frameworks */,
+				F4334C4D055184BC9E04279C0E3D963D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F8356559F1C7E9AEC99D19FB49F98CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99EC5F45F2B5D64365043B9B062C1DCF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +354,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		82FD4D3D6E22832A26695973CEE4ADCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A707FA8D8C0B7BCD0DCE3BB0FB6861D /* Foundation.framework in Frameworks */,
+				8D0585655DB9A0C479263D40347CCADB /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99195E4207764744AEC07ECCBCD550EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,20 +371,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6866549B7DA81656614FDE607CFAC0E /* Frameworks */ = {
+		BE9D23CC0577CF74A72AE1B3E8725356 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4B800A7D3F8E700D8ABECEB154CAC60 /* AVFoundation.framework in Frameworks */,
-				04823ABC80989B024D213B5C71C89C1A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BA4B8DE3457E6CCE3F7749E577B9BB49 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA68BF3354D3C3DC4F15E6E06BE678F3 /* Foundation.framework in Frameworks */,
+				5C8A22896E18214720BCC210D42513D7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,11 +388,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D4EF7AC0D9A258BE0288AA7598683C07 /* Frameworks */ = {
+		D838FA25875A305059192638FAED1444 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3A88EA583B79467FE24168E45E509EB /* Foundation.framework in Frameworks */,
+				45FE3B91035E73046989F8BC8CEF826F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,82 +407,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0297D1B89DA7718479528B0203CCD73E /* Products */ = {
+		02DEC50F35C96CFC1D6251C7A6FCD5C6 /* AlamofireImage */ = {
 			isa = PBXGroup;
 			children = (
-				07BAF42C74CD90A7ACA2172639418F42 /* Alamofire.framework */,
-				5EBA799D8C55D1FD8D5EF60680958E77 /* AlamofireImage.framework */,
-				428CB4D97776597CC45A153357521C88 /* Pods_Bespoken.framework */,
-				53634C8DF817DC8169B100B2A035C54D /* Pods_BespokenTests.framework */,
-				159A79AD3A4E331C837C84FFF5E28802 /* Pods_BespokenUITests.framework */,
-				23D1E2C2B1155BDBCD0484B7F65B6BBC /* QRCodeReader.framework */,
-				AB4895D57A0EC32CDA3C14D3C81915C4 /* SwiftVideoBackground.framework */,
-				5EED0F2FE5D4011746968979D94CB4AF /* TOPasscodeViewController.framework */,
+				4C208976C40DFCB33926EAE33940517C /* AFIError.swift */,
+				AAABB50A212B1A760D28E07507935B9E /* Image.swift */,
+				65276223D8A08E12BABC75B8C2496C19 /* ImageCache.swift */,
+				F2B30717D72DDBADFE5ECD18F9B58805 /* ImageDownloader.swift */,
+				D5E28F3DBF30A5E27365B60A99F4A881 /* ImageFilter.swift */,
+				7B7277DEB00982DF6E2AF191B6317864 /* Request+AlamofireImage.swift */,
+				48A1F9C01CC406F1451BD831981285B0 /* UIButton+AlamofireImage.swift */,
+				F6C9F37F8A107277B89E6FFE413FC468 /* UIImage+AlamofireImage.swift */,
+				192AE344EAEE052ADD0015B5941F7BE8 /* UIImageView+AlamofireImage.swift */,
+				B87CE8BEDA0D5DD1FBEF45B627984E1B /* Support Files */,
 			);
-			name = Products;
+			name = AlamofireImage;
+			path = AlamofireImage;
 			sourceTree = "<group>";
 		};
-		11C89C98BB448CD9D7EFEE7DCC748C17 /* iOS */ = {
+		12CE20454F81CB800596A4C963BAC35A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B32E1649E56B6CABEDEB89639AC33394 /* AVFoundation.framework */,
-				721483CD465C9BC929B4BF83BA2BDBDD /* Foundation.framework */,
+				0AAB444D6B577EB01D718357791EC3E7 /* AVFoundation.framework */,
+				BEA1C613591D834B26E32593AC73BE85 /* Foundation.framework */,
+				8C7674A0ED9AF89BC34DC5F5D415C7A7 /* QuartzCore.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		1A936A9300C5894A244CEC9E3E3B0EEF /* Support Files */ = {
+		2898328B012C0ED0F78730C8C94C541D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6B024ECA567E0686D622DDA781837203 /* Info.plist */,
-				8809C821B6517921DD8C8725FEFDCC74 /* SwiftVideoBackground.modulemap */,
-				7956F3883019BFC441E00E13BCF96D15 /* SwiftVideoBackground.xcconfig */,
-				5D200DD3D0D3757165B6F010FD64B582 /* SwiftVideoBackground-dummy.m */,
-				9FA4CB27DA902CBB621A65BD88ED6A08 /* SwiftVideoBackground-prefix.pch */,
-				3BEB1A73605A6E6A97F3E4B6665D690D /* SwiftVideoBackground-umbrella.h */,
+				B6DCED33A2823DD3FE271D134C7E3D50 /* Info.plist */,
+				C4EF749CC939F6A5381C0FE34EE84549 /* TOPasscodeViewController.modulemap */,
+				449E250AD6C10FFE8047DB945642937C /* TOPasscodeViewController.xcconfig */,
+				1D1DE74ADF00251E04B0C771AF8C2155 /* TOPasscodeViewController-dummy.m */,
+				F82B15EFB1F5AD17698ED6336C8FC64B /* TOPasscodeViewController-prefix.pch */,
+				796AF0C35D87508B5A14C915694ACC01 /* TOPasscodeViewController-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwiftVideoBackground";
+			path = "../Target Support Files/TOPasscodeViewController";
 			sourceTree = "<group>";
 		};
-		34AF4645FE96A39C57343F9787F11A63 /* Pods */ = {
+		42EDF868AD5818A07CC6AAA958360C8E /* QRCodeReader.swift */ = {
 			isa = PBXGroup;
 			children = (
-				FDEEEE4C3AE286124673B78D83C13193 /* Alamofire */,
-				80C7115DC7BBA4F131D5B9790BB91820 /* AlamofireImage */,
-				BB6D1EEF49541A81D92D3F6D51C60F95 /* QRCodeReader.swift */,
-				952BF698F75CC838BE2F7A2F0A3CB4FE /* SwiftVideoBackground */,
-				99BA0803AC251A6DFA56370AD36ADD9E /* TOPasscodeViewController */,
+				D0598177780AD2B5CFD8F6D3E66E47C9 /* QRCodeReader.swift */,
+				011EC9FFFA8CC0A1CFAD5C60EF12DC73 /* QRCodeReaderResult.swift */,
+				04F86B347AEEBB4D69F2FA3189339C4D /* QRCodeReaderView.swift */,
+				88F28FE409BC8D6E38DA61AEFE72DA8C /* QRCodeReaderViewContainer.swift */,
+				C0236FB9A1B7FDA9311A1E632A8E3FB2 /* QRCodeReaderViewController.swift */,
+				0F7424A934A29EC6C43A5202C8293A82 /* QRCodeReaderViewControllerBuilder.swift */,
+				9766E9DEB7D64C2CE52E50C5D27AF2B4 /* QRCodeReaderViewControllerDelegate.swift */,
+				BB3723A4F923045241E7BF192632C35B /* ReaderOverlayView.swift */,
+				E5D222DB4729545A99EB0FCA01CC6F90 /* SwitchCameraButton.swift */,
+				D20343AC26ED57D8B14AF1625D7B7FE8 /* ToggleTorchButton.swift */,
+				D5FB5F5A5CECDDD5F071441A2957EA40 /* Support Files */,
 			);
-			name = Pods;
+			name = QRCodeReader.swift;
+			path = QRCodeReader.swift;
 			sourceTree = "<group>";
 		};
-		3FDF17B976F7B6499C9C5E1B5F593B03 /* Support Files */ = {
+		5B4A0C191B1BB2732777354A1D09EC91 /* PulsingHalo */ = {
 			isa = PBXGroup;
 			children = (
-				7CCF28EF75AF5A0E52A78C1FE775F002 /* AlamofireImage.modulemap */,
-				D0C7E02D1677CD5A7FD18C6C84D9D3A1 /* AlamofireImage.xcconfig */,
-				33811E71D884790CFF5274D5FCDF99AC /* AlamofireImage-dummy.m */,
-				AF7358BA93897C6EA55C10D9C50AE67B /* AlamofireImage-prefix.pch */,
-				EE450084C321A723663A32B0D6B6AEDE /* AlamofireImage-umbrella.h */,
-				13F2D336A8F2319DD8E4F989F38FBFFC /* Info.plist */,
+				4165D22DAEEBCE7713534F767E1F1C38 /* PulsingHalo.h */,
+				42153713E57769183BF4FAB9C80948E6 /* PulsingHaloLayer.h */,
+				3D72EE75B821BC0EC607B19C8BFEDF52 /* PulsingHaloLayer.m */,
+				BF69C22D3B9D15DF57C7D21F728E89F1 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/AlamofireImage";
-			sourceTree = "<group>";
-		};
-		40DBACB729707123EB17A17122FB231C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8B3CE028112A0E1110FD35DCAD44C474 /* Alamofire.modulemap */,
-				DD7E453B876992604AD2D26FEEDF06D9 /* Alamofire.xcconfig */,
-				731E71D75D8498CFC54E4E05C6255F17 /* Alamofire-dummy.m */,
-				8F1C13478DB29E5DCFB59DB1406D5CC6 /* Alamofire-prefix.pch */,
-				3B7175CAF22D687A35CC5FE97A493774 /* Alamofire-umbrella.h */,
-				A9D1E0751351F52F9CEA4B0445D1890D /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Alamofire";
+			name = PulsingHalo;
+			path = PulsingHalo;
 			sourceTree = "<group>";
 		};
 		6141278176AB2F48E2224EC9CEA4CCE9 /* Targets Support Files */ = {
@@ -459,6 +488,19 @@
 				D6DEAECC05352511754D59019A6EF646 /* Pods-BespokenUITests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		63339928701B3E8F57E50CB0FC33B21E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87C16F8ED3051F2269A3B02E1D360BF7 /* Alamofire */,
+				02DEC50F35C96CFC1D6251C7A6FCD5C6 /* AlamofireImage */,
+				5B4A0C191B1BB2732777354A1D09EC91 /* PulsingHalo */,
+				42EDF868AD5818A07CC6AAA958360C8E /* QRCodeReader.swift */,
+				8713E88E5BA8E70093B7C952F4BB8C25 /* SwiftVideoBackground */,
+				F549185EF7C89BDB2BE4094ECD379B28 /* TOPasscodeViewController */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7A7B9D31A17688710C0ACB0142EAB9B6 /* Pods-BespokenTests */ = {
@@ -479,56 +521,53 @@
 			path = "Target Support Files/Pods-BespokenTests";
 			sourceTree = "<group>";
 		};
-		7B05826141F5DEB7AF13094100054778 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9F02A739100B7422F36AE23783BE8C24 /* Alamofire.framework */,
-				11C89C98BB448CD9D7EFEE7DCC748C17 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				7B05826141F5DEB7AF13094100054778 /* Frameworks */,
-				34AF4645FE96A39C57343F9787F11A63 /* Pods */,
-				0297D1B89DA7718479528B0203CCD73E /* Products */,
+				CAD3C16957C45B9334B34B3F761CF915 /* Frameworks */,
+				63339928701B3E8F57E50CB0FC33B21E /* Pods */,
+				CED1FEB1975DB30BA6DB2A671FFAF299 /* Products */,
 				6141278176AB2F48E2224EC9CEA4CCE9 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		80C7115DC7BBA4F131D5B9790BB91820 /* AlamofireImage */ = {
+		8713E88E5BA8E70093B7C952F4BB8C25 /* SwiftVideoBackground */ = {
 			isa = PBXGroup;
 			children = (
-				0E728E033730892ECF6DC96D12129FE5 /* AFIError.swift */,
-				BE59D05FFB465D11D63ED73DC23EA79A /* Image.swift */,
-				576A28154FF53425C5ECC5DC8DB63D0A /* ImageCache.swift */,
-				EBB27AC90007B0E7C3B8078F5D21E9BA /* ImageDownloader.swift */,
-				0D48333FE8A5F6611DEC81842706DE6E /* ImageFilter.swift */,
-				691DD5E1797BEDDAE0173F3ABE7BC35F /* Request+AlamofireImage.swift */,
-				CCAB7FC9776282A99A127D027585103B /* UIButton+AlamofireImage.swift */,
-				4E9392CCDE30F6CC9FEC64D857D87814 /* UIImage+AlamofireImage.swift */,
-				4F26841662C7D1F92089CE530B605EBB /* UIImageView+AlamofireImage.swift */,
-				3FDF17B976F7B6499C9C5E1B5F593B03 /* Support Files */,
+				31D02FF53CA3F2F718515B1C1582CC42 /* SwiftVideoBackground.h */,
+				58D67067D554E6E8B9DE2310DD531C7E /* VideoBackground.swift */,
+				8478EA9A36347506C0F61A3FDD353A54 /* VideoBackgroundError.swift */,
+				F7A830DEAED5BE9E9D7F67424F6BD748 /* Support Files */,
 			);
-			name = AlamofireImage;
-			path = AlamofireImage;
+			name = SwiftVideoBackground;
+			path = SwiftVideoBackground;
 			sourceTree = "<group>";
 		};
-		8D53DFE6ECA3B4F2DB2CC40EA5026FD5 /* Support Files */ = {
+		87C16F8ED3051F2269A3B02E1D360BF7 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				AB6BA1A0E86854706FB98C63B14795DF /* Info.plist */,
-				4E7B219180C71982A20C068512B7798E /* QRCodeReader.swift.modulemap */,
-				BB2D30190374FEFA1B195FC35302F124 /* QRCodeReader.swift.xcconfig */,
-				E3AE0E808646A30B36C064F6932AA051 /* QRCodeReader.swift-dummy.m */,
-				D2061720228A28AA368D16008925ED2B /* QRCodeReader.swift-prefix.pch */,
-				3CC11908706FA5F5FF7F8B5E25BD957E /* QRCodeReader.swift-umbrella.h */,
+				85129E6C69CDF858E75A70565AEEBD39 /* AFError.swift */,
+				4FC8D7B25AFEA35AF043A287B546B9EE /* Alamofire.swift */,
+				66C6B866B208C8EE4303B32B8E64BABA /* DispatchQueue+Alamofire.swift */,
+				31C56CD83E240F4C3803C2B8787BCE6C /* MultipartFormData.swift */,
+				8D1ADB6DAB2260FBCB0792113E8E7D28 /* NetworkReachabilityManager.swift */,
+				150F5752827D04413E4D48DF4A324905 /* Notifications.swift */,
+				B1CB0490BCF11A125C2CB7143B582379 /* ParameterEncoding.swift */,
+				EA5D412D0C7145C0F4483AD11033AE07 /* Request.swift */,
+				9467782F95F63B94BAD88A8C442B7537 /* Response.swift */,
+				4BC6F01D6813AF50C7C2816C5B396694 /* ResponseSerialization.swift */,
+				AB89BC006779715A265A3FFC5B0A1600 /* Result.swift */,
+				9B85C92F9527F3D8675EE5D408618E68 /* ServerTrustPolicy.swift */,
+				E187FF17D0C456AA0601EC648E8FC989 /* SessionDelegate.swift */,
+				06008F8E6F4A9C7F485CFD0BC0A283CF /* SessionManager.swift */,
+				9BD58829994219E68BEFE51CD88DE92E /* TaskDelegate.swift */,
+				9AC588A73AF39E8F11561F8CD5971390 /* Timeline.swift */,
+				A14F1AFCEF455A1E896AFDEA9B305136 /* Validation.swift */,
+				C88BD97C37FBE3E6E05B6AC1BD3A24F0 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/QRCodeReader.swift";
+			name = Alamofire;
+			path = Alamofire;
 			sourceTree = "<group>";
 		};
 		9454AD6145A5566FCE311DFD5AD83BAA /* Pods-Bespoken */ = {
@@ -549,79 +588,85 @@
 			path = "Target Support Files/Pods-Bespoken";
 			sourceTree = "<group>";
 		};
-		952BF698F75CC838BE2F7A2F0A3CB4FE /* SwiftVideoBackground */ = {
+		B87CE8BEDA0D5DD1FBEF45B627984E1B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1E79870FDBA7F544634CBED891AB3D6C /* SwiftVideoBackground.h */,
-				735AB3A2F0224694555C1153EA159730 /* VideoBackground.swift */,
-				CA7F8C92F4886C969192C71F1CB9C733 /* VideoBackgroundError.swift */,
-				1A936A9300C5894A244CEC9E3E3B0EEF /* Support Files */,
+				1826C91AE2ABF0F415C3382381E78E8D /* AlamofireImage.modulemap */,
+				61CBB66A2E8D362E5BC41C8197404F66 /* AlamofireImage.xcconfig */,
+				7553ABA0E2C1463A8AC4705B800A48A8 /* AlamofireImage-dummy.m */,
+				6DECD2159821A13B97A93F4CA6FA6F88 /* AlamofireImage-prefix.pch */,
+				A7EDD91995A614626A373903E3FC1236 /* AlamofireImage-umbrella.h */,
+				6F1D7ECA7DA90F9E0DF036E7FB937504 /* Info.plist */,
 			);
-			name = SwiftVideoBackground;
-			path = SwiftVideoBackground;
+			name = "Support Files";
+			path = "../Target Support Files/AlamofireImage";
 			sourceTree = "<group>";
 		};
-		99BA0803AC251A6DFA56370AD36ADD9E /* TOPasscodeViewController */ = {
+		BF69C22D3B9D15DF57C7D21F728E89F1 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FE7A905C3DD459AE0EA583F8BA6C7CFB /* TOPasscodeButtonLabel.h */,
-				1B38C919EBF4A3ECF9330E69FA8AD7C7 /* TOPasscodeButtonLabel.m */,
-				24C76383E727464A0DD065ACEEAB5B95 /* TOPasscodeCircleButton.h */,
-				904A32CBA6610AC28DD6C5E140DA7748 /* TOPasscodeCircleButton.m */,
-				EDC130B3B29908F702D9D9449DFE507D /* TOPasscodeCircleImage.h */,
-				9E76D55E344D16E28E6544BF560F4841 /* TOPasscodeCircleImage.m */,
-				14053F6E42D34588F14371F0FAEF2DAE /* TOPasscodeCircleView.h */,
-				E2D5127B6725D2FBF9C318478DA4E27E /* TOPasscodeCircleView.m */,
-				0429917D0F17FC0B1E4CAAC788ABA9C8 /* TOPasscodeFixedInputView.h */,
-				C5FC5B6F73BBB8605DD1D0C5B82AB087 /* TOPasscodeFixedInputView.m */,
-				30AD719C05942D696CBCBBE599EC0729 /* TOPasscodeInputField.h */,
-				4C4061FFE59DD03437DD1947E98A4383 /* TOPasscodeInputField.m */,
-				AB1CCFA5E5EDFDF4457A4AB90152886A /* TOPasscodeKeypadView.h */,
-				F90349F3A5C698D22C6C329AB3DD76BB /* TOPasscodeKeypadView.m */,
-				BFD390453AA83FD3B7A91A4AB9E47427 /* TOPasscodeSettingsKeypadButton.h */,
-				3E12065598625D838FBB4F4595A45465 /* TOPasscodeSettingsKeypadButton.m */,
-				57C22823E730F8A12C3BB50CF6369989 /* TOPasscodeSettingsKeypadView.h */,
-				3CB047BCF3935EF396B2AB80E9F48114 /* TOPasscodeSettingsKeypadView.m */,
-				2B2D6652161F562FB435B5842C9E7E83 /* TOPasscodeSettingsViewController.h */,
-				244F501E89700BDF2F07557137CEB4BF /* TOPasscodeSettingsViewController.m */,
-				7D332392F109DD9229D731B25C7CAF3B /* TOPasscodeSettingsWarningLabel.h */,
-				1074082396137CD64F064FF3411B90EF /* TOPasscodeSettingsWarningLabel.m */,
-				01E3E07CB011AEB0BB3B17D66CB5B824 /* TOPasscodeVariableInputView.h */,
-				E994319C29A11902600D9703D88F9C9D /* TOPasscodeVariableInputView.m */,
-				7C4C41E938D0A85BC4032798FC83C75A /* TOPasscodeView.h */,
-				09A73E6A59F317A098A70F0DF171446C /* TOPasscodeView.m */,
-				4593DBDCB8295F0E13BC8DE292945922 /* TOPasscodeViewContentLayout.h */,
-				5F2FEF6C732F7C64EFE0F6C7598437FC /* TOPasscodeViewContentLayout.m */,
-				7A4FB732A70DAEA57E677EF598522D2D /* TOPasscodeViewController.h */,
-				0988BA3FCBB80AB8DD9F6F5D65C4492A /* TOPasscodeViewController.m */,
-				4D7F547281EF2C2E5EC0F7AC342520FF /* TOPasscodeViewControllerAnimatedTransitioning.h */,
-				9E807DF71DB3443FF33F861DC5D69A45 /* TOPasscodeViewControllerAnimatedTransitioning.m */,
-				34576417E65592E59919BA40DF1534CF /* TOPasscodeViewControllerConstants.h */,
-				5B856F428FE2623B15280788248B5FC5 /* TOSettingsKeypadImage.h */,
-				BBFA4AC8142EF0AAD46659E8175C2285 /* TOSettingsKeypadImage.m */,
-				EB2B7FA34AEF7222D57EFBBC97C7E786 /* Support Files */,
+				3CB0F67A7D8791F81148D82A38E11631 /* Info.plist */,
+				88577921DA0FB1660200EB1CC0F34AD1 /* PulsingHalo.modulemap */,
+				6334A5FB70C0A391B999EF33A6932A47 /* PulsingHalo.xcconfig */,
+				AF2C0767485D9896830A91F8257EE0CF /* PulsingHalo-dummy.m */,
+				6E7C03093B85527A35193AB60A43E731 /* PulsingHalo-prefix.pch */,
+				5D9F8FA7232B1879DFD3E02B8C99A4B8 /* PulsingHalo-umbrella.h */,
 			);
-			name = TOPasscodeViewController;
-			path = TOPasscodeViewController;
+			name = "Support Files";
+			path = "../Target Support Files/PulsingHalo";
 			sourceTree = "<group>";
 		};
-		BB6D1EEF49541A81D92D3F6D51C60F95 /* QRCodeReader.swift */ = {
+		C88BD97C37FBE3E6E05B6AC1BD3A24F0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				58462C23D6A4BFF71DF15185C98C6B09 /* QRCodeReader.swift */,
-				FD9B284FE1528440E3527B91D0BCF796 /* QRCodeReaderResult.swift */,
-				C2844B089658D660617A7E13A4A2107E /* QRCodeReaderView.swift */,
-				BF6003D6F3E46FA6CC786171D4E12F5E /* QRCodeReaderViewContainer.swift */,
-				4A287E423BF846036FD5AA4CDFBCE5AC /* QRCodeReaderViewController.swift */,
-				124E50B9BA8E870EBAD665B479AB49D0 /* QRCodeReaderViewControllerBuilder.swift */,
-				C4CCF166941EE3EEB7A41A1AA3AC82FC /* QRCodeReaderViewControllerDelegate.swift */,
-				244258A3F71A4D32382447C46C0C51C6 /* ReaderOverlayView.swift */,
-				7ABF2D06DB872DC1D5011949DA2E95D9 /* SwitchCameraButton.swift */,
-				0586E63656BA17A64E070181F59F0B03 /* ToggleTorchButton.swift */,
-				8D53DFE6ECA3B4F2DB2CC40EA5026FD5 /* Support Files */,
+				477C33CB9152A72E14B55AD197C58157 /* Alamofire.modulemap */,
+				C1E05F4920CE888420C4AAF249B32003 /* Alamofire.xcconfig */,
+				0937C12331931C93EEFB8D5B090D8FD3 /* Alamofire-dummy.m */,
+				297132C048036D197E2E20E2700B741B /* Alamofire-prefix.pch */,
+				86EE94AB443649E5C02FBA711295C1F5 /* Alamofire-umbrella.h */,
+				9D899D89C06637DA2CDF0E0FA763079C /* Info.plist */,
 			);
-			name = QRCodeReader.swift;
-			path = QRCodeReader.swift;
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		CAD3C16957C45B9334B34B3F761CF915 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26F06CA2E46281C39ABF8AC532C03A69 /* Alamofire.framework */,
+				12CE20454F81CB800596A4C963BAC35A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CED1FEB1975DB30BA6DB2A671FFAF299 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1ABFD7569D6A909D619AEE444082D342 /* Alamofire.framework */,
+				F398684C444DF986AD87C65EC9108FA0 /* AlamofireImage.framework */,
+				20796856E7B8C9F2546ACB1061CF195E /* Pods_Bespoken.framework */,
+				8BF4B507942343D1649574077B9191E5 /* Pods_BespokenTests.framework */,
+				E1FB9583928D023C0CE3BA6947B3D6CF /* Pods_BespokenUITests.framework */,
+				7E67C765E0424E2B0BE3BEE5F5D720C4 /* PulsingHalo.framework */,
+				3160156BE272006AD5F3E70751827228 /* QRCodeReader.framework */,
+				72B25526D85A7D86B63D81B2C427C991 /* SwiftVideoBackground.framework */,
+				0D94F36084C8410D7D939A16C11DB35A /* TOPasscodeViewController.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5FB5F5A5CECDDD5F071441A2957EA40 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A80E4AEDFF156E6A8B0AA59EFFE4A523 /* Info.plist */,
+				7FDB96FE11AF9C72060A1A56DC771260 /* QRCodeReader.swift.modulemap */,
+				009E94AEEE5730523EBFD7672EC6A9C3 /* QRCodeReader.swift.xcconfig */,
+				7F157A49D1D73A3C43AE0A97A837E5C2 /* QRCodeReader.swift-dummy.m */,
+				D0ADBC05D4FC694C269FFAE15C7BA72A /* QRCodeReader.swift-prefix.pch */,
+				17A93A285AAA20D97064165317B27AD7 /* QRCodeReader.swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/QRCodeReader.swift";
 			sourceTree = "<group>";
 		};
 		D6DEAECC05352511754D59019A6EF646 /* Pods-BespokenUITests */ = {
@@ -642,55 +687,98 @@
 			path = "Target Support Files/Pods-BespokenUITests";
 			sourceTree = "<group>";
 		};
-		EB2B7FA34AEF7222D57EFBBC97C7E786 /* Support Files */ = {
+		F549185EF7C89BDB2BE4094ECD379B28 /* TOPasscodeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				ADC4A06E8C1FCBC35632DE271FB0F032 /* Info.plist */,
-				5934A74246DA1AE48E6B4DBA0C6A8DB1 /* TOPasscodeViewController.modulemap */,
-				974AEA827103A2E4668161C2BE7EAB93 /* TOPasscodeViewController.xcconfig */,
-				65EF369007A8AE884870C288400975D7 /* TOPasscodeViewController-dummy.m */,
-				96BA4E31509FEFC7B4E9A5A566B20B3D /* TOPasscodeViewController-prefix.pch */,
-				CD8B43843B19FD510DA68B18ABE32941 /* TOPasscodeViewController-umbrella.h */,
+				BBB7618DD4FD43746BCAAC5926A64CD2 /* TOPasscodeButtonLabel.h */,
+				ED368A7103C9EE1C179CAA60223DE2E8 /* TOPasscodeButtonLabel.m */,
+				4C1407B06C1C5E048AE18EFC46C4015E /* TOPasscodeCircleButton.h */,
+				D3D7473852D8DF7F4D73B18F455FD27B /* TOPasscodeCircleButton.m */,
+				6ED8BCEB82D059AE9C62DD21F4FE9F51 /* TOPasscodeCircleImage.h */,
+				07C9236EDC4F72019C64B4E83B37BAF4 /* TOPasscodeCircleImage.m */,
+				D8B1A50F1B2EC27415B4209D57250ECF /* TOPasscodeCircleView.h */,
+				A51C8D542345CA84BBFC5C30E7908C0B /* TOPasscodeCircleView.m */,
+				12BDC68C6655531C751702DFE095218E /* TOPasscodeFixedInputView.h */,
+				631400A5ABC19483F5520F2B1EECE0B4 /* TOPasscodeFixedInputView.m */,
+				22BF6DC554FFF2C8FAF81C04D27D4FA1 /* TOPasscodeInputField.h */,
+				94C764716C5E57A0BB1A5864E9325C27 /* TOPasscodeInputField.m */,
+				F9B86D70EBA490DE1141B88F1E068D95 /* TOPasscodeKeypadView.h */,
+				E8365C48439CD6E80D31ACCC35895FE9 /* TOPasscodeKeypadView.m */,
+				4DBB9059F027D2FE628307259C3A22D0 /* TOPasscodeSettingsKeypadButton.h */,
+				916A09C01061279CA8CEF7EA670DD890 /* TOPasscodeSettingsKeypadButton.m */,
+				391157CC0E1E6EB1315E72E80C7BE063 /* TOPasscodeSettingsKeypadView.h */,
+				4749EBE0132C387D3966CBDF58B12839 /* TOPasscodeSettingsKeypadView.m */,
+				19EA6836D98B4B03535F0F23B686DC8C /* TOPasscodeSettingsViewController.h */,
+				6A27DDEB94447EBF1CEFEB97A28D1A6A /* TOPasscodeSettingsViewController.m */,
+				A82B74BB2ABA8592C993683A8B929F69 /* TOPasscodeSettingsWarningLabel.h */,
+				2C51B35DBF98A7B8DE089175B66BA2DD /* TOPasscodeSettingsWarningLabel.m */,
+				E87B9698BD81BF15B81D81CD9DD133E7 /* TOPasscodeVariableInputView.h */,
+				C05B8ACBC735172181F4CEEC269646B7 /* TOPasscodeVariableInputView.m */,
+				C68C0FFE780904005F05F466D7D5BF90 /* TOPasscodeView.h */,
+				BC4C757ACFA6FDBD257D5E365B3DEB70 /* TOPasscodeView.m */,
+				80E7CD453FF8AF10744300B1AB2C4259 /* TOPasscodeViewContentLayout.h */,
+				CB2CB122364824F18093397FC9368AA4 /* TOPasscodeViewContentLayout.m */,
+				F6E5CFFDF2E4C041104040162BCB3E80 /* TOPasscodeViewController.h */,
+				8DF037FDF4CFBAAF6DBC7279C2A65C7A /* TOPasscodeViewController.m */,
+				48460EDEDDAFA32BBEEE166DECE092E2 /* TOPasscodeViewControllerAnimatedTransitioning.h */,
+				3F3C391CBEE9F597D80B1FA027885F97 /* TOPasscodeViewControllerAnimatedTransitioning.m */,
+				0CCE1F80195D1C83882CA4BF2F1D0F19 /* TOPasscodeViewControllerConstants.h */,
+				8D854DAC6AC1569BD9150C9C2369DBB4 /* TOSettingsKeypadImage.h */,
+				97C4FF5C5DF8299291A8DCC2EB87D405 /* TOSettingsKeypadImage.m */,
+				2898328B012C0ED0F78730C8C94C541D /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/TOPasscodeViewController";
+			name = TOPasscodeViewController;
+			path = TOPasscodeViewController;
 			sourceTree = "<group>";
 		};
-		FDEEEE4C3AE286124673B78D83C13193 /* Alamofire */ = {
+		F7A830DEAED5BE9E9D7F67424F6BD748 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3504D593F8028046198FDBDD2097DAAB /* AFError.swift */,
-				67E58B19D9C5623738B838B91102D90C /* Alamofire.swift */,
-				773D30070A3F92384925C5045FF5731C /* DispatchQueue+Alamofire.swift */,
-				D51A5032C1E914C09DF3B30BD9ADE7F1 /* MultipartFormData.swift */,
-				443C3684A9E945DD2125586B23B8A312 /* NetworkReachabilityManager.swift */,
-				D2CA09FDF676A5C162D38FFB9FABAF06 /* Notifications.swift */,
-				DB2FA76815975D3FAA6335D3179F8529 /* ParameterEncoding.swift */,
-				A0C4178B149C1A0012AC66AFA27C20C6 /* Request.swift */,
-				E0F69528E00B84863E9BBEF73734CD4E /* Response.swift */,
-				BFA58D80B6A9D2F372187F832C3D193C /* ResponseSerialization.swift */,
-				103F70834994EA4F0FB8995C43DFD4BB /* Result.swift */,
-				6063289A598822626FEC6978DA7EEB05 /* ServerTrustPolicy.swift */,
-				29F8A5387D419E8E4C0D3E38EC71A951 /* SessionDelegate.swift */,
-				16980CE318B49687C3EB556E334DD6FB /* SessionManager.swift */,
-				9C7CD3587CF3858FAA1A81CF78237B9F /* TaskDelegate.swift */,
-				A9C41B189568160FE4ABB41C71F97AE6 /* Timeline.swift */,
-				F01D24B050F846C723EA92FB3EAF3F98 /* Validation.swift */,
-				40DBACB729707123EB17A17122FB231C /* Support Files */,
+				198E5806E57E0459880F38DB5EFB634B /* Info.plist */,
+				C86E0201F2F0CAF6A5EFEF66E0F8BB5B /* SwiftVideoBackground.modulemap */,
+				95B21238705C3317D1449EC10540039F /* SwiftVideoBackground.xcconfig */,
+				22E1715E0FA08D6E4463F687AC3AE4EC /* SwiftVideoBackground-dummy.m */,
+				882BA90D9EFB89945C7FFFC56B0C1290 /* SwiftVideoBackground-prefix.pch */,
+				CF83F92FF004D16252AE27151119D5C3 /* SwiftVideoBackground-umbrella.h */,
 			);
-			name = Alamofire;
-			path = Alamofire;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftVideoBackground";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1E595139FF178274DE6F5C917B975DF4 /* Headers */ = {
+		1F9A1B760CB6AB14301B2FD140C89915 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A12596CBBA466C58BE073060C35DC0D9 /* SwiftVideoBackground-umbrella.h in Headers */,
-				01C83EF581818A9713F50FAD05CCEAF4 /* SwiftVideoBackground.h in Headers */,
+				1F6E27AC6D5989D11A43B2A61B346ACE /* TOPasscodeButtonLabel.h in Headers */,
+				70CDBC6915228F8DE0C90A4FF3CC3579 /* TOPasscodeCircleButton.h in Headers */,
+				0A5C8BED212748EF60AA9F34C8245D7E /* TOPasscodeCircleImage.h in Headers */,
+				F88FC88D09DF6D12F69D3F07721A6739 /* TOPasscodeCircleView.h in Headers */,
+				72E7CD002BBE85232B54B770ECC3A09F /* TOPasscodeFixedInputView.h in Headers */,
+				E9CF07AEB2523E5F638B0233AB0F8E45 /* TOPasscodeInputField.h in Headers */,
+				80BC70EAD304D27BEB5FEE5B502FA172 /* TOPasscodeKeypadView.h in Headers */,
+				083948F32C9A5312326B14D31B4A4524 /* TOPasscodeSettingsKeypadButton.h in Headers */,
+				015921DFDB3FABB3FB360A4EE7BFE1BA /* TOPasscodeSettingsKeypadView.h in Headers */,
+				481FFB0520308B5462175715E6987179 /* TOPasscodeSettingsViewController.h in Headers */,
+				7A78A427A8C1FE0F18C70974B9F68884 /* TOPasscodeSettingsWarningLabel.h in Headers */,
+				AB79672E643ACC3883B3B71718F06A4A /* TOPasscodeVariableInputView.h in Headers */,
+				9687712662AC87F164F27E1B0B703224 /* TOPasscodeView.h in Headers */,
+				7E5D36DCC124C1F577CE7EBB837D0EE3 /* TOPasscodeViewContentLayout.h in Headers */,
+				FB236BB46A7ECFF908CAAC47376FD9E9 /* TOPasscodeViewController-umbrella.h in Headers */,
+				758C2465B45AC0E8B7F6147EC495EFCA /* TOPasscodeViewController.h in Headers */,
+				499F79AC1CCD901E7A4EEBFDD3744AA6 /* TOPasscodeViewControllerAnimatedTransitioning.h in Headers */,
+				9C6D6C83A67A76A9CF0BB71F118ED810 /* TOPasscodeViewControllerConstants.h in Headers */,
+				E562F121AAD636ACCE0BF076C4E5C56C /* TOSettingsKeypadImage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FD2B673CDDA403A3E87109FAF273A6D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9A697E2C0FBBF0937D268DC2B5C1D2 /* Pods-Bespoken-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,11 +790,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7B02FE3815C9A0D4ADF3F16A02AD3AA5 /* Headers */ = {
+		86DC184BC85A8FBEC668D23A3935C81F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFB48518F8852990EC3711A682DC6E99 /* QRCodeReader.swift-umbrella.h in Headers */,
+				C7DE5FA011E051C687C54FF73DA71901 /* PulsingHalo-umbrella.h in Headers */,
+				E31B08E7153B46D1E369ED13B30ADEF1 /* PulsingHalo.h in Headers */,
+				CEDA670A7AB55A6FB9196316EDA5C6B8 /* PulsingHaloLayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B08A17CF35983162660753D10EA53CB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C76A2636F10F22E793BE5773CA6E45BE /* SwiftVideoBackground-umbrella.h in Headers */,
+				879A6F311D272639BABE22B9C0B83A89 /* SwiftVideoBackground.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,32 +817,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		985DEC98E54D17D26295E8AC26090523 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AD23898839F26A4B13CE510DA8E44131 /* TOPasscodeButtonLabel.h in Headers */,
-				D91C4587BD3B7DD74E4B5C2E547C4F70 /* TOPasscodeCircleButton.h in Headers */,
-				FE6CC867D7D4B969A29121DD04ADBAA9 /* TOPasscodeCircleImage.h in Headers */,
-				A33C085F0A01D87EA9B774248931808B /* TOPasscodeCircleView.h in Headers */,
-				2A13605E4CCD0BAAC5AF58A039B536C4 /* TOPasscodeFixedInputView.h in Headers */,
-				38BE787626CB5A33B1E4C244E50818E1 /* TOPasscodeInputField.h in Headers */,
-				D45F969746F644D73F921D5A277AEEC1 /* TOPasscodeKeypadView.h in Headers */,
-				952F0E9C2B92F3ADB40E65B288183E67 /* TOPasscodeSettingsKeypadButton.h in Headers */,
-				3C171556BC498D781CD40FA5282D8A1D /* TOPasscodeSettingsKeypadView.h in Headers */,
-				F8237F1F43E8104772C50B04C03FD3B7 /* TOPasscodeSettingsViewController.h in Headers */,
-				8154FE7067E2F72BB4239C997977950D /* TOPasscodeSettingsWarningLabel.h in Headers */,
-				D65B33F7F80F2CAB4DE2F719AB9654A6 /* TOPasscodeVariableInputView.h in Headers */,
-				07BD999BCF3064A9104E454C78B37349 /* TOPasscodeView.h in Headers */,
-				4E369653C2D1A5B9F2D5DCDE3E32CA78 /* TOPasscodeViewContentLayout.h in Headers */,
-				FEEEE2D6D23855F98613B7B1934738BC /* TOPasscodeViewController-umbrella.h in Headers */,
-				93734C28551FFBB907573C00B1D290C1 /* TOPasscodeViewController.h in Headers */,
-				AC6B938D9B67AB223F5A3FD0F26562DA /* TOPasscodeViewControllerAnimatedTransitioning.h in Headers */,
-				75C94D9B74E900D25073D1F2EC444A6C /* TOPasscodeViewControllerConstants.h in Headers */,
-				2B97B5D58AC964581D4E78811A19399D /* TOSettingsKeypadImage.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -752,11 +825,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9F59F7D0F63F9FEB6F604FFC2BBC57B /* Headers */ = {
+		BFA35E0E65A567D0057AC9FE958D3181 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F982E54F8CA45A17609D2849B01822F /* Pods-Bespoken-umbrella.h in Headers */,
+				8947AEFF580F05548E493E5CB69F4C72 /* QRCodeReader.swift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,13 +844,47 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		137C6B7796533C929DBACC2F36C47DA5 /* SwiftVideoBackground */ = {
+		18EB36BEF40935CFD52AC0C10E2E5A71 /* QRCodeReader.swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB2F298DE70457B54E77D2E758A27406 /* Build configuration list for PBXNativeTarget "SwiftVideoBackground" */;
+			buildConfigurationList = 04A59667312028E584E51A3DB4ECB886 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */;
 			buildPhases = (
-				7A64067CE09465C4ED5307BA946DF4D2 /* Sources */,
-				D4EF7AC0D9A258BE0288AA7598683C07 /* Frameworks */,
-				1E595139FF178274DE6F5C917B975DF4 /* Headers */,
+				44C6103C24B6835BB8C5A18EED121881 /* Sources */,
+				124DD0E066A19CD21C6255602F6ADC6A /* Frameworks */,
+				BFA35E0E65A567D0057AC9FE958D3181 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QRCodeReader.swift;
+			productName = QRCodeReader.swift;
+			productReference = 3160156BE272006AD5F3E70751827228 /* QRCodeReader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3F2100C674A2B51F3951B954B5A1E6BF /* TOPasscodeViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31ED13A9E9A429E65EF89A7B16DDC359 /* Build configuration list for PBXNativeTarget "TOPasscodeViewController" */;
+			buildPhases = (
+				4EBBE91E1A8407AA8D65788A621CF293 /* Sources */,
+				5F8356559F1C7E9AEC99D19FB49F98CE /* Frameworks */,
+				1F9A1B760CB6AB14301B2FD140C89915 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TOPasscodeViewController;
+			productName = TOPasscodeViewController;
+			productReference = 0D94F36084C8410D7D939A16C11DB35A /* TOPasscodeViewController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6339BF5961992884311D4999DAD76170 /* SwiftVideoBackground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA2B80FBB4B43B127B87E9281A72A90B /* Build configuration list for PBXNativeTarget "SwiftVideoBackground" */;
+			buildPhases = (
+				85867849B6901E345F1E3498DA3CA8DD /* Sources */,
+				D838FA25875A305059192638FAED1444 /* Frameworks */,
+				8B08A17CF35983162660753D10EA53CB /* Headers */,
 			);
 			buildRules = (
 			);
@@ -785,29 +892,7 @@
 			);
 			name = SwiftVideoBackground;
 			productName = SwiftVideoBackground;
-			productReference = AB4895D57A0EC32CDA3C14D3C81915C4 /* SwiftVideoBackground.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		188CE72E0F3C436CFCA75DC7ADDECABF /* Pods-Bespoken */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 746C69FCF6B9C2CACC4DA1BF63AE33CE /* Build configuration list for PBXNativeTarget "Pods-Bespoken" */;
-			buildPhases = (
-				0FDA50DE10433E9F53BDBEA038CE2BC2 /* Sources */,
-				5DC322287068CD30FA76AF20CD533132 /* Frameworks */,
-				B9F59F7D0F63F9FEB6F604FFC2BBC57B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5C91341FE06155038D31C25BFDEA0BFF /* PBXTargetDependency */,
-				5644085A5C2D45B51A43820542E37896 /* PBXTargetDependency */,
-				1603B75CC0965549F13933B86279742B /* PBXTargetDependency */,
-				160D56B1F811A0E6475689C273BC2DC6 /* PBXTargetDependency */,
-				5AAB5296C1D443379C66150A897D18CF /* PBXTargetDependency */,
-			);
-			name = "Pods-Bespoken";
-			productName = "Pods-Bespoken";
-			productReference = 428CB4D97776597CC45A153357521C88 /* Pods_Bespoken.framework */;
+			productReference = 72B25526D85A7D86B63D81B2C427C991 /* SwiftVideoBackground.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
@@ -824,7 +909,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 07BAF42C74CD90A7ACA2172639418F42 /* Alamofire.framework */;
+			productReference = 1ABFD7569D6A909D619AEE444082D342 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9EFE4C70245EE2857D336B8B9FA4E825 /* AlamofireImage */ = {
@@ -842,7 +927,7 @@
 			);
 			name = AlamofireImage;
 			productName = AlamofireImage;
-			productReference = 5EBA799D8C55D1FD8D5EF60680958E77 /* AlamofireImage.framework */;
+			productReference = F398684C444DF986AD87C65EC9108FA0 /* AlamofireImage.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AF8EF6C1401ECE1757DF54C4080DFE65 /* Pods-BespokenTests */ = {
@@ -859,24 +944,7 @@
 			);
 			name = "Pods-BespokenTests";
 			productName = "Pods-BespokenTests";
-			productReference = 53634C8DF817DC8169B100B2A035C54D /* Pods_BespokenTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		BFFA931CCA9E420723FA95DC69F9AB96 /* QRCodeReader.swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D49DF13645DBE8A84FC09659F231F726 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */;
-			buildPhases = (
-				40E8FD8C02B9F9BA9D31E31804654FDC /* Sources */,
-				A6866549B7DA81656614FDE607CFAC0E /* Frameworks */,
-				7B02FE3815C9A0D4ADF3F16A02AD3AA5 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = QRCodeReader.swift;
-			productName = QRCodeReader.swift;
-			productReference = 23D1E2C2B1155BDBCD0484B7F65B6BBC /* QRCodeReader.framework */;
+			productReference = 8BF4B507942343D1649574077B9191E5 /* Pods_BespokenTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C9020D016F8263D5D484BA68681C353E /* Pods-BespokenUITests */ = {
@@ -893,24 +961,47 @@
 			);
 			name = "Pods-BespokenUITests";
 			productName = "Pods-BespokenUITests";
-			productReference = 159A79AD3A4E331C837C84FFF5E28802 /* Pods_BespokenUITests.framework */;
+			productReference = E1FB9583928D023C0CE3BA6947B3D6CF /* Pods_BespokenUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F8DC4C15F1DE2D75359DE7B83FD68E56 /* TOPasscodeViewController */ = {
+		CC1D8A28C5FE95DB9A96BB5755C072B5 /* Pods-Bespoken */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94B97CA45E44921C99AADD4B3115BB0F /* Build configuration list for PBXNativeTarget "TOPasscodeViewController" */;
+			buildConfigurationList = 3AB0F14459DB97CCDD5687CC6C5E6AE9 /* Build configuration list for PBXNativeTarget "Pods-Bespoken" */;
 			buildPhases = (
-				3A51F4B41E7BD4EA02C7DA8D373EAB62 /* Sources */,
-				BA4B8DE3457E6CCE3F7749E577B9BB49 /* Frameworks */,
-				985DEC98E54D17D26295E8AC26090523 /* Headers */,
+				CB2E1E3F5FFF244BE091B384031336AC /* Sources */,
+				BE9D23CC0577CF74A72AE1B3E8725356 /* Frameworks */,
+				2FD2B673CDDA403A3E87109FAF273A6D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFE22B846C28661CA23BD4776DA2DDFF /* PBXTargetDependency */,
+				F67E85E21C0F24298F35E67786D183F4 /* PBXTargetDependency */,
+				40D439D083CA1D1C8B7BDA9F3B508754 /* PBXTargetDependency */,
+				F36832A9461BF544CBB9491370E8976D /* PBXTargetDependency */,
+				C07F24F218CEAE6084963B39C49058E1 /* PBXTargetDependency */,
+				8C69F8C6C398765A9A8354AFA3185C11 /* PBXTargetDependency */,
+			);
+			name = "Pods-Bespoken";
+			productName = "Pods-Bespoken";
+			productReference = 20796856E7B8C9F2546ACB1061CF195E /* Pods_Bespoken.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DE774CECFD6A0BD07D591AF8036B316A /* PulsingHalo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBD46598C5AE3104D4305C35218631D6 /* Build configuration list for PBXNativeTarget "PulsingHalo" */;
+			buildPhases = (
+				1EF74AC36A5F27E13079FA44AEAE1F7F /* Sources */,
+				82FD4D3D6E22832A26695973CEE4ADCE /* Frameworks */,
+				86DC184BC85A8FBEC668D23A3935C81F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TOPasscodeViewController;
-			productName = TOPasscodeViewController;
-			productReference = 5EED0F2FE5D4011746968979D94CB4AF /* TOPasscodeViewController.framework */;
+			name = PulsingHalo;
+			productName = PulsingHalo;
+			productReference = 7E67C765E0424E2B0BE3BEE5F5D720C4 /* PulsingHalo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -930,28 +1021,30 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 0297D1B89DA7718479528B0203CCD73E /* Products */;
+			productRefGroup = CED1FEB1975DB30BA6DB2A671FFAF299 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
 				9EFE4C70245EE2857D336B8B9FA4E825 /* AlamofireImage */,
-				188CE72E0F3C436CFCA75DC7ADDECABF /* Pods-Bespoken */,
+				CC1D8A28C5FE95DB9A96BB5755C072B5 /* Pods-Bespoken */,
 				AF8EF6C1401ECE1757DF54C4080DFE65 /* Pods-BespokenTests */,
 				C9020D016F8263D5D484BA68681C353E /* Pods-BespokenUITests */,
-				BFFA931CCA9E420723FA95DC69F9AB96 /* QRCodeReader.swift */,
-				137C6B7796533C929DBACC2F36C47DA5 /* SwiftVideoBackground */,
-				F8DC4C15F1DE2D75359DE7B83FD68E56 /* TOPasscodeViewController */,
+				DE774CECFD6A0BD07D591AF8036B316A /* PulsingHalo */,
+				18EB36BEF40935CFD52AC0C10E2E5A71 /* QRCodeReader.swift */,
+				6339BF5961992884311D4999DAD76170 /* SwiftVideoBackground */,
+				3F2100C674A2B51F3951B954B5A1E6BF /* TOPasscodeViewController */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0FDA50DE10433E9F53BDBEA038CE2BC2 /* Sources */ = {
+		1EF74AC36A5F27E13079FA44AEAE1F7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C6AEBB3D02B410CB7009C04B8F53E67 /* Pods-Bespoken-dummy.m in Sources */,
+				CE71F9C5E3E0937621B0863AD4C7B5CF /* PulsingHalo-dummy.m in Sources */,
+				2F0B3DE97F1338A078B012F9DA5C1E18 /* PulsingHaloLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -980,56 +1073,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A51F4B41E7BD4EA02C7DA8D373EAB62 /* Sources */ = {
+		44C6103C24B6835BB8C5A18EED121881 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				216F646474D972DA6D0F0B45256497CF /* TOPasscodeButtonLabel.m in Sources */,
-				E2421C1660B75726EEA8009AA9E58730 /* TOPasscodeCircleButton.m in Sources */,
-				BB4E0943A33F1DBAFBD755EE3B1484A9 /* TOPasscodeCircleImage.m in Sources */,
-				7D0FDE21AADA4F22DA20E8377A5FDF64 /* TOPasscodeCircleView.m in Sources */,
-				19669F4B631BEF995CD0F7B51471E29A /* TOPasscodeFixedInputView.m in Sources */,
-				7FBD21F05196957AF802607FDBDE1B8C /* TOPasscodeInputField.m in Sources */,
-				DF982C02444B6777F7883F80CBE7EFC8 /* TOPasscodeKeypadView.m in Sources */,
-				FCE3CF2D28B36FD63959B2343C85EEFF /* TOPasscodeSettingsKeypadButton.m in Sources */,
-				03B2467B7B836CEF288141D4FE91DDB3 /* TOPasscodeSettingsKeypadView.m in Sources */,
-				8AE2C9718FAF0609D0CA463762420849 /* TOPasscodeSettingsViewController.m in Sources */,
-				05B31E0F2ADE8121B9AB1B199BF6607C /* TOPasscodeSettingsWarningLabel.m in Sources */,
-				AB5AA03885FF150423FCD8D6FC3AA1E1 /* TOPasscodeVariableInputView.m in Sources */,
-				09A2C5147F85BA7D98DB2BDDCD79C14B /* TOPasscodeView.m in Sources */,
-				BDD187864FE1D51AF33C82851EC076A2 /* TOPasscodeViewContentLayout.m in Sources */,
-				D3A7D5C45A4C499402B5238132133023 /* TOPasscodeViewController-dummy.m in Sources */,
-				338561B857E4A9F1F68B953B9578AD77 /* TOPasscodeViewController.m in Sources */,
-				D69DAD74CBAC0BCEFF21315E3572D0B4 /* TOPasscodeViewControllerAnimatedTransitioning.m in Sources */,
-				B651B08DC5C9302D57FFCDD24AC74584 /* TOSettingsKeypadImage.m in Sources */,
+				10989357FC6B828CA68D0D7A07784170 /* QRCodeReader.swift in Sources */,
+				D42336A66C31C3DBBF3F527690FA64CA /* QRCodeReader.swift-dummy.m in Sources */,
+				EFD629850962850B1FF09F330D67F762 /* QRCodeReaderResult.swift in Sources */,
+				22E81998FC985419C8070A7E450DF635 /* QRCodeReaderView.swift in Sources */,
+				51BE7A58ACEB3719716D6AEF941A9B11 /* QRCodeReaderViewContainer.swift in Sources */,
+				B641D2DC9329A8384910766411A6AE58 /* QRCodeReaderViewController.swift in Sources */,
+				211D908A917E7728F882B63777DE42A0 /* QRCodeReaderViewControllerBuilder.swift in Sources */,
+				7037BF44EAC089013E96EA3F2DC5D503 /* QRCodeReaderViewControllerDelegate.swift in Sources */,
+				F03C5D1ED914E99D5BD99A8C00EEC5EC /* ReaderOverlayView.swift in Sources */,
+				5DC13FA05C318BCAFCF4DC90244E9AA5 /* SwitchCameraButton.swift in Sources */,
+				A9F93F840487C6DE791638B08C800B32 /* ToggleTorchButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		40E8FD8C02B9F9BA9D31E31804654FDC /* Sources */ = {
+		4EBBE91E1A8407AA8D65788A621CF293 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				824930FACC203B9CDD7173674B4F04B9 /* QRCodeReader.swift in Sources */,
-				D2B5CF6A5B446802A7F59C2BF5C39F5A /* QRCodeReader.swift-dummy.m in Sources */,
-				B09AE1DD7B3E210C9907F7244A731B19 /* QRCodeReaderResult.swift in Sources */,
-				D83923D0C0EECEA4BF2BBB1EFA6119A0 /* QRCodeReaderView.swift in Sources */,
-				1130E41B69119BB816D08C52E4341E5C /* QRCodeReaderViewContainer.swift in Sources */,
-				C15CDEA3873088D238E43A5ACEA2A1D1 /* QRCodeReaderViewController.swift in Sources */,
-				045203B0D7ABEB8A5DB7618B7119780F /* QRCodeReaderViewControllerBuilder.swift in Sources */,
-				C9FDB5D2802E7FF6614AEC64EDE9DEEE /* QRCodeReaderViewControllerDelegate.swift in Sources */,
-				A4663798F8F3C65F4D36A270B461909B /* ReaderOverlayView.swift in Sources */,
-				6D6A2F078E1190210D4645FF00C948D8 /* SwitchCameraButton.swift in Sources */,
-				42D3F5C3E599FE088BD1108D584E8729 /* ToggleTorchButton.swift in Sources */,
+				B24EEB579391940AAD00A7278A9CD903 /* TOPasscodeButtonLabel.m in Sources */,
+				FB590C90782D0988F74640870E58A75F /* TOPasscodeCircleButton.m in Sources */,
+				7732F8CFE0A8EEE0E20AD8D9BFE77CB5 /* TOPasscodeCircleImage.m in Sources */,
+				E2319D36807965B26DF4F91F0BB0AC3F /* TOPasscodeCircleView.m in Sources */,
+				184CC37330AAFED605EEE716404CBCE7 /* TOPasscodeFixedInputView.m in Sources */,
+				67BB4281E2182671C962E45D80BF5038 /* TOPasscodeInputField.m in Sources */,
+				FDBBD45248531D9D3C91E9856FFA6521 /* TOPasscodeKeypadView.m in Sources */,
+				1004D98D3DE88BF05A79E52C657DEA7E /* TOPasscodeSettingsKeypadButton.m in Sources */,
+				E6BE20718951F35A35E434FE760C4622 /* TOPasscodeSettingsKeypadView.m in Sources */,
+				EC1D65C522CFD9368F701B9DAE4E4D7A /* TOPasscodeSettingsViewController.m in Sources */,
+				744C64E78895B5B921B1851C4E8F973D /* TOPasscodeSettingsWarningLabel.m in Sources */,
+				4F8B10F622BB456A7E755F8C6581CD36 /* TOPasscodeVariableInputView.m in Sources */,
+				F09AD01CF6F8EE2787EA68133674D1F3 /* TOPasscodeView.m in Sources */,
+				6FCC38307156D325D5282BECF971DCF9 /* TOPasscodeViewContentLayout.m in Sources */,
+				67711766FA1759A6BFE0902D619ACF9C /* TOPasscodeViewController-dummy.m in Sources */,
+				BB0E9BFDEF824E36DA87FCDBAC2E2099 /* TOPasscodeViewController.m in Sources */,
+				16856B9426B4E69B96A5928D8363C33C /* TOPasscodeViewControllerAnimatedTransitioning.m in Sources */,
+				4BBCEEBE09BD9D45DC9A699FE59F50EE /* TOSettingsKeypadImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A64067CE09465C4ED5307BA946DF4D2 /* Sources */ = {
+		85867849B6901E345F1E3498DA3CA8DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC076DCC4CBEB59DB856D9368C9502A8 /* SwiftVideoBackground-dummy.m in Sources */,
-				2B9E4E90933F6CB7229013B1D8B8F2E1 /* VideoBackground.swift in Sources */,
-				40E96B9867CC06617AEF5CDFF26CC926 /* VideoBackgroundError.swift in Sources */,
+				EA4F14B116D3325C5CA19EB0AF65B199 /* SwiftVideoBackground-dummy.m in Sources */,
+				201F241AAFD82EC794F575F770D2FCEB /* VideoBackground.swift in Sources */,
+				F4860672AA7ABB9AE0BB373111BA1E57 /* VideoBackgroundError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB2E1E3F5FFF244BE091B384031336AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DF60E9552E5A9C7A2ECA81BF6D90F80 /* Pods-Bespoken-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1069,35 +1170,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1603B75CC0965549F13933B86279742B /* PBXTargetDependency */ = {
+		40D439D083CA1D1C8B7BDA9F3B508754 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = QRCodeReader.swift;
-			target = BFFA931CCA9E420723FA95DC69F9AB96 /* QRCodeReader.swift */;
-			targetProxy = 0E89645AA0AAF24510EAB98AEF6099EA /* PBXContainerItemProxy */;
-		};
-		160D56B1F811A0E6475689C273BC2DC6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftVideoBackground;
-			target = 137C6B7796533C929DBACC2F36C47DA5 /* SwiftVideoBackground */;
-			targetProxy = B15DC3C9E9F6C5C67A65F4EBAC70D560 /* PBXContainerItemProxy */;
-		};
-		5644085A5C2D45B51A43820542E37896 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AlamofireImage;
-			target = 9EFE4C70245EE2857D336B8B9FA4E825 /* AlamofireImage */;
-			targetProxy = FF7E1E49C6ECAD94750E2249C6830C57 /* PBXContainerItemProxy */;
-		};
-		5AAB5296C1D443379C66150A897D18CF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TOPasscodeViewController;
-			target = F8DC4C15F1DE2D75359DE7B83FD68E56 /* TOPasscodeViewController */;
-			targetProxy = 2763A7C337C412C3680DD05549E61EA0 /* PBXContainerItemProxy */;
-		};
-		5C91341FE06155038D31C25BFDEA0BFF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
-			targetProxy = 788E4DB55F92B993730127FFA3A57A7D /* PBXContainerItemProxy */;
+			name = PulsingHalo;
+			target = DE774CECFD6A0BD07D591AF8036B316A /* PulsingHalo */;
+			targetProxy = 99FACEC5402D49C45885CEE7149E7357 /* PBXContainerItemProxy */;
 		};
 		8937A2057A0DAADF003B7C65E7CE115D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1105,12 +1182,73 @@
 			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
 			targetProxy = A1758AA696D56310AA192B587162169A /* PBXContainerItemProxy */;
 		};
+		8C69F8C6C398765A9A8354AFA3185C11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TOPasscodeViewController;
+			target = 3F2100C674A2B51F3951B954B5A1E6BF /* TOPasscodeViewController */;
+			targetProxy = C7C4461808A2D12BD12C529EEE3B2D8B /* PBXContainerItemProxy */;
+		};
+		C07F24F218CEAE6084963B39C49058E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftVideoBackground;
+			target = 6339BF5961992884311D4999DAD76170 /* SwiftVideoBackground */;
+			targetProxy = 147721AC48FED16CB5E6DBDF5B4E6A6F /* PBXContainerItemProxy */;
+		};
+		DFE22B846C28661CA23BD4776DA2DDFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
+			targetProxy = BA4CEA790DA3FB39FD5DF346647A3BC3 /* PBXContainerItemProxy */;
+		};
+		F36832A9461BF544CBB9491370E8976D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QRCodeReader.swift;
+			target = 18EB36BEF40935CFD52AC0C10E2E5A71 /* QRCodeReader.swift */;
+			targetProxy = A6F677630DC450BB60ACB06C37E87A2A /* PBXContainerItemProxy */;
+		};
+		F67E85E21C0F24298F35E67786D183F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AlamofireImage;
+			target = 9EFE4C70245EE2857D336B8B9FA4E825 /* AlamofireImage */;
+			targetProxy = D658164A0363CC753EDE3E47EDD078BF /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		17A1122B6AF35AD6BAE0D260ED524C73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6334A5FB70C0A391B999EF33A6932A47 /* PulsingHalo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PulsingHalo/PulsingHalo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PulsingHalo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PulsingHalo/PulsingHalo.modulemap";
+				PRODUCT_NAME = PulsingHalo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		2D3B3EAF58C58E20D2C9DA7CFA1A71EB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0C7E02D1677CD5A7FD18C6C84D9D3A1 /* AlamofireImage.xcconfig */;
+			baseConfigurationReference = 61CBB66A2E8D362E5BC41C8197404F66 /* AlamofireImage.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1203,9 +1341,9 @@
 			};
 			name = Debug;
 		};
-		4F2753983519C28F632860F97A0C56AB /* Debug */ = {
+		398262422174E8936E8470D2DF80EF05 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7A3D2F27173092F59A79A00C075DF59 /* Pods-Bespoken.debug.xcconfig */;
+			baseConfigurationReference = 0C90E794F64B5E2D880EB0D2E75E6F00 /* Pods-Bespoken.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1230,17 +1368,110 @@
 				PRODUCT_NAME = Pods_Bespoken;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		51C5B6BC955B7BF910E20E5F7BFFE377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 009E94AEEE5730523EBFD7672EC6A9C3 /* QRCodeReader.swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
+				PRODUCT_NAME = QRCodeReader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		58EA4E378417249190AFD97607163EAF /* Release */ = {
+		5A0C63981A10AD03564AAF8D3348FEDD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7956F3883019BFC441E00E13BCF96D15 /* SwiftVideoBackground.xcconfig */;
+			baseConfigurationReference = 449E250AD6C10FFE8047DB945642937C /* TOPasscodeViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TOPasscodeViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController.modulemap";
+				PRODUCT_NAME = TOPasscodeViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		612FCD534236F08800EBA424102F25B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 009E94AEEE5730523EBFD7672EC6A9C3 /* QRCodeReader.swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
+				PRODUCT_NAME = QRCodeReader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6B69706CD9D6A953F5EECCB073DC3F11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95B21238705C3317D1449EC10540039F /* SwiftVideoBackground.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1261,18 +1492,48 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		75CE52815C03C00D4BADD412DDC837FC /* Release */ = {
+		7B34F346B30F73A2633FB77AF26769D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 974AEA827103A2E4668161C2BE7EAB93 /* TOPasscodeViewController.xcconfig */;
+			baseConfigurationReference = C1E05F4920CE888420C4AAF249B32003 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7D22AB34B8285B326445B746E98E7497 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 449E250AD6C10FFE8047DB945642937C /* TOPasscodeViewController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1301,9 +1562,9 @@
 			};
 			name = Release;
 		};
-		7B34F346B30F73A2633FB77AF26769D3 /* Debug */ = {
+		83BAD7B228597E56B4E7C6BF9F0CBBA2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD7E453B876992604AD2D26FEEDF06D9 /* Alamofire.xcconfig */;
+			baseConfigurationReference = 95B21238705C3317D1449EC10540039F /* SwiftVideoBackground.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1314,23 +1575,24 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftVideoBackground/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				PRODUCT_NAME = Alamofire;
+				MODULEMAP_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground.modulemap";
+				PRODUCT_NAME = SwiftVideoBackground;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		83C1E7BED8AACC969E2B78834C2C2B43 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1367,7 +1629,7 @@
 		};
 		902A89C9810FA29DC00B9E10BD86FBC7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD7E453B876992604AD2D26FEEDF06D9 /* Alamofire.xcconfig */;
+			baseConfigurationReference = C1E05F4920CE888420C4AAF249B32003 /* Alamofire.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1390,41 +1652,6 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9C44E6A930EB85F75E30648B331E9D05 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C90E794F64B5E2D880EB0D2E75E6F00 /* Pods-Bespoken.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Bespoken/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Bespoken/Pods-Bespoken.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Bespoken;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1500,41 +1727,9 @@
 			};
 			name = Release;
 		};
-		C5C221297610BDD0D03785A0059B508C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB2D30190374FEFA1B195FC35302F124 /* QRCodeReader.swift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
-				PRODUCT_NAME = QRCodeReader;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		C72E9E1CFA2CB9D3725C84ED94A244D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0C7E02D1677CD5A7FD18C6C84D9D3A1 /* AlamofireImage.xcconfig */;
+			baseConfigurationReference = 61CBB66A2E8D362E5BC41C8197404F66 /* AlamofireImage.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1563,9 +1758,44 @@
 			};
 			name = Debug;
 		};
-		DD441A427472188277B06E6BD4E18088 /* Debug */ = {
+		CAE9A7228599854AE6A469C180D43F4C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7956F3883019BFC441E00E13BCF96D15 /* SwiftVideoBackground.xcconfig */;
+			baseConfigurationReference = F7A3D2F27173092F59A79A00C075DF59 /* Pods-Bespoken.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Bespoken/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Bespoken/Pods-Bespoken.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Bespoken;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DFDE2B64CE93753D24FDD45DC7D0D69D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6334A5FB70C0A391B999EF33A6932A47 /* PulsingHalo.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1576,17 +1806,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftVideoBackground/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PulsingHalo/PulsingHalo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PulsingHalo/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground.modulemap";
-				PRODUCT_NAME = SwiftVideoBackground;
+				MODULEMAP_FILE = "Target Support Files/PulsingHalo/PulsingHalo.modulemap";
+				PRODUCT_NAME = PulsingHalo;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1685,67 +1914,6 @@
 			};
 			name = Release;
 		};
-		F7F5739F547888D6AD4BBF73701E1B4E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB2D30190374FEFA1B195FC35302F124 /* QRCodeReader.swift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
-				PRODUCT_NAME = QRCodeReader;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FDFD30DDD9BE1826028ECED741055219 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 974AEA827103A2E4668161C2BE7EAB93 /* TOPasscodeViewController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TOPasscodeViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TOPasscodeViewController/TOPasscodeViewController.modulemap";
-				PRODUCT_NAME = TOPasscodeViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1758,11 +1926,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		04A59667312028E584E51A3DB4ECB886 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51C5B6BC955B7BF910E20E5F7BFFE377 /* Debug */,
+				612FCD534236F08800EBA424102F25B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3689957E0025D075A2C0993927F9FE71 /* Debug */,
 				F582AD13A9DE7F131B91568E61E9D1F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31ED13A9E9A429E65EF89A7B16DDC359 /* Build configuration list for PBXNativeTarget "TOPasscodeViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0C63981A10AD03564AAF8D3348FEDD /* Debug */,
+				7D22AB34B8285B326445B746E98E7497 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AB0F14459DB97CCDD5687CC6C5E6AE9 /* Build configuration list for PBXNativeTarget "Pods-Bespoken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAE9A7228599854AE6A469C180D43F4C /* Debug */,
+				398262422174E8936E8470D2DF80EF05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1785,29 +1980,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		746C69FCF6B9C2CACC4DA1BF63AE33CE /* Build configuration list for PBXNativeTarget "Pods-Bespoken" */ = {
+		BBD46598C5AE3104D4305C35218631D6 /* Build configuration list for PBXNativeTarget "PulsingHalo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F2753983519C28F632860F97A0C56AB /* Debug */,
-				9C44E6A930EB85F75E30648B331E9D05 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		94B97CA45E44921C99AADD4B3115BB0F /* Build configuration list for PBXNativeTarget "TOPasscodeViewController" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FDFD30DDD9BE1826028ECED741055219 /* Debug */,
-				75CE52815C03C00D4BADD412DDC837FC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D49DF13645DBE8A84FC09659F231F726 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F7F5739F547888D6AD4BBF73701E1B4E /* Debug */,
-				C5C221297610BDD0D03785A0059B508C /* Release */,
+				DFDE2B64CE93753D24FDD45DC7D0D69D /* Debug */,
+				17A1122B6AF35AD6BAE0D260ED524C73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1821,11 +1998,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB2F298DE70457B54E77D2E758A27406 /* Build configuration list for PBXNativeTarget "SwiftVideoBackground" */ = {
+		FA2B80FBB4B43B127B87E9281A72A90B /* Build configuration list for PBXNativeTarget "SwiftVideoBackground" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD441A427472188277B06E6BD4E18088 /* Debug */,
-				58EA4E378417249190AFD97607163EAF /* Release */,
+				6B69706CD9D6A953F5EECCB073DC3F11 /* Debug */,
+				83BAD7B228597E56B4E7C6BF9F0CBBA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

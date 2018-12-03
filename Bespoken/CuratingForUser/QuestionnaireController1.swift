@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Alamofire
+import AlamofireImage
 
 var myQuestions = Questionnaire()
 
@@ -20,6 +21,7 @@ class QuestionnaireController1: UIViewController {
     
     @IBOutlet weak var optionCollection: UICollectionView!
     
+    var answered = [PostAnswers]()
     
     //MARK: Declare Variables
     
@@ -50,6 +52,13 @@ class QuestionnaireController1: UIViewController {
         optionCollection.delegate = self
         optionCollection.dataSource = self
         
+        for items in myQuestions{
+           
+            if items.tab == 0{
+            let ans = PostAnswers(question: items.id!)
+            answered.append(ans)
+            }
+        }
        
         
         createNavBar(leftButton: "HOMEPAGE")
@@ -84,9 +93,6 @@ class QuestionnaireController1: UIViewController {
                 cell.transform = CGAffineTransform(translationX: 0, y: 0)
             }, completion: nil)
             
-//            UIView.animateWithDuration(1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: nil, animations: {
-//                cell.transform = CGAffineTransformMakeTranslation(0, 0);
-//            }, completion: nil)
             
             index += 1
         }
@@ -134,24 +140,28 @@ class QuestionnaireController1: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
         
-       
-        
-        
-        
-        
     }
     
     @objc func nextPressed(){
         
+       
         
-        if nextCountPress < myQuestions.count - 1{
+        if nextCountPress < myQuestions.count - 1 {
+            if myQuestions[nextCountPress + 1].tab == 0{
             nextCountPress += 1
+            }else{
+                
+                updateUserPreferences()
+                
+//                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//                let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
+//                nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Brand")
+//                self.navigationController?.pushViewController(nextVC!, animated: true)
+                
+            }
         }else{
             
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
-            nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Brand")
-            self.navigationController?.pushViewController(nextVC!, animated: true)
+            updateUserPreferences()
         }
         
         
@@ -192,7 +202,16 @@ class QuestionnaireController1: UIViewController {
 
 extension QuestionnaireController1: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return myQuestions[nextCountPress].options?.count ?? 0
+        
+        if myQuestions.count != 0{
+            
+             return myQuestions[nextCountPress].options?.count ?? 0
+            
+        }else{
+            
+            return 0
+        }
+       
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -206,7 +225,10 @@ extension QuestionnaireController1: UICollectionViewDelegateFlowLayout,UICollect
            
             cell?.innerView.backgroundColor = UIColor.white
         }
-        
+        if let url = URL(string: (myQuestions[nextCountPress].options?[indexPath.row].image)!){
+             cell?.imageView.af_setImage(withURL: url)
+        }
+       
         cell?.titleText.text = myQuestions[nextCountPress].options?[indexPath.row].text
         return cell!
         
@@ -218,11 +240,23 @@ extension QuestionnaireController1: UICollectionViewDelegateFlowLayout,UICollect
         
         if myQuestions[nextCountPress].options?[indexPath.row].archived == true{
             myQuestions[nextCountPress].options?[indexPath.row].archived = false
-        }else{
+            
+                for (index,val) in answered[nextCountPress].answers.enumerated(){
+                    
+                    if val == myQuestions[nextCountPress].options?[indexPath.row].id{
+                        
+                        answered[nextCountPress].answers.remove(at: index)
+                    }
+                }
+            
+            
+         }else{
+            answered[nextCountPress].answers.append((myQuestions[nextCountPress].options?[indexPath.row].id)!)
             myQuestions[nextCountPress].options?[indexPath.row].archived = true
         }
         
     
+        
          optionCollection.reloadData()
     }
     
@@ -242,4 +276,54 @@ extension QuestionnaireController1: UICollectionViewDelegateFlowLayout,UICollect
     }
     
     
+}
+
+//MARK: - Network Operation
+
+extension QuestionnaireController1{
+    
+    func updateUserPreferences(){
+        
+        BSLoader.showLoading("", disableUI: true, image: "Group 376")
+        
+       var mainDictArr = [NSDictionary]()
+        
+        for values in answered{
+            
+            let tempDict = NSMutableDictionary()
+            tempDict["question"] = values.question
+            tempDict["answer"] = values.answers
+            mainDictArr.append(tempDict)
+        }
+        
+        Alamofire.request(Router.updateUser(answers: mainDictArr)).responseJSON(completionHandler: { (response) in
+            
+            BSLoader.hide()
+            
+            switch response.result{
+            case.success(let JSON):
+                print(JSON)
+                
+                guard let status = (JSON as? NSDictionary)?.value(forKeyPath: "data.result") as? String else {return}
+                
+                if status == "success"{
+                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                    let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
+                    nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Brand")
+                    self.navigationController?.pushViewController(nextVC!, animated: true)
+                }else{
+                    self.showAlert(message: "Could not update your preferences")
+                }
+               
+                
+                
+            case .failure(let error):
+                print(error)
+            }
+            
+        })
+        
+        
+        
+    }
 }

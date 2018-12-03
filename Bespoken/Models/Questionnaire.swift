@@ -11,28 +11,45 @@ import Foundation
 typealias Questionnaire = [QuestionnaireElement]
 
 struct QuestionnaireElement: Codable {
-    let id, text: String?
+    let id, title, subtitle: String?
     let v: Int?
     let archived: Bool?
     let updatedDate: String?
+    let showInitial: Bool?
+    let tab: Int?
     var options: [Option]?
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case text
+        case title, subtitle
         case v = "__v"
-        case archived, updatedDate, options
+        case archived, updatedDate
+        case showInitial = "show_initial"
+        case tab, options
     }
 }
 
 struct Option: Codable {
-    let text, id: String?
-    var archived: Bool? = false
+    let text: String?
+    let image: String?
+    let id: String?
+    var archived: Bool?
     
     enum CodingKeys: String, CodingKey {
-        case text
+        case text, image
         case id = "_id"
         case archived
     }
 }
 
+
+struct PostAnswers {
+
+    var question : String?
+    var answers = [String]()
+    
+    init(question: String) {
+        self.question = question
+    }
+    
+}

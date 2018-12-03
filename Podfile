@@ -10,6 +10,7 @@ target 'Bespoken' do
   pod 'SwiftVideoBackground', '~> 3.0'
   pod 'QRCodeReader.swift', '~> 9.0.1'
   pod 'TOPasscodeViewController'
+  pod 'PulsingHalo'
 
 
 

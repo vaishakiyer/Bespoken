@@ -30,7 +30,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 707" translatesAutoresizingMaskIntoConstraints="NO" id="oHa-Nu-AwV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oHa-Nu-AwV">
                                 <rect key="frame" x="8" y="40" width="124" height="58"/>
                             </imageView>
                         </subviews>
@@ -63,7 +63,4 @@
             <point key="canvasLocation" x="78.400000000000006" y="153.82308845577214"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="Group 707" width="360" height="413"/>
-    </resources>
 </document>

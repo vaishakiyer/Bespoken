@@ -21,10 +21,12 @@ import Alamofire
  case signIn(email: String,password: String)
  case getQuestions()
  case getUser()
+ case updateUser(answers: [NSDictionary])
+ case getEvents()
     
  var method: Alamofire.HTTPMethod {
  switch self {
- case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser:
+ case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents:
  return .post
  default:
  return .get
@@ -46,7 +48,10 @@ import Alamofire
     return "signIn"
   case .getUser:
     return "getUser"
-    
+ case .updateUser:
+    return "updateUser"
+ case .getEvents:
+    return "getEvents"
  }
  }
  
@@ -78,6 +83,9 @@ import Alamofire
     let parameters = ["email": email,"password": password]
     return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
     
+ case .updateUser(let answers):
+    let parameters = ["preferences" : answers]
+    return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
  default:
  return try Alamofire.JSONEncoding.default.encode(urlRequest, with: nil)
  }

@@ -489,6 +489,7 @@
                     </view>
                     <connections>
                         <outlet property="GifImgView" destination="ahL-Jy-LCz" id="sE5-gn-3yV"/>
+                        <outlet property="ballButton" destination="aX5-pc-eFP" id="eaH-4Q-TfT"/>
                         <outlet property="ballView" destination="rQt-j4-gVp" id="ieN-qs-xMb"/>
                         <outlet property="homeBallView" destination="6Ap-zs-Qv5" id="TBL-mP-FU8"/>
                         <outlet property="optionCollection" destination="yKm-E3-vPG" id="wDs-39-fAc"/>
@@ -1128,7 +1129,7 @@
         <image name="Group 704" width="375" height="667"/>
         <image name="Group 733" width="272" height="439"/>
         <image name="Mask Group 22" width="235" height="365"/>
-        <image name="menu" width="16" height="16"/>
-        <image name="search" width="16" height="16"/>
+        <image name="menu" width="22.5" height="19.5"/>
+        <image name="search" width="25" height="25.5"/>
     </resources>
 </document>

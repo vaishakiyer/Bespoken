@@ -19,6 +19,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     @IBOutlet weak var ballView: Homecenter1!
     @IBOutlet weak var viewTinderBackGround: UIView!
     @IBOutlet weak var homeBallView: UIImageView!
+    @IBOutlet weak var ballButton: UIButton!
     
     //MARK: Declare Variables
     
@@ -37,20 +38,51 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         
         setup()
         optionCollection.isHidden = false
+        ballButton.addTarget(self, action: #selector(startPulsating), for: .touchUpInside)
+        
         
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func startPulsating(){
+        let halo = PulsingHaloLayer()
+        halo.position = viewTinderBackGround.center
+        view.layer.addSublayer(halo)
+        halo.start()
+        halo.radius = 240
+        halo.backgroundColor = UIColor.black.cgColor
+
+    }
+    
+    func startPulsation(){
+    
+        halo.position = viewTinderBackGround.center
+        view.layer.addSublayer(halo)
+        halo.start()
+        halo.radius = 240
+        halo.backgroundColor = UIColor.black.cgColor
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         playVideoInBackgroud()
-       
+        
+        if currentLoadedCardsArray.count == 0{
+        let halo = PulsingHaloLayer()
+        halo.position = viewTinderBackGround.center
+        view.layer.addSublayer(halo)
+        halo.start()
+        halo.radius = 240
+        halo.backgroundColor = UIColor.black.cgColor
+        }
     }
     
     
     func setup(){
         
         updateUI()
+
         optionCollection.register(UINib(nibName: "HomePageOptionCell", bundle: nil), forCellWithReuseIdentifier: "HomePageOptionCell")
         optionCollection.delegate = self
         optionCollection.dataSource = self
@@ -70,13 +102,13 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         homeBallView.roundCorners(corners: .allCorners, radius: 30)
         ballView.isHidden = true
         
+//        halo.position = viewTinderBackGround.center
+//        view.layer.addSublayer(halo)
+//        halo.radius = 240
+//        halo.haloLayerNumber = 2
+//        halo.repeatCount = .infinity
+//        halo.start()
        
-        halo.position = viewTinderBackGround.center
-        view.layer.addSublayer(halo)
-        halo.radius = 240
-        halo.haloLayerNumber = 2
-        halo.repeatCount = .infinity
-        halo.start()
     
     }
     
@@ -204,12 +236,6 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
             let nextVC = storyBoard.instantiateViewController(withIdentifier: "TrunckViewController") as? TrunckViewController
             self.navigationController?.pushViewController(nextVC!, animated: true)
         }
-        else if indexPath.row == 1{
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let collectionVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as? CollectionsViewController
-            self.navigationController?.present(collectionVC!, animated: true)
-        }
-
         else{
          
             
@@ -271,7 +297,6 @@ extension HomepageViewController{
     
     func removeObjectAndAddNewValues() {
         
-        halo.start()
         
         currentLoadedCardsArray.remove(at: 0)
         currentIndex = currentIndex + 1
@@ -284,7 +309,14 @@ extension HomepageViewController{
             currentLoadedCardsArray.append(card)
             viewTinderBackGround.insertSubview(currentLoadedCardsArray[MAX_BUFFER_SIZE - 1], belowSubview: currentLoadedCardsArray[MAX_BUFFER_SIZE - 2])
         }else{
-              halo.backgroundColor = UIColor.black.cgColor
+            if currentLoadedCardsArray.count == 0{
+                let halo = PulsingHaloLayer()
+                halo.position = viewTinderBackGround.center
+                view.layer.addSublayer(halo)
+                halo.start()
+                halo.radius = 240
+                halo.backgroundColor = UIColor.black.cgColor
+            }
         }
         
         print(currentIndex)

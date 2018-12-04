@@ -48,7 +48,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     func createNavbar(){
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "profile"), style: .plain, target: self, action: nil)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "profile"), style: .plain, target: self, action: #selector(openNotificationVC))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Path 842"), style: .plain, target: self, action: nil)
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -78,6 +78,15 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //MARK: - objC functions
+    
+    @objc func openNotificationVC()  {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "NotificationViewController") as! NotificationViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
 
 }
 

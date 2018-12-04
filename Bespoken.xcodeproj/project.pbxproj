@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0114F75921AFE8F700C5FF4F /* CollectionsSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0114F75821AFE8F700C5FF4F /* CollectionsSearchResultsViewController.swift */; };
+		012A183021B65A53008CBC06 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A182F21B65A53008CBC06 /* NotificationViewController.swift */; };
+		012A183221B661AA008CBC06 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A183121B661AA008CBC06 /* NotificationTableViewCell.swift */; };
+		012A183521B666E5008CBC06 /* BSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A183421B666E5008CBC06 /* BSNotification.swift */; };
 		016FE42B21AD603D00C7066C /* CollectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FE42A21AD603D00C7066C /* CollectionsViewController.swift */; };
 		016FE42D21AD60CC00C7066C /* CollectionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FE42C21AD60CC00C7066C /* CollectionsCollectionViewCell.swift */; };
 		016FE42F21AD61EC00C7066C /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016FE42E21AD61EC00C7066C /* PinterestLayout.swift */; };
@@ -72,6 +76,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0114F75821AFE8F700C5FF4F /* CollectionsSearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsSearchResultsViewController.swift; sourceTree = "<group>"; };
+		012A182F21B65A53008CBC06 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		012A183121B661AA008CBC06 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		012A183421B666E5008CBC06 /* BSNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSNotification.swift; sourceTree = "<group>"; };
 		016FE42A21AD603D00C7066C /* CollectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewController.swift; sourceTree = "<group>"; };
 		016FE42C21AD60CC00C7066C /* CollectionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsCollectionViewCell.swift; sourceTree = "<group>"; };
 		016FE42E21AD61EC00C7066C /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
@@ -159,12 +167,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012A183321B661B9008CBC06 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				012A182F21B65A53008CBC06 /* NotificationViewController.swift */,
+				012A183121B661AA008CBC06 /* NotificationTableViewCell.swift */,
+				012A183421B666E5008CBC06 /* BSNotification.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		016FE42921AD602000C7066C /* Collections */ = {
 			isa = PBXGroup;
 			children = (
 				016FE42A21AD603D00C7066C /* CollectionsViewController.swift */,
 				016FE42C21AD60CC00C7066C /* CollectionsCollectionViewCell.swift */,
 				016FE42E21AD61EC00C7066C /* PinterestLayout.swift */,
+				0114F75821AFE8F700C5FF4F /* CollectionsSearchResultsViewController.swift */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
@@ -283,6 +302,7 @@
 				A594F5FA21A14471001BD710 /* Info.plist */,
 				A594F5F221A1446F001BD710 /* Bespoken.xcdatamodeld */,
 				A5B0C95621A4446B0058A064 /* DummyContent.swift */,
+				012A183321B661B9008CBC06 /* Notification */,
 			);
 			path = Bespoken;
 			sourceTree = "<group>";
@@ -408,6 +428,7 @@
 		A594F5E021A1446F001BD710 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BS;
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = jagdish.bespoken;
@@ -575,6 +596,8 @@
 				A5779BDF21A5AFEB001CE009 /* BSLoader.swift in Sources */,
 				A511931921A1BFB900453C89 /* CustomTextField.swift in Sources */,
 				A5231BA921A84FBE00463AE4 /* TrunckViewCell.swift in Sources */,
+				0114F75921AFE8F700C5FF4F /* CollectionsSearchResultsViewController.swift in Sources */,
+				012A183221B661AA008CBC06 /* NotificationTableViewCell.swift in Sources */,
 				A5FA1A3221A4747E00743D73 /* TinderCard.swift in Sources */,
 				A5082D8621A1838A005EBA41 /* Router.swift in Sources */,
 				016FE42B21AD603D00C7066C /* CollectionsViewController.swift in Sources */,
@@ -595,6 +618,8 @@
 				A5231BAD21A8645C00463AE4 /* PreviewImageCollectionViewCell.swift in Sources */,
 				A529D5C821A2E9B5005A221A /* HomepageViewController.swift in Sources */,
 				A594F5EC21A1446F001BD710 /* AppDelegate.swift in Sources */,
+				012A183021B65A53008CBC06 /* NotificationViewController.swift in Sources */,
+				012A183521B666E5008CBC06 /* BSNotification.swift in Sources */,
 				A5082D7821A15737005EBA41 /* PersonalisationHeader.swift in Sources */,
 				A5082D7521A14CB2005EBA41 /* PersonalisationController.swift in Sources */,
 			);

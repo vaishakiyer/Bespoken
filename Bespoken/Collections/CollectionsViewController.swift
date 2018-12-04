@@ -12,6 +12,9 @@ class CollectionsViewController: UIViewController {
     var items = [UIImage(named: "collection8") , UIImage(named: "collection2"), UIImage(named: "collection3") ,  UIImage(named: "collection4"), UIImage(named: "collection5"), UIImage(named: "collection6"), UIImage(named: "collection7"), UIImage(named: "collection1"), UIImage(named: "collection9")]
     var hamburgerMenuItems = ["Home","Wishlist", "Bag","My Profile", "Notifications"]
 
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    
+    @IBOutlet weak var navigationBarTitle: UINavigationItem!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var hamburgerMenu: UIView!
     @IBOutlet weak var shadowView: UIView!
@@ -22,6 +25,21 @@ class CollectionsViewController: UIViewController {
     @IBOutlet var shadowViewTapGesture: UITapGestureRecognizer!
     @IBOutlet var screenEdgePanGesture: UIScreenEdgePanGestureRecognizer!
     
+    @IBAction func onSearchTapped(_ sender: Any) {
+        let resultsController = self.storyboard?.instantiateViewController(withIdentifier: "CollectionsSearchResultsViewController")
+        let searchController = UISearchController(searchResultsController: resultsController)
+        // Setup the Search Controller
+        searchController.searchResultsUpdater = resultsController as? UISearchResultsUpdating
+        searchController.obscuresBackgroundDuringPresentation = true
+        searchController.searchBar.placeholder = "Search "
+//        self.navigationBarTitle.searchController = searchController
+//        self.navigationBarTitle.titleView = searchController.searchBar
+        searchController.hidesNavigationBarDuringPresentation = true
+        self.present(searchController, animated: true)
+        definesPresentationContext = true
+
+        
+    }
     @IBOutlet weak var hamburgerMenuLeftConstraint: NSLayoutConstraint!
     @IBAction func gestureTap(_ sender: UITapGestureRecognizer) {
         self.hideMenu()
@@ -126,8 +144,9 @@ class CollectionsViewController: UIViewController {
         self.hamburgerMenuTableView.delegate = self
         self.hamburgerMenuTableView.dataSource = self
         self.hamburgerMenuTableView.tableFooterView = nil
-        
-        
+//        self.navigationItem.largeTitleDisplayMode = .automatic
+//        self.navigationBar.prefersLargeTitles = true
+//        self.navigationBarTitle.largeTitleDisplayMode = .automatic
     }
     
 
@@ -141,6 +160,11 @@ extension CollectionsViewController : UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier:"CollectionsCollectionViewCell" , for: indexPath) as! CollectionsCollectionViewCell
         cell.imageView.image = items[indexPath.row]!
+        cell.imageView.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.imageView.layer.shadowRadius = 5
+        cell.imageView.layer.shadowOpacity = 1
+        cell.imageView.layer.shadowOffset = CGSize.zero
+
         return cell
     }
     

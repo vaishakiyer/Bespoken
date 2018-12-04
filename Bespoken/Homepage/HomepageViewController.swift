@@ -230,6 +230,12 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
             let nextVC = storyBoard.instantiateViewController(withIdentifier: "PersonalisationController") as? PersonalisationController
             
             self.navigationController?.pushViewController(nextVC!, animated: true)
+        }
+        else if indexPath.item == 1{
+            
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let nextVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as? CollectionsViewController
+            self.navigationController?.pushViewController(nextVC!, animated: true)
         }else if indexPath.item == 0{
             
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)

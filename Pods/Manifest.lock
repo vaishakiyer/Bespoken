@@ -15,6 +15,15 @@ DEPENDENCIES:
   - SwiftVideoBackground (~> 3.0)
   - TOPasscodeViewController
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - PulsingHalo
+    - QRCodeReader.swift
+    - SwiftVideoBackground
+    - TOPasscodeViewController
+
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
@@ -25,4 +34,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 1dc5569d801559620711d5d8b46199be424ca0df
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

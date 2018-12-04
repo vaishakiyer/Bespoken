@@ -265,6 +265,7 @@ extension HomepageViewController{
     
     func removeObjectAndAddNewValues() {
         
+        halo.start()
         
         currentLoadedCardsArray.remove(at: 0)
         currentIndex = currentIndex + 1

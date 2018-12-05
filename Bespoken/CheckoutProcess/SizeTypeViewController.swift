@@ -121,6 +121,22 @@ extension SizeTypeViewController: UICollectionViewDelegate,UICollectionViewDataS
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        switch isSegmentChanged {
+        case true:
+            let popoverContent = self.storyboard?.instantiateViewController(withIdentifier: "customVideoController") as! customVideoController
+            
+            popoverContent.modalPresentationStyle = .overCurrentContext
+            
+            self.present(popoverContent, animated: true, completion: nil)
+
+        default:
+            break
+        }
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
         switch isSegmentChanged {
@@ -138,3 +154,5 @@ extension SizeTypeViewController: UICollectionViewDelegate,UICollectionViewDataS
     
     
 }
+
+

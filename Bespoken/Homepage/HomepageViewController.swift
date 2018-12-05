@@ -18,7 +18,6 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     @IBOutlet weak var videoBackgroudView: UIView!
     @IBOutlet weak var ballView: Homecenter1!
     @IBOutlet weak var viewTinderBackGround: UIView!
-    @IBOutlet weak var homeBallView: UIImageView!
     @IBOutlet weak var ballButton: UIButton!
     
     //MARK: Declare Variables
@@ -99,7 +98,6 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
          ballView.firstName.text = "HI " + firstName
         }
         
-        homeBallView.roundCorners(corners: .allCorners, radius: 30)
         ballView.isHidden = true
         
 //        halo.position = viewTinderBackGround.center

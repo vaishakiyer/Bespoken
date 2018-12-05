@@ -62,6 +62,9 @@
 		A5B4192121B592920032F35C /* TrunckShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4192021B592920032F35C /* TrunckShow.swift */; };
 		A5BE55F021AEAB5800A8A285 /* ProductCheckoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BE55EF21AEAB5800A8A285 /* ProductCheckoutController.swift */; };
 		A5EB435C21B04E3E0056B24A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB435B21B04E3E0056B24A /* User.swift */; };
+		A5F8FF4821B8536F00C38AC2 /* customVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F8FF4721B8536F00C38AC2 /* customVideoController.swift */; };
+		A5F8FF4B21B853FC00C38AC2 /* customVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F8FF4921B853FC00C38AC2 /* customVideoCell.swift */; };
+		A5F8FF4C21B853FC00C38AC2 /* customVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F8FF4A21B853FC00C38AC2 /* customVideoCell.xib */; };
 		A5FA1A2D21A4617D00743D73 /* TinderSwipeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A2C21A4617D00743D73 /* TinderSwipeControllerViewController.swift */; };
 		A5FA1A3121A4747E00743D73 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A2F21A4747E00743D73 /* GradientView.swift */; };
 		A5FA1A3221A4747E00743D73 /* TinderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A3021A4747E00743D73 /* TinderCard.swift */; };
@@ -150,6 +153,9 @@
 		A5B4192021B592920032F35C /* TrunckShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrunckShow.swift; sourceTree = "<group>"; };
 		A5BE55EF21AEAB5800A8A285 /* ProductCheckoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCheckoutController.swift; sourceTree = "<group>"; };
 		A5EB435B21B04E3E0056B24A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A5F8FF4721B8536F00C38AC2 /* customVideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customVideoController.swift; sourceTree = "<group>"; };
+		A5F8FF4921B853FC00C38AC2 /* customVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customVideoCell.swift; sourceTree = "<group>"; };
+		A5F8FF4A21B853FC00C38AC2 /* customVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customVideoCell.xib; sourceTree = "<group>"; };
 		A5FA1A2C21A4617D00743D73 /* TinderSwipeControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderSwipeControllerViewController.swift; sourceTree = "<group>"; };
 		A5FA1A2F21A4747E00743D73 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A5FA1A3021A4747E00743D73 /* TinderCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderCard.swift; sourceTree = "<group>"; };
@@ -295,6 +301,9 @@
 				A5B4191721B2E7CB0032F35C /* SizeSliderCell.xib */,
 				A5B4191A21B50DFF0032F35C /* customTypeCell.swift */,
 				A5B4191B21B50E000032F35C /* customTypeCell.xib */,
+				A5F8FF4721B8536F00C38AC2 /* customVideoController.swift */,
+				A5F8FF4921B853FC00C38AC2 /* customVideoCell.swift */,
+				A5F8FF4A21B853FC00C38AC2 /* customVideoCell.xib */,
 			);
 			path = CheckoutProcess;
 			sourceTree = "<group>";
@@ -529,6 +538,7 @@
 				A529D5D521A31210005A221A /* CurationViewCell.xib in Resources */,
 				A53D596D21AEED62009F993F /* sizeChartCell.xib in Resources */,
 				A594F5F121A1446F001BD710 /* Main.storyboard in Resources */,
+				A5F8FF4C21B853FC00C38AC2 /* customVideoCell.xib in Resources */,
 				A5082D8121A15A49005EBA41 /* OptionsViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -724,12 +734,14 @@
 				A5FA1A3221A4747E00743D73 /* TinderCard.swift in Sources */,
 				A5082D8621A1838A005EBA41 /* Router.swift in Sources */,
 				A5EB435C21B04E3E0056B24A /* User.swift in Sources */,
+				A5F8FF4B21B853FC00C38AC2 /* customVideoCell.swift in Sources */,
 				A529D5D121A30F54005A221A /* QuestionnaireController1.swift in Sources */,
 				A5B0C95721A4446B0058A064 /* DummyContent.swift in Sources */,
 				A594F5F421A1446F001BD710 /* Bespoken.xcdatamodeld in Sources */,
 				A529D5CD21A2FE9B005A221A /* HomePageOptionCell.swift in Sources */,
 				A5B4191821B2E7CB0032F35C /* SizeSliderCell.swift in Sources */,
 				A5BE55F021AEAB5800A8A285 /* ProductCheckoutController.swift in Sources */,
+				A5F8FF4821B8536F00C38AC2 /* customVideoController.swift in Sources */,
 				A5B4192121B592920032F35C /* TrunckShow.swift in Sources */,
 				A56CDF9D21ADB24000113997 /* MeasurementViewController.swift in Sources */,
 				A5082D8021A15A49005EBA41 /* OptionsViewCell.swift in Sources */,
@@ -930,7 +942,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9U7Y45UZ8Q;
 				INFOPLIST_FILE = Bespoken/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.Bespoken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -946,7 +961,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9U7Y45UZ8Q;
 				INFOPLIST_FILE = Bespoken/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.Bespoken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -962,7 +980,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -979,7 +1001,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -995,7 +1021,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1011,7 +1041,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

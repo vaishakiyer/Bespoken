@@ -15,6 +15,14 @@ import Alamofire
 class TrunckViewController: UIViewController {
 
     @IBOutlet weak var trunckCollection: UICollectionView!
+    @IBOutlet weak var innerView: UIView!
+    @IBOutlet weak var trunkLogo: UIImageView!
+    @IBOutlet weak var titleName: UILabel!
+    @IBOutlet weak var titleDesc: UILabel!
+    @IBOutlet weak var eventDate: UILabel!
+    @IBOutlet weak var eventLocation: UILabel!
+    
+    
     var tap = UITapGestureRecognizer()
     lazy var readerVC: QRCodeReaderViewController = {
         let builder = QRCodeReaderViewControllerBuilder {
@@ -44,6 +52,22 @@ class TrunckViewController: UIViewController {
         trunckCollection.register(UINib(nibName: "TrunckViewCell", bundle: nil), forCellWithReuseIdentifier: "TrunckViewCell")
         trunckCollection.register(UINib(nibName: "PreviewImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PreviewImageCollectionViewCell")
         getEvents()
+        innerView.roundCorners(corners: .allCorners, radius: 12)
+        innerView.isHidden = true
+    }
+    
+    func updateUI() {
+        
+        if let url = URL(string: myEvents[selectedIndex].bannerImage!){
+            trunkLogo.af_setImage(withURL: url)
+        }
+        
+        titleName.text = myEvents[selectedIndex].organizerName
+        titleDesc.text = myEvents[selectedIndex].description
+        eventDate.text = myEvents[selectedIndex].startDate
+        eventLocation.text = myEvents[selectedIndex].location
+        
+        
     }
     
     func addGestureToView(){
@@ -55,6 +79,7 @@ class TrunckViewController: UIViewController {
     @objc func handleTap(){
         
         previewButtonPressed = false
+        innerView.isHidden = true
         UIView.transition(with: trunckCollection, duration: 0.5, options: .transitionFlipFromRight, animations: {
             //Do the data reload here
             self.trunckCollection.performBatchUpdates({
@@ -157,7 +182,9 @@ extension TrunckViewController: TrunckViewDelegate{
         selectedIndex = tappedIndex.item
         previewButtonPressed = true
          addGestureToView()
+        innerView.isHidden = false
         
+        updateUI()
         
         UIView.transition(with: trunckCollection, duration: 0.5, options: .transitionFlipFromLeft, animations: {
             //Do the data reload here

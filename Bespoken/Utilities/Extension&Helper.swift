@@ -124,6 +124,30 @@ extension UIViewController{
         
     }
 }
+
+extension String{
+    func toDate(format : String) -> Date{
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = format
+        return dateFormatter.date(from: self)!
+    }
+}
+
+extension UIView {
+    func fadeIn() {
+        // Move our fade out code from earlier
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+            self.alpha = 1.0 // Instead of a specific instance of, say, birdTypeLabel, we simply set [thisInstance] (ie, self)'s alpha
+        }, completion: nil)
+    }
+    
+    func fadeOut() {
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
+            self.alpha = 0.0
+        }, completion: nil)
+    }
+}
     
     
 

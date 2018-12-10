@@ -68,6 +68,10 @@
 		A5FA1A2D21A4617D00743D73 /* TinderSwipeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A2C21A4617D00743D73 /* TinderSwipeControllerViewController.swift */; };
 		A5FA1A3121A4747E00743D73 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A2F21A4747E00743D73 /* GradientView.swift */; };
 		A5FA1A3221A4747E00743D73 /* TinderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA1A3021A4747E00743D73 /* TinderCard.swift */; };
+		A5FBD7A021BEC0E100638D5F /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FBD79E21BEC0E100638D5F /* SectionHeader.swift */; };
+		A5FBD7A121BEC0E100638D5F /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FBD79F21BEC0E100638D5F /* SectionHeader.xib */; };
+		A5FBD7A821BED28000638D5F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FBD7A621BED28000638D5F /* HeaderView.swift */; };
+		A5FBD7A921BED28000638D5F /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FBD7A721BED28000638D5F /* HeaderView.xib */; };
 		E11ACFF9ABB5427F37CF4D40 /* Pods_BespokenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F417B68EB3A4B509CA7DB933 /* Pods_BespokenUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -159,6 +163,10 @@
 		A5FA1A2C21A4617D00743D73 /* TinderSwipeControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderSwipeControllerViewController.swift; sourceTree = "<group>"; };
 		A5FA1A2F21A4747E00743D73 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A5FA1A3021A4747E00743D73 /* TinderCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderCard.swift; sourceTree = "<group>"; };
+		A5FBD79E21BEC0E100638D5F /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		A5FBD79F21BEC0E100638D5F /* SectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
+		A5FBD7A621BED28000638D5F /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		A5FBD7A721BED28000638D5F /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		B6B88244009E8354EA4E3AC9 /* Pods-BespokenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BespokenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BespokenUITests/Pods-BespokenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C57CD40E2D4649F060EF7998 /* Pods-BespokenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BespokenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BespokenUITests/Pods-BespokenUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D7B6277E946FA762B7B89412 /* Pods-Bespoken.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bespoken.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bespoken/Pods-Bespoken.debug.xcconfig"; sourceTree = "<group>"; };
@@ -248,11 +256,15 @@
 		A5231BA221A82BD200463AE4 /* TrunckShow */ = {
 			isa = PBXGroup;
 			children = (
+				A5FBD7A621BED28000638D5F /* HeaderView.swift */,
+				A5FBD7A721BED28000638D5F /* HeaderView.xib */,
 				A5231BA321A8432300463AE4 /* TrunckViewController.swift */,
 				A5231BA721A84FBE00463AE4 /* TrunckViewCell.swift */,
 				A5231BA821A84FBE00463AE4 /* TrunckViewCell.xib */,
 				A5231BAB21A8645C00463AE4 /* PreviewImageCollectionViewCell.swift */,
 				A5231BAC21A8645C00463AE4 /* PreviewImageCollectionViewCell.xib */,
+				A5FBD79E21BEC0E100638D5F /* SectionHeader.swift */,
+				A5FBD79F21BEC0E100638D5F /* SectionHeader.xib */,
 			);
 			path = TrunckShow;
 			sourceTree = "<group>";
@@ -534,9 +546,11 @@
 				A5082D7921A15737005EBA41 /* PersonalisationHeader.xib in Resources */,
 				A5231BAE21A8645C00463AE4 /* PreviewImageCollectionViewCell.xib in Resources */,
 				A5B4191F21B539360032F35C /* welcomeGif.gif in Resources */,
+				A5FBD7A921BED28000638D5F /* HeaderView.xib in Resources */,
 				A529D5CE21A2FE9B005A221A /* HomePageOptionCell.xib in Resources */,
 				A529D5D521A31210005A221A /* CurationViewCell.xib in Resources */,
 				A53D596D21AEED62009F993F /* sizeChartCell.xib in Resources */,
+				A5FBD7A121BEC0E100638D5F /* SectionHeader.xib in Resources */,
 				A594F5F121A1446F001BD710 /* Main.storyboard in Resources */,
 				A5F8FF4C21B853FC00C38AC2 /* customVideoCell.xib in Resources */,
 				A5082D8121A15A49005EBA41 /* OptionsViewCell.xib in Resources */,
@@ -569,6 +583,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bespoken/Pods-Bespoken-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/CircleProgressView/CircleProgressView.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/PulsingHalo/PulsingHalo.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftVideoBackground/SwiftVideoBackground.framework",
@@ -578,6 +594,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleProgressView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PulsingHalo.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftVideoBackground.framework",
@@ -737,12 +755,14 @@
 				A5F8FF4B21B853FC00C38AC2 /* customVideoCell.swift in Sources */,
 				A529D5D121A30F54005A221A /* QuestionnaireController1.swift in Sources */,
 				A5B0C95721A4446B0058A064 /* DummyContent.swift in Sources */,
+				A5FBD7A821BED28000638D5F /* HeaderView.swift in Sources */,
 				A594F5F421A1446F001BD710 /* Bespoken.xcdatamodeld in Sources */,
 				A529D5CD21A2FE9B005A221A /* HomePageOptionCell.swift in Sources */,
 				A5B4191821B2E7CB0032F35C /* SizeSliderCell.swift in Sources */,
 				A5BE55F021AEAB5800A8A285 /* ProductCheckoutController.swift in Sources */,
 				A5F8FF4821B8536F00C38AC2 /* customVideoController.swift in Sources */,
 				A5B4192121B592920032F35C /* TrunckShow.swift in Sources */,
+				A5FBD7A021BEC0E100638D5F /* SectionHeader.swift in Sources */,
 				A56CDF9D21ADB24000113997 /* MeasurementViewController.swift in Sources */,
 				A5082D8021A15A49005EBA41 /* OptionsViewCell.swift in Sources */,
 				A5B0C95C21A450760058A064 /* Homecenter1.swift in Sources */,
@@ -942,10 +962,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9U7Y45UZ8Q;
 				INFOPLIST_FILE = Bespoken/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.Bespoken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -961,10 +978,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9U7Y45UZ8Q;
 				INFOPLIST_FILE = Bespoken/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.Bespoken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -980,11 +994,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1001,11 +1011,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1021,11 +1027,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1041,11 +1043,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

@@ -29,18 +29,26 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkw-2u-Cyt" customClass="ImageSlideshow" customModule="ImageSlideshow">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="389"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hkw-2u-Cyt" firstAttribute="centerY" secondItem="o4f-U3-YqO" secondAttribute="centerY" id="15J-2g-Uss"/>
+                            <constraint firstItem="hkw-2u-Cyt" firstAttribute="width" secondItem="nR8-6N-UJD" secondAttribute="width" id="3lP-W7-gj6"/>
                             <constraint firstItem="nR8-6N-UJD" firstAttribute="centerX" secondItem="o4f-U3-YqO" secondAttribute="centerX" id="7ss-0k-ekg"/>
                             <constraint firstItem="r3P-GD-9yA" firstAttribute="leading" secondItem="o4f-U3-YqO" secondAttribute="leading" constant="25" id="GDf-zx-U31"/>
                             <constraint firstAttribute="bottom" secondItem="nR8-6N-UJD" secondAttribute="bottom" id="KcF-ZD-kM8"/>
                             <constraint firstItem="nR8-6N-UJD" firstAttribute="leading" secondItem="o4f-U3-YqO" secondAttribute="leading" id="LKo-DM-Wvw"/>
                             <constraint firstAttribute="trailing" secondItem="nR8-6N-UJD" secondAttribute="trailing" id="VJV-yR-fEH"/>
+                            <constraint firstItem="hkw-2u-Cyt" firstAttribute="height" secondItem="nR8-6N-UJD" secondAttribute="height" id="YXZ-F6-4GM"/>
                             <constraint firstItem="nR8-6N-UJD" firstAttribute="centerY" secondItem="o4f-U3-YqO" secondAttribute="centerY" id="Ydk-QL-1Fn"/>
                             <constraint firstAttribute="trailing" secondItem="r3P-GD-9yA" secondAttribute="trailing" constant="31" id="YoT-hJ-4xl"/>
                             <constraint firstItem="nR8-6N-UJD" firstAttribute="top" secondItem="o4f-U3-YqO" secondAttribute="top" id="cUQ-Dw-Nag"/>
                             <constraint firstItem="r3P-GD-9yA" firstAttribute="top" secondItem="o4f-U3-YqO" secondAttribute="top" constant="70" id="tO1-8e-9B4"/>
+                            <constraint firstItem="hkw-2u-Cyt" firstAttribute="centerX" secondItem="o4f-U3-YqO" secondAttribute="centerX" id="z40-7I-mJr"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -56,8 +64,9 @@
             <connections>
                 <outlet property="countDownLabel" destination="r3P-GD-9yA" id="6z0-W5-2qa"/>
                 <outlet property="previewImage" destination="nR8-6N-UJD" id="mxO-RL-N2n"/>
+                <outlet property="slideShow" destination="hkw-2u-Cyt" id="DnG-1T-7pB"/>
             </connections>
-            <point key="canvasLocation" x="-114" y="126"/>
+            <point key="canvasLocation" x="-339.19999999999999" y="67.916041979010501"/>
         </collectionViewCell>
     </objects>
     <resources>

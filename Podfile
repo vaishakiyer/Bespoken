@@ -11,6 +11,8 @@ target 'Bespoken' do
   pod 'QRCodeReader.swift', '~> 9.0.1'
   pod 'TOPasscodeViewController'
   pod 'PulsingHalo'
+  pod 'CircleProgressView'
+  pod 'ImageSlideshow', '~> 1.6'
 
 
 

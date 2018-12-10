@@ -21,6 +21,7 @@ class QuestionnaireController1: UIViewController {
     
     @IBOutlet weak var optionCollection: UICollectionView!
     
+    var completeAnsHandler : (() -> UIViewController)!
     var answered = [PostAnswers]()
     
     //MARK: Declare Variables
@@ -307,10 +308,15 @@ extension QuestionnaireController1{
                 guard let status = (JSON as? NSDictionary)?.value(forKeyPath: "data.result") as? String else {return}
                 
                 if status == "success"{
-                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                    let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
-                    nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Brand")
-                    self.navigationController?.pushViewController(nextVC!, animated: true)
+                    
+                    self.completeAnsHandler()
+                
+//                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//                    let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
+//                    nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Brand")
+//                    self.navigationController?.pushViewController(nextVC!, animated: true)
+                    
+                    
                 }else{
                     self.showAlert(message: "Could not update your preferences")
                 }

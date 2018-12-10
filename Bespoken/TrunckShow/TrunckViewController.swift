@@ -11,6 +11,7 @@ import AVFoundation
 import QRCodeReader
 import AlamofireImage
 import Alamofire
+import ImageSlideshow
 
 class TrunckViewController: UIViewController {
 
@@ -50,6 +51,7 @@ class TrunckViewController: UIViewController {
         trunckCollection.delegate = self
         trunckCollection.dataSource = self
         trunckCollection.register(UINib(nibName: "TrunckViewCell", bundle: nil), forCellWithReuseIdentifier: "TrunckViewCell")
+        trunckCollection.register(UINib(nibName: "SectionHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SectionHeader")
         trunckCollection.register(UINib(nibName: "PreviewImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PreviewImageCollectionViewCell")
         getEvents()
         innerView.roundCorners(corners: .allCorners, radius: 12)
@@ -64,7 +66,15 @@ class TrunckViewController: UIViewController {
         
         titleName.text = myEvents[selectedIndex].organizerName
         titleDesc.text = myEvents[selectedIndex].description
-        eventDate.text = myEvents[selectedIndex].startDate
+        
+        let releaseDate: Date?
+        let releaseDateFormatter = DateFormatter()
+        releaseDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        releaseDate = releaseDateFormatter.date(from: myEvents[selectedIndex].startDate!)!  as Date
+        releaseDateFormatter.dateFormat = "dd-MMM-YYYY"
+        let startDate = releaseDateFormatter.string(from: releaseDate!)
+        eventDate.text = startDate
+        
         eventLocation.text = myEvents[selectedIndex].location
         
         
@@ -105,6 +115,8 @@ class TrunckViewController: UIViewController {
 
 }
 extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if previewButtonPressed == true{
              return 1
@@ -114,18 +126,46 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
        
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
+        if previewButtonPressed == true{
+        return CGSize(width: 351, height: 114)
+        }else{
+            return CGSize(width: self.view.frame.width, height: 0)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if previewButtonPressed == true{
+
+             let sectionHeader = trunckCollection.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as? SectionHeader
+            
+            if let startTime = myEvents[selectedIndex].startDate{
+                sectionHeader!.setDate = startTime
+            }
+            
+            return sectionHeader!
+            
+        }else{
+             return UICollectionReusableView()
+        }
+       
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if previewButtonPressed == true{
             
             let cell = trunckCollection.dequeueReusableCell(withReuseIdentifier: "PreviewImageCollectionViewCell", for: indexPath) as? PreviewImageCollectionViewCell
+            cell?.imageList.removeAll()
+            cell!.delegate = self
+            if let urls = URL(string: myEvents[selectedIndex].bannerImage!){
+                
+               cell!.imageList.append(AlamofireSource(url: urls))
+             //   cell!.previewImage.af_setImage(withURL: url)
+            }
             
-            if let url = URL(string: myEvents[selectedIndex].bannerImage!){
-                cell!.previewImage.af_setImage(withURL: url)
-            }
-            if let startTime = myEvents[selectedIndex].startDate{
-                 cell!.setDate = startTime
-            }
            
             return cell!
             
@@ -158,7 +198,7 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if previewButtonPressed == true{
-            return CGSize(width: 280, height: 390)
+            return CGSize(width: 350, height: 390)
         }else{
             return CGSize(width: 290, height: 50)
         }
@@ -209,7 +249,15 @@ extension TrunckViewController: TrunckViewDelegate{
     
 }
 
-extension TrunckViewController: QRCodeReaderViewControllerDelegate{
+extension TrunckViewController: QRCodeReaderViewControllerDelegate,EnlargeImageDelegate{
+    func openImage(sender: ImageSlideshow) {
+        
+        sender.presentFullScreenController(from: self)
+    }
+    
+    
+    
+    
     
     func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
         print(result.value)

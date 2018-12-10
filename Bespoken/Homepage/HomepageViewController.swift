@@ -25,6 +25,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     var listArray = ["EVENTS","COLLECTION","PERSONALISATION"]
     let videoPlay = VideoBackground()
     let halo = PulsingHaloLayer()
+    var checkUser : User?
     
     var currentIndex = 0
     var currentLoadedCardsArray = [TinderCard]()
@@ -53,21 +54,12 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
 
     }
     
-    func startPulsation(){
-    
-        halo.position = viewTinderBackGround.center
-        view.layer.addSublayer(halo)
-        halo.start()
-        halo.radius = 240
-        halo.backgroundColor = UIColor.black.cgColor
-
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         playVideoInBackgroud()
         
-        if currentLoadedCardsArray.count == 0{
+        if currentLoadedCardsArray.count == 0 && checkUser != nil{
         let halo = PulsingHaloLayer()
         halo.position = viewTinderBackGround.center
         view.layer.addSublayer(halo)
@@ -80,25 +72,33 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     func setup(){
         
-        updateUI()
-
+        //updateUI()
+        ballButton.roundCorners(corners: .allCorners, radius: ballButton.frame.width / 2)
         optionCollection.register(UINib(nibName: "HomePageOptionCell", bundle: nil), forCellWithReuseIdentifier: "HomePageOptionCell")
         optionCollection.delegate = self
         optionCollection.dataSource = self
         createNavbar()
         getQuestions()
         fetchUser()
-        loadCardValues()
+       // loadCardValues()
         
     }
     
-    func updateUI(){
+    func updateUI(toHide: Bool){
         
         if let firstName = BSUserDefaults.loggedName(){
          ballView.firstName.text = "HI " + firstName
         }
         
-        ballView.isHidden = true
+        if toHide == true{
+             ballView.isHidden = false
+            
+        }else{
+            
+              ballView.isHidden = true
+              loadCardValues()
+        }
+       
         
 //        halo.position = viewTinderBackGround.center
 //        view.layer.addSublayer(halo)
@@ -149,6 +149,16 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
                 let userDict = jsonArray.first
                 
                 BSUserDefaults.setLoggedInUserDict(userDict!)
+                
+                self.checkUser = BSUserDefaults.loggedInUser()
+                if self.checkUser?.preferences?.count == 0{
+                    self.updateUI(toHide: true)
+                  
+                }else{
+                    self.updateUI(toHide: false)
+                   
+                }
+                
              
             case .failure(let error):
                 print(error)
@@ -232,8 +242,20 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
         else if indexPath.item == 1{
             
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let nextVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as? CollectionsViewController
+            let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
+            
+            nextVC?.completeAnsHandler = { () -> UIViewController in
+                
+                (self.navigationController?.popViewController(animated: true))!
+                
+                }
+            
             self.navigationController?.pushViewController(nextVC!, animated: true)
+            
+            
+//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//            let nextVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as? CollectionsViewController
+//            self.navigationController?.pushViewController(nextVC!, animated: true)
         }else if indexPath.item == 0{
             
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01C58BF221C005F2001EF372 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C58BEF21C005F2001EF372 /* NotificationTableViewCell.swift */; };
+		01C58BF321C005F2001EF372 /* BSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C58BF021C005F2001EF372 /* BSNotification.swift */; };
+		01C58BF421C005F2001EF372 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C58BF121C005F2001EF372 /* NotificationViewController.swift */; };
 		01E6F7FE21B6B90D0037970D /* CollectionsSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F7FA21B6B90D0037970D /* CollectionsSearchResultsViewController.swift */; };
 		01E6F7FF21B6B90D0037970D /* CollectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F7FB21B6B90D0037970D /* CollectionsViewController.swift */; };
 		01E6F80021B6B90D0037970D /* CollectionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F7FC21B6B90D0037970D /* CollectionsCollectionViewCell.swift */; };
@@ -95,6 +98,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01C58BEF21C005F2001EF372 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		01C58BF021C005F2001EF372 /* BSNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSNotification.swift; sourceTree = "<group>"; };
+		01C58BF121C005F2001EF372 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		01E6F7FA21B6B90D0037970D /* CollectionsSearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionsSearchResultsViewController.swift; sourceTree = "<group>"; };
 		01E6F7FB21B6B90D0037970D /* CollectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionsViewController.swift; sourceTree = "<group>"; };
 		01E6F7FC21B6B90D0037970D /* CollectionsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -205,6 +211,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01C58BF521C005FE001EF372 /* NotificationAndWishlist */ = {
+			isa = PBXGroup;
+			children = (
+				01C58BF021C005F2001EF372 /* BSNotification.swift */,
+				01C58BEF21C005F2001EF372 /* NotificationTableViewCell.swift */,
+				01C58BF121C005F2001EF372 /* NotificationViewController.swift */,
+			);
+			name = NotificationAndWishlist;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		01E6F80321B6B9260037970D /* Collections */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +368,7 @@
 		A594F5EA21A1446F001BD710 /* Bespoken */ = {
 			isa = PBXGroup;
 			children = (
+				01C58BF521C005FE001EF372 /* NotificationAndWishlist */,
 				01E6F80321B6B9260037970D /* Collections */,
 				A53D597021AF1437009F993F /* Models */,
 				A54DDA5C21AC05580065BA95 /* CheckoutProcess */,
@@ -440,7 +458,6 @@
 				A594F5E521A1446F001BD710 /* Frameworks */,
 				A594F5E621A1446F001BD710 /* Resources */,
 				173AF0D67BF43392343F7506 /* [CP] Embed Pods Frameworks */,
-				76FCF0BE68B380D882B719C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -459,8 +476,6 @@
 				A594F5FB21A14471001BD710 /* Sources */,
 				A594F5FC21A14471001BD710 /* Frameworks */,
 				A594F5FD21A14471001BD710 /* Resources */,
-				C494B45F79E972A56E76C9BF /* [CP] Embed Pods Frameworks */,
-				F9346D52E33E539FFE1ED198 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -480,8 +495,6 @@
 				A594F60621A14471001BD710 /* Sources */,
 				A594F60721A14471001BD710 /* Frameworks */,
 				A594F60821A14471001BD710 /* Resources */,
-				5B2B262F39E002042807813E /* [CP] Embed Pods Frameworks */,
-				FE2AFC39821B4DC98EFC92AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -613,36 +626,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bespoken/Pods-Bespoken-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5B2B262F39E002042807813E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BespokenUITests/Pods-BespokenUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		76FCF0BE68B380D882B719C6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bespoken/Pods-Bespoken-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AB6C5AE7DCF338D69057890D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -679,21 +662,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C494B45F79E972A56E76C9BF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BespokenTests/Pods-BespokenTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CE2FD5D347715C8E22E103A3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -712,36 +680,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F9346D52E33E539FFE1ED198 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BespokenTests/Pods-BespokenTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FE2AFC39821B4DC98EFC92AE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BespokenUITests/Pods-BespokenUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -755,6 +693,7 @@
 				A5779BDF21A5AFEB001CE009 /* BSLoader.swift in Sources */,
 				A511931921A1BFB900453C89 /* CustomTextField.swift in Sources */,
 				A5231BA921A84FBE00463AE4 /* TrunckViewCell.swift in Sources */,
+				01C58BF421C005F2001EF372 /* NotificationViewController.swift in Sources */,
 				A53D597221AF144A009F993F /* Questionnaire.swift in Sources */,
 				A5FA1A3221A4747E00743D73 /* TinderCard.swift in Sources */,
 				A5082D8621A1838A005EBA41 /* Router.swift in Sources */,
@@ -781,11 +720,13 @@
 				A529D5D421A31210005A221A /* CurationViewCell.swift in Sources */,
 				A5FA1A2D21A4617D00743D73 /* TinderSwipeControllerViewController.swift in Sources */,
 				A5231BA421A8432300463AE4 /* TrunckViewController.swift in Sources */,
+				01C58BF221C005F2001EF372 /* NotificationTableViewCell.swift in Sources */,
 				01E6F7FE21B6B90D0037970D /* CollectionsSearchResultsViewController.swift in Sources */,
 				A5231BAD21A8645C00463AE4 /* PreviewImageCollectionViewCell.swift in Sources */,
 				A53D596C21AEED62009F993F /* sizeChartCell.swift in Sources */,
 				A53D596F21AF09D8009F993F /* BSUserDefault.swift in Sources */,
 				A529D5C821A2E9B5005A221A /* HomepageViewController.swift in Sources */,
+				01C58BF321C005F2001EF372 /* BSNotification.swift in Sources */,
 				A594F5EC21A1446F001BD710 /* AppDelegate.swift in Sources */,
 				01E6F80021B6B90D0037970D /* CollectionsCollectionViewCell.swift in Sources */,
 				A5082D7821A15737005EBA41 /* PersonalisationHeader.swift in Sources */,
@@ -968,7 +909,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9U7Y45UZ8Q;
+				DEVELOPMENT_TEAM = KXX5V299J5;
 				INFOPLIST_FILE = Bespoken/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -987,7 +928,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9U7Y45UZ8Q;
+				DEVELOPMENT_TEAM = KXX5V299J5;
 				INFOPLIST_FILE = Bespoken/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

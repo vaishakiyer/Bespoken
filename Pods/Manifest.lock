@@ -5,9 +5,6 @@ PODS:
   - CircleProgressView (1.2.0)
   - ImageSlideshow (1.7.0):
     - ImageSlideshow/Core (= 1.7.0)
-  - ImageSlideshow/Alamofire (1.7.0):
-    - AlamofireImage (~> 3.0)
-    - ImageSlideshow/Core
   - ImageSlideshow/Core (1.7.0)
   - PulsingHalo (0.2.8)
   - QRCodeReader.swift (9.0.1)
@@ -19,11 +16,21 @@ DEPENDENCIES:
   - AlamofireImage (~> 3.4)
   - CircleProgressView
   - ImageSlideshow (~> 1.6)
-  - ImageSlideshow/Alamofire
   - PulsingHalo
   - QRCodeReader.swift (~> 9.0.1)
   - SwiftVideoBackground (~> 3.0)
   - TOPasscodeViewController
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - CircleProgressView
+    - ImageSlideshow
+    - PulsingHalo
+    - QRCodeReader.swift
+    - SwiftVideoBackground
+    - TOPasscodeViewController
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -35,6 +42,6 @@ SPEC CHECKSUMS:
   SwiftVideoBackground: 628408dbd5eb20b5f82f394aac9615d29aecb2f6
   TOPasscodeViewController: 03b5df3762a7be1511102093c644a42275bddf24
 
-PODFILE CHECKSUM: a1805fb54fc01568e08fcd61b3d54c16c6b6f62e
+PODFILE CHECKSUM: 6f962934f912231737851705849ca1a09a0453c0
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

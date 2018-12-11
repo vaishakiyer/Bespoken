@@ -8,16 +8,22 @@
 
 import UIKit
 
+protocol optionsDelegate {
+    func didSelectOption(forQuestion : QuestionnaireElement  , selectedOption : Option, sender: UITableViewCell, tab: Int)
+    func didSelectAll(tab: Int, forQuestion : QuestionnaireElement , options : [Option], sender: UITableViewCell)
+}
+
 class PersonalisationCell: UITableViewCell {
     
     
     @IBOutlet weak var optionCollection: UICollectionView!
-    
-    var dummyArray = [String](){
+    var question : QuestionnaireElement?
+    var answerOptions = [Option](){
         didSet{
             optionCollection.reloadData()
         }
     }
+    var delegate :optionsDelegate?
     var segmentIndex: Int?
     
     override func awakeFromNib() {
@@ -27,10 +33,10 @@ class PersonalisationCell: UITableViewCell {
         optionCollection.dataSource = self
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -42,21 +48,33 @@ class PersonalisationCell: UITableViewCell {
 extension PersonalisationCell: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if segmentIndex == 2{
+            return answerOptions.count + 1
+        }else{
+            return answerOptions.count
+        }
         
-            return dummyArray.count
-        
-       
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = optionCollection.dequeueReusableCell(withReuseIdentifier: "OptionsViewCell", for: indexPath) as? OptionsViewCell
-        
-        
-          cell?.titleLabel.text = dummyArray[indexPath.row]
-        
-        
-        return cell!
+        if indexPath.row == answerOptions.count && segmentIndex == 2{
+            cell?.titleLabel.text = "All"
+            cell?.titleLabel.backgroundColor = UIColor.blue
+            return cell!
+        }
+        else{
+            cell?.titleLabel.text = answerOptions[indexPath.row].text?.uppercased()
+            
+            if answerOptions[indexPath.row].archived == true{
+                cell!.titleLabel.backgroundColor = UIColor.gray
+            }
+            else{
+                cell!.titleLabel.backgroundColor = UIColor.white
+            }
+            return cell!
+        }
         
     }
     
@@ -84,5 +102,13 @@ extension PersonalisationCell: UICollectionViewDataSource,UICollectionViewDelega
     
     
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == answerOptions.count && segmentIndex == 2{
+            delegate!.didSelectAll(tab: 2, forQuestion: self.question! , options: self.answerOptions, sender: self)
+        }
+        else{
+            delegate?.didSelectOption(forQuestion: self.question!, selectedOption: answerOptions[indexPath.row],sender: self, tab: self.segmentIndex!)
+        }
+    }
 }
 

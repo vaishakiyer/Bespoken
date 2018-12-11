@@ -34,6 +34,8 @@
 		A529D5D121A30F54005A221A /* QuestionnaireController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529D5D021A30F53005A221A /* QuestionnaireController1.swift */; };
 		A529D5D421A31210005A221A /* CurationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529D5D221A31210005A221A /* CurationViewCell.swift */; };
 		A529D5D521A31210005A221A /* CurationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A529D5D321A31210005A221A /* CurationViewCell.xib */; };
+		A53B96E921BFC7EB0044C71A /* eventsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53B96E721BFC7EB0044C71A /* eventsHeader.swift */; };
+		A53B96EA21BFC7EB0044C71A /* eventsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53B96E821BFC7EB0044C71A /* eventsHeader.xib */; };
 		A53D596C21AEED62009F993F /* sizeChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53D596A21AEED62009F993F /* sizeChartCell.swift */; };
 		A53D596D21AEED62009F993F /* sizeChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53D596B21AEED62009F993F /* sizeChartCell.xib */; };
 		A53D596F21AF09D8009F993F /* BSUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53D596E21AF09D8009F993F /* BSUserDefault.swift */; };
@@ -123,6 +125,8 @@
 		A529D5D021A30F53005A221A /* QuestionnaireController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireController1.swift; sourceTree = "<group>"; };
 		A529D5D221A31210005A221A /* CurationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurationViewCell.swift; sourceTree = "<group>"; };
 		A529D5D321A31210005A221A /* CurationViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurationViewCell.xib; sourceTree = "<group>"; };
+		A53B96E721BFC7EB0044C71A /* eventsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventsHeader.swift; sourceTree = "<group>"; };
+		A53B96E821BFC7EB0044C71A /* eventsHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = eventsHeader.xib; sourceTree = "<group>"; };
 		A53D596A21AEED62009F993F /* sizeChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sizeChartCell.swift; sourceTree = "<group>"; };
 		A53D596B21AEED62009F993F /* sizeChartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sizeChartCell.xib; sourceTree = "<group>"; };
 		A53D596E21AF09D8009F993F /* BSUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSUserDefault.swift; sourceTree = "<group>"; };
@@ -265,6 +269,8 @@
 				A5231BAC21A8645C00463AE4 /* PreviewImageCollectionViewCell.xib */,
 				A5FBD79E21BEC0E100638D5F /* SectionHeader.swift */,
 				A5FBD79F21BEC0E100638D5F /* SectionHeader.xib */,
+				A53B96E721BFC7EB0044C71A /* eventsHeader.swift */,
+				A53B96E821BFC7EB0044C71A /* eventsHeader.xib */,
 			);
 			path = TrunckShow;
 			sourceTree = "<group>";
@@ -538,6 +544,7 @@
 				A5B4191D21B50E000032F35C /* customTypeCell.xib in Resources */,
 				A5B0C95821A4454E0058A064 /* videoplayback.mp4 in Resources */,
 				A5B4191921B2E7CB0032F35C /* SizeSliderCell.xib in Resources */,
+				A53B96EA21BFC7EB0044C71A /* eventsHeader.xib in Resources */,
 				A5231BAA21A84FBE00463AE4 /* TrunckViewCell.xib in Resources */,
 				A5082D7D21A15905005EBA41 /* PersonalisationCell.xib in Resources */,
 				A594F5F921A14471001BD710 /* LaunchScreen.storyboard in Resources */,
@@ -757,6 +764,7 @@
 				A5B0C95721A4446B0058A064 /* DummyContent.swift in Sources */,
 				A5FBD7A821BED28000638D5F /* HeaderView.swift in Sources */,
 				A594F5F421A1446F001BD710 /* Bespoken.xcdatamodeld in Sources */,
+				A53B96E921BFC7EB0044C71A /* eventsHeader.swift in Sources */,
 				A529D5CD21A2FE9B005A221A /* HomePageOptionCell.swift in Sources */,
 				A5B4191821B2E7CB0032F35C /* SizeSliderCell.swift in Sources */,
 				A5BE55F021AEAB5800A8A285 /* ProductCheckoutController.swift in Sources */,
@@ -962,7 +970,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9U7Y45UZ8Q;
 				INFOPLIST_FILE = Bespoken/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.Bespoken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -978,7 +989,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9U7Y45UZ8Q;
 				INFOPLIST_FILE = Bespoken/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.Bespoken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -994,7 +1008,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1011,7 +1029,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1027,7 +1049,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1043,7 +1069,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

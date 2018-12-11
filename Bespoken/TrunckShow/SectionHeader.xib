@@ -12,11 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SectionHeader" id="U6b-Vx-4bR" customClass="SectionHeader" customModule="Bespoken" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="351" height="135"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHX-rH-UsC">
-                    <rect key="frame" x="0.0" y="0.0" width="351" height="135"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
@@ -30,7 +30,7 @@
             <connections>
                 <outlet property="outerView" destination="CHX-rH-UsC" id="KBB-AA-LLJ"/>
             </connections>
-            <point key="canvasLocation" x="-55" y="38"/>
+            <point key="canvasLocation" x="-55.200000000000003" y="27.886056971514247"/>
         </collectionReusableView>
     </objects>
 </document>

@@ -271,6 +271,14 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
                     actionController.addAction(okAction)
                     self.present(actionController, animated: true, completion: nil)
                     
+                }else{
+                    if let message = (JSON as AnyObject).value(forKey: "message") as? String{
+                        
+                        let actionController = UIAlertController(title: "", message: message, preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        actionController.addAction(okAction)
+                    self.nextVC.present(actionController, animated: true, completion: nil)
+                    }
                 }
                 
                 guard let status = (JSON as AnyObject).value(forKey: "result") as? String else {return}
@@ -325,13 +333,15 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
                 
                 guard let receivedParam = requiredInfo.value(forKey: "receivedParams") as? NSDictionary else {return}
                 
-                if let inviteC = receivedParam.value(forKey: "invitecode") as? Int{
-                    self.loginInfo.inviteCode = inviteC.description
-                     self.loginInfo.inviteCode = "6810"
-                    
-                    let nc = UINavigationController.init(rootViewController: self.firstTimeVC)
-                    self.present(nc, animated: true, completion: nil)
-                }
+//                if let inviteC = receivedParam.value(forKey: "invitecode") as? Int{
+//                    self.loginInfo.inviteCode = inviteC.description
+//                     self.loginInfo.inviteCode = "6810"
+//
+//
+//                }
+                
+                let nc = UINavigationController.init(rootViewController: self.firstTimeVC)
+                self.present(nc, animated: true, completion: nil)
                 
                 
                 
@@ -358,10 +368,10 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
             case .success(let JSON):
                 
                 print(JSON)
-                
-                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
-                self.nextVC.navigationController?.pushViewController(nextVC1!, animated: true)
+                self.signInPressed()
+//                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//                let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
+//                self.nextVC.navigationController?.pushViewController(nextVC1!, animated: true)
                 
             case .failure(let error):
                 
@@ -459,17 +469,21 @@ extension LoginViewController: TOPasscodeSettingsViewControllerDelegate,TOPassco
     }
     
     func passcodeViewController(_ passcodeViewController: TOPasscodeViewController, isCorrectCode code: String) -> Bool {
-        if code != loginInfo.inviteCode{
+        if code != ""{
             
+            loginInfo.inviteCode = code
             let actionController = UIAlertController(title: "", message: "Enter the correct Invite Code", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             actionController.addAction(okAction)
-            passcodeViewController.present(actionController, animated: true, completion: nil)
-            return false
+           // passcodeViewController.present(actionController, animated: true, completion: nil)
+            return true
         }else{
             
             return true
         }
+        
+     
+        
     }
     
 //    func passcodeSettingsViewController(_ passcodeSettingsViewController: TOPasscodeSettingsViewController, didAttemptCurrentPasscode passcode: String) -> Bool {

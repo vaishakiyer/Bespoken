@@ -18,6 +18,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     @IBOutlet weak var videoBackgroudView: UIView!
     @IBOutlet weak var ballView: Homecenter1!
     @IBOutlet weak var viewTinderBackGround: UIView!
+    @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var ballButton: UIButton!
     
     //MARK: Declare Variables
@@ -86,14 +87,21 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     func updateUI(toHide: Bool){
         
-        if let firstName = BSUserDefaults.loggedName(){
+        
+        allCardsArray.removeAll()
+        
+        if let firstName = checkUser?.firstName{
          ballView.firstName.text = "HI " + firstName
         }
         
         if toHide == true{
              ballView.isHidden = false
+             ballButton.isHidden = true
             
         }else{
+            
+            //ballView.isHidden = false
+            //ballButton.isHidden = true
             
               ballView.isHidden = true
               loadCardValues()
@@ -233,45 +241,53 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if indexPath.item == 2{
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let nextVC = storyBoard.instantiateViewController(withIdentifier: "PersonalisationController") as? PersonalisationController
+        
+        if checkUser?.preferences?.count != 0{
             
-            self.navigationController?.pushViewController(nextVC!, animated: true)
-        }
-        else if indexPath.item == 1{
-            
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
-            
-            nextVC?.completeAnsHandler = { () -> UIViewController in
+            if indexPath.item == 2{
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let nextVC = storyBoard.instantiateViewController(withIdentifier: "PersonalisationController") as? PersonalisationController
                 
-                (self.navigationController?.popViewController(animated: true))!
+                self.navigationController?.pushViewController(nextVC!, animated: true)
+            }
+            else if indexPath.item == 1{
                 
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
+                
+                nextVC?.completeAnsHandler = { () -> UIViewController in
+                    
+                    (self.navigationController?.popViewController(animated: true))!
+                    
                 }
+                
+                self.navigationController?.pushViewController(nextVC!, animated: true)
+                
+                
+                //            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                //            let nextVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as? CollectionsViewController
+                //            self.navigationController?.pushViewController(nextVC!, animated: true)
+                
+            }else if indexPath.item == 0{
+                
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let nextVC = storyBoard.instantiateViewController(withIdentifier: "TrunckViewController") as? TrunckViewController
+                self.navigationController?.pushViewController(nextVC!, animated: true)
+            }
             
-            self.navigationController?.pushViewController(nextVC!, animated: true)
             
             
-//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//            let nextVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as? CollectionsViewController
-//            self.navigationController?.pushViewController(nextVC!, animated: true)
-        }else if indexPath.item == 0{
+        }else{
             
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let nextVC = storyBoard.instantiateViewController(withIdentifier: "TrunckViewController") as? TrunckViewController
-            self.navigationController?.pushViewController(nextVC!, animated: true)
-        }
-        else{
-         
-            
-
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
-
+            
             self.navigationController?.pushViewController(nextVC!, animated: true)
-
+            
+            
         }
+        
+ 
     }
     
     

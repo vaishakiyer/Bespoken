@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="eventsHeader" id="U6b-Vx-4bR" customClass="eventsHeader" customModule="Bespoken" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ubm-eR-8F4">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20t-is-kmh">
+                            <rect key="frame" x="29" y="15" width="115" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="20t-is-kmh" firstAttribute="leading" secondItem="Ubm-eR-8F4" secondAttribute="leading" constant="29" id="CLi-zi-N2Q"/>
+                        <constraint firstAttribute="trailing" secondItem="20t-is-kmh" secondAttribute="trailing" constant="231" id="DCB-Hc-qtG"/>
+                        <constraint firstItem="20t-is-kmh" firstAttribute="top" secondItem="Ubm-eR-8F4" secondAttribute="top" constant="15" id="flF-1M-GnX"/>
+                        <constraint firstAttribute="bottom" secondItem="20t-is-kmh" secondAttribute="bottom" constant="14.5" id="yst-bz-QHt"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Ubm-eR-8F4" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Df3-eP-Z1b"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="Ubm-eR-8F4" secondAttribute="trailing" id="WIb-Df-sOW"/>
+                <constraint firstItem="Ubm-eR-8F4" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="rV4-3Z-lPP"/>
+                <constraint firstAttribute="bottom" secondItem="Ubm-eR-8F4" secondAttribute="bottom" id="yPt-pG-jEQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="titleLabel" destination="20t-is-kmh" id="ht1-Zr-B29"/>
+            </connections>
+            <point key="canvasLocation" x="-106" y="94"/>
+        </collectionReusableView>
+    </objects>
+</document>

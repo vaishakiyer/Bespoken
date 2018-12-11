@@ -148,6 +148,36 @@ extension UIView {
         }, completion: nil)
     }
 }
+
+extension Array {
+    func unique<T:Hashable>(by: ((Element) -> (T)))  -> [Element] {
+        var set = Set<T>() //the unique list kept in a Set for fast retrieval
+        var arrayOrdered = [Element]() //keeping the unique list of elements but ordered
+        for value in self {
+            if !set.contains(by(value)) {
+                set.insert(by(value))
+                arrayOrdered.append(value)
+            }
+        }
+        
+        return arrayOrdered
+    }
+}
+
+extension Sequence {
+    func group<GroupingType: Hashable>(by key: (Iterator.Element) -> GroupingType) -> [[Iterator.Element]] {
+        var groups: [GroupingType: [Iterator.Element]] = [:]
+        var groupsOrder: [GroupingType] = []
+        forEach { element in
+            let key = key(element)
+            if case nil = groups[key]?.append(element) {
+                groups[key] = [element]
+                groupsOrder.append(key)
+            }
+        }
+        return groupsOrder.map { groups[$0]! }
+    }
+}
     
     
 

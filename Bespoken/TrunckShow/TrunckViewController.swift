@@ -34,7 +34,10 @@ class TrunckViewController: UIViewController {
     }()
     var previewButtonPressed: Bool? = false
     var selectedIndex: Int!
+    var selectedSection : Int!
+    var mySections = [String]()
     var myEvents = TrunckShow()
+    var myGroupedEvents = [TrunckShow]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,11 +50,13 @@ class TrunckViewController: UIViewController {
     
     func setup(){
         
-        self.navigationItem.title = "Trunck Shows"
+        self.navigationItem.title = "EVENTS"
         trunckCollection.delegate = self
         trunckCollection.dataSource = self
         trunckCollection.register(UINib(nibName: "TrunckViewCell", bundle: nil), forCellWithReuseIdentifier: "TrunckViewCell")
         trunckCollection.register(UINib(nibName: "SectionHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SectionHeader")
+        
+         trunckCollection.register(UINib(nibName: "eventsHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "eventsHeader")
         trunckCollection.register(UINib(nibName: "PreviewImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PreviewImageCollectionViewCell")
         getEvents()
         innerView.roundCorners(corners: .allCorners, radius: 12)
@@ -60,22 +65,22 @@ class TrunckViewController: UIViewController {
     
     func updateUI() {
         
-        if let url = URL(string: myEvents[selectedIndex].bannerImage!){
+        if let url = URL(string: myGroupedEvents[selectedSection][selectedIndex].bannerImage!){
             trunkLogo.af_setImage(withURL: url)
         }
         
-        titleName.text = myEvents[selectedIndex].organizerName
-        titleDesc.text = myEvents[selectedIndex].description
+        titleName.text = myGroupedEvents[selectedSection][selectedIndex].organizerName
+        titleDesc.text = myGroupedEvents[selectedSection][selectedIndex].description
         
         let releaseDate: Date?
         let releaseDateFormatter = DateFormatter()
         releaseDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        releaseDate = releaseDateFormatter.date(from: myEvents[selectedIndex].startDate!)!  as Date
+        releaseDate = releaseDateFormatter.date(from: myGroupedEvents[selectedSection][selectedIndex].startDate!)!  as Date
         releaseDateFormatter.dateFormat = "dd-MMM-YYYY"
         let startDate = releaseDateFormatter.string(from: releaseDate!)
         eventDate.text = startDate
         
-        eventLocation.text = myEvents[selectedIndex].location
+        eventLocation.text = myGroupedEvents[selectedSection][selectedIndex].location
         
         
     }
@@ -117,20 +122,24 @@ class TrunckViewController: UIViewController {
 extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return mySections.count
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if previewButtonPressed == true{
              return 1
         }else{
-             return myEvents.count
+             return myGroupedEvents[section].count
         }
        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
         if previewButtonPressed == true{
-        return CGSize(width: 351, height: 114)
+        return CGSize(width: self.view.frame.width, height: 114)
         }else{
-            return CGSize(width: self.view.frame.width, height: 0)
+            return CGSize(width: self.view.frame.width, height: 50)
         }
     }
     
@@ -140,14 +149,18 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
 
              let sectionHeader = trunckCollection.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as? SectionHeader
             
-            if let startTime = myEvents[selectedIndex].startDate{
+            if let startTime = myGroupedEvents[selectedSection][selectedIndex].startDate{
                 sectionHeader!.setDate = startTime
             }
             
             return sectionHeader!
             
         }else{
-             return UICollectionReusableView()
+            
+            let header = trunckCollection.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "eventsHeader", for: indexPath) as? eventsHeader
+            header?.titleLabel.text = mySections[indexPath.row]
+            
+             return header!
         }
        
     }
@@ -160,7 +173,7 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
             let cell = trunckCollection.dequeueReusableCell(withReuseIdentifier: "PreviewImageCollectionViewCell", for: indexPath) as? PreviewImageCollectionViewCell
             cell?.imageList.removeAll()
             cell!.delegate = self
-            if let urls = URL(string: myEvents[selectedIndex].bannerImage!){
+            if let urls = URL(string: myGroupedEvents[indexPath.section][selectedIndex].bannerImage!){
                 
                cell!.imageList.append(AlamofireSource(url: urls))
              //   cell!.previewImage.af_setImage(withURL: url)
@@ -173,7 +186,7 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
             
             let cell = trunckCollection.dequeueReusableCell(withReuseIdentifier: "TrunckViewCell", for: indexPath) as? TrunckViewCell
             
-            if let url = URL(string: myEvents[indexPath.item].bannerImage!){
+            if let url = URL(string: myGroupedEvents[indexPath.section][indexPath.item].bannerImage!){
                 cell!.bkgImage.af_setImage(withURL: url)
             }
             
@@ -198,7 +211,7 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if previewButtonPressed == true{
-            return CGSize(width: 350, height: 390)
+            return CGSize(width: self.view.frame.width, height: 390)
         }else{
             return CGSize(width: 290, height: 50)
         }
@@ -207,7 +220,7 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-        return UIEdgeInsets(top: 30, left: 10, bottom: 30, right: 0)
+        return UIEdgeInsets(top: 30, left: 0, bottom: 30, right: 0)
     }
     
     
@@ -220,6 +233,7 @@ extension TrunckViewController: TrunckViewDelegate{
         guard let tappedIndex  = trunckCollection.indexPath(for: sender) else {return}
         
         selectedIndex = tappedIndex.item
+        selectedSection = tappedIndex.section
         previewButtonPressed = true
          addGestureToView()
         innerView.isHidden = false
@@ -295,6 +309,13 @@ extension TrunckViewController{
                 if let val = events{
                     self.myEvents = val
                 }
+                let x = self.myEvents.unique(by: {$0.category})
+                
+                for items in x{
+                    self.mySections.append(items.category!)
+                }
+                
+                self.myGroupedEvents = self.myEvents.group(by: {$0.category})
                 
                 self.trunckCollection.reloadData()
                 

@@ -61,7 +61,7 @@ extension PersonalisationCell: UICollectionViewDataSource,UICollectionViewDelega
         let cell = optionCollection.dequeueReusableCell(withReuseIdentifier: "OptionsViewCell", for: indexPath) as? OptionsViewCell
         if indexPath.row == answerOptions.count && segmentIndex == 2{
             cell?.titleLabel.text = "All"
-            cell?.titleLabel.backgroundColor = UIColor.blue
+            cell?.titleLabel.backgroundColor = UIColor.groupTableViewBackground
             return cell!
         }
         else{
@@ -71,7 +71,7 @@ extension PersonalisationCell: UICollectionViewDataSource,UICollectionViewDelega
                 cell!.titleLabel.backgroundColor = UIColor.gray
             }
             else{
-                cell!.titleLabel.backgroundColor = UIColor.white
+                cell!.titleLabel.backgroundColor = UIColor.groupTableViewBackground
             }
             return cell!
         }

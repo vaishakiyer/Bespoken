@@ -70,11 +70,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             currentLocation = locManager.location
             
-            let latitude = currentLocation.coordinate.latitude.description
-            let longitude = currentLocation.coordinate.longitude.description
             
-            myLocation.latitude = latitude
-            myLocation.longitude = longitude
+//            let latitude = currentLocation.coordinate.latitude.description
+//            let longitude = currentLocation.coordinate.longitude.description
+//
+//            myLocation.latitude = latitude
+//            myLocation.longitude = longitude
         }
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }

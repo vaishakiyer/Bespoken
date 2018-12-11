@@ -13,6 +13,7 @@ target 'Bespoken' do
   pod 'PulsingHalo'
   pod 'CircleProgressView'
   pod 'ImageSlideshow', '~> 1.6'
+  pod 'ImageSlideshow/Alamofire'
 
 
 

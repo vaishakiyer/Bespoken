@@ -8,15 +8,20 @@
 
 import UIKit
 import CoreData
+import CoreLocation
+
+var myLocation = Location()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var locManager = CLLocationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        locManager.requestWhenInUseAuthorization()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
@@ -34,6 +39,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = navController
         }
         
+        
+        
+        
+          
         
         return true
     }
@@ -53,6 +62,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
+        
+        var currentLocation: CLLocation!
+        
+        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
+            
+            currentLocation = locManager.location
+            
+            let latitude = currentLocation.coordinate.latitude.description
+            let longitude = currentLocation.coordinate.longitude.description
+            
+            myLocation.latitude = latitude
+            myLocation.longitude = longitude
+        }
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 

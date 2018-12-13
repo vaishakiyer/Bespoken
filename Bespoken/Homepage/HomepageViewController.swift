@@ -31,8 +31,8 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     var currentIndex = 0
     var currentLoadedCardsArray = [TinderCard]()
     var allCardsArray = [TinderCard]()
-    var valueArray = ["1","2","3","4","5","6","7","8","9","10"]
-    var imageArray = ["Mask Group 68","Mask Group 22","Mask Group 68","Group 732","Mask Group 68","Mask Group 68","Mask Group 22","Group 732","Mask Group 68","Mask Group 22"]
+    var valueArray = ["1","2","3"]
+    var imageArray = ["Mask Group 68","Mask Group 22","Mask Group 68"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,21 +107,13 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
               loadCardValues()
         }
        
-        
-//        halo.position = viewTinderBackGround.center
-//        view.layer.addSublayer(halo)
-//        halo.radius = 240
-//        halo.haloLayerNumber = 2
-//        halo.repeatCount = .infinity
-//        halo.start()
-       
     
     }
     
     func createNavbar(){
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "profile"), style: .plain, target: self, action: nil)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Path 842"), style: .plain, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Path 842"), style: .plain, target: self, action: #selector(openNotification))
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -131,6 +123,14 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     
     //MARK: Animation
+    
+    @objc func openNotification(){
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "NotificationViewController") as? NotificationViewController
+       self.navigationController?.pushViewController(vc!, animated: true)
+      
+    }
     
     
     func playVideoInBackgroud(){

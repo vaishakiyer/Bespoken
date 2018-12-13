@@ -66,7 +66,7 @@
                                     <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
-                                    <color key="value" red="0.82745098039215681" green="0.066666666666666666" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="trackBorderWidth">
                                     <real key="value" value="1"/>
@@ -106,7 +106,7 @@
                                     <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
-                                    <color key="value" red="0.82745098039215681" green="0.066666666666666666" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="trackBorderWidth">
                                     <real key="value" value="1"/>
@@ -152,7 +152,7 @@
                                     <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
-                                    <color key="value" red="0.82745098039215681" green="0.066666666666666666" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="trackBorderWidth">
                                     <real key="value" value="1"/>
@@ -195,7 +195,7 @@
                                     <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
-                                    <color key="value" red="0.82745098039215681" green="0.066666666666666666" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="trackBorderWidth">
                                     <real key="value" value="1"/>

@@ -137,7 +137,7 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
         if previewButtonPressed == true{
-        return CGSize(width: self.view.frame.width, height: 114)
+        return CGSize(width: self.view.frame.width, height: 144)
         }else{
             return CGSize(width: self.view.frame.width, height: 50)
         }
@@ -201,10 +201,12 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
-        nextVC?.controlFLow = FlowAnalysis(rawValue: "F2TrunckShow")
-        self.navigationController?.pushViewController(nextVC!, animated: true)
+        
+        self.navigationController?.popViewController(animated: true)
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
+//        nextVC?.controlFLow = FlowAnalysis(rawValue: "F2TrunckShow")
+//        self.navigationController?.pushViewController(nextVC!, animated: true)
         
     }
     

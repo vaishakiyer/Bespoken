@@ -12,25 +12,36 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SectionHeader" id="U6b-Vx-4bR" customClass="SectionHeader" customModule="Bespoken" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHX-rH-UsC">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seats Left : 50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pF-K3-zlX">
+                    <rect key="frame" x="0.0" y="114" width="375" height="30"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="CHX-rH-UsC" secondAttribute="bottom" id="IuO-CD-SZ3"/>
+                <constraint firstItem="9pF-K3-zlX" firstAttribute="top" secondItem="CHX-rH-UsC" secondAttribute="bottom" id="27b-QL-K0t"/>
+                <constraint firstItem="9pF-K3-zlX" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="520-Io-dPp"/>
+                <constraint firstAttribute="bottom" secondItem="CHX-rH-UsC" secondAttribute="bottom" constant="30" id="IuO-CD-SZ3"/>
                 <constraint firstItem="CHX-rH-UsC" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="SzN-Cv-7nZ"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="9pF-K3-zlX" secondAttribute="trailing" id="TAG-Td-QUq"/>
                 <constraint firstItem="CHX-rH-UsC" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="TTn-sa-IsQ"/>
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="CHX-rH-UsC" secondAttribute="trailing" id="gaR-zc-lKJ"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="9pF-K3-zlX" secondAttribute="bottom" id="uHu-SO-nli"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <connections>
                 <outlet property="outerView" destination="CHX-rH-UsC" id="KBB-AA-LLJ"/>
             </connections>
-            <point key="canvasLocation" x="-55.200000000000003" y="27.886056971514247"/>
+            <point key="canvasLocation" x="-55.200000000000003" y="41.379310344827587"/>
         </collectionReusableView>
     </objects>
 </document>

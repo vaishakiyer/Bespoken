@@ -19,6 +19,7 @@ enum FlowAnalysis: String{
     case Flow1_SelectBrand = "F1Brand"
     case Flow1_SelectGarment = "F1Garment"
     case Flow2_TrunckShow = "F2TrunckShow"
+    case lastFlow = "ALL"
     
 }
 

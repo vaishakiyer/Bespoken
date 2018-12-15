@@ -34,17 +34,18 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     var currentLoadedCardsArray = [TinderCard]()
     var allCardsArray = [TinderCard]()
     var cardSetType1 = [ThemeCards]()
+    var myAllCards = [Product]()
     var valueArray = ["1","2","3"]
     var imageArray = ["Mask Group 68","Mask Group 22","Mask Group 68"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         setup()
         optionCollection.isHidden = false
         ballButton.addTarget(self, action: #selector(startPulsating), for: .touchUpInside)
-        getTheProducts()
-        getThemeCards()
+       
         
         // Do any additional setup after loading the view.
     }
@@ -64,7 +65,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
            view.layer.sublayers!.removeLast()
         }
         
-        getAffinityCards()
+        getTheProducts()
     }
     
     
@@ -85,8 +86,8 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     
     func setup(){
-        
-        //updateUI()
+    
+        controlFlow = FlowAnalysis(rawValue: "")
         ballButton.roundCorners(corners: .allCorners, radius: ballButton.frame.width / 2)
         optionCollection.register(UINib(nibName: "HomePageOptionCell", bundle: nil), forCellWithReuseIdentifier: "HomePageOptionCell")
         optionCollection.delegate = self
@@ -94,7 +95,6 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         createNavbar()
         getQuestions()
         fetchUser()
-       // loadCardValues()
         
     }
     
@@ -113,10 +113,23 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
             
         }else{
             
-            //ballView.isHidden = false
-            //ballButton.isHidden = true
+             ballView.isHidden = true
             
-              ballView.isHidden = true
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                
+                switch self.controlFlow{
+                case .Flow1_SelectGarment?:
+                    self.view.layer.sublayers?.removeLast()
+                    self.controlFlow = FlowAnalysis(rawValue: "ALL")
+                default:
+                    break
+                }
+                // Put your code which should be executed with a delay here
+            })
+            
+              self.getTheProducts()
+ 
               //loadCardValues()
         }
        
@@ -128,11 +141,13 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         
         switch controlFlow! {
         case .Flow1_SelectBrand:
-            print("brand")
+            getThemeCards()
         case .Flow2_TrunckShow:
-            print("trunckShow")
+              getTheProducts()
         case .Flow1_SelectGarment:
             print("garment")
+        case .lastFlow:
+            break
         }
         
         
@@ -228,11 +243,27 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
             }
             else if indexPath.item == 1{
                 
-
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
                 
-                            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                            let nextVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as! UINavigationController
-                self.present(nextVC, animated: true, completion: nil)
+                nextVC?.completeAnsHandler = { (value) -> UIViewController in
+                    
+                    self.controlFlow = FlowAnalysis(rawValue: value)
+                    self.updateTheFlow()
+                    return (self.navigationController?.popViewController(animated: true))!
+                    
+                    
+                }
+                
+                self.navigationController?.pushViewController(nextVC!, animated: true)
+                
+//
+//
+//
+//
+//                            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//                            let nextVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as! UINavigationController
+//                self.present(nextVC, animated: true, completion: nil)
                 
             }else if indexPath.item == 0{
                 
@@ -244,29 +275,14 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
 
                     self.controlFlow = FlowAnalysis(rawValue: value)
                     self.updateTheFlow()
-
+                    
                     return (self.navigationController?.popViewController(animated: true))!
 
 
                 }
 
                 self.navigationController?.pushViewController(nextVC!, animated: true)
-                
-//                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//                let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
-//
-//                nextVC?.completeAnsHandler = { (value) -> UIViewController in
-//
-//                    self.controlFlow = FlowAnalysis(rawValue: value)
-//                    self.updateTheFlow()
-//
-//                    return (self.navigationController?.popViewController(animated: true))!
-//
-//
-//                }
-//
-//                self.navigationController?.pushViewController(nextVC!, animated: true)
-//
+            
                 
             }
             
@@ -280,7 +296,6 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
             
                                 self.controlFlow = FlowAnalysis(rawValue: value)
                                 self.updateTheFlow()
-                                
                                 return (self.navigationController?.popViewController(animated: true))!
                               
             
@@ -362,7 +377,6 @@ extension HomepageViewController{
         }else{
             if currentLoadedCardsArray.count == 0{
                 
-                //shouldPulsate = true
                 let halo = PulsingHaloLayer()
                 halo.position = viewTinderBackGround.center
                 view.layer.addSublayer(halo)
@@ -370,6 +384,18 @@ extension HomepageViewController{
                 halo.haloLayerNumber = 3
                 halo.radius = 240
                 halo.backgroundColor = UIColor.black.cgColor
+                
+                
+                switch controlFlow{
+                case .Flow1_SelectBrand?:
+                    getAffinityCards()
+                
+                case .Flow1_SelectGarment?:
+                    fetchUser()
+                default:
+                    break
+                    
+                }
             }
         }
         
@@ -517,6 +543,20 @@ extension HomepageViewController{
                 
                 self.loadCardValues()
                 
+                switch self.controlFlow{
+                case .Flow1_SelectBrand?:
+                    self.view.layer.sublayers?.removeLast()
+                   
+                case .Flow2_TrunckShow?:
+                     break
+                case .Flow1_SelectGarment?:
+                    print("garment")
+                case .none:
+                    break
+                case .some(.lastFlow):
+                    break
+                }
+                
              
             case .failure(let error):
                 
@@ -549,11 +589,15 @@ extension HomepageViewController{
                     themeCard.desc = items.value(forKey: "description") as? String
                     themeCard.title = items.value(forKey: "title") as? String
                     themeCard.cardId = items.value(forKey: "_id") as? String
+                    
                     themeCard.image = items.value(forKey: "image") as? String
                     self.cardSetType1.append(themeCard)
                 }
                 self.shouldPulsate = false
+                self.controlFlow = FlowAnalysis(rawValue: "F1Garment")
+                 self.view.layer.sublayers!.removeLast()
                 self.loadCardValues()
+                
                 
                 
             case .failure(let error):
@@ -574,6 +618,47 @@ extension HomepageViewController{
              
             case .success(let JSON):
                 print(JSON)
+                
+                
+                self.allCardsArray.removeAll()
+                self.cardSetType1.removeAll()
+                
+                guard let jsonArray = JSON as? [NSDictionary] else {return}
+                
+                for items in jsonArray{
+                    
+                     let product = Product(json: items as! JSON)
+                     self.myAllCards.append(product)
+                    
+                    var themeCard = ThemeCards()
+                    
+                    themeCard.desc = items.value(forKey: "description") as? String
+                    themeCard.title = items.value(forKey: "title") as? String
+                    themeCard.cardId = items.value(forKey: "_id") as? String
+                    
+                    if let img = items.value(forKey: "images") as? [String]{
+                        themeCard.image = img.first
+                    }
+                    self.cardSetType1.append(themeCard)
+                    
+                }
+               
+                self.shouldPulsate = false
+                self.loadCardValues()
+                
+                switch self.controlFlow{
+                case .Flow1_SelectBrand?:
+                    break
+                case .Flow2_TrunckShow?:
+                    self.view.layer.sublayers?.removeLast()
+                case .Flow1_SelectGarment?:
+                    print("garment")
+                case .none:
+                    break
+                case .some(.lastFlow):
+                    break
+                }
+                
                 
             case .failure(let error):
                 

@@ -34,6 +34,6 @@ class ProductDetailViewController: UIViewController {
 
     func playVideo(){
 //        videoPlay.play(view: videoView, url: URL(string: (product!.styletip["video"]!))!)
-        videoPlay.play(view: videoView, url: URL(string: (product!.styletip["video"]!))!, darkness: 0, isMuted: true, willLoopVideo: true, setAudioSessionAmbient: true)
+        videoPlay.play(view: videoView, url: URL(string: ((product!.styletip?.video!)!))!, darkness: 0, isMuted: true, willLoopVideo: true, setAudioSessionAmbient: true)
     }
 }

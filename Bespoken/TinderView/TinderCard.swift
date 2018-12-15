@@ -83,7 +83,7 @@ class TinderCard: UIView {
         
         let labelText = UILabel(frame:CGRect(x: 35, y: frame.size.height - 80, width: frame.size.width - 50, height: 60))
         let attributedText = NSMutableAttributedString(string: descriptions, attributes: [.foregroundColor: UIColor.white,.font:UIFont.boldSystemFont(ofSize: 25)])
-        attributedText.append(NSAttributedString(string: "\n\(value)", attributes: [.foregroundColor: UIColor.white,.font:UIFont.systemFont(ofSize: 18)]))
+        attributedText.append(NSAttributedString(string: "\n\(value)", attributes: [.foregroundColor: UIColor.darkGray,.font:UIFont.systemFont(ofSize: 18)]))
         labelText.attributedText = attributedText
         labelText.numberOfLines = 2
         addSubview(labelText)

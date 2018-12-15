@@ -43,6 +43,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         setup()
         optionCollection.isHidden = false
         ballButton.addTarget(self, action: #selector(startPulsating), for: .touchUpInside)
+        getTheProducts()
         getThemeCards()
         
         // Do any additional setup after loading the view.
@@ -561,6 +562,28 @@ extension HomepageViewController{
                 
             }
         }
+        
+    }
+    
+    
+    func getTheProducts(){
+        
+        Alamofire.request(Router.getTheCards()).responseJSON { (response) in
+            
+            switch response.result{
+             
+            case .success(let JSON):
+                print(JSON)
+                
+            case .failure(let error):
+                
+                print(error.localizedDescription)
+            }
+            
+            
+        }
+        
+        
         
     }
 

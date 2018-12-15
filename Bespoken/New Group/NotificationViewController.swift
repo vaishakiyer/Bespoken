@@ -51,15 +51,15 @@ class NotificationViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight  = 40
-        segmentButton.selectedSegmentIndex = 0
-       if  segmentButton.selectedSegmentIndex == 0
-       {
-        allNotifications.append(BSNotification("NEW COLLECTION ARRIVAL", "Checkout our new SpringLines! Order Now For delivery in Spring weather- in 10 to 14 days !", "redCircleFill"))
-        allNotifications.append(BSNotification("NEW COLLECTION ARRIVAL", "Checkout our new SpringLines! Order Now For delivery in Spring weather- in 10 to 14 days !, Checkout our new SpringLines! Order Now For delivery in Spring weather- in 10 to 14 days !", "redCircleFill"))
-        }
-       else{
-        allNotifications.removeAll()
-        }
+      //  segmentButton.selectedSegmentIndex = 0
+//       if  segmentButton.selectedSegmentIndex == 0
+//       {
+//        allNotifications.append(BSNotification("NEW COLLECTION ARRIVAL", "Checkout our new SpringLines! Order Now For delivery in Spring weather- in 10 to 14 days !", "redCircleFill"))
+//        allNotifications.append(BSNotification("NEW COLLECTION ARRIVAL", "Checkout our new SpringLines! Order Now For delivery in Spring weather- in 10 to 14 days !, Checkout our new SpringLines! Order Now For delivery in Spring weather- in 10 to 14 days !", "redCircleFill"))
+//        }
+//       else{
+//        allNotifications.removeAll()
+//        }
     }
     
 

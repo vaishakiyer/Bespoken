@@ -289,10 +289,16 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
                         BSUserDefaults.setAccessToken(token)
                     }
                     
-                    
-                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                    let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
-                    self.navigationController?.pushViewController(nextVC1!, animated: true)
+                    if self.isFlipped == false{
+                        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                        let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
+                        self.nextVC.navigationController?.pushViewController(nextVC1!, animated: true)
+                    }else{
+                        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                        let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
+                        self.navigationController?.pushViewController(nextVC1!, animated: true)
+                    }
+                   
                     
                 }else{
                     let actionController = UIAlertController(title: "", message: "Please check you user credentials.", preferredStyle: .alert)

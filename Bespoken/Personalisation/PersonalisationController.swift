@@ -106,32 +106,7 @@ class PersonalisationController: UIViewController {
             }
         }
         self.postAnswersAPI()
-        //        for i in tab1Questions{
-        //            var answerId  : [String] = []
-        //            for j in i.options!{
-        //                if j.archived == true {
-        //                    answerId.append(j.id!)
-        //                }
-        //            }
-        //            if !answerId.isEmpty{
-        //                var newAns = PostAnswers(question: i.id!)
-        //                newAns.answers = answerId
-        //                self.updatedResponse.append(newAns)
-        //            }
-        //        }
-        //        for i in tab2Questions{
-        //            var answerId  : [String] = []
-        //            for j in i.options!{
-        //                if j.archived == true {
-        //                    answerId.append(j.id!)
-        //                }
-        //            }
-        //            if !answerId.isEmpty{
-        //                var newAns = PostAnswers(question: i.id!)
-        //                newAns.answers = answerId
-        //                self.updatedResponse.append(newAns)
-        //            }
-        //        }
+
     }
     @IBAction func segmentPressed(_ sender: UISegmentedControl) {
         
@@ -264,10 +239,12 @@ extension PersonalisationController {
                 guard let status = (JSON as? NSDictionary)?.value(forKeyPath: "data.result") as? String else {return}
                 
                 if status == "success"{
-                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                    let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
-                    nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Brand")
-                    self.navigationController?.pushViewController(nextVC!, animated: true)
+                    
+                    self.navigationController?.popViewController(animated: true)
+//                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//                    let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
+//                    nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Brand")
+//                    self.navigationController?.pushViewController(nextVC!, animated: true)
                 }else{
                     self.showAlert(message: "Could not update your preferences")
                 }

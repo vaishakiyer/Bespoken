@@ -34,7 +34,7 @@ class ProfileViewController: UIViewController {
         let rightConstraint = NSLayoutConstraint(item: progressBar, attribute: NSLayoutConstraint.Attribute.right, relatedBy: NSLayoutConstraint.Relation.equal, toItem: progressView, attribute: NSLayoutConstraint.Attribute.right, multiplier: 1, constant: 0)
         let topConstraint = NSLayoutConstraint(item: progressBar, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: progressView, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: 0)
         let bottomConstraint = NSLayoutConstraint(item: progressBar, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: progressView, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: 0)
-        progressBar.addConstraints([leftConstraint, rightConstraint ,topConstraint, bottomConstraint])
+//        progressBar.addConstraints([leftConstraint, rightConstraint ,topConstraint, bottomConstraint])
         self.progressView.addSubview(progressBar)
     }
     

@@ -158,6 +158,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftVideoBackground/SwiftVideoBackground.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TOPasscodeViewController/TOPasscodeViewController.framework"
+  install_framework "${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework"
+  install_framework "${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YLProgressBar/YLProgressBar.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -176,6 +178,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftVideoBackground/SwiftVideoBackground.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TOPasscodeViewController/TOPasscodeViewController.framework"
+  install_framework "${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework"
+  install_framework "${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YLProgressBar/YLProgressBar.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

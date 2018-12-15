@@ -112,7 +112,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     func createNavbar(){
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "profile"), style: .plain, target: self, action: nil)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "profile"), style: .plain, target: self, action: #selector(openProfile))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Path 842"), style: .plain, target: self, action: #selector(openNotification))
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -278,9 +278,6 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
                 
                             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                             let nextVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as! UINavigationController
-                
-//                let nc = UINavigationController(rootViewController: nextVC!)
-                
                 self.present(nextVC, animated: true, completion: nil)
                 
             }else if indexPath.item == 0{

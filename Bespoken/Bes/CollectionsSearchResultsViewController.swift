@@ -12,7 +12,16 @@ class CollectionsSearchResultsViewController: UIViewController , UISearchResults
     
     @IBOutlet weak var collectionViewTags: UICollectionView!
     @IBOutlet weak var collectionViewResults: UICollectionView!
-    
+    var allProducts : [Product] = []{
+        didSet{
+            for each in allProducts{
+                for tag in each.tags{
+                    tagsArray.append(tag)
+                }
+            }
+            self.collectionViewTags.reloadData()
+        }
+    }
     
     var tagsArray : [String] = []
     var tagFlowLayout: UICollectionViewFlowLayout {
@@ -42,7 +51,7 @@ class CollectionsSearchResultsViewController: UIViewController , UISearchResults
         
         self.tagFlowLayout.scrollDirection = .horizontal
         self.searchResultFlowLayout.scrollDirection = .vertical
-        self.tagsArray  = ["Sensual", "Sensual","Sensual","Sensual","Sensual", "Sensual","Sensual","Sensual"]
+//        self.tagsArray  = ["Sensual", "Sensual","Sensual","Sensual","Sensual", "Sensual","Sensual","Sensual"]
         collectionViewTags.delegate = self
         collectionViewTags.dataSource = self
         collectionViewResults.delegate = self

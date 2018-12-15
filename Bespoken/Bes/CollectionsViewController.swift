@@ -181,6 +181,7 @@ class CollectionsViewController: UIViewController {
     }
   @objc  func openSearch() {
         let resultsController = self.storyboard?.instantiateViewController(withIdentifier: "CollectionsSearchResultsViewController") as! CollectionsSearchResultsViewController
+    resultsController.allProducts = self.allProducts
         let searchController = UISearchController(searchResultsController: resultsController)
         // Setup the Search Controller
         searchController.delegate = self

@@ -25,10 +25,11 @@ enum Router: URLRequestConvertible{
     case getEvents()
     case getNotifications()
     case getWishlistItems()
+    case getAllProducts()
     
     var method: Alamofire.HTTPMethod {
         switch self {
-        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems:
+        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems , .getAllProducts():
             return .post
         default:
             return .get
@@ -58,6 +59,8 @@ enum Router: URLRequestConvertible{
             return "getNotifications"
         case .getWishlistItems:
             return "getWishlistItems"
+        case .getAllProducts():
+            return "getProducts"
         }
     }
     

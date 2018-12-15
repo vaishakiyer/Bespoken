@@ -9,10 +9,12 @@
 import UIKit
 import QRCodeReader
 import ImageSlideshow
+import Alamofire
 
 class CollectionsViewController: UIViewController {
     var items = [UIImage(named: "collection8") , UIImage(named: "collection2"), UIImage(named: "collection3") ,  UIImage(named: "collection4"), UIImage(named: "collection5"), UIImage(named: "collection6"), UIImage(named: "collection7"), UIImage(named: "collection1"), UIImage(named: "collection9")]
     var hamburgerMenuItems = ["Home","Wishlist", "Bag","My Profile", "Notifications"]
+    var allProducts : [Product] = []
 
     @IBOutlet weak var navigationBar: UINavigationBar!
     
@@ -157,6 +159,7 @@ class CollectionsViewController: UIViewController {
         if let layout = collectionView?.collectionViewLayout as? PinterestLayout {
             layout.delegate = self
         }
+        self.getAllProductsAPI()
 
 
     }
@@ -222,20 +225,21 @@ extension CollectionsViewController : UISearchBarDelegate{
 
 extension CollectionsViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return allProducts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier:"CollectionsCollectionViewCell" , for: indexPath) as! CollectionsCollectionViewCell
-        cell.imageView.image = items[indexPath.row]!
-        cell.imageView.layer.shadowColor = UIColor.lightGray.cgColor
-        cell.imageView.layer.shadowRadius = 5
-        cell.imageView.layer.shadowOpacity = 1
-        cell.imageView.layer.shadowOffset = CGSize.zero
+        cell.product = self.allProducts[indexPath.row]
+//        cell.imageView.image = items[indexPath.row]!
 
         return cell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = UIStoryboard(name: "main2", bundle: nil).instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
+        vc.product = allProducts[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
 extension CollectionsViewController: PinterestLayoutDelegate {
@@ -317,4 +321,23 @@ extension CollectionsViewController : QRCodeReaderViewControllerDelegate,Enlarge
         dismiss(animated: true, completion: nil)
     }
     
+}
+extension CollectionsViewController{
+    func getAllProductsAPI(){
+        Alamofire.request(Router.getAllProducts()).responseJSON(completionHandler: {(response) in
+            
+            switch response.result{
+            case .success(let JSON):
+                for each in (JSON as! [JSON]){
+                    var product = Product(json: each as JSON)
+                    self.allProducts.append(product)
+                }
+                self.collectionView.reloadData()
+                
+            case .failure(let error):
+                print(error)
+            }
+          
+        })
+    }
 }

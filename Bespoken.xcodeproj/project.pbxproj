@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0118068821C109BF001EA439 /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0118068721C109BF001EA439 /* TagsCollectionViewCell.swift */; };
+		011806A821C27D84001EA439 /* ResultsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011806A721C27D84001EA439 /* ResultsCollectionViewCell.swift */; };
+		011806AA21C28CBB001EA439 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011806A921C28CBB001EA439 /* ProfileViewController.swift */; };
 		01C58BF221C005F2001EF372 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C58BEF21C005F2001EF372 /* NotificationTableViewCell.swift */; };
 		01C58BF321C005F2001EF372 /* BSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C58BF021C005F2001EF372 /* BSNotification.swift */; };
 		01C58BF421C005F2001EF372 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C58BF121C005F2001EF372 /* NotificationViewController.swift */; };
@@ -111,6 +114,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0118068721C109BF001EA439 /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
+		011806A721C27D84001EA439 /* ResultsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCollectionViewCell.swift; sourceTree = "<group>"; };
+		011806A921C28CBB001EA439 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		01C58BEF21C005F2001EF372 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		01C58BF021C005F2001EF372 /* BSNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSNotification.swift; sourceTree = "<group>"; };
 		01C58BF121C005F2001EF372 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +278,8 @@
 				01E6F7FA21B6B90D0037970D /* CollectionsSearchResultsViewController.swift */,
 				01E6F7FB21B6B90D0037970D /* CollectionsViewController.swift */,
 				01E6F7FD21B6B90D0037970D /* PinterestLayout.swift */,
+				0118068721C109BF001EA439 /* TagsCollectionViewCell.swift */,
+				011806A721C27D84001EA439 /* ResultsCollectionViewCell.swift */,
 			);
 			name = Collections;
 			path = Bes;
@@ -431,6 +439,7 @@
 				A594F5FA21A14471001BD710 /* Info.plist */,
 				A594F5F221A1446F001BD710 /* Bespoken.xcdatamodeld */,
 				A5B0C95621A4446B0058A064 /* DummyContent.swift */,
+				011806A921C28CBB001EA439 /* ProfileViewController.swift */,
 			);
 			path = Bespoken;
 			sourceTree = "<group>";
@@ -519,7 +528,6 @@
 				A594F5E521A1446F001BD710 /* Frameworks */,
 				A594F5E621A1446F001BD710 /* Resources */,
 				173AF0D67BF43392343F7506 /* [CP] Embed Pods Frameworks */,
-				888C974F99C2707FADBD4B16 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -538,8 +546,6 @@
 				A594F5FB21A14471001BD710 /* Sources */,
 				A594F5FC21A14471001BD710 /* Frameworks */,
 				A594F5FD21A14471001BD710 /* Resources */,
-				A51CE2C736EA929E8074B2F2 /* [CP] Embed Pods Frameworks */,
-				BC8313F77F80D13C7EB71941 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -559,8 +565,6 @@
 				A594F60621A14471001BD710 /* Sources */,
 				A594F60721A14471001BD710 /* Frameworks */,
 				A594F60821A14471001BD710 /* Resources */,
-				2D38C3F92740E079D86B34C4 /* [CP] Embed Pods Frameworks */,
-				B59C32BA57B11DECBDFEA30A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -669,72 +673,43 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bespoken/Pods-Bespoken-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/CircleProgressView/CircleProgressView.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/PulsingHalo/PulsingHalo.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftVideoBackground/SwiftVideoBackground.framework",
 				"${BUILT_PRODUCTS_DIR}/TOPasscodeViewController/TOPasscodeViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/YLProgressBar/YLProgressBar.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleProgressView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PulsingHalo.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftVideoBackground.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TOPasscodeViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YLProgressBar.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bespoken/Pods-Bespoken-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2D38C3F92740E079D86B34C4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BespokenUITests/Pods-BespokenUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		888C974F99C2707FADBD4B16 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bespoken/Pods-Bespoken-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A51CE2C736EA929E8074B2F2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BespokenTests/Pods-BespokenTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AB6C5AE7DCF338D69057890D /* [CP] Check Pods Manifest.lock */ = {
@@ -753,36 +728,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B59C32BA57B11DECBDFEA30A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BespokenUITests/Pods-BespokenUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BC8313F77F80D13C7EB71941 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BespokenTests/Pods-BespokenTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BE7DCC1F78ACFD73281DD1F9 /* [CP] Check Pods Manifest.lock */ = {
@@ -838,9 +783,11 @@
 				A53D597221AF144A009F993F /* Questionnaire.swift in Sources */,
 				A5FA1A3221A4747E00743D73 /* TinderCard.swift in Sources */,
 				A5082D8621A1838A005EBA41 /* Router.swift in Sources */,
+				011806A821C27D84001EA439 /* ResultsCollectionViewCell.swift in Sources */,
 				A5EB435C21B04E3E0056B24A /* User.swift in Sources */,
 				A5F8FF4B21B853FC00C38AC2 /* customVideoCell.swift in Sources */,
 				A529D5D121A30F54005A221A /* QuestionnaireController1.swift in Sources */,
+				0118068821C109BF001EA439 /* TagsCollectionViewCell.swift in Sources */,
 				A5B0C95721A4446B0058A064 /* DummyContent.swift in Sources */,
 				A5FBD7A821BED28000638D5F /* HeaderView.swift in Sources */,
 				A594F5F421A1446F001BD710 /* Bespoken.xcdatamodeld in Sources */,
@@ -848,6 +795,7 @@
 				A529D5CD21A2FE9B005A221A /* HomePageOptionCell.swift in Sources */,
 				A5B4191821B2E7CB0032F35C /* SizeSliderCell.swift in Sources */,
 				A5BE55F021AEAB5800A8A285 /* ProductCheckoutController.swift in Sources */,
+				011806AA21C28CBB001EA439 /* ProfileViewController.swift in Sources */,
 				A5F8FF4821B8536F00C38AC2 /* customVideoController.swift in Sources */,
 				A5B4192121B592920032F35C /* TrunckShow.swift in Sources */,
 				A5FBD7A021BEC0E100638D5F /* SectionHeader.swift in Sources */,
@@ -1053,8 +1001,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KXX5V299J5;
 				INFOPLIST_FILE = Bespoken/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.Bespoken;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jagadish.bespoken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1069,8 +1020,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KXX5V299J5;
 				INFOPLIST_FILE = Bespoken/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.Bespoken;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jagadish.bespoken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1085,7 +1039,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1102,7 +1060,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1118,7 +1080,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1134,7 +1100,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BespokenUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = BeSpoken.BespokenUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

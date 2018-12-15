@@ -14,7 +14,11 @@ target 'Bespoken' do
   pod 'CircleProgressView'
   pod 'ImageSlideshow', '~> 1.6'
   pod 'ImageSlideshow/Alamofire'
-
+  pod 'YLProgressBar'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
+  pod 'TwitterKit'
 
 
   target 'BespokenTests' do

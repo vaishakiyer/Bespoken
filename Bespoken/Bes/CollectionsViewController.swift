@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import QRCodeReader
+import ImageSlideshow
 
 class CollectionsViewController: UIViewController {
     var items = [UIImage(named: "collection8") , UIImage(named: "collection2"), UIImage(named: "collection3") ,  UIImage(named: "collection4"), UIImage(named: "collection5"), UIImage(named: "collection6"), UIImage(named: "collection7"), UIImage(named: "collection1"), UIImage(named: "collection9")]
@@ -19,26 +21,46 @@ class CollectionsViewController: UIViewController {
     @IBOutlet weak var hamburgerMenu: UIView!
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var hamburgerMenuWidthConstraint: NSLayoutConstraint!
+    @IBOutlet var searchButton: UIBarButtonItem!
     
     @IBOutlet weak var hamburgerMenuTableView: UITableView!
     @IBOutlet var shadowViewPanGestureRecogniser: UIPanGestureRecognizer!
     @IBOutlet var shadowViewTapGesture: UITapGestureRecognizer!
     @IBOutlet var screenEdgePanGesture: UIScreenEdgePanGestureRecognizer!
     
-    @IBAction func onSearchTapped(_ sender: Any) {
-        let resultsController = self.storyboard?.instantiateViewController(withIdentifier: "CollectionsSearchResultsViewController")
+    
+    lazy var readerVC: QRCodeReaderViewController = {
+        let builder = QRCodeReaderViewControllerBuilder {
+            $0.reader = QRCodeReader(metadataObjectTypes: [.qr], captureDevicePosition: .back)
+        }
+        
+        return QRCodeReaderViewController(builder: builder)
+    }()
+    lazy var searchController: UISearchController = {
+        
+        let resultsController = self.storyboard?.instantiateViewController(withIdentifier: "CollectionsSearchResultsViewController") as! CollectionsSearchResultsViewController
         let searchController = UISearchController(searchResultsController: resultsController)
         // Setup the Search Controller
-        searchController.searchResultsUpdater = resultsController as? UISearchResultsUpdating
-        searchController.obscuresBackgroundDuringPresentation = true
+        searchController.delegate = self
+        searchController.searchResultsUpdater = resultsController
+        searchController.dimsBackgroundDuringPresentation = true
         searchController.searchBar.placeholder = "Search "
-//        self.navigationBarTitle.searchController = searchController
-//        self.navigationBarTitle.titleView = searchController.searchBar
         searchController.hidesNavigationBarDuringPresentation = true
-        self.present(searchController, animated: true)
-        definesPresentationContext = true
-
+        searchController.searchBar.showsBookmarkButton = true
+        searchController.searchBar.delegate = self
+        searchController.searchBar.setImage(UIImage(named: "qrcode"), for: .bookmark, state: .normal)
         
+        return searchController
+    }()
+    
+    @IBAction func onSearchTapped(_ sender: Any) {
+        self.navigationItem.rightBarButtonItem = nil
+        
+        UIView.animate(withDuration: 0.3) {
+            self.navigationItem.searchController = self.searchController
+            self.searchController.isActive = true
+        }
+        self.view.layoutIfNeeded()
     }
     @IBOutlet weak var hamburgerMenuLeftConstraint: NSLayoutConstraint!
     @IBAction func gestureTap(_ sender: UITapGestureRecognizer) {
@@ -129,6 +151,7 @@ class CollectionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initializeView()
+        definesPresentationContext = true
         collectionView.delegate = self
         collectionView.dataSource = self
         if let layout = collectionView?.collectionViewLayout as? PinterestLayout {
@@ -138,18 +161,63 @@ class CollectionsViewController: UIViewController {
 
     }
     func initializeView()  {
+        
+        self.navigationItem.hidesSearchBarWhenScrolling = false
         self.hamburgerMenuLeftConstraint.constant = -self.hamburgerMenu.frame.size.width
         self.shadowView.alpha = 0
         self.shadowView.isHidden = true
         self.hamburgerMenuTableView.delegate = self
         self.hamburgerMenuTableView.dataSource = self
         self.hamburgerMenuTableView.tableFooterView = nil
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(openMenu))
+//        self.navigationItem.rightBarButtonItem = searchButton
+        self.title = "Collections"
 //        self.navigationItem.largeTitleDisplayMode = .automatic
 //        self.navigationBar.prefersLargeTitles = true
 //        self.navigationBarTitle.largeTitleDisplayMode = .automatic
     }
+  @objc  func openSearch() {
+        let resultsController = self.storyboard?.instantiateViewController(withIdentifier: "CollectionsSearchResultsViewController") as! CollectionsSearchResultsViewController
+        let searchController = UISearchController(searchResultsController: resultsController)
+        // Setup the Search Controller
+        searchController.delegate = self
+        searchController.searchResultsUpdater = resultsController
+        searchController.obscuresBackgroundDuringPresentation = true
+        searchController.searchBar.placeholder = "Search "
+        definesPresentationContext = true
+       self.navigationItem.rightBarButtonItem = nil
+        
+                self.navigationItem.searchController = searchController
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+//    self.navigationItem.titleView = searchController.searchBar
+        searchController.hidesNavigationBarDuringPresentation = false
+//self.present(searchController, animated: true, completion: nil)
+    }
     
 
+}
+
+
+extension CollectionsViewController: UISearchControllerDelegate {
+    
+    func willPresentSearchController(_ searchController: UISearchController) {
+        
+        searchController.searchBar.becomeFirstResponder()
+    }
+    
+    func willDismissSearchController(_ searchController: UISearchController) {
+        self.navigationItem.searchController = nil
+        self.navigationItem.rightBarButtonItem = self.searchButton
+        self.view.layoutIfNeeded()
+    }
+    
+}
+extension CollectionsViewController : UISearchBarDelegate{
+    func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
+        readerVC.delegate = self
+        // Presents the readerVC as modal form sheet
+        readerVC.modalPresentationStyle = .formSheet
+        present(readerVC, animated: true, completion: nil)    }
 }
 
 extension CollectionsViewController : UICollectionViewDelegate, UICollectionViewDataSource{
@@ -191,12 +259,15 @@ extension CollectionsViewController : UITableViewDelegate, UITableViewDataSource
         cell.textLabel?.text = self.hamburgerMenuItems[indexPath.row]
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 
 }
-// For HamburgerMenu
+//Mark :- For HamburgerMenu
 extension CollectionsViewController{
-    func openMenu() {
+   @objc func openMenu() {
         
         self.hamburgerMenuLeftConstraint.constant = 0
 
@@ -223,4 +294,27 @@ extension CollectionsViewController{
             self.shadowView.isHidden = true
         })
     }
+}
+extension CollectionsViewController : QRCodeReaderViewControllerDelegate,EnlargeImageDelegate{
+    func openImage(sender: ImageSlideshow) {
+        
+        sender.presentFullScreenController(from: self)
+    }
+    
+    
+    
+    
+    
+    func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
+        print(result.value)
+        reader.stopScanning()
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func readerDidCancel(_ reader: QRCodeReaderViewController) {
+        print("Action Cancelled")
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

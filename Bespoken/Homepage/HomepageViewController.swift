@@ -31,8 +31,13 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     var currentIndex = 0
     var currentLoadedCardsArray = [TinderCard]()
     var allCardsArray = [TinderCard]()
-    var valueArray = ["1","2","3","4","5","6","7","8","9","10"]
-    var imageArray = ["Mask Group 68","Mask Group 22","Mask Group 68","Group 732","Mask Group 68","Mask Group 68","Mask Group 22","Group 732","Mask Group 68","Mask Group 22"]
+//    var valueArray = ["1","2","3","4","5","6","7","8","9","10"]
+//    var imageArray = ["Mask Group 68","Mask Group 22","Mask Group 68","Group 732","Mask Group 68","Mask Group 68","Mask Group 22","Group 732","Mask Group 68","Mask Group 22"]
+    var valueArray = ["1","2"]
+
+    var imageArray = ["Mask Group 68","Mask Group 22"]
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,7 +125,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     func createNavbar(){
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "profile"), style: .plain, target: self, action: nil)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "profile"), style: .plain, target: self, action: #selector(openProfile))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Path 842"), style: .plain, target: self, action: nil)
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -252,21 +257,24 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
             }
             else if indexPath.item == 1{
                 
-                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
+//                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//                let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
+//
+//                nextVC?.completeAnsHandler = { () -> UIViewController in
+//
+//                    (self.navigationController?.popViewController(animated: true))!
+//
+//                }
+//
+//                self.navigationController?.pushViewController(nextVC!, animated: true)
                 
-                nextVC?.completeAnsHandler = { () -> UIViewController in
-                    
-                    (self.navigationController?.popViewController(animated: true))!
-                    
-                }
                 
-                self.navigationController?.pushViewController(nextVC!, animated: true)
+                            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                            let nextVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as! UINavigationController
                 
+//                let nc = UINavigationController(rootViewController: nextVC!)
                 
-                //            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                //            let nextVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as? CollectionsViewController
-                //            self.navigationController?.pushViewController(nextVC!, animated: true)
+                self.present(nextVC, animated: true, completion: nil)
                 
             }else if indexPath.item == 0{
                 
@@ -322,6 +330,10 @@ extension HomepageViewController{
             perform(#selector(loadInitialDummyAnimation), with: nil, afterDelay: 1.0)
         }
         
+    }
+    @objc func openProfile(){
+        let profileVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        self.present(profileVC, animated: true, completion: nil)
     }
     
     @objc func loadInitialDummyAnimation() {

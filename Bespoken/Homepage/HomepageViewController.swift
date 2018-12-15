@@ -124,6 +124,18 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     //MARK: Animation
     
+    @IBAction func controllerSwiped(_ sender: UISwipeGestureRecognizer) {
+        
+        switch sender.direction {
+        case .left:
+            break
+        default:
+            break
+        }
+        
+        
+    }
+    
     @objc func openNotification(){
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)

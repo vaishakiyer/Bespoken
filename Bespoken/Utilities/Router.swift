@@ -26,10 +26,13 @@ enum Router: URLRequestConvertible{
     case getNotifications()
     case getWishlistItems()
     case getAllProducts()
+    case getThemeboardCards()
+    case getAffinityCards()
+    case postSwipedCards(direction: String, cardId: String,isProduct: Bool)
     
     var method: Alamofire.HTTPMethod {
         switch self {
-        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems , .getAllProducts():
+        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems,.getThemeboardCards,.getAffinityCards,.postSwipedCards:
             return .post
         default:
             return .get
@@ -61,6 +64,12 @@ enum Router: URLRequestConvertible{
             return "getWishlistItems"
         case .getAllProducts():
             return "getProducts"
+        case .getThemeboardCards:
+            return "getThemeboardcards"
+        case .getAffinityCards:
+            return "getAffinitycards"
+        case .postSwipedCards:
+            return "recordSwipe"
         }
     }
     
@@ -95,6 +104,17 @@ enum Router: URLRequestConvertible{
         case .updateUser(let answers):
             let parameters = ["preferences" : answers]
             return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
+        case .postSwipedCards(let direction, let cardId,let isProduct):
+            
+            var parameters = [String: Any]()
+            if isProduct == true{
+                 parameters = ["direction": direction,"product": cardId]
+            }else{
+                 parameters = ["direction": direction,"themeboard": cardId]
+            }
+            
+            return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
+            
         default:
             return try Alamofire.JSONEncoding.default.encode(urlRequest, with: nil)
         }

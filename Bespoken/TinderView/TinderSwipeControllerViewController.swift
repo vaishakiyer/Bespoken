@@ -8,7 +8,7 @@
 
 import UIKit
 
-let  MAX_BUFFER_SIZE = 3;
+let  MAX_BUFFER_SIZE = 3000;
 let  SEPERATOR_DISTANCE = 8;
 let  TOPYAXIS = 75;
 
@@ -117,7 +117,7 @@ class TinderSwipeControllerViewController: UIViewController {
             let capCount = (valueArray.count > MAX_BUFFER_SIZE) ? MAX_BUFFER_SIZE : valueArray.count
             
             for (i,value) in valueArray.enumerated() {
-                let newCard = createTinderCard(at: i,value: value, imageAdded: imageArray[i])
+                let newCard = createTinderCard(at: i,value: value, description: "HELLO", imageAdded: imageArray[i])
                 allCardsArray.append(newCard)
                 if i < capCount {
                     currentLoadedCardsArray.append(newCard)
@@ -142,9 +142,9 @@ class TinderSwipeControllerViewController: UIViewController {
         dummyCard?.shakeAnimationCard()
     }
     
-    func createTinderCard(at index: Int , value :String , imageAdded: String) -> TinderCard {
+    func createTinderCard(at index: Int , value :String,description: String ,imageAdded: String) -> TinderCard {
         
-        let card = TinderCard(frame: CGRect(x: 0, y: 0, width: viewTinderBackGround.frame.size.width , height: viewTinderBackGround.frame.size.height), value: value, image: imageAdded)
+         let card = TinderCard(frame: CGRect(x: 0, y: 0, width: viewTinderBackGround.frame.size.width , height: viewTinderBackGround.frame.size.height), value: value, descriptions: description,image: imageAdded,cardId:"")
         card.delegate = self
         return card
     }

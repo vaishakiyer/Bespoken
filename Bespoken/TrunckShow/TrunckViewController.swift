@@ -38,6 +38,7 @@ class TrunckViewController: UIViewController {
     var mySections = [String]()
     var myEvents = TrunckShow()
     var myGroupedEvents = [TrunckShow]()
+    var completeAnsHandler : ((_ value: String) -> UIViewController)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -202,11 +203,9 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         
+        self.completeAnsHandler("F2TrunckShow")
         self.navigationController?.popViewController(animated: true)
-//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//        let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
-//        nextVC?.controlFLow = FlowAnalysis(rawValue: "F2TrunckShow")
-//        self.navigationController?.pushViewController(nextVC!, animated: true)
+
         
     }
     

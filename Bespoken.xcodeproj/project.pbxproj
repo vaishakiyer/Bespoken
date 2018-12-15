@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011463CF21C56CC9003DF072 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011463CE21C56CC9003DF072 /* Product.swift */; };
+		011463D121C57C08003DF072 /* main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011463D021C57C08003DF072 /* main2.storyboard */; };
+		011463D321C57D3B003DF072 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011463D221C57D3B003DF072 /* ProductDetailViewController.swift */; };
 		0118068821C109BF001EA439 /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0118068721C109BF001EA439 /* TagsCollectionViewCell.swift */; };
 		011806A821C27D84001EA439 /* ResultsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011806A721C27D84001EA439 /* ResultsCollectionViewCell.swift */; };
 		011806AA21C28CBB001EA439 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011806A921C28CBB001EA439 /* ProfileViewController.swift */; };
@@ -116,6 +119,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		011463CE21C56CC9003DF072 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		011463D021C57C08003DF072 /* main2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main2.storyboard; sourceTree = "<group>"; };
+		011463D221C57D3B003DF072 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		0118068721C109BF001EA439 /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
 		011806A721C27D84001EA439 /* ResultsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCollectionViewCell.swift; sourceTree = "<group>"; };
 		011806A921C28CBB001EA439 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -284,6 +290,8 @@
 				01E6F7FD21B6B90D0037970D /* PinterestLayout.swift */,
 				0118068721C109BF001EA439 /* TagsCollectionViewCell.swift */,
 				011806A721C27D84001EA439 /* ResultsCollectionViewCell.swift */,
+				011463CE21C56CC9003DF072 /* Product.swift */,
+				011463D221C57D3B003DF072 /* ProductDetailViewController.swift */,
 			);
 			name = Collections;
 			path = Bes;
@@ -446,6 +454,7 @@
 				A594F5F221A1446F001BD710 /* Bespoken.xcdatamodeld */,
 				A5B0C95621A4446B0058A064 /* DummyContent.swift */,
 				011806A921C28CBB001EA439 /* ProfileViewController.swift */,
+				011463D021C57C08003DF072 /* main2.storyboard */,
 			);
 			path = Bespoken;
 			sourceTree = "<group>";
@@ -651,6 +660,7 @@
 				A594F5F121A1446F001BD710 /* Main.storyboard in Resources */,
 				A5F8FF4C21B853FC00C38AC2 /* customVideoCell.xib in Resources */,
 				A5082D8121A15A49005EBA41 /* OptionsViewCell.xib in Resources */,
+				011463D121C57C08003DF072 /* main2.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,11 +841,13 @@
 				011806AA21C28CBB001EA439 /* ProfileViewController.swift in Sources */,
 				A5F8FF4821B8536F00C38AC2 /* customVideoController.swift in Sources */,
 				A5B4192121B592920032F35C /* TrunckShow.swift in Sources */,
+				011463CF21C56CC9003DF072 /* Product.swift in Sources */,
 				A5FBD7A021BEC0E100638D5F /* SectionHeader.swift in Sources */,
 				A56CDF9D21ADB24000113997 /* MeasurementViewController.swift in Sources */,
 				A5082D8021A15A49005EBA41 /* OptionsViewCell.swift in Sources */,
 				A5B0C95C21A450760058A064 /* Homecenter1.swift in Sources */,
 				A5A38A8021A18ED500ED1088 /* Swift+Gif.swift in Sources */,
+				011463D321C57D3B003DF072 /* ProductDetailViewController.swift in Sources */,
 				A5082D8421A15E75005EBA41 /* Extension&Helper.swift in Sources */,
 				A523095221C570E600CF4C30 /* ThemeCards.swift in Sources */,
 				A5B4191C21B50E000032F35C /* customTypeCell.swift in Sources */,

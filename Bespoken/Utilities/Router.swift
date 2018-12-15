@@ -25,6 +25,7 @@ enum Router: URLRequestConvertible{
     case getEvents()
     case getNotifications()
     case getWishlistItems()
+    case getAllProducts()
     case getThemeboardCards()
     case getAffinityCards()
     case postSwipedCards(direction: String, cardId: String,isProduct: Bool)
@@ -63,6 +64,8 @@ enum Router: URLRequestConvertible{
             return "getNotifications"
         case .getWishlistItems:
             return "getWishlistItems"
+        case .getAllProducts():
+            return "getProducts"
         case .getThemeboardCards:
             return "getThemeboardcards"
         case .getAffinityCards:

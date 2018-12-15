@@ -12,6 +12,8 @@ let SCALE_STRENGTH : CGFloat = 4
 let SCALE_RANGE : CGFloat = 0.90
 
 import UIKit
+import AlamofireImage
+
 
 protocol TinderCardDelegate: NSObjectProtocol {
     func cardGoesLeft(card: TinderCard)
@@ -29,13 +31,13 @@ class TinderCard: UIView {
     var overLayImage = UIImageView()
     var isLiked = false
     var cardName : String?
-    
+    var myCardId : String?
     
     weak var delegate: TinderCardDelegate?
     
-    public init(frame: CGRect, value: String,image: String) {
+    public init(frame: CGRect, value: String,descriptions: String,image: String,cardId: String) {
         super.init(frame: frame)
-        setupView(at: value, image: image)
+        setupView(at: value, descriptions: descriptions, image: image, cardId: cardId)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -43,7 +45,7 @@ class TinderCard: UIView {
     }
     
     
-    func setupView(at value:String, image: String) {
+    func setupView(at value:String,descriptions: String,image: String,cardId : String) {
         
         layer.cornerRadius = 20
         layer.shadowRadius = 3
@@ -65,7 +67,9 @@ class TinderCard: UIView {
         addGestureRecognizer(tap)
         
         let backGroundImageView = UIImageView(frame:bounds)
-        backGroundImageView.image = UIImage(named:image)
+        if let url = URL(string: image){
+             backGroundImageView.af_setImage(withURL: url)
+        }
         backGroundImageView.contentMode = .scaleAspectFill
         backGroundImageView.clipsToBounds = true;
         addSubview(backGroundImageView)
@@ -78,7 +82,7 @@ class TinderCard: UIView {
       //  addSubview(profileImageView)
         
         let labelText = UILabel(frame:CGRect(x: 35, y: frame.size.height - 80, width: frame.size.width - 50, height: 60))
-        let attributedText = NSMutableAttributedString(string: NAMES[Int(arc4random_uniform(UInt32(NAMES.count)))], attributes: [.foregroundColor: UIColor.white,.font:UIFont.boldSystemFont(ofSize: 25)])
+        let attributedText = NSMutableAttributedString(string: descriptions, attributes: [.foregroundColor: UIColor.white,.font:UIFont.boldSystemFont(ofSize: 25)])
         attributedText.append(NSAttributedString(string: "\n\(value)", attributes: [.foregroundColor: UIColor.white,.font:UIFont.systemFont(ofSize: 18)]))
         labelText.attributedText = attributedText
         labelText.numberOfLines = 2
@@ -93,7 +97,7 @@ class TinderCard: UIView {
         addSubview(overLayImage)
         
         cardName = labelText.text
-
+        myCardId = cardId
     }
     
     

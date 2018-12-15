@@ -20,7 +20,6 @@ target 'Bespoken' do
   pod 'FacebookShare'
   pod 'TwitterKit'
 
-
   target 'BespokenTests' do
     inherit! :search_paths
     # Pods for testing

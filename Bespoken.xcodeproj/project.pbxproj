@@ -29,6 +29,7 @@
 		A5082D8421A15E75005EBA41 /* Extension&Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8321A15E75005EBA41 /* Extension&Helper.swift */; };
 		A5082D8621A1838A005EBA41 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8521A1838A005EBA41 /* Router.swift */; };
 		A511931921A1BFB900453C89 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A511931821A1BFB900453C89 /* CustomTextField.swift */; };
+		A523095221C570E600CF4C30 /* ThemeCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523095121C570E600CF4C30 /* ThemeCards.swift */; };
 		A5231BA421A8432300463AE4 /* TrunckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5231BA321A8432300463AE4 /* TrunckViewController.swift */; };
 		A5231BA921A84FBE00463AE4 /* TrunckViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5231BA721A84FBE00463AE4 /* TrunckViewCell.swift */; };
 		A5231BAA21A84FBE00463AE4 /* TrunckViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5231BA821A84FBE00463AE4 /* TrunckViewCell.xib */; };
@@ -140,6 +141,7 @@
 		A5082D8321A15E75005EBA41 /* Extension&Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension&Helper.swift"; sourceTree = "<group>"; };
 		A5082D8521A1838A005EBA41 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A511931821A1BFB900453C89 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A523095121C570E600CF4C30 /* ThemeCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCards.swift; sourceTree = "<group>"; };
 		A5231BA321A8432300463AE4 /* TrunckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrunckViewController.swift; sourceTree = "<group>"; };
 		A5231BA721A84FBE00463AE4 /* TrunckViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrunckViewCell.swift; sourceTree = "<group>"; };
 		A5231BA821A84FBE00463AE4 /* TrunckViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrunckViewCell.xib; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 				A5EB435B21B04E3E0056B24A /* User.swift */,
 				A5B4192021B592920032F35C /* TrunckShow.swift */,
 				A53B96EB21C002A10044C71A /* Location.swift */,
+				A523095121C570E600CF4C30 /* ThemeCards.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -834,6 +837,7 @@
 				A5B0C95C21A450760058A064 /* Homecenter1.swift in Sources */,
 				A5A38A8021A18ED500ED1088 /* Swift+Gif.swift in Sources */,
 				A5082D8421A15E75005EBA41 /* Extension&Helper.swift in Sources */,
+				A523095221C570E600CF4C30 /* ThemeCards.swift in Sources */,
 				A5B4191C21B50E000032F35C /* customTypeCell.swift in Sources */,
 				A5082D7C21A15905005EBA41 /* PersonalisationCell.swift in Sources */,
 				A529D5D421A31210005A221A /* CurationViewCell.swift in Sources */,

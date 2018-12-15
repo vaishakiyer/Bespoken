@@ -21,7 +21,7 @@ class QuestionnaireController1: UIViewController {
     
     @IBOutlet weak var optionCollection: UICollectionView!
     
-    var completeAnsHandler : (() -> UIViewController)!
+    var completeAnsHandler : ((_ value: String) -> UIViewController)!
     var answered = [PostAnswers]()
     
     //MARK: Declare Variables
@@ -309,7 +309,7 @@ extension QuestionnaireController1{
                 
                 if status == "success"{
                     
-                    self.completeAnsHandler()
+                    self.completeAnsHandler("F1Brand")
                 
 //                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
 //                    let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController

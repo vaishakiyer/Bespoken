@@ -27,10 +27,13 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     let videoPlay = VideoBackground()
     let halo = PulsingHaloLayer()
     var checkUser : User?
+    var controlFlow : FlowAnalysis?
+    var shouldPulsate : Bool = false
     
     var currentIndex = 0
     var currentLoadedCardsArray = [TinderCard]()
     var allCardsArray = [TinderCard]()
+    var cardSetType1 = [ThemeCards]()
     var valueArray = ["1","2","3"]
     var imageArray = ["Mask Group 68","Mask Group 22","Mask Group 68"]
     
@@ -40,19 +43,27 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         setup()
         optionCollection.isHidden = false
         ballButton.addTarget(self, action: #selector(startPulsating), for: .touchUpInside)
-        
+        getThemeCards()
         
         // Do any additional setup after loading the view.
     }
     
     @objc func startPulsating(){
+        
+        
         let halo = PulsingHaloLayer()
         halo.position = viewTinderBackGround.center
-        view.layer.addSublayer(halo)
         halo.start()
+        halo.haloLayerNumber = 3
         halo.radius = 240
         halo.backgroundColor = UIColor.black.cgColor
-
+        if shouldPulsate == true{
+            view.layer.addSublayer(halo)
+        }else{
+           view.layer.sublayers!.removeLast()
+        }
+        
+        getAffinityCards()
     }
     
     
@@ -65,6 +76,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         halo.position = viewTinderBackGround.center
         view.layer.addSublayer(halo)
         halo.start()
+        halo.haloLayerNumber = 3
         halo.radius = 240
         halo.backgroundColor = UIColor.black.cgColor
         }
@@ -91,7 +103,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         allCardsArray.removeAll()
         
         if let firstName = checkUser?.firstName{
-         ballView.firstName.text = "HI " + firstName
+         ballView.firstName.text = "HI " + firstName.uppercased()
         }
         
         if toHide == true{
@@ -104,10 +116,26 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
             //ballButton.isHidden = true
             
               ballView.isHidden = true
-              loadCardValues()
+              //loadCardValues()
         }
        
     
+    }
+    
+    
+    func updateTheFlow(){
+        
+        switch controlFlow! {
+        case .Flow1_SelectBrand:
+            print("brand")
+        case .Flow2_TrunckShow:
+            print("trunckShow")
+        case .Flow1_SelectGarment:
+            print("garment")
+        }
+        
+        
+        
     }
     
     func createNavbar(){
@@ -151,71 +179,6 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         
     }
     
-    
-    //MARK: - Network Operation
-    
-    func fetchUser(){
-        
-        Alamofire.request(Router.getUser()).responseJSON { (response) in
-            
-            switch response.result{
-                
-            case .success(let JSON):
-                
-                print(JSON)
-                
-                guard let jsonArray = JSON as? [NSDictionary] else {return}
-                
-                let userDict = jsonArray.first
-                
-                BSUserDefaults.setLoggedInUserDict(userDict!)
-                
-                self.checkUser = BSUserDefaults.loggedInUser()
-                if self.checkUser?.preferences?.count == 0{
-                    self.updateUI(toHide: true)
-                  
-                }else{
-                    self.updateUI(toHide: false)
-                   
-                }
-                
-             
-            case .failure(let error):
-                print(error)
-            }
-            
-        }
-        
-    }
-    
-    
-    func getQuestions(){
-        
-        Alamofire.request(Router.getQuestions()).responseJSON { (response) in
-            
-            switch response.result{
-            case .success( _):
-                
-                let question = try? JSONDecoder().decode(Questionnaire.self, from: response.data!)
-                myQuestions = question!
-                
-                break
-                
-            case .failure(let error):
-                print(error)
-                
-            }
-            
-            
-        }
-        
-        
-        
-    }
-
-    
-    
-
     /*
     // MARK: - Navigation
 
@@ -264,17 +227,7 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
             }
             else if indexPath.item == 1{
                 
-//                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//                let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
-//
-//                nextVC?.completeAnsHandler = { () -> UIViewController in
-//
-//                    (self.navigationController?.popViewController(animated: true))!
-//
-//                }
-//
-//                self.navigationController?.pushViewController(nextVC!, animated: true)
-                
+
                 
                             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                             let nextVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as! UINavigationController
@@ -282,19 +235,58 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
                 
             }else if indexPath.item == 0{
                 
+                
                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                 let nextVC = storyBoard.instantiateViewController(withIdentifier: "TrunckViewController") as? TrunckViewController
+
+                nextVC?.completeAnsHandler = { (value) -> UIViewController in
+
+                    self.controlFlow = FlowAnalysis(rawValue: value)
+                    self.updateTheFlow()
+
+                    return (self.navigationController?.popViewController(animated: true))!
+
+
+                }
+
                 self.navigationController?.pushViewController(nextVC!, animated: true)
+                
+//                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//                let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
+//
+//                nextVC?.completeAnsHandler = { (value) -> UIViewController in
+//
+//                    self.controlFlow = FlowAnalysis(rawValue: value)
+//                    self.updateTheFlow()
+//
+//                    return (self.navigationController?.popViewController(animated: true))!
+//
+//
+//                }
+//
+//                self.navigationController?.pushViewController(nextVC!, animated: true)
+//
+                
             }
-            
             
             
         }else{
             
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
+                            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                            let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
             
-            self.navigationController?.pushViewController(nextVC!, animated: true)
+                            nextVC?.completeAnsHandler = { (value) -> UIViewController in
+            
+                                self.controlFlow = FlowAnalysis(rawValue: value)
+                                self.updateTheFlow()
+                                
+                                return (self.navigationController?.popViewController(animated: true))!
+                              
+            
+                            }
+            
+                            self.navigationController?.pushViewController(nextVC!, animated: true)
+            
             
             
         }
@@ -309,14 +301,14 @@ extension HomepageViewController{
     
     func loadCardValues() {
         
-        if valueArray.count > 0 {
+        
+        if cardSetType1.count > 0 {
             
-           halo.backgroundColor = UIColor.clear.cgColor
             
-            let capCount = (valueArray.count > MAX_BUFFER_SIZE) ? MAX_BUFFER_SIZE : valueArray.count
+            let capCount = (cardSetType1.count > MAX_BUFFER_SIZE) ? MAX_BUFFER_SIZE : cardSetType1.count
             
-            for (i,value) in valueArray.enumerated() {
-                let newCard = createTinderCard(at: i,value: value, imageAdded: imageArray[i])
+            for (i,value) in cardSetType1.enumerated() {
+                let newCard = createTinderCard(at: i,value: value.title!, description: value.desc!, cardId: value.cardId!, imageAdded: value.image!)
                 allCardsArray.append(newCard)
                 if i < capCount {
                     currentLoadedCardsArray.append(newCard)
@@ -346,9 +338,9 @@ extension HomepageViewController{
         dummyCard?.shakeAnimationCard()
     }
     
-    func createTinderCard(at index: Int , value :String , imageAdded: String) -> TinderCard {
+    func createTinderCard(at index: Int , value :String,description: String,cardId: String, imageAdded: String) -> TinderCard {
         
-        let card = TinderCard(frame: CGRect(x: 0, y: 0, width: viewTinderBackGround.frame.size.width , height: viewTinderBackGround.frame.size.height), value: value, image: imageAdded)
+        let card = TinderCard(frame: CGRect(x: 0, y: 0, width: viewTinderBackGround.frame.size.width , height: viewTinderBackGround.frame.size.height), value: value, descriptions: description,image: imageAdded,cardId:cardId)
         card.delegate = self
         return card
     }
@@ -368,10 +360,13 @@ extension HomepageViewController{
             viewTinderBackGround.insertSubview(currentLoadedCardsArray[MAX_BUFFER_SIZE - 1], belowSubview: currentLoadedCardsArray[MAX_BUFFER_SIZE - 2])
         }else{
             if currentLoadedCardsArray.count == 0{
+                
+                //shouldPulsate = true
                 let halo = PulsingHaloLayer()
                 halo.position = viewTinderBackGround.center
                 view.layer.addSublayer(halo)
                 halo.start()
+                halo.haloLayerNumber = 3
                 halo.radius = 240
                 halo.backgroundColor = UIColor.black.cgColor
             }
@@ -409,10 +404,13 @@ extension HomepageViewController : TinderCardDelegate{
     
     // action called when the card goes to the left.
     func cardGoesLeft(card: TinderCard) {
+        
+        swipePrimaryCards(direction: "left", id: card.myCardId!)
         removeObjectAndAddNewValues()
     }
     // action called when the card goes to the right.
     func cardGoesRight(card: TinderCard) {
+        swipePrimaryCards(direction: "right", id: card.myCardId!)
         removeObjectAndAddNewValues()
     }
     func currentCardStatus(card: TinderCard, distance: CGFloat) {
@@ -429,4 +427,166 @@ class MyFlowLayout: UICollectionViewFlowLayout {
         attributes.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
         return attributes
     }
+}
+
+//MARK: - NETWORK OPERATION
+
+extension HomepageViewController{
+
+    func fetchUser(){
+        
+        Alamofire.request(Router.getUser()).responseJSON { (response) in
+            
+            switch response.result{
+                
+            case .success(let JSON):
+                
+                print(JSON)
+                
+                guard let jsonArray = JSON as? [NSDictionary] else {return}
+                
+                let userDict = jsonArray.first
+                
+                BSUserDefaults.setLoggedInUserDict(userDict!)
+                
+                self.checkUser = BSUserDefaults.loggedInUser()
+                if self.checkUser?.preferences?.count == 0{
+                    self.updateUI(toHide: true)
+                    
+                }else{
+                    self.updateUI(toHide: false)
+                    
+                }
+                
+                
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
+        
+    }
+    
+    
+    func getQuestions(){
+        
+        Alamofire.request(Router.getQuestions()).responseJSON { (response) in
+            
+            switch response.result{
+            case .success( _):
+                
+                let question = try? JSONDecoder().decode(Questionnaire.self, from: response.data!)
+                myQuestions = question!
+                
+                break
+                
+            case .failure(let error):
+                print(error)
+                
+            }
+            
+            
+        }
+        
+        
+        
+    }
+
+    func getThemeCards(){
+     
+        Alamofire.request(Router.getThemeboardCards()).responseJSON { (respomse) in
+            
+            switch respomse.result{
+                
+            case .success(let JSON):
+                
+                print(JSON)
+                
+                guard let jsonArray = JSON as? [NSDictionary] else {return}
+                
+                for items in jsonArray{
+                    var themeCard = ThemeCards()
+                    
+                    themeCard.desc = items.value(forKey: "description") as? String
+                    themeCard.title = items.value(forKey: "title") as? String
+                    themeCard.cardId = items.value(forKey: "_id") as? String
+                    themeCard.image = items.value(forKey: "image") as? String
+                    self.cardSetType1.append(themeCard)
+                }
+                
+                self.loadCardValues()
+                
+             
+            case .failure(let error):
+                
+                print(error.localizedDescription)
+                
+            }
+        }
+        
+        
+    }
+    
+    func getAffinityCards(){
+        
+        Alamofire.request(Router.getAffinityCards()).responseJSON { (respomse) in
+            
+            switch respomse.result{
+                
+            case .success(let JSON):
+                
+                print(JSON)
+                
+                
+                self.allCardsArray.removeAll()
+                self.cardSetType1.removeAll()
+                guard let jsonArray = JSON as? [NSDictionary] else {return}
+                
+                for items in jsonArray{
+                    var themeCard = ThemeCards()
+                    
+                    themeCard.desc = items.value(forKey: "description") as? String
+                    themeCard.title = items.value(forKey: "title") as? String
+                    themeCard.cardId = items.value(forKey: "_id") as? String
+                    themeCard.image = items.value(forKey: "image") as? String
+                    self.cardSetType1.append(themeCard)
+                }
+                self.shouldPulsate = false
+                self.loadCardValues()
+                
+                
+            case .failure(let error):
+                
+                print(error.localizedDescription)
+                
+            }
+        }
+        
+    }
+
+    func swipePrimaryCards(direction: String, id: String){
+     
+        Alamofire.request(Router.postSwipedCards(direction: direction, cardId: id, isProduct: false)).responseJSON { (response) in
+            
+            
+            switch response.result{
+             
+            case .success(let JSON):
+                
+                print(JSON)
+                
+            case .failure(let error):
+                
+                print(error.localizedDescription)
+                
+            }
+            
+            
+            
+        }
+        
+        
+        
+    }
+
 }

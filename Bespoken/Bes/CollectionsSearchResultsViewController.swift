@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Alamofire
 
 class CollectionsSearchResultsViewController: UIViewController , UISearchResultsUpdating {
     
     @IBOutlet weak var collectionViewTags: UICollectionView!
     @IBOutlet weak var collectionViewResults: UICollectionView!
+    var items = [UIImage(named: "collection8") , UIImage(named: "collection2"), UIImage(named: "collection3") ,  UIImage(named: "collection4"), UIImage(named: "collection5"), UIImage(named: "collection6"), UIImage(named: "collection7"), UIImage(named: "collection1"), UIImage(named: "collection9")]
+
     var allProducts : [Product] = []{
         didSet{
             for each in allProducts{
@@ -30,9 +33,10 @@ class CollectionsSearchResultsViewController: UIViewController , UISearchResults
         }
     }
     
-    var searchResultFlowLayout: UICollectionViewFlowLayout {
+    var searchResultFlowLayout: UICollectionViewLayout {
         get {
-            return self.collectionViewResults.collectionViewLayout as! UICollectionViewFlowLayout
+            
+            return self.collectionViewResults!.collectionViewLayout
         }
     }
     
@@ -50,13 +54,16 @@ class CollectionsSearchResultsViewController: UIViewController , UISearchResults
     func setup() {
         
         self.tagFlowLayout.scrollDirection = .horizontal
-        self.searchResultFlowLayout.scrollDirection = .vertical
+//        self.searchResultFlowLayout.scrollDirection = .vertical
 //        self.tagsArray  = ["Sensual", "Sensual","Sensual","Sensual","Sensual", "Sensual","Sensual","Sensual"]
         collectionViewTags.delegate = self
         collectionViewTags.dataSource = self
         collectionViewResults.delegate = self
         collectionViewResults.dataSource = self
-        
+        getAllProductsAPI()
+        if let layout = collectionViewResults?.collectionViewLayout as? PinterestLayout {
+            layout.delegate = self
+        }
         
     }
 
@@ -67,7 +74,7 @@ extension CollectionsSearchResultsViewController : UICollectionViewDelegateFlowL
         
         if collectionView == collectionViewTags {
 //            let width = self.collectionViewResults.frame.width / 3 - self.searchResultFlowLayout.minimumInteritemSpacing
-            let cellSize : CGSize = CGSize(width: 100.0, height:  100.0)
+            let cellSize : CGSize = CGSize(width: 100.0, height:  30.0)
             return cellSize
         } else {
             
@@ -80,12 +87,17 @@ extension CollectionsSearchResultsViewController : UICollectionViewDelegateFlowL
 
     }
 }
+
 extension CollectionsSearchResultsViewController : UICollectionViewDelegate{
     
 }
 extension CollectionsSearchResultsViewController : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.tagsArray.count
+        if collectionView == collectionViewTags{
+            return self.tagsArray.count}
+        else{
+           return allProducts.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -98,8 +110,38 @@ extension CollectionsSearchResultsViewController : UICollectionViewDataSource{
         }
         else {
             let cell = self.collectionViewResults.dequeueReusableCell(withReuseIdentifier: "ResultsCollectionViewCell", for: indexPath) as! ResultsCollectionViewCell
+            cell.product = allProducts[indexPath.row]
             return cell
 
         }
+    }
+    
+    func getAllProductsAPI(){
+        Alamofire.request(Router.getAllProducts()).responseJSON(completionHandler: {(response) in
+            
+            switch response.result{
+            case .success(let JSON):
+                for each in (JSON as! [JSON]){
+                    var product = Product(json: each as JSON)
+                    self.allProducts.append(product)
+                }
+                self.collectionViewTags.reloadData()
+                
+            case .failure(let error):
+                print(error)
+            }
+            
+        })
+    }
+}
+extension CollectionsSearchResultsViewController: PinterestLayoutDelegate {
+    func collectionView(_ collectionView: UICollectionView,
+                        heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
+        
+        return (items[indexPath.item]?.size.height)!
+    }
+    func collectionView(_ collectionView: UICollectionView, widthForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+        return (items[indexPath.item]?.size.width)!
+        
     }
 }

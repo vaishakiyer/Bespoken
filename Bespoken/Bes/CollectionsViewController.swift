@@ -181,7 +181,6 @@ class CollectionsViewController: UIViewController {
     }
   @objc  func openSearch() {
         let resultsController = self.storyboard?.instantiateViewController(withIdentifier: "CollectionsSearchResultsViewController") as! CollectionsSearchResultsViewController
-    resultsController.allProducts = self.allProducts
         let searchController = UISearchController(searchResultsController: resultsController)
         // Setup the Search Controller
         searchController.delegate = self
@@ -190,6 +189,7 @@ class CollectionsViewController: UIViewController {
         searchController.searchBar.placeholder = "Search "
         definesPresentationContext = true
        self.navigationItem.rightBarButtonItem = nil
+    
         
                 self.navigationItem.searchController = searchController
         self.navigationItem.hidesSearchBarWhenScrolling = false

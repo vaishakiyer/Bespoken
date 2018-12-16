@@ -311,7 +311,7 @@ extension PersonalisationController : optionsDelegate{
                     if value.archived == true{
                         tab2Questions[tappedIndex.item].options?[index].archived = false
                     }
-                }
+                
                 else {
                     tab2Questions[tappedIndex.item].options?[index].archived = true
                 }
@@ -319,7 +319,7 @@ extension PersonalisationController : optionsDelegate{
             }
             
             
-            
+            }
         default:
             print("Error")
         }

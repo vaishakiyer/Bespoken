@@ -50,8 +50,8 @@
                         <viewLayoutGuide key="safeArea" id="Klk-gP-fKW"/>
                     </view>
                     <connections>
-                        <outlet property="description" destination="K8A-q5-o3y" id="5Up-Cy-sNy"/>
-                        <outlet property="title" destination="TVy-Lh-WR5" id="lg3-Zf-s6I"/>
+                        <outlet property="bdescription" destination="K8A-q5-o3y" id="u5H-Tl-uag"/>
+                        <outlet property="btitle" destination="TVy-Lh-WR5" id="LWr-RI-4QW"/>
                         <outlet property="videoView" destination="eYU-lx-tSb" id="6wD-Gi-zNI"/>
                     </connections>
                 </viewController>

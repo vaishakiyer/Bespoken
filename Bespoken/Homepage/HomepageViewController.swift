@@ -21,6 +21,10 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var ballButton: UIButton!
     
+    @IBAction func pinPressed(_ sender: Any) {
+        
+        
+    }
     //MARK: Declare Variables
     
     var listArray = ["EVENTS","COLLECTION","PERSONALISATION"]

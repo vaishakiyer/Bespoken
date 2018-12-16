@@ -113,10 +113,11 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
             
         }else{
             
+             ballButton.isHidden = false
              ballView.isHidden = true
             
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
                 
                 switch self.controlFlow{
                 case .Flow1_SelectGarment?:
@@ -243,27 +244,23 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
             }
             else if indexPath.item == 1{
                 
-                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
-                
-                nextVC?.completeAnsHandler = { (value) -> UIViewController in
-                    
-                    self.controlFlow = FlowAnalysis(rawValue: value)
-                    self.updateTheFlow()
-                    return (self.navigationController?.popViewController(animated: true))!
-                    
-                    
-                }
-                
-                self.navigationController?.pushViewController(nextVC!, animated: true)
-                
+//                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//                let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
+//
+//                nextVC?.completeAnsHandler = { (value) -> UIViewController in
+//
+//                    self.controlFlow = FlowAnalysis(rawValue: value)
+//                    self.updateTheFlow()
+//                    return (self.navigationController?.popViewController(animated: true))!
 //
 //
+//                }
 //
-//
-//                            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//                            let nextVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as! UINavigationController
-//                self.present(nextVC, animated: true, completion: nil)
+//                self.navigationController?.pushViewController(nextVC!, animated: true)
+
+                            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                            let nextVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as! UINavigationController
+                self.present(nextVC, animated: true, completion: nil)
                 
             }else if indexPath.item == 0{
                 

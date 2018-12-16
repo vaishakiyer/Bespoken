@@ -65,18 +65,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var currentLocation: CLLocation!
         
+        
         if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() ==  .authorizedAlways){
             
             currentLocation = locManager.location
-            
-            
-//            let latitude = currentLocation.coordinate.latitude.description
-//            let longitude = currentLocation.coordinate.longitude.description
-//
-//            myLocation.latitude = latitude
-//            myLocation.longitude = longitude
+            if currentLocation != nil{
+                myLocation.latitude = currentLocation.coordinate.latitude.description
+                myLocation.longitude = currentLocation.coordinate.longitude.description
+            }else{
+                myLocation.latitude = ""
+                myLocation.longitude = ""
+            }
         }
+
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 

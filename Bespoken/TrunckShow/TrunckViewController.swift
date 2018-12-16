@@ -38,7 +38,7 @@ class TrunckViewController: UIViewController {
     var mySections = [String]()
     var myEvents = TrunckShow()
     var myGroupedEvents = [TrunckShow]()
-    var completeAnsHandler : ((_ value: String) -> UIViewController)!
+    var completeAnsHandler : ((_ value: String,_ trunckId: String) -> UIViewController)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -203,7 +203,7 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         
-        self.completeAnsHandler("F2TrunckShow")
+        self.completeAnsHandler("F2TrunckShow",myGroupedEvents[indexPath.section][indexPath.row].id!)
         self.navigationController?.popViewController(animated: true)
 
         
@@ -296,7 +296,7 @@ extension TrunckViewController{
         
          BSLoader.showLoading("", disableUI: true, image: "Group 376")
         
-        Alamofire.request(Router.getEvents()).responseJSON { (response) in
+        Alamofire.request(Router.getEvents(lat: myLocation.latitude!, long: myLocation.longitude!)).responseJSON { (response) in
             
             BSLoader.hide()
             

@@ -33,9 +33,9 @@ class ProductDetailViewController: UIViewController {
     }
 
     func playVideo(){
-        print(product!.styletip["video"]!)
+        print(product!.styletip?.video!)
 //        videoPlay.play(view: videoView, url: URL(string: (product!.styletip["video"]!))!)
-        var videoPlay = AVPlayer(url: URL(string: (product!.styletip["video"]!))!)
+        var videoPlay = AVPlayer(url: URL(string: ((product!.styletip?.video!)!))!)
         let playerLayer = AVPlayerLayer(player: videoPlay)
         playerLayer.frame = self.videoView.bounds
         self.videoView.layer.addSublayer(playerLayer)

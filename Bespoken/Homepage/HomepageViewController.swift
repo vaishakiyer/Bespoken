@@ -66,10 +66,13 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         if shouldPulsate == true{
             view.layer.addSublayer(halo)
         }else{
-           view.layer.sublayers!.removeLast()
+            
+            view.layer.sublayers!.removeLast()
+            getTheProducts()
+        
         }
         
-        getTheProducts()
+       
     }
     
     
@@ -148,7 +151,8 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         case .Flow1_SelectBrand:
             getThemeCards()
         case .Flow2_TrunckShow:
-              getTheProducts()
+            break
+            
         case .Flow1_SelectGarment:
             print("garment")
         case .lastFlow:
@@ -272,10 +276,10 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                 let nextVC = storyBoard.instantiateViewController(withIdentifier: "TrunckViewController") as? TrunckViewController
 
-                nextVC?.completeAnsHandler = { (value) -> UIViewController in
+                nextVC?.completeAnsHandler = { (value,id) -> UIViewController in
 
                     self.controlFlow = FlowAnalysis(rawValue: value)
-                    self.updateTheFlow()
+                    self.getProductForEvents(id: id)
                     
                     return (self.navigationController?.popViewController(animated: true))!
 
@@ -516,8 +520,6 @@ extension HomepageViewController{
             
         }
         
-        
-        
     }
 
     func getThemeCards(){
@@ -646,6 +648,55 @@ extension HomepageViewController{
                
                 self.shouldPulsate = false
                 self.loadCardValues()
+                                
+                
+            case .failure(let error):
+                
+                print(error.localizedDescription)
+            }
+            
+            
+        }
+        
+        
+        
+    }
+    
+    func getProductForEvents(id: String){
+        
+        Alamofire.request(Router.getTheCardsForEvent(eventID: id)).responseJSON { (response) in
+            
+            switch response.result{
+                
+            case .success(let JSON):
+                print(JSON)
+                
+                
+                self.allCardsArray.removeAll()
+                self.cardSetType1.removeAll()
+                
+                guard let jsonArray = JSON as? [NSDictionary] else {return}
+                
+                for items in jsonArray{
+                    
+                    let product = Product(json: items as! JSON)
+                    self.myAllCards.append(product)
+                    
+                    var themeCard = ThemeCards()
+                    
+                    themeCard.desc = items.value(forKey: "description") as? String
+                    themeCard.title = items.value(forKey: "title") as? String
+                    themeCard.cardId = items.value(forKey: "_id") as? String
+                    
+                    if let img = items.value(forKey: "images") as? [String]{
+                        themeCard.image = img.first
+                    }
+                    self.cardSetType1.append(themeCard)
+                    
+                }
+                
+                self.shouldPulsate = false
+                self.loadCardValues()
                 
                 switch self.controlFlow{
                 case .Flow1_SelectBrand?:
@@ -670,8 +721,9 @@ extension HomepageViewController{
         }
         
         
-        
     }
+    
+    
 
     func swipePrimaryCards(direction: String, id: String){
      

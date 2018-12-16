@@ -22,7 +22,7 @@ enum Router: URLRequestConvertible{
     case getQuestions()
     case getUser()
     case updateUser(answers: [NSDictionary])
-    case getEvents()
+    case getEvents(lat: String,long: String)
     case getNotifications()
     case getWishlistItems()
     case getAllProducts()
@@ -30,11 +30,12 @@ enum Router: URLRequestConvertible{
     case getAffinityCards()
     case postSwipedCards(direction: String, cardId: String,isProduct: Bool)
     case getTheCards()
+    case getTheCardsForEvent(eventID: String)
     
     
     var method: Alamofire.HTTPMethod {
         switch self {
-        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems,.getThemeboardCards,.getAffinityCards,.postSwipedCards,.getTheCards:
+        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems,.getThemeboardCards,.getAffinityCards,.postSwipedCards,.getTheCards,.getTheCardsForEvent:
             return .post
         default:
             return .get
@@ -74,6 +75,8 @@ enum Router: URLRequestConvertible{
             return "recordSwipe"
         case .getTheCards:
             return "getProducts"
+        case .getTheCardsForEvent:
+             return "getProducts"
         }
     }
     
@@ -117,6 +120,15 @@ enum Router: URLRequestConvertible{
                  parameters = ["direction": direction,"themeboard": cardId]
             }
             
+            return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
+        
+        case .getEvents(let lat,let long):
+            
+            let parameters = ["lat": lat,"long": long]
+            return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
+            
+        case .getTheCardsForEvent(let eventID):
+            let parameters = ["event_id": eventID]
             return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
             
         default:

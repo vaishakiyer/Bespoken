@@ -38,7 +38,7 @@ class TrunckViewController: UIViewController {
     var mySections = [String]()
     var myEvents = TrunckShow()
     var myGroupedEvents = [TrunckShow]()
-    var completeAnsHandler : ((_ value: String,_ trunckId: String) -> UIViewController)!
+    var completeAnsHandler : ((_ value: String,_ trunckId: String) -> [UIViewController])!
     
     override func viewDidLoad() {
         super.viewDidLoad()

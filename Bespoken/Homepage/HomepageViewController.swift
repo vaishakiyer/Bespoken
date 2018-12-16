@@ -251,21 +251,7 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
                 self.navigationController?.pushViewController(nextVC!, animated: true)
             }
             else if indexPath.item == 1{
-                
-//                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//                let nextVC = storyBoard.instantiateViewController(withIdentifier: "QuestionnaireController1") as? QuestionnaireController1
-//
-//                nextVC?.completeAnsHandler = { (value) -> UIViewController in
-//
-//                    self.controlFlow = FlowAnalysis(rawValue: value)
-//                    self.updateTheFlow()
-//                    return (self.navigationController?.popViewController(animated: true))!
-//
-//
-//                }
-//
-//                self.navigationController?.pushViewController(nextVC!, animated: true)
-
+        
                             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                             let nextVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as! UINavigationController
                 self.present(nextVC, animated: true, completion: nil)
@@ -276,12 +262,16 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                 let nextVC = storyBoard.instantiateViewController(withIdentifier: "TrunckViewController") as? TrunckViewController
 
-                nextVC?.completeAnsHandler = { (value,id) -> UIViewController in
+                nextVC?.completeAnsHandler = { (value,id) -> [UIViewController] in
 
                     self.controlFlow = FlowAnalysis(rawValue: value)
                     self.getProductForEvents(id: id)
                     
-                    return (self.navigationController?.popViewController(animated: true))!
+                    
+                    let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
+                    return  self.navigationController!.popToViewController( viewControllers[viewControllers.count - 2], animated: true)!
+                    
+//                    return (self.navigationController?.popViewController(animated: true))!
 
 
                 }

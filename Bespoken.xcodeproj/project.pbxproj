@@ -290,7 +290,6 @@
 				01E6F7FD21B6B90D0037970D /* PinterestLayout.swift */,
 				0118068721C109BF001EA439 /* TagsCollectionViewCell.swift */,
 				011806A721C27D84001EA439 /* ResultsCollectionViewCell.swift */,
-				011463CE21C56CC9003DF072 /* Product.swift */,
 				011463D221C57D3B003DF072 /* ProductDetailViewController.swift */,
 			);
 			name = Collections;
@@ -381,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				A53D597121AF144A009F993F /* Questionnaire.swift */,
+				011463CE21C56CC9003DF072 /* Product.swift */,
 				A5EB435B21B04E3E0056B24A /* User.swift */,
 				A5B4192021B592920032F35C /* TrunckShow.swift */,
 				A53B96EB21C002A10044C71A /* Location.swift */,

@@ -33,6 +33,7 @@ class TinderCard: UIView {
     var cardName : String?
     var myCardId : String?
     
+    
     weak var delegate: TinderCardDelegate?
     
     public init(frame: CGRect, value: String,descriptions: String,image: String,cardId: String) {

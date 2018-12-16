@@ -45,40 +45,40 @@ class TinderSwipeControllerViewController: UIViewController {
     
     @objc func nextPressed(){
         
-        switch controlFLow {
-            
-        case .Flow1_SelectBrand?:
-            
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
-            nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Garment")
-           DispatchQueue.main.asyncAfter(deadline: .now()) {
-            self.navigationController?.pushViewController(nextVC!, animated: true)
-           }
-           
-            
-            
-        case .Flow1_SelectGarment?:
-            
-            BSLoader.showLoading("CURATING YOUR STYLE STATEMENT NOW", disableUI: true, image: "Group 376")
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-                BSLoader.hide()
-                let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
-                  self.navigationController!.popToViewController(viewControllers[viewControllers.count - 4], animated: true)
-            }
-            
-            
-           break
-            
-        case .Flow2_TrunckShow?:
-            
-            break
-        
-        case .none:
-            print("case not identified")
-        }
-        
+//        switch controlFLow {
+//            
+//        case .Flow1_SelectBrand?:
+//
+//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//            let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
+//            nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Garment")
+//           DispatchQueue.main.asyncAfter(deadline: .now()) {
+//            self.navigationController?.pushViewController(nextVC!, animated: true)
+//           }
+//
+//
+//
+//        case .Flow1_SelectGarment?:
+//
+//            BSLoader.showLoading("CURATING YOUR STYLE STATEMENT NOW", disableUI: true, image: "Group 376")
+//
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+//                BSLoader.hide()
+//                let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
+//                  self.navigationController!.popToViewController(viewControllers[viewControllers.count - 4], animated: true)
+//            }
+//
+//
+//           break
+//
+//        case .Flow2_TrunckShow?:
+//
+//            break
+//
+//        case .none:
+//            print("case not identified")
+//        }
+//
     }
     
     func initialDataSetup(){
@@ -89,19 +89,19 @@ class TinderSwipeControllerViewController: UIViewController {
         nextButton.addTarget(self, action: #selector(nextPressed), for: .touchUpInside)
         loadCardValues()
     
-        switch controlFLow! {
-        case .Flow1_SelectBrand:
-            headerLabel.text = "Let us know your preference for brands"
-            createNavBar(title: "BRANDS")
-           
-        case .Flow1_SelectGarment:
-            createNavBar(title: "GARMENTS")
-             headerLabel.text = "Let us know your preference for garments"
-            
-        case .Flow2_TrunckShow:
-            createNavBar(title: "Trunck Collection")
-            headerLabel.text = "Let us know your favourites from the Trunck Show"
-        }
+//        switch controlFLow! {
+//        case .Flow1_SelectBrand:
+//            headerLabel.text = "Let us know your preference for brands"
+//            createNavBar(title: "BRANDS")
+//
+//        case .Flow1_SelectGarment:
+//            createNavBar(title: "GARMENTS")
+//             headerLabel.text = "Let us know your preference for garments"
+//
+//        case .Flow2_TrunckShow:
+//            createNavBar(title: "Trunck Collection")
+//            headerLabel.text = "Let us know your favourites from the Trunck Show"
+//        }
         
     }
     

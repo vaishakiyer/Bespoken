@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		011463CF21C56CC9003DF072 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011463CE21C56CC9003DF072 /* Product.swift */; };
 		011463D121C57C08003DF072 /* main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011463D021C57C08003DF072 /* main2.storyboard */; };
 		011463D321C57D3B003DF072 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011463D221C57D3B003DF072 /* ProductDetailViewController.swift */; };
+		011463D521C647E6003DF072 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011463D421C647E6003DF072 /* Product.swift */; };
+		011463D721C649F6003DF072 /* Themecards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011463D621C649F6003DF072 /* Themecards.swift */; };
 		0118068821C109BF001EA439 /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0118068721C109BF001EA439 /* TagsCollectionViewCell.swift */; };
 		011806A821C27D84001EA439 /* ResultsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011806A721C27D84001EA439 /* ResultsCollectionViewCell.swift */; };
 		011806AA21C28CBB001EA439 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011806A921C28CBB001EA439 /* ProfileViewController.swift */; };
@@ -32,7 +33,6 @@
 		A5082D8421A15E75005EBA41 /* Extension&Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8321A15E75005EBA41 /* Extension&Helper.swift */; };
 		A5082D8621A1838A005EBA41 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8521A1838A005EBA41 /* Router.swift */; };
 		A511931921A1BFB900453C89 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A511931821A1BFB900453C89 /* CustomTextField.swift */; };
-		A523095221C570E600CF4C30 /* ThemeCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523095121C570E600CF4C30 /* ThemeCards.swift */; };
 		A5231BA421A8432300463AE4 /* TrunckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5231BA321A8432300463AE4 /* TrunckViewController.swift */; };
 		A5231BA921A84FBE00463AE4 /* TrunckViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5231BA721A84FBE00463AE4 /* TrunckViewCell.swift */; };
 		A5231BAA21A84FBE00463AE4 /* TrunckViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5231BA821A84FBE00463AE4 /* TrunckViewCell.xib */; };
@@ -119,9 +119,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		011463CE21C56CC9003DF072 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		011463D021C57C08003DF072 /* main2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main2.storyboard; sourceTree = "<group>"; };
 		011463D221C57D3B003DF072 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		011463D421C647E6003DF072 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		011463D621C649F6003DF072 /* Themecards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themecards.swift; sourceTree = "<group>"; };
 		0118068721C109BF001EA439 /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
 		011806A721C27D84001EA439 /* ResultsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCollectionViewCell.swift; sourceTree = "<group>"; };
 		011806A921C28CBB001EA439 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -147,7 +148,6 @@
 		A5082D8321A15E75005EBA41 /* Extension&Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension&Helper.swift"; sourceTree = "<group>"; };
 		A5082D8521A1838A005EBA41 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A511931821A1BFB900453C89 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		A523095121C570E600CF4C30 /* ThemeCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCards.swift; sourceTree = "<group>"; };
 		A5231BA321A8432300463AE4 /* TrunckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrunckViewController.swift; sourceTree = "<group>"; };
 		A5231BA721A84FBE00463AE4 /* TrunckViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrunckViewCell.swift; sourceTree = "<group>"; };
 		A5231BA821A84FBE00463AE4 /* TrunckViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrunckViewCell.xib; sourceTree = "<group>"; };
@@ -291,6 +291,8 @@
 				0118068721C109BF001EA439 /* TagsCollectionViewCell.swift */,
 				011806A721C27D84001EA439 /* ResultsCollectionViewCell.swift */,
 				011463D221C57D3B003DF072 /* ProductDetailViewController.swift */,
+				011463D421C647E6003DF072 /* Product.swift */,
+				011463D621C649F6003DF072 /* Themecards.swift */,
 			);
 			name = Collections;
 			path = Bes;
@@ -380,11 +382,9 @@
 			isa = PBXGroup;
 			children = (
 				A53D597121AF144A009F993F /* Questionnaire.swift */,
-				011463CE21C56CC9003DF072 /* Product.swift */,
 				A5EB435B21B04E3E0056B24A /* User.swift */,
 				A5B4192021B592920032F35C /* TrunckShow.swift */,
 				A53B96EB21C002A10044C71A /* Location.swift */,
-				A523095121C570E600CF4C30 /* ThemeCards.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -831,6 +831,7 @@
 				A5F8FF4B21B853FC00C38AC2 /* customVideoCell.swift in Sources */,
 				A529D5D121A30F54005A221A /* QuestionnaireController1.swift in Sources */,
 				0118068821C109BF001EA439 /* TagsCollectionViewCell.swift in Sources */,
+				011463D721C649F6003DF072 /* Themecards.swift in Sources */,
 				A5B0C95721A4446B0058A064 /* DummyContent.swift in Sources */,
 				A5FBD7A821BED28000638D5F /* HeaderView.swift in Sources */,
 				A594F5F421A1446F001BD710 /* Bespoken.xcdatamodeld in Sources */,
@@ -841,15 +842,14 @@
 				011806AA21C28CBB001EA439 /* ProfileViewController.swift in Sources */,
 				A5F8FF4821B8536F00C38AC2 /* customVideoController.swift in Sources */,
 				A5B4192121B592920032F35C /* TrunckShow.swift in Sources */,
-				011463CF21C56CC9003DF072 /* Product.swift in Sources */,
 				A5FBD7A021BEC0E100638D5F /* SectionHeader.swift in Sources */,
 				A56CDF9D21ADB24000113997 /* MeasurementViewController.swift in Sources */,
 				A5082D8021A15A49005EBA41 /* OptionsViewCell.swift in Sources */,
 				A5B0C95C21A450760058A064 /* Homecenter1.swift in Sources */,
 				A5A38A8021A18ED500ED1088 /* Swift+Gif.swift in Sources */,
 				011463D321C57D3B003DF072 /* ProductDetailViewController.swift in Sources */,
+				011463D521C647E6003DF072 /* Product.swift in Sources */,
 				A5082D8421A15E75005EBA41 /* Extension&Helper.swift in Sources */,
-				A523095221C570E600CF4C30 /* ThemeCards.swift in Sources */,
 				A5B4191C21B50E000032F35C /* customTypeCell.swift in Sources */,
 				A5082D7C21A15905005EBA41 /* PersonalisationCell.swift in Sources */,
 				A529D5D421A31210005A221A /* CurationViewCell.swift in Sources */,

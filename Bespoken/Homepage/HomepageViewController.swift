@@ -22,11 +22,18 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     @IBOutlet weak var ballButton: UIButton!
     
     @IBAction func pinPressed(_ sender: Any) {
-        
+        let vc = UIStoryboard(name: "main2", bundle: nil).instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
+        for each in allProducts{
+            if each.id == allCardsArray[0].myCardId{
+                vc.product = each
+                self.navigationController?.pushViewController(vc, animated: true)
+
+            }
+        }
         
     }
     //MARK: Declare Variables
-    
+    var allProducts : [Product] = []
     var listArray = ["EVENTS","COLLECTION","PERSONALISATION"]
     let videoPlay = VideoBackground()
     let halo = PulsingHaloLayer()
@@ -166,6 +173,9 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.darkGray
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.darkGray
+
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
     }
@@ -346,7 +356,7 @@ extension HomepageViewController{
     }
     @objc func openProfile(){
         let profileVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
-        self.present(profileVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(profileVC, animated: true)
     }
     
     @objc func loadInitialDummyAnimation() {
@@ -623,6 +633,7 @@ extension HomepageViewController{
                 
                 self.allCardsArray.removeAll()
                 self.cardSetType1.removeAll()
+                self.allProducts.removeAll()
                 
                 guard let jsonArray = JSON as? [NSDictionary] else {return}
                 
@@ -630,7 +641,7 @@ extension HomepageViewController{
                     
                      let product = Product(json: items as! JSON)
                      self.myAllCards.append(product)
-                    
+                     self.allProducts.append(product)
                     var themeCard = ThemeCards()
                     
                     themeCard.desc = items.value(forKey: "description") as? String

@@ -166,6 +166,9 @@ class CollectionsViewController: UIViewController {
     func initializeView()  {
         
         self.navigationItem.hidesSearchBarWhenScrolling = false
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
         self.hamburgerMenuLeftConstraint.constant = -self.hamburgerMenu.frame.size.width
         self.shadowView.alpha = 0
         self.shadowView.isHidden = true
@@ -239,6 +242,7 @@ extension CollectionsViewController : UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = UIStoryboard(name: "main2", bundle: nil).instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
         vc.product = allProducts[indexPath.row]
+
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

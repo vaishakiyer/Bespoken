@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 typealias JSON = [String : Any]
 
 import Foundation
@@ -54,7 +55,13 @@ struct StyleTip {
     var cardId : String?
     var author : String?
     var text: String?
-    var video : String?
+    var video : String?{
+        didSet{
+        }
+    }
+    var localVideoURL : URL?
+    
+    
     
     init(json: NSDictionary) {
         
@@ -62,6 +69,27 @@ struct StyleTip {
         author = json.value(forKey: "author") as? String
         text = json.value(forKey: "text") as? String
         video = json.value(forKey: "video") as? String
+        downloadVideo(url: video)
+        
+    }
+    mutating func downloadVideo(url : String?) {
+        
+        let _ = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory)
+        let documentDicrectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let video = documentDicrectory?.appendingPathComponent("Videos")
+        if !FileManager.default.fileExists(atPath: video!.path) {
+            try? FileManager.default.createDirectory(at: video!, withIntermediateDirectories: true, attributes: nil)
+        }
+        let videoStoragePath = video!.appendingPathComponent(self.cardId! + ".mp4")
+        localVideoURL = videoStoragePath
+
+        Alamofire.download(url!, method: .get, parameters: nil) { (_, _) -> (destinationURL: URL, options: DownloadRequest.DownloadOptions) in
+            return (videoStoragePath, .createIntermediateDirectories)
+            }.response { (response) in
+                response.resumeData
+                print("video downloaded")
+        }
     }
     
 }
+

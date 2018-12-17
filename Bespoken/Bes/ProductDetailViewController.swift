@@ -19,6 +19,7 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet var videoView: UIView!
     var videoPlay = VideoBackground()
     var product : Product?
+    var loadingIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -33,7 +34,6 @@ class ProductDetailViewController: UIViewController {
         playVideo()
         btitle.text = product!.title
         bdescription.text = product!.description
-        var loadingIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
         loadingIndicator.startAnimating()
         loaderView.addSubview(loadingIndicator)
     }
@@ -41,14 +41,33 @@ class ProductDetailViewController: UIViewController {
     func playVideo(){
         print(product!.styletip!.video)
         let videoURL : URL = URL(string: (product!.styletip!.video!))!
+        
         videoPlay.isMuted = false
         videoPlay.willLoopVideo = true
-        videoPlay.play(view: videoView, url: videoURL )
-//        var videoPlay = AVPlayer(url: URL(string: (product!.styletip!.video!))!)
+//      try?  videoPlay.play(view: videoView, videoName: (product?.styletip?.cardId)!  + ".mp4", videoType: "mp4", isMuted: true, darkness: 0, willLoopVideo: true, setAudioSessionAmbient: false)
+        try? videoPlay.play(view: videoView, url: (product!.styletip?.localVideoURL!)! )
+//        let videoPlay = AVPlayer(url: videoURL)
 //        let playerLayer = AVPlayerLayer(player: videoPlay)
-//        playerLayer.frame = self.view.bounds
+//        playerLayer.frame = self.videoView.bounds
 //        self.videoView.layer.addSublayer(playerLayer)
+//
 //        videoPlay.play()
+//        videoPlay.addPeriodicTimeObserver(forInterval: CMTimeMake(value: 1, timescale: 600), queue: DispatchQueue.main, using: { time in
+//
+//            if videoPlay.currentItem?.status == AVPlayerItem.Status.readyToPlay {
+//
+//                if let isPlaybackLikelyToKeepUp = videoPlay.currentItem?.isPlaybackLikelyToKeepUp {
+//                    //do what ever you want with isPlaybackLikelyToKeepUp value, for example, show or hide a activity indicator.
+//                    if isPlaybackLikelyToKeepUp{
+//                        self.loadingIndicator.stopAnimating()
+//                    }
+//                    else{
+//                        self.loadingIndicator.startAnimating()
+//                    }
+//                    //MBProgressHUD.hide(for: self.view, animated: true)
+//                }
+//            }
+//        })
 //        BSLoader.showLoading()
 //        videoPlay.addPeriodicTimeObserver(forInterval: CMTimeMake(value: 1, timescale: 600), queue: DispatchQueue.main, using: { time in
 //            

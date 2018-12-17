@@ -279,8 +279,14 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
                     
                     
                     let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
-                    return  self.navigationController!.popToViewController( viewControllers[viewControllers.count - 2], animated: true)!
+//                    return  self.navigationController!.popToViewController( viewControllers[viewControllers.count - 1], animated: true)!
+                    for  i in viewControllers{
+                        if i is HomepageViewController{
+                            return  self.navigationController!.popToViewController( i, animated: true)!
+                        }
                     
+                    }
+                    return viewControllers
 //                    return (self.navigationController?.popViewController(animated: true))!
 
 

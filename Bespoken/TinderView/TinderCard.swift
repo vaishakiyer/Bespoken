@@ -71,6 +71,7 @@ class TinderCard: UIView {
         if let url = URL(string: image){
              backGroundImageView.af_setImage(withURL: url)
         }
+        backGroundImageView.backgroundColor = UIColor.gray
         backGroundImageView.contentMode = .scaleAspectFill
         backGroundImageView.clipsToBounds = true;
         addSubview(backGroundImageView)

@@ -47,6 +47,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     var controlFlow : FlowAnalysis?
     var shouldPulsate : Bool = false
     
+    var count : Int = 0
     var currentIndex = 0
     var currentLoadedCardsArray = [TinderCard](){
         didSet{
@@ -78,7 +79,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     @objc func startPulsating(){
         
-        
+        count += 1
         let halo = PulsingHaloLayer()
         halo.position = viewTinderBackGround.center
         halo.start()
@@ -88,9 +89,12 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         if shouldPulsate == true{
             view.layer.addSublayer(halo)
         }else{
-            
+            if count < 2{
             view.layer.sublayers!.removeLast()
-            getTheProducts()
+                getTheProducts()
+            }
+        
+            
         
         }
         
@@ -101,7 +105,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         playVideoInBackgroud()
-        
+        count = 0
         if currentLoadedCardsArray.count == 0 && checkUser != nil{
         let halo = PulsingHaloLayer()
         halo.position = viewTinderBackGround.center
@@ -668,6 +672,7 @@ extension HomepageViewController{
                     
                 }
                
+                self.count = 0
                 self.shouldPulsate = false
                 self.loadCardValues()
                                 

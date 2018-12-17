@@ -292,11 +292,14 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
                     if self.isFlipped == false{
                         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                         let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
-                        self.nextVC.navigationController?.pushViewController(nextVC1!, animated: true)
+                        
+                        let nc = UINavigationController(rootViewController: nextVC1!)
+                        self.nextVC.present(nc, animated: true, completion: nil)
                     }else{
                         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                         let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
-                        self.navigationController?.pushViewController(nextVC1!, animated: true)
+                        let nc = UINavigationController(rootViewController: nextVC1!)
+                        self.present(nc, animated: true, completion: nil)
                     }
                    
                     

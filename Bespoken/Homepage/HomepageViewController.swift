@@ -13,6 +13,8 @@ import PulsingHalo
 
 class HomepageViewController: UIViewController,CAAnimationDelegate {
 
+    @IBOutlet var greenButton: UIButton!
+    @IBOutlet var redButton: UIButton!
     @IBOutlet weak var GifImgView: UIImageView!
     @IBOutlet weak var optionCollection: UICollectionView!
     @IBOutlet weak var videoBackgroudView: UIView!
@@ -23,13 +25,17 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     @IBAction func pinPressed(_ sender: Any) {
         let vc = UIStoryboard(name: "main2", bundle: nil).instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
+        if currentLoadedCardsArray.isEmpty{
+            
+        }
+        else{
         for each in allProducts{
-            if each.id == allCardsArray[0].myCardId{
+            if each.id == currentLoadedCardsArray.last!.myCardId{
                 vc.product = each
                 self.navigationController?.pushViewController(vc, animated: true)
 
             }
-        }
+            }}
         
     }
     //MARK: Declare Variables
@@ -42,7 +48,16 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     var shouldPulsate : Bool = false
     
     var currentIndex = 0
-    var currentLoadedCardsArray = [TinderCard]()
+    var currentLoadedCardsArray = [TinderCard](){
+        didSet{
+            if currentLoadedCardsArray.isEmpty{
+                self.greenButton.isEnabled = false
+            }
+            else{
+                self.greenButton.isEnabled = true
+            }
+        }
+    }
     var allCardsArray = [TinderCard]()
     var cardSetType1 = [ThemeCards]()
     var myAllCards = [Product]()

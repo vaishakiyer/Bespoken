@@ -90,10 +90,8 @@ extension NotificationViewController : UITableViewDataSource{
 }
 extension NotificationViewController {
     func getNotificationsAPI() {
-        BSLoader.showLoading("", disableUI: true, image: "Group 376")
         Alamofire.request(Router.getNotifications()).responseJSON{
             response in
-            BSLoader.hide()
 
             switch response.result {
             case .success(let JSON):

@@ -9,6 +9,7 @@ PODS:
     - AlamofireImage (~> 3.0)
     - ImageSlideshow/Core
   - ImageSlideshow/Core (1.7.0)
+  - LTMorphingLabel (0.5.9)
   - PulsingHalo (0.2.8)
   - QRCodeReader.swift (9.0.1)
   - SwiftVideoBackground (3.1.0)
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - CircleProgressView
   - ImageSlideshow (~> 1.6)
   - ImageSlideshow/Alamofire
+  - LTMorphingLabel
   - PulsingHalo
   - QRCodeReader.swift (~> 9.0.1)
   - SwiftVideoBackground (~> 3.0)
@@ -33,6 +35,7 @@ SPEC REPOS:
     - AlamofireImage
     - CircleProgressView
     - ImageSlideshow
+    - LTMorphingLabel
     - PulsingHalo
     - QRCodeReader.swift
     - SwiftVideoBackground
@@ -44,12 +47,13 @@ SPEC CHECKSUMS:
   AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
   CircleProgressView: 6b5b091d59dc5e5d2fda84e637a40498cdc39937
   ImageSlideshow: f8eec5e37a980f60923b585ff23b0e140fd24018
+  LTMorphingLabel: e6047354486aa4ba52d36ccc40be8874b50e1ef1
   PulsingHalo: 64938e4bd3893b823abdf01478084cd92445af2b
   QRCodeReader.swift: 96292a5612fbc2fd9a0b26f93fa5164c8d02f59d
   SwiftVideoBackground: 628408dbd5eb20b5f82f394aac9615d29aecb2f6
   TOPasscodeViewController: 03b5df3762a7be1511102093c644a42275bddf24
   YLProgressBar: 365b6c5e934be18b661f79413db33c993c8e8251
 
-PODFILE CHECKSUM: 52cf7c565e6dc7dfeef6ba76f4d7ab2fa2460d34
+PODFILE CHECKSUM: e176184676b6d5c073058c018ac470b8db5738b0
 
 COCOAPODS: 1.5.3

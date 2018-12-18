@@ -68,7 +68,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        getStylewords()
         setup()
         optionCollection.isHidden = false
         ballButton.addTarget(self, action: #selector(startPulsating), for: .touchUpInside)
@@ -775,6 +775,32 @@ extension HomepageViewController{
             
         }
         
+        
+        
+    }
+    
+    
+    func getStylewords(){
+        
+        Alamofire.request(Router.getStyleWords()).responseJSON { (response) in
+            
+            switch response.result{
+                
+            case .success(let JSON):
+                
+                print(JSON)
+                
+                guard let wordList = (JSON as? NSDictionary)?.value(forKey: "words") as? [String] else {return}
+                
+                BSUserDefaults.setLoggedWords(wordList)
+                
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+            
+            
+        }
         
         
     }

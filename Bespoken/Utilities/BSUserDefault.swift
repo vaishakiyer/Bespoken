@@ -12,6 +12,7 @@ import UIKit
 private let kAccessToken = "kAccessToken"
 private let kUser = "kUser"
 private let kLoggedName = "kName"
+private let kWords = "kWords"
 
 
 
@@ -48,6 +49,16 @@ class BSUserDefaults{
         sharedInstance.set(try? NSKeyedArchiver.archivedData(withRootObject: userDict, requiringSecureCoding: true), forKey: kUser)
         sharedInstance.synchronize()
     }
+    
+    class func setLoggedWords(_ words: [String]){
+        sharedInstance.set(words, forKey: kWords)
+        sharedInstance.synchronize()
+    }
+    
+    class func getLoggedWords() -> [String]?{
+        return sharedInstance.value(forKey: kWords) as? [String]
+    }
+    
     
     
 }

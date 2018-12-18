@@ -31,11 +31,12 @@ enum Router: URLRequestConvertible{
     case postSwipedCards(direction: String, cardId: String,isProduct: Bool)
     case getTheCards()
     case getTheCardsForEvent(eventID: String)
+    case getStyleWords()
     
     
     var method: Alamofire.HTTPMethod {
         switch self {
-        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems,.getThemeboardCards,.getAffinityCards,.postSwipedCards,.getTheCards,.getTheCardsForEvent:
+        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems,.getThemeboardCards,.getAffinityCards,.postSwipedCards,.getTheCards,.getTheCardsForEvent,.getStyleWords:
             return .post
         default:
             return .get
@@ -77,6 +78,8 @@ enum Router: URLRequestConvertible{
             return "getProducts"
         case .getTheCardsForEvent:
              return "getProducts"
+        case .getStyleWords:
+            return "getStyleWords"
         }
     }
     

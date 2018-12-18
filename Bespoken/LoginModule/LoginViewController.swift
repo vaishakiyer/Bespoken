@@ -6,7 +6,6 @@
 //  Copyright © 2018 jagdish.bespoken. All rights reserved.
 //
 
-let VerifyPasscode = "1234"
 
 import UIKit
 import TOPasscodeViewController
@@ -58,6 +57,7 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         
          GifView.loadGif(name: "welcomeGif")
          setup()
+        checkInternetConnectivity()
          self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
@@ -188,6 +188,16 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         createChangedOnFlip()
       
     }
+    func checkInternetConnectivity() {
+        if Reachability.isConnectedToNetwork(){
+            return
+        }
+        else{
+            let alertCont = UIAlertController(title: "Alert", message: "No Internet Connection detected", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: {ok in self.dismiss(animated: true, completion: nil)  })
+            alertCont.addAction(okAction)
+            self.present(alertCont, animated: true)            }
+    }
     
     func createChangedOnFlip(){
         
@@ -227,11 +237,20 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
     @objc func signInOrSignUpPressed(){
         
         self.view.endEditing(true)
-        
+        if Reachability.isConnectedToNetwork(){
+                    }
+        else{
+            let alertCont = UIAlertController(title: "Alert", message: "No Internet Connection detected", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: {ok in self.dismiss(animated: true, completion: nil)  })
+            alertCont.addAction(okAction)
+            self.present(alertCont, animated: true)            }
         switch isFlipped {
         case false:
-            
-            loginIsPressedSignUp()
+            let alertCont = UIAlertController(title: "Congrats", message: "You will get a passcode to the registered email. Please enter it in the next step", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: {ok in self.loginIsPressedSignUp()  })
+            alertCont.addAction(okAction)
+            self.present(alertCont, animated: true)
+//            loginIsPressedSignUp()
          //   let nc = UINavigationController.init(rootViewController: self.firstTimeVC)
          //   self.present(nc, animated: true, completion: nil)
             

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C51D2FBB98780412EAF590E17BF39DD0"
+               BlueprintIdentifier = "C52EA28191D91D9952E876463F7F8A91"
                BlueprintName = "PulsingHalo"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "PulsingHalo.framework">

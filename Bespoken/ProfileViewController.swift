@@ -25,17 +25,18 @@ class ProfileViewController: UIViewController {
     func setup()  {
         self.profileImage.image =  self.profileImage.image?.af_imageRounded(withCornerRadius: 500)
         self.logoutButton.roundCorners(corners: UIRectCorner(arrayLiteral: .allCorners), radius: 20)
-//        self.shadowView.dropShadow(color: UIColor.black, offSet: CGSize(width: 10, height: 10))
-        let progressBar = YLProgressBar(frame: self.progressView.frame)
+        self.shadowView.dropShadow(color: UIColor.black, offSet: CGSize(width: 10, height: 10))
+        let progressBar = YLProgressBar(frame: self.progressView.bounds)
         progressBar.cornerRadius = 0
         progressBar.progressTintColor = UIColor.black
+        self.progressView.addSubview(progressBar)
         progressView.translatesAutoresizingMaskIntoConstraints = false
-        let leftConstraint = NSLayoutConstraint(item: progressBar, attribute: NSLayoutConstraint.Attribute.left, relatedBy: NSLayoutConstraint.Relation.equal, toItem: progressView, attribute: NSLayoutConstraint.Attribute.left, multiplier: 1, constant: 0)
-        let rightConstraint = NSLayoutConstraint(item: progressBar, attribute: NSLayoutConstraint.Attribute.right, relatedBy: NSLayoutConstraint.Relation.equal, toItem: progressView, attribute: NSLayoutConstraint.Attribute.right, multiplier: 1, constant: 0)
+        let leftConstraint = NSLayoutConstraint(item: progressBar, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: progressView, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: 0)
+        let rightConstraint = NSLayoutConstraint(item: progressBar, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: progressView, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1, constant: 0)
         let topConstraint = NSLayoutConstraint(item: progressBar, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: progressView, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: 0)
         let bottomConstraint = NSLayoutConstraint(item: progressBar, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: progressView, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: 0)
-//        progressBar.addConstraints([leftConstraint, rightConstraint ,topConstraint, bottomConstraint])
-        self.progressView.addSubview(progressBar)
+        progressView.addConstraints([leftConstraint, rightConstraint ,topConstraint, bottomConstraint])
+        
     }
     
 

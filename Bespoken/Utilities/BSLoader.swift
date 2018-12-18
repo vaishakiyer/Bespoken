@@ -16,11 +16,11 @@ public struct BSLoader {
     public static var pulseAnimation = true
     public static var activityColor: UIColor = UIColor.white
     public static var activityBackgroundImage : String = "Group 376"
-    public static var activityBackgroundColor: UIColor = UIColor.darkGray
+    public static var activityBackgroundColor: UIColor = UIColor.gray
     public static var activityTextColor: UIColor = UIColor.white
     public static var activityTextFontName: UIFont = UIFont.systemFont(ofSize: 23)
     fileprivate static var activityWidth = (UIScreen.screenWidth / widthDivision) / 1.5
-    fileprivate static var activityHeight = activityWidth
+    fileprivate static var activityHeight = activityWidth / 0.66
     public static var widthDivision: CGFloat {
         get {
             guard UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad else {
@@ -66,7 +66,7 @@ public struct BSLoader {
             autoresizingMask = [.flexibleTopMargin, .flexibleLeftMargin, .flexibleBottomMargin, .flexibleRightMargin]
             backgroundColor = activityBackgroundColor
             alpha = 1
-            layer.cornerRadius = frame.width / 2
+//            layer.cornerRadius = frame.width / 2
             
             let yPosition = frame.height/2 - 20
             
@@ -242,7 +242,7 @@ fileprivate extension BSLoader{
                     }
                     BSLoader.backgroundView.backgroundColor = UIColor.black.withAlphaComponent(0)
                     topMostViewController?.view.addSubview(BSLoader.backgroundView)
-                    UIView.animate(withDuration: 0.2, animations: {BSLoader.backgroundView.backgroundColor = BSLoader.backgroundView.backgroundColor?.withAlphaComponent(0.5)})
+                    UIView.animate(withDuration: 0.2, animations: {BSLoader.backgroundView.backgroundColor = BSLoader.backgroundView.backgroundColor?.withAlphaComponent(0)})
                 }
                 BSLoader.instance?.showLoadingActivity()
             }

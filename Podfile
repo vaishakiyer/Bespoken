@@ -15,6 +15,7 @@ target 'Bespoken' do
   pod 'ImageSlideshow', '~> 1.6'
   pod 'ImageSlideshow/Alamofire'
   pod 'YLProgressBar'
+  pod 'LTMorphingLabel'
 #  pod 'FacebookCore'
 #  pod 'FacebookLogin'
 #  pod 'FacebookShare'

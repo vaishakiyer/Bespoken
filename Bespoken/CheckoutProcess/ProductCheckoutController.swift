@@ -37,9 +37,18 @@ class ProductCheckoutController: UIViewController {
     func setup(){
         
         nextButton.roundCorners(corners: .allCorners, radius: 24)
+        nextButton.addTarget(self, action: #selector(goToMeasurement), for: .touchUpInside)
         
     }
     
+    
+    @objc func goToMeasurement(){
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = storyBoard.instantiateViewController(withIdentifier: "MeasurementViewController") as? MeasurementViewController
+        self.navigationController?.pushViewController(nextVC!, animated: true)
+        
+    }
     /*
     // MARK: - Navigation
 

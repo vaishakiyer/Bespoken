@@ -18,7 +18,6 @@ protocol TrunckViewDelegate{
 class TrunckViewCell: UICollectionViewCell {
 
     @IBOutlet weak var outerView: UIView!
-    @IBOutlet weak var scannerView: UIView!
     @IBOutlet weak var previewButton: UIButton!
     @IBOutlet weak var scannerButton: UIButton!
     @IBOutlet weak var bkgImage: UIImageView!
@@ -28,9 +27,9 @@ class TrunckViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        scannerView.layer.borderWidth = 0.5
-        scannerView.layer.borderColor = UIColor.white.cgColor
-        scannerView.roundCorners(corners: .allCorners, radius: 6)
+//        scannerView.layer.borderWidth = 0.5
+//        scannerView.layer.borderColor = UIColor.white.cgColor
+//        scannerView.roundCorners(corners: .allCorners, radius: 6)
         outerView.roundCorners(corners: .allCorners, radius: 24)
         
         previewButton.addTarget(self, action: #selector(previewPressed), for: .touchUpInside)

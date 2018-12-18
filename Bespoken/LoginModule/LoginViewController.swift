@@ -311,11 +311,14 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
                     if self.isFlipped == false{
                         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                         let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
-                        self.nextVC.navigationController?.pushViewController(nextVC1!, animated: true)
+                        
+                        let nc = UINavigationController(rootViewController: nextVC1!)
+                        self.nextVC.present(nc, animated: true, completion: nil)
                     }else{
                         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                         let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
-                        self.navigationController?.pushViewController(nextVC1!, animated: true)
+                        let nc = UINavigationController(rootViewController: nextVC1!)
+                        self.present(nc, animated: true, completion: nil)
                     }
                    
                     
@@ -476,13 +479,21 @@ extension LoginViewController: TOPasscodeSettingsViewControllerDelegate,TOPassco
     func passcodeSettingsViewController(_ passcodeSettingsViewController: TOPasscodeSettingsViewController, didChangeToNewPasscode passcode: String, of type: TOPasscodeType) {
         
         print(passcode)
-        loginInfo.password = passcode
         
-//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//        let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
-//        self.nextVC.navigationController?.pushViewController(nextVC1!, animated: true)
+        if passcode.count < 8{
+            
+            let alertControl = UIAlertController(title: "", message: "Choose a password with atleast 8 characters for unlocking the app", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertControl.addAction(okAction)
+            passcodeSettingsViewController.present(alertControl, animated: true, completion: nil)
+            
+        }else{
+            loginInfo.password = passcode
+            confirmUser()
+        }
         
-        confirmUser()
+       
         
 
     }
@@ -511,22 +522,7 @@ extension LoginViewController: TOPasscodeSettingsViewControllerDelegate,TOPassco
         
     }
     
-//    func passcodeSettingsViewController(_ passcodeSettingsViewController: TOPasscodeSettingsViewController, didAttemptCurrentPasscode passcode: String) -> Bool {
-//
-//        if passcode != VerifyPasscode{
-//              return false
-//
-//        }else{
-//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//            let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
-//            passcodeSettingsViewController.navigationController?.pushViewController(nextVC1!, animated: true)
-//            return true
-//
-//        }
-//
-//
-//
-//    }
+
     
     
 }

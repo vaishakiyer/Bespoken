@@ -37,6 +37,7 @@ class SizeTypeViewController: UIViewController {
         sizeCollection.register(UINib(nibName: "SizeSliderCell", bundle: nil), forCellWithReuseIdentifier: "SizeSliderCell")
         sizeCollection.register(UINib(nibName: "customTypeCell", bundle: nil), forCellWithReuseIdentifier: "customTypeCell")
         nextButton.roundCorners(corners: .allCorners, radius: 12)
+        nextButton.addTarget(self, action: #selector(toBagController), for: .touchUpInside)
         segmentControl.addTarget(self, action: #selector(segmentChanged(sender:)), for: .allEvents)
         measuredByView.isHidden = true
         
@@ -61,6 +62,13 @@ class SizeTypeViewController: UIViewController {
         
     }
     
+    @objc func toBagController(){
+    
+    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+    let nextVC = storyBoard.instantiateViewController(withIdentifier: "BagViewController") as? BagViewController
+    self.navigationController?.pushViewController(nextVC!, animated: true)
+
+    }
 
     /*
     // MARK: - Navigation

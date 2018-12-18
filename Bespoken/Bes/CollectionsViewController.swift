@@ -50,6 +50,7 @@ class CollectionsViewController: UIViewController {
         searchController.hidesNavigationBarDuringPresentation = true
         searchController.searchBar.showsBookmarkButton = true
         searchController.searchBar.delegate = self
+        searchController.searchBar.tintColor = UIColor.black
         searchController.searchBar.setImage(UIImage(named: "qrcode"), for: .bookmark, state: .normal)
         
         return searchController
@@ -176,11 +177,9 @@ class CollectionsViewController: UIViewController {
         self.hamburgerMenuTableView.dataSource = self
         self.hamburgerMenuTableView.tableFooterView = nil
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(openMenu))
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
 //        self.navigationItem.rightBarButtonItem = searchButton
         self.title = "Collections"
-//        self.navigationItem.largeTitleDisplayMode = .automatic
-//        self.navigationBar.prefersLargeTitles = true
-//        self.navigationBarTitle.largeTitleDisplayMode = .automatic
     }
   @objc  func openSearch() {
         let resultsController = self.storyboard?.instantiateViewController(withIdentifier: "CollectionsSearchResultsViewController") as! CollectionsSearchResultsViewController
@@ -234,9 +233,9 @@ extension CollectionsViewController : UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier:"CollectionsCollectionViewCell" , for: indexPath) as! CollectionsCollectionViewCell
+        cell.delegate = self as CollectionsCollectionViewCellDelegate
+        cell.indexPath = indexPath
         cell.product = self.allProducts[indexPath.row]
-//        cell.imageView.image = items[indexPath.row]!
-
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -250,14 +249,33 @@ extension CollectionsViewController : UICollectionViewDelegate, UICollectionView
 extension CollectionsViewController: PinterestLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
-        
-        return (items[indexPath.item]?.size.height)!
+        let imageUrl : String = allProducts[indexPath.row].images[0]
+        return allProducts[indexPath.row].imageSizes[imageUrl]?.height ?? 20
     }
-    func collectionView(_ collectionView: UICollectionView, widthForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-        return (items[indexPath.item]?.size.width)!
+    func collectionView(_ collectionView: UICollectionView,
+                        widthForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+        let imageUrl : String = allProducts[indexPath.row].images[0]
+        return allProducts[indexPath.row].imageSizes[imageUrl]?.width ?? 20
 
     }
 }
+
+
+extension CollectionsViewController: CollectionsCollectionViewCellDelegate {
+    func didFinishLoadingImage(_ cell: UICollectionViewCell) {
+        
+        let cell = cell as! CollectionsCollectionViewCell
+//        self.collectionView.reloadItems(at: [cell.indexPath!])
+//        self.collectionView.collectionViewLayout.invalidateLayout()
+
+        self.collectionView.reloadData()
+        self.collectionView.layoutIfNeeded()
+    
+    }
+    
+    
+}
+
 extension CollectionsViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5

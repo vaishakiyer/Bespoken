@@ -15,11 +15,24 @@ class DesignableUITextField: UITextField {
     
     // Provides left padding for images
     override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
-        var textRect = super.leftViewRect(forBounds: bounds)
-        textRect.origin.x += leftPadding
-        return textRect
+        var leftViewRect = super.leftViewRect(forBounds: bounds)
+        leftViewRect.origin.x += leftPadding
+        leftViewRect.origin.y = -5
+        return leftViewRect
     }
     
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        var textRect = super.textRect(forBounds: bounds)
+        textRect.origin.x = 32
+        textRect.origin.y = -3
+        return textRect
+    }
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        var editingRect = super.textRect(forBounds: bounds)
+        editingRect.origin.x = 32
+        editingRect.origin.y = -3
+        return editingRect
+    }
     @IBInspectable var leftImage: UIImage? {
         didSet {
             updateView()

@@ -1,33 +1,8 @@
 PODS:
-  - Alamofire (4.7.3)
+  - Alamofire (4.8.0)
   - AlamofireImage (3.4.1):
     - Alamofire (~> 4.7)
-  - Bolts (1.9.0):
-    - Bolts/AppLinks (= 1.9.0)
-    - Bolts/Tasks (= 1.9.0)
-  - Bolts/AppLinks (1.9.0):
-    - Bolts/Tasks
-  - Bolts/Tasks (1.9.0)
   - CircleProgressView (1.2.0)
-  - FacebookCore (0.5.0):
-    - Bolts (~> 1.9)
-    - FBSDKCoreKit (~> 4.37)
-  - FacebookLogin (0.5.0):
-    - Bolts (~> 1.9)
-    - FacebookCore (~> 0.5)
-    - FBSDKCoreKit (~> 4.37)
-    - FBSDKLoginKit (~> 4.37)
-  - FacebookShare (0.5.0):
-    - Bolts (~> 1.9)
-    - FacebookCore (~> 0.5)
-    - FBSDKCoreKit (~> 4.37)
-    - FBSDKShareKit (~> 4.37)
-  - FBSDKCoreKit (4.38.1):
-    - Bolts (~> 1.9)
-  - FBSDKLoginKit (4.38.1):
-    - FBSDKCoreKit
-  - FBSDKShareKit (4.38.1):
-    - FBSDKCoreKit
   - ImageSlideshow (1.7.0):
     - ImageSlideshow/Core (= 1.7.0)
   - ImageSlideshow/Alamofire (1.7.0):
@@ -38,68 +13,43 @@ PODS:
   - QRCodeReader.swift (9.0.1)
   - SwiftVideoBackground (3.1.0)
   - TOPasscodeViewController (0.0.2)
-  - TwitterCore (3.2.0)
-  - TwitterKit (3.4.2):
-    - TwitterCore (>= 3.2.0)
   - YLProgressBar (3.10.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - AlamofireImage (~> 3.4)
   - CircleProgressView
-  - FacebookCore
-  - FacebookLogin
-  - FacebookShare
   - ImageSlideshow (~> 1.6)
   - ImageSlideshow/Alamofire
   - PulsingHalo
   - QRCodeReader.swift (~> 9.0.1)
   - SwiftVideoBackground (~> 3.0)
   - TOPasscodeViewController
-  - TwitterKit
   - YLProgressBar
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
-    - Bolts
     - CircleProgressView
-    - FacebookCore
-    - FacebookLogin
-    - FacebookShare
-    - FBSDKCoreKit
-    - FBSDKLoginKit
-    - FBSDKShareKit
     - ImageSlideshow
     - PulsingHalo
     - QRCodeReader.swift
     - SwiftVideoBackground
     - TOPasscodeViewController
-    - TwitterCore
-    - TwitterKit
     - YLProgressBar
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
-  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   CircleProgressView: 6b5b091d59dc5e5d2fda84e637a40498cdc39937
-  FacebookCore: 74288d0add931d361b1596beae787ab72c438249
-  FacebookLogin: ebcf34714a1cb9f0759d9f071cfb01ed500996cf
-  FacebookShare: 963b4bb1124a64a395b1e428163d70b5774116e8
-  FBSDKCoreKit: 8d47857400e2f5bdea697a80daff882e91c84ef6
-  FBSDKLoginKit: 4621c690d9dd8628031a4791497062183ea34b0d
-  FBSDKShareKit: 6ffe22f0a0618eb7424d4104ab0ef3ce9643d42a
   ImageSlideshow: f8eec5e37a980f60923b585ff23b0e140fd24018
   PulsingHalo: 64938e4bd3893b823abdf01478084cd92445af2b
   QRCodeReader.swift: 96292a5612fbc2fd9a0b26f93fa5164c8d02f59d
   SwiftVideoBackground: 628408dbd5eb20b5f82f394aac9615d29aecb2f6
   TOPasscodeViewController: 03b5df3762a7be1511102093c644a42275bddf24
-  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
-  TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
   YLProgressBar: 365b6c5e934be18b661f79413db33c993c8e8251
 
-PODFILE CHECKSUM: e5f2b24b9319e508eb688416b2b46ae46ac24e4f
+PODFILE CHECKSUM: 52cf7c565e6dc7dfeef6ba76f4d7ab2fa2460d34
 
 COCOAPODS: 1.5.3

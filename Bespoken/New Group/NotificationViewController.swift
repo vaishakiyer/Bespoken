@@ -104,10 +104,10 @@ extension NotificationViewController {
         }
     }
     func getWishlistItemsAPI(){
-        BSLoader.showLoading("", disableUI: true, image: "Group 376")
+//        BSLoader.showLoading("", disableUI: true, image: "Group 376")
         Alamofire.request(Router.getNotifications()).responseJSON{
             response in
-            BSLoader.hide()
+//            BSLoader.hide()
 
             switch response.result {
             case .success(let JSON):

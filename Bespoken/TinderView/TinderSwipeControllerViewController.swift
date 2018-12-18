@@ -85,7 +85,7 @@ class TinderSwipeControllerViewController: UIViewController {
         
         BSLoader.activityTextFontName = UIFont.boldSystemFont(ofSize: 15)
         BSLoader.activityTextColor = .white
-        BSLoader.activityBackgroundColor = .darkGray
+        BSLoader.activityBackgroundColor = .white
         nextButton.addTarget(self, action: #selector(nextPressed), for: .touchUpInside)
         loadCardValues()
     

@@ -35,7 +35,6 @@ class CollectionsSearchResultsViewController: UIViewController , UISearchResults
     
     var searchResultFlowLayout: UICollectionViewLayout {
         get {
-            
             return self.collectionViewResults!.collectionViewLayout
         }
     }
@@ -44,7 +43,6 @@ class CollectionsSearchResultsViewController: UIViewController , UISearchResults
         self.collectionViewTags.reloadData()
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
  
@@ -53,9 +51,7 @@ class CollectionsSearchResultsViewController: UIViewController , UISearchResults
     
     func setup() {
         
-        self.tagFlowLayout.scrollDirection = .horizontal
-//        self.searchResultFlowLayout.scrollDirection = .vertical
-//        self.tagsArray  = ["Sensual", "Sensual","Sensual","Sensual","Sensual", "Sensual","Sensual","Sensual"]
+//        self.tagFlowLayout.scrollDirection = .horizontal
         collectionViewTags.delegate = self
         collectionViewTags.dataSource = self
         collectionViewResults.delegate = self

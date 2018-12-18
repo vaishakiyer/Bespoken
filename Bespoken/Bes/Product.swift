@@ -27,6 +27,7 @@ class Product {
     var attributes : [String]
     var styletip : StyleTip?
     var tags : [String]
+    var imageSizes : [String : CGSize] = [:]
     
     init(json: JSON) {
         self.id = json["_id"] as! String
@@ -55,10 +56,7 @@ struct StyleTip {
     var cardId : String?
     var author : String?
     var text: String?
-    var video : String?{
-        didSet{
-        }
-    }
+    var video : String?
     var localVideoURL : URL?
     
     
@@ -70,7 +68,7 @@ struct StyleTip {
         text = json.value(forKey: "text") as? String
         video = json.value(forKey: "video") as? String
         downloadVideo(url: video)
-        
+
     }
     mutating func downloadVideo(url : String?) {
         
@@ -82,6 +80,7 @@ struct StyleTip {
         }
         let videoStoragePath = video!.appendingPathComponent(self.cardId! + ".mp4")
         localVideoURL = videoStoragePath
+        print(localVideoURL)
 
         Alamofire.download(url!, method: .get, parameters: nil) { (_, _) -> (destinationURL: URL, options: DownloadRequest.DownloadOptions) in
             return (videoStoragePath, .createIntermediateDirectories)

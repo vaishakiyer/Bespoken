@@ -22,6 +22,9 @@ class TrunckViewController: UIViewController {
     @IBOutlet weak var titleDesc: UILabel!
     @IBOutlet weak var eventDate: UILabel!
     @IBOutlet weak var eventLocation: UILabel!
+    @IBOutlet weak var pageControl: UIPageControl!
+    let segment: UISegmentedControl = UISegmentedControl(items: ["First", "Second"])
+   
     
     
     var tap = UITapGestureRecognizer()
@@ -50,8 +53,16 @@ class TrunckViewController: UIViewController {
     
     
     func setup(){
+    
+        segment.sizeToFit()
+        segment.tintColor = UIColor(red:0.99, green:0.00, blue:0.25, alpha:1.00)
+        segment.selectedSegmentIndex = 0;
+        segment.addTarget(self, action: #selector(segementChanged(sender:)), for: .allEvents)
+        //segment.setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "ProximaNova-Light", size: 15)!], for: .normal)
+        self.navigationItem.titleView = segment
         
-        self.navigationItem.title = "EVENTS"
+//        self.navigationItem.title = "EVENTS"
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         trunckCollection.delegate = self
         trunckCollection.dataSource = self
         trunckCollection.register(UINib(nibName: "TrunckViewCell", bundle: nil), forCellWithReuseIdentifier: "TrunckViewCell")
@@ -62,6 +73,30 @@ class TrunckViewController: UIViewController {
         getEvents()
         innerView.roundCorners(corners: .allCorners, radius: 12)
         innerView.isHidden = true
+    }
+    
+    @objc func segementChanged(sender: UISegmentedControl){
+        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            
+            break
+        default:
+            
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let nextVC = storyBoard.instantiateViewController(withIdentifier: "List2ViewController") as? List2ViewController
+            let nc = UINavigationController(rootViewController: nextVC!)
+            nextVC?.presentHandler = { () -> Void in
+                
+                self.segment.selectedSegmentIndex = 0
+                self.dismiss(animated: true, completion: nil)
+            }
+            nc.modalPresentationStyle = .fullScreen
+            self.present(nc, animated: true, completion: nil)
+        }
+        
+        
+        
     }
     
     func updateUI() {
@@ -94,6 +129,11 @@ class TrunckViewController: UIViewController {
     
     @objc func handleTap(){
         
+        
+        if let layout = trunckCollection.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = .horizontal
+        }
+        
         previewButtonPressed = false
         innerView.isHidden = true
         UIView.transition(with: trunckCollection, duration: 0.5, options: .transitionFlipFromRight, animations: {
@@ -120,7 +160,7 @@ class TrunckViewController: UIViewController {
     */
 
 }
-extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate{
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -131,16 +171,29 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
         if previewButtonPressed == true{
              return 1
         }else{
+            
+            pageControl.numberOfPages = myGroupedEvents[section].count
+            pageControl.isHidden = !(myGroupedEvents[section].count > 1)
              return myGroupedEvents[section].count
         }
        
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+    }
+    
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        
+        pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
         if previewButtonPressed == true{
         return CGSize(width: self.view.frame.width, height: 144)
         }else{
-            return CGSize(width: self.view.frame.width, height: 50)
+            return CGSize(width: 0, height: 0)
         }
     }
     
@@ -150,7 +203,7 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
 
              let sectionHeader = trunckCollection.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as? SectionHeader
             
-            if let startTime = myGroupedEvents[selectedSection][selectedIndex].startDate{
+            if let startTime = myGroupedEvents[selectedSection][selectedIndex].endDate{
                 sectionHeader!.setDate = startTime
             }
             
@@ -204,7 +257,7 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
         
         
         self.completeAnsHandler("F2TrunckShow",myGroupedEvents[indexPath.section][indexPath.row].id!)
-        self.navigationController?.popViewController(animated: true)
+       // self.navigationController?.popViewController(animated: true)
 
         
     }
@@ -214,14 +267,14 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
         if previewButtonPressed == true{
             return CGSize(width: self.view.frame.width, height: 390)
         }else{
-            return CGSize(width: 290, height: 50)
+            return CGSize(width: self.view.frame.width - 20, height: 550)
         }
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-        return UIEdgeInsets(top: 30, left: 0, bottom: 30, right: 0)
+        return UIEdgeInsets(top: 0, left: self.view.frame.width / 2 - 145, bottom: 0, right: self.view.frame.width / 2 - 145)
     }
     
     
@@ -232,6 +285,10 @@ extension TrunckViewController: TrunckViewDelegate{
     func buttonPreviewPressed(sender: TrunckViewCell) {
         
         guard let tappedIndex  = trunckCollection.indexPath(for: sender) else {return}
+        
+        if let layout = trunckCollection.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = .vertical
+        }
         
         selectedIndex = tappedIndex.item
         selectedSection = tappedIndex.section

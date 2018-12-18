@@ -33,6 +33,9 @@
 		A5082D8421A15E75005EBA41 /* Extension&Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8321A15E75005EBA41 /* Extension&Helper.swift */; };
 		A5082D8621A1838A005EBA41 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8521A1838A005EBA41 /* Router.swift */; };
 		A511931921A1BFB900453C89 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A511931821A1BFB900453C89 /* CustomTextField.swift */; };
+		A518546B21C956DD00184C48 /* List2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518546A21C956DD00184C48 /* List2ViewController.swift */; };
+		A518546E21C959B600184C48 /* List2CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518546C21C959B600184C48 /* List2CollectionCell.swift */; };
+		A518546F21C959B600184C48 /* List2CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A518546D21C959B600184C48 /* List2CollectionCell.xib */; };
 		A5231BA421A8432300463AE4 /* TrunckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5231BA321A8432300463AE4 /* TrunckViewController.swift */; };
 		A5231BA921A84FBE00463AE4 /* TrunckViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5231BA721A84FBE00463AE4 /* TrunckViewCell.swift */; };
 		A5231BAA21A84FBE00463AE4 /* TrunckViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5231BA821A84FBE00463AE4 /* TrunckViewCell.xib */; };
@@ -148,6 +151,9 @@
 		A5082D8321A15E75005EBA41 /* Extension&Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension&Helper.swift"; sourceTree = "<group>"; };
 		A5082D8521A1838A005EBA41 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A511931821A1BFB900453C89 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A518546A21C956DD00184C48 /* List2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List2ViewController.swift; sourceTree = "<group>"; };
+		A518546C21C959B600184C48 /* List2CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List2CollectionCell.swift; sourceTree = "<group>"; };
+		A518546D21C959B600184C48 /* List2CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = List2CollectionCell.xib; sourceTree = "<group>"; };
 		A5231BA321A8432300463AE4 /* TrunckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrunckViewController.swift; sourceTree = "<group>"; };
 		A5231BA721A84FBE00463AE4 /* TrunckViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrunckViewCell.swift; sourceTree = "<group>"; };
 		A5231BA821A84FBE00463AE4 /* TrunckViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrunckViewCell.xib; sourceTree = "<group>"; };
@@ -352,6 +358,9 @@
 				A5FBD79F21BEC0E100638D5F /* SectionHeader.xib */,
 				A53B96E721BFC7EB0044C71A /* eventsHeader.swift */,
 				A53B96E821BFC7EB0044C71A /* eventsHeader.xib */,
+				A518546A21C956DD00184C48 /* List2ViewController.swift */,
+				A518546C21C959B600184C48 /* List2CollectionCell.swift */,
+				A518546D21C959B600184C48 /* List2CollectionCell.xib */,
 			);
 			path = TrunckShow;
 			sourceTree = "<group>";
@@ -658,6 +667,7 @@
 				A53D596D21AEED62009F993F /* sizeChartCell.xib in Resources */,
 				A5FBD7A121BEC0E100638D5F /* SectionHeader.xib in Resources */,
 				A594F5F121A1446F001BD710 /* Main.storyboard in Resources */,
+				A518546F21C959B600184C48 /* List2CollectionCell.xib in Resources */,
 				A5F8FF4C21B853FC00C38AC2 /* customVideoCell.xib in Resources */,
 				A5082D8121A15A49005EBA41 /* OptionsViewCell.xib in Resources */,
 				011463D121C57C08003DF072 /* main2.storyboard in Resources */,
@@ -823,6 +833,7 @@
 				A511931921A1BFB900453C89 /* CustomTextField.swift in Sources */,
 				A5231BA921A84FBE00463AE4 /* TrunckViewCell.swift in Sources */,
 				01C58BF421C005F2001EF372 /* NotificationViewController.swift in Sources */,
+				A518546B21C956DD00184C48 /* List2ViewController.swift in Sources */,
 				A53D597221AF144A009F993F /* Questionnaire.swift in Sources */,
 				A5FA1A3221A4747E00743D73 /* TinderCard.swift in Sources */,
 				A5082D8621A1838A005EBA41 /* Router.swift in Sources */,
@@ -837,6 +848,7 @@
 				A594F5F421A1446F001BD710 /* Bespoken.xcdatamodeld in Sources */,
 				A53B96E921BFC7EB0044C71A /* eventsHeader.swift in Sources */,
 				A529D5CD21A2FE9B005A221A /* HomePageOptionCell.swift in Sources */,
+				A518546E21C959B600184C48 /* List2CollectionCell.swift in Sources */,
 				A5B4191821B2E7CB0032F35C /* SizeSliderCell.swift in Sources */,
 				A5BE55F021AEAB5800A8A285 /* ProductCheckoutController.swift in Sources */,
 				011806AA21C28CBB001EA439 /* ProfileViewController.swift in Sources */,
@@ -1048,6 +1060,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6558ULBQX7;
 				INFOPLIST_FILE = Bespoken/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1067,6 +1080,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6558ULBQX7;
 				INFOPLIST_FILE = Bespoken/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

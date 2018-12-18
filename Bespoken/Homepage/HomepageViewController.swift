@@ -93,9 +93,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
             view.layer.sublayers!.removeLast()
                 getTheProducts()
             }
-        
-            
-        
+    
         }
         
        
@@ -295,15 +293,15 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
 
                     self.controlFlow = FlowAnalysis(rawValue: value)
                     self.getProductForEvents(id: id)
-                    
-                    
+
+
                     let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
 //                    return  self.navigationController!.popToViewController( viewControllers[viewControllers.count - 1], animated: true)!
                     for  i in viewControllers{
                         if i is HomepageViewController{
                             return  self.navigationController!.popToViewController( i, animated: true)!
                         }
-                    
+
                     }
                     return viewControllers
 //                    return (self.navigationController?.popViewController(animated: true))!
@@ -454,6 +452,10 @@ extension HomepageViewController{
 
 extension HomepageViewController : TinderCardDelegate{
     func cardTapped(card: TinderCard) {
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = storyBoard.instantiateViewController(withIdentifier: "ProductCheckoutController") as? ProductCheckoutController
+        self.navigationController?.pushViewController(nextVC!, animated: true)
         print("Card Tapped")
     }
     

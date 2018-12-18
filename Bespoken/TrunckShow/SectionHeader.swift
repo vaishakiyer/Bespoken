@@ -28,6 +28,7 @@ class SectionHeader: UICollectionReusableView {
         super.awakeFromNib()
         
         
+   
          timeEnd = Date(timeInterval: "2019-01-01 10:00:00".toDate(format: "yyyy-MM-dd HH:mm:ss").timeIntervalSince(Date()), since: Date())
         
         
@@ -36,9 +37,7 @@ class SectionHeader: UICollectionReusableView {
         self.outerView.addSubview(headerView!)
         
 //        headerView?.roundCorners(corners: .allCorners, radius: 24)
-        
         updateView()
-        
        
         // Initialization code
     }

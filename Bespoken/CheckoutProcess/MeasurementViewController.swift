@@ -36,9 +36,20 @@ class MeasurementViewController: UIViewController {
      measTypeCollection.register(UINib(nibName: "sizeChartCell", bundle: nil), forCellWithReuseIdentifier: "sizeChartCell")
     customiseButton.roundCorners(corners: .allCorners, radius: 24)
     nextButton.roundCorners(corners: .allCorners, radius: 24)
+        nextButton.addTarget(self, action: #selector(launchSizeController), for: .touchUpInside)
+        customiseButton.addTarget(self, action: #selector(launchSizeController), for: .touchUpInside)
         
     }
     
+    
+    @objc func launchSizeController(){
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = storyBoard.instantiateViewController(withIdentifier: "SizeTypeViewController") as? SizeTypeViewController
+        self.navigationController?.pushViewController(nextVC!, animated: true)
+
+        
+    }
 
     /*
     // MARK: - Navigation

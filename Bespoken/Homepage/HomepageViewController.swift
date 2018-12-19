@@ -11,6 +11,7 @@ import SwiftVideoBackground
 import Alamofire
 import PulsingHalo
 
+
 class HomepageViewController: UIViewController,CAAnimationDelegate {
 
     @IBOutlet var greenButton: UIButton!
@@ -22,7 +23,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     @IBOutlet weak var viewTinderBackGround: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var ballButton: UIButton!
-    
+   
     @IBAction func pinPressed(_ sender: Any) {
         let vc = UIStoryboard(name: "main2", bundle: nil).instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
         if currentLoadedCardsArray.isEmpty{
@@ -118,6 +119,12 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     func setup(){
     
+//        creativeLabel.font = UIFont (name: "HelveticaNeue-UltraLight", size: 24)
+//        self.creativeLabel.delegate = self
+//        self.creativeLabel.morphingEnabled = true
+//        self.creativeLabel.morphingEffect = .anvil
+//        self.creativeLabel.morphingDuration = 10
+
         controlFlow = FlowAnalysis(rawValue: "")
         ballButton.roundCorners(corners: .allCorners, radius: ballButton.frame.width / 2)
         optionCollection.register(UINib(nibName: "HomePageOptionCell", bundle: nil), forCellWithReuseIdentifier: "HomePageOptionCell")
@@ -793,6 +800,9 @@ extension HomepageViewController{
                 guard let wordList = (JSON as? NSDictionary)?.value(forKey: "words") as? [String] else {return}
                 
                 BSUserDefaults.setLoggedWords(wordList)
+                
+                let labelValue = wordList.joined(separator: "\n")
+             //   self.creativeLabel.text = labelValue
                 
                 
             case .failure(let error):

@@ -304,6 +304,14 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
                 
                 if status == "success"{
                     
+                    if let checkFirstTime = BSUserDefaults.getFirstTime(){
+                        
+                        if checkFirstTime == true{
+                            BSUserDefaults.setFirstTime(val: false)
+                        }
+                        
+                    }
+                    
                     if let token = (JSON as AnyObject).value(forKey: "token") as? String{
                         BSUserDefaults.setAccessToken(token)
                     }

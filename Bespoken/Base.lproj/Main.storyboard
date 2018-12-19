@@ -395,6 +395,7 @@
                         <outlet property="ballView" destination="rQt-j4-gVp" id="ieN-qs-xMb"/>
                         <outlet property="bottomView" destination="pJH-fs-5MS" id="8jB-zd-kNc"/>
                         <outlet property="greenButton" destination="PFp-xk-Q2T" id="Oqd-g0-6yg"/>
+                        <outlet property="myStyleStatement" destination="3eR-8I-2Uy" id="d2f-kV-vDT"/>
                         <outlet property="optionCollection" destination="yKm-E3-vPG" id="wDs-39-fAc"/>
                         <outlet property="redButton" destination="Nos-45-mJc" id="n7h-pQ-nxd"/>
                         <outlet property="videoBackgroudView" destination="fXn-wd-sI3" id="hVh-g6-Zn9"/>

@@ -23,7 +23,8 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     @IBOutlet weak var viewTinderBackGround: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var ballButton: UIButton!
-   
+    @IBOutlet weak var myStyleStatement: CurateStyle!
+    
     @IBAction func pinPressed(_ sender: Any) {
         let vc = UIStoryboard(name: "main2", bundle: nil).instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
         if currentLoadedCardsArray.isEmpty{
@@ -69,7 +70,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getStylewords()
+        //getStylewords()
         setup()
         optionCollection.isHidden = false
         ballButton.addTarget(self, action: #selector(startPulsating), for: .touchUpInside)
@@ -119,12 +120,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     func setup(){
     
-//        creativeLabel.font = UIFont (name: "HelveticaNeue-UltraLight", size: 24)
-//        self.creativeLabel.delegate = self
-//        self.creativeLabel.morphingEnabled = true
-//        self.creativeLabel.morphingEffect = .anvil
-//        self.creativeLabel.morphingDuration = 10
-
+        myStyleStatement.delegate = self
         controlFlow = FlowAnalysis(rawValue: "")
         ballButton.roundCorners(corners: .allCorners, radius: ballButton.frame.width / 2)
         optionCollection.register(UINib(nibName: "HomePageOptionCell", bundle: nil), forCellWithReuseIdentifier: "HomePageOptionCell")
@@ -145,7 +141,10 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
          ballView.firstName.text = "HI " + firstName.uppercased()
         }
         
+        myStyleStatement.isHidden = true
+        
         if toHide == true{
+            
              ballView.isHidden = false
              ballButton.isHidden = true
             
@@ -167,7 +166,24 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
                 // Put your code which should be executed with a delay here
             })
             
-              self.getTheProducts()
+            getTheProducts()
+//            if let checkFirstTime = BSUserDefaults.getFirstTime(){
+//
+//                if checkFirstTime == true{
+//
+//                    getStylewords()
+//                }else{
+//                    if count > 0 && count < 2{
+//                         self.getTheProducts()
+//                    }
+//
+//
+//                }
+//
+//            }else{
+//                self.getTheProducts()
+//            }
+            
  
               //loadCardValues()
         }
@@ -426,7 +442,11 @@ extension HomepageViewController{
                     getAffinityCards()
                 
                 case .Flow1_SelectGarment?:
-                    fetchUser()
+                    
+                    ballButton.isHidden = true
+                    ballView.isHidden = true
+                    myStyleStatement.isHidden = false
+                    self.getStylewords()
                 default:
                     break
                     
@@ -518,8 +538,9 @@ extension HomepageViewController{
                 self.checkUser = BSUserDefaults.loggedInUser()
                 if self.checkUser?.preferences?.count == 0{
                     self.updateUI(toHide: true)
-                    
+                    BSUserDefaults.setFirstTime(val: true)
                 }else{
+                    
                     self.updateUI(toHide: false)
                     
                 }
@@ -801,8 +822,8 @@ extension HomepageViewController{
                 
                 BSUserDefaults.setLoggedWords(wordList)
                 
-                let labelValue = wordList.joined(separator: "\n")
-             //   self.creativeLabel.text = labelValue
+                self.myStyleStatement.updateUI(words: wordList)
+                //   self.creativeLabel.text = labelValue
                 
                 
             case .failure(let error):
@@ -815,4 +836,16 @@ extension HomepageViewController{
         
     }
 
+}
+extension HomepageViewController: AnimationCompletedDelegate{
+    
+    func animationCompleted() {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+            BSUserDefaults.setFirstTime(val: false)
+             self.fetchUser()
+        })
+        
+    }
+    
 }

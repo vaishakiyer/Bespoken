@@ -35,6 +35,8 @@
 		A5082D8121A15A49005EBA41 /* OptionsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5082D7F21A15A49005EBA41 /* OptionsViewCell.xib */; };
 		A5082D8421A15E75005EBA41 /* Extension&Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8321A15E75005EBA41 /* Extension&Helper.swift */; };
 		A5082D8621A1838A005EBA41 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8521A1838A005EBA41 /* Router.swift */; };
+		A511854621CA596800BADDEC /* CurateStyle.xib in Resources */ = {isa = PBXBuildFile; fileRef = A511854521CA596800BADDEC /* CurateStyle.xib */; };
+		A511854821CA644F00BADDEC /* CurateStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A511854721CA644F00BADDEC /* CurateStyle.swift */; };
 		A511931921A1BFB900453C89 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A511931821A1BFB900453C89 /* CustomTextField.swift */; };
 		A518546B21C956DD00184C48 /* List2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518546A21C956DD00184C48 /* List2ViewController.swift */; };
 		A518546E21C959B600184C48 /* List2CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518546C21C959B600184C48 /* List2CollectionCell.swift */; };
@@ -156,6 +158,8 @@
 		A5082D7F21A15A49005EBA41 /* OptionsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsViewCell.xib; sourceTree = "<group>"; };
 		A5082D8321A15E75005EBA41 /* Extension&Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension&Helper.swift"; sourceTree = "<group>"; };
 		A5082D8521A1838A005EBA41 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A511854521CA596800BADDEC /* CurateStyle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurateStyle.xib; sourceTree = "<group>"; };
+		A511854721CA644F00BADDEC /* CurateStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurateStyle.swift; sourceTree = "<group>"; };
 		A511931821A1BFB900453C89 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		A518546A21C956DD00184C48 /* List2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List2ViewController.swift; sourceTree = "<group>"; };
 		A518546C21C959B600184C48 /* List2CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List2CollectionCell.swift; sourceTree = "<group>"; };
@@ -389,6 +393,8 @@
 				A529D5CC21A2FE9B005A221A /* HomePageOptionCell.xib */,
 				A5B0C95921A4473F0058A064 /* Homecenter1.xib */,
 				A5B0C95B21A450760058A064 /* Homecenter1.swift */,
+				A511854521CA596800BADDEC /* CurateStyle.xib */,
+				A511854721CA644F00BADDEC /* CurateStyle.swift */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -681,6 +687,7 @@
 				A529D5CE21A2FE9B005A221A /* HomePageOptionCell.xib in Resources */,
 				A529D5D521A31210005A221A /* CurationViewCell.xib in Resources */,
 				A53D596D21AEED62009F993F /* sizeChartCell.xib in Resources */,
+				A511854621CA596800BADDEC /* CurateStyle.xib in Resources */,
 				A5FBD7A121BEC0E100638D5F /* SectionHeader.xib in Resources */,
 				A594F5F121A1446F001BD710 /* Main.storyboard in Resources */,
 				A518546F21C959B600184C48 /* List2CollectionCell.xib in Resources */,
@@ -840,6 +847,7 @@
 				A5FBD7A021BEC0E100638D5F /* SectionHeader.swift in Sources */,
 				A56CDF9D21ADB24000113997 /* MeasurementViewController.swift in Sources */,
 				A5082D8021A15A49005EBA41 /* OptionsViewCell.swift in Sources */,
+				A511854821CA644F00BADDEC /* CurateStyle.swift in Sources */,
 				A5B0C95C21A450760058A064 /* Homecenter1.swift in Sources */,
 				01A8A10921CB91300017B86F /* ProfileTimelineTableViewCell.swift in Sources */,
 				A5A38A8021A18ED500ED1088 /* Swift+Gif.swift in Sources */,
@@ -1045,7 +1053,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6558ULBQX7;
 				INFOPLIST_FILE = Bespoken/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1065,7 +1073,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6558ULBQX7;
 				INFOPLIST_FILE = Bespoken/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

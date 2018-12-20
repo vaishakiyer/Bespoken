@@ -13,6 +13,7 @@ private let kAccessToken = "kAccessToken"
 private let kUser = "kUser"
 private let kLoggedName = "kName"
 private let kWords = "kWords"
+private let kFirstTime = "kFirstTime"
 
 
 
@@ -59,6 +60,15 @@ class BSUserDefaults{
         return sharedInstance.value(forKey: kWords) as? [String]
     }
     
+    class func setFirstTime(val: Bool){
+        
+        sharedInstance.set(val, forKey: kFirstTime)
+        sharedInstance.synchronize()
+    }
     
+    class func getFirstTime() -> Bool?{
+        
+         return sharedInstance.value(forKey: kFirstTime) as? Bool
+    }
     
 }

@@ -109,11 +109,11 @@ extension NotificationViewController : QRCodeReaderViewControllerDelegate{
     func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
         print(result.value)
         
-        let productDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "")
         //        productDetailVC.productId = result.value
-        self.navigationController?.pushViewController(productDetailVC!, animated: true)
+        let nextVC = self.storyboard!.instantiateViewController(withIdentifier: "ProductCheckoutController") as? ProductCheckoutController
+        nextVC?.theProductId = result.value
+        self.navigationController?.pushViewController(nextVC!, animated: true)
         reader.stopScanning()
-        
         dismiss(animated: true, completion: nil)
     }
     

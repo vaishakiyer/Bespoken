@@ -8,7 +8,7 @@
 
 import UIKit
 import AlamofireImage
-
+import Alamofire
 class ProductCheckoutController: UIViewController {
     
     //MARK: - Making IB Outlets
@@ -24,7 +24,16 @@ class ProductCheckoutController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
-    var theProduct : Product?
+    var theProduct : Product?{
+        didSet{
+            self.updateUI()
+        }
+    }
+    var theProductId : String?{
+        didSet{
+            self.getProductAPI(id : self.theProductId!)
+        }
+    }
     //MARK: - Viewcontroller lifecycle
 
     
@@ -75,14 +84,18 @@ class ProductCheckoutController: UIViewController {
         productPrice.text = (theProduct?.currency)! + " " + (theProduct?.cost.description)!
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func getProductAPI(id : String){
+        Alamofire.request(Router.getProductBy(id: id)).responseJSON(completionHandler: {
+            response in
+            switch response.result{
+            case .success(let JSON):
+                let newProduct : Product = Product(json : JSON as! JSON)
+                self.theProduct = newProduct
+            case .failure(let error):
+                print(error.localizedDescription)
+                
+                
+            }
+        })
     }
-    */
-
 }

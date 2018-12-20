@@ -11,6 +11,7 @@ import YLProgressBar
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet var tableView: UITableView!
     @IBOutlet var logoutButton: UIButton!
     @IBOutlet var progressView: UIView!
     @IBOutlet var profileImage: UIImageView!
@@ -25,7 +26,10 @@ class ProfileViewController: UIViewController {
     func setup()  {
         self.profileImage.image =  self.profileImage.image?.af_imageRounded(withCornerRadius: 500)
         self.logoutButton.roundCorners(corners: UIRectCorner(arrayLiteral: .allCorners), radius: 20)
-        self.shadowView.dropShadow(color: UIColor.black, offSet: CGSize(width: 10, height: 10))
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+//        self.shadowView.dropShadow(color: UIColor.black, offSet: CGSize(width: 10, height: 10))
         let progressBar = YLProgressBar(frame: self.progressView.bounds)
         progressBar.cornerRadius = 0
         progressBar.progressTintColor = UIColor.black
@@ -40,4 +44,23 @@ class ProfileViewController: UIViewController {
     }
     
 
+}
+extension ProfileViewController : UITableViewDelegate{
+    
+}
+extension ProfileViewController : UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "ProfileTimelineTableViewCell") as! ProfileTimelineTableViewCell
+        cell.indexPath = indexPath
+        return cell
+    }
+    
+    
 }

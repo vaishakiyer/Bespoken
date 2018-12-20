@@ -12,25 +12,22 @@ import ImageSlideshow
 import Alamofire
 
 class CollectionsViewController: UIViewController {
-    var items = [UIImage(named: "collection8") , UIImage(named: "collection2"), UIImage(named: "collection3") ,  UIImage(named: "collection4"), UIImage(named: "collection5"), UIImage(named: "collection6"), UIImage(named: "collection7"), UIImage(named: "collection1"), UIImage(named: "collection9")]
-    var hamburgerMenuItems = ["Home","Wishlist", "Bag","My Profile", "Notifications"]
-    var allProducts : [Product] = []
-
-    @IBOutlet weak var navigationBar: UINavigationBar!
     
-    @IBOutlet weak var navigationBarTitle: UINavigationItem!
+    //MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var hamburgerMenu: UIView!
     @IBOutlet weak var shadowView: UIView!
-    @IBOutlet weak var hamburgerMenuWidthConstraint: NSLayoutConstraint!
     @IBOutlet var searchButton: UIBarButtonItem!
-    
     @IBOutlet weak var hamburgerMenuTableView: UITableView!
     @IBOutlet var shadowViewPanGestureRecogniser: UIPanGestureRecognizer!
     @IBOutlet var shadowViewTapGesture: UITapGestureRecognizer!
     @IBOutlet var screenEdgePanGesture: UIScreenEdgePanGestureRecognizer!
     
-    
+    //MARK: - Stored Variables
+    var items = [UIImage(named: "collection8") , UIImage(named: "collection2"), UIImage(named: "collection3") ,  UIImage(named: "collection4"), UIImage(named: "collection5"), UIImage(named: "collection6"), UIImage(named: "collection7"), UIImage(named: "collection1"), UIImage(named: "collection9")]
+    var hamburgerMenuItems = ["Home","Wishlist", "Bag","My Profile", "Notifications"]
+    var allProducts : [Product] = []
+
     lazy var readerVC: QRCodeReaderViewController = {
         let builder = QRCodeReaderViewControllerBuilder {
             $0.reader = QRCodeReader(metadataObjectTypes: [.qr], captureDevicePosition: .back)
@@ -56,6 +53,8 @@ class CollectionsViewController: UIViewController {
         return searchController
     }()
     
+    
+    //MARK: - IBActions
     @IBAction func onSearchTapped(_ sender: Any) {
         self.navigationItem.rightBarButtonItem = nil
         
@@ -250,12 +249,12 @@ extension CollectionsViewController: PinterestLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
         let imageUrl : String = allProducts[indexPath.row].images[0]
-        return allProducts[indexPath.row].imageSizes[imageUrl]?.height ?? 20
+        return allProducts[indexPath.row].imageSizes[imageUrl]?.height ?? 100
     }
     func collectionView(_ collectionView: UICollectionView,
                         widthForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
         let imageUrl : String = allProducts[indexPath.row].images[0]
-        return allProducts[indexPath.row].imageSizes[imageUrl]?.width ?? 20
+        return allProducts[indexPath.row].imageSizes[imageUrl]?.width ?? 100
 
     }
 }
@@ -265,11 +264,7 @@ extension CollectionsViewController: CollectionsCollectionViewCellDelegate {
     func didFinishLoadingImage(_ cell: UICollectionViewCell) {
         
         let cell = cell as! CollectionsCollectionViewCell
-//        self.collectionView.reloadItems(at: [cell.indexPath!])
-//        self.collectionView.collectionViewLayout.invalidateLayout()
-
-        self.collectionView.reloadData()
-        self.collectionView.layoutIfNeeded()
+        self.collectionView.reloadItems(at: [cell.indexPath!])
     
     }
     
@@ -334,6 +329,10 @@ extension CollectionsViewController : QRCodeReaderViewControllerDelegate,Enlarge
     
     func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
         print(result.value)
+        
+        let productDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "")
+//        productDetailVC.productId = result.value
+        self.navigationController?.pushViewController(productDetailVC!, animated: true)
         reader.stopScanning()
         
         dismiss(animated: true, completion: nil)

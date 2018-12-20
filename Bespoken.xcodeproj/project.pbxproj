@@ -15,6 +15,7 @@
 		011806A821C27D84001EA439 /* ResultsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011806A721C27D84001EA439 /* ResultsCollectionViewCell.swift */; };
 		011806AA21C28CBB001EA439 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011806A921C28CBB001EA439 /* ProfileViewController.swift */; };
 		01A8A10721C975D70017B86F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A8A10621C975D70017B86F /* Reachability.swift */; };
+		01A8A10921CB91300017B86F /* ProfileTimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A8A10821CB91300017B86F /* ProfileTimelineTableViewCell.swift */; };
 		01C58BF221C005F2001EF372 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C58BEF21C005F2001EF372 /* NotificationTableViewCell.swift */; };
 		01C58BF321C005F2001EF372 /* BSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C58BF021C005F2001EF372 /* BSNotification.swift */; };
 		01C58BF421C005F2001EF372 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C58BF121C005F2001EF372 /* NotificationViewController.swift */; };
@@ -132,6 +133,7 @@
 		011806A721C27D84001EA439 /* ResultsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCollectionViewCell.swift; sourceTree = "<group>"; };
 		011806A921C28CBB001EA439 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		01A8A10621C975D70017B86F /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		01A8A10821CB91300017B86F /* ProfileTimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTimelineTableViewCell.swift; sourceTree = "<group>"; };
 		01C58BEF21C005F2001EF372 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		01C58BF021C005F2001EF372 /* BSNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSNotification.swift; sourceTree = "<group>"; };
 		01C58BF121C005F2001EF372 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +282,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01A8A10A21CB91420017B86F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				01A8A10821CB91300017B86F /* ProfileTimelineTableViewCell.swift */,
+				011806A921C28CBB001EA439 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		01C58BF521C005FE001EF372 /* NotificationAndWishlist */ = {
 			isa = PBXGroup;
 			children = (
@@ -448,6 +459,7 @@
 		A594F5EA21A1446F001BD710 /* Bespoken */ = {
 			isa = PBXGroup;
 			children = (
+				01A8A10A21CB91420017B86F /* Profile */,
 				01C58BF521C005FE001EF372 /* NotificationAndWishlist */,
 				01E6F80321B6B9260037970D /* Collections */,
 				A53D597021AF1437009F993F /* Models */,
@@ -467,7 +479,6 @@
 				A594F5FA21A14471001BD710 /* Info.plist */,
 				A594F5F221A1446F001BD710 /* Bespoken.xcdatamodeld */,
 				A5B0C95621A4446B0058A064 /* DummyContent.swift */,
-				011806A921C28CBB001EA439 /* ProfileViewController.swift */,
 				011463D021C57C08003DF072 /* main2.storyboard */,
 				01E0040721C799F200393458 /* FileManager.swift */,
 			);
@@ -830,6 +841,7 @@
 				A56CDF9D21ADB24000113997 /* MeasurementViewController.swift in Sources */,
 				A5082D8021A15A49005EBA41 /* OptionsViewCell.swift in Sources */,
 				A5B0C95C21A450760058A064 /* Homecenter1.swift in Sources */,
+				01A8A10921CB91300017B86F /* ProfileTimelineTableViewCell.swift in Sources */,
 				A5A38A8021A18ED500ED1088 /* Swift+Gif.swift in Sources */,
 				011463D321C57D3B003DF072 /* ProductDetailViewController.swift in Sources */,
 				011463D521C647E6003DF072 /* Product.swift in Sources */,

@@ -32,7 +32,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         }
         else{
         for each in allProducts{
-            if each.id == currentLoadedCardsArray.last!.myCardId{
+            if each.id == currentLoadedCardsArray[0].myCardId{
                 vc.product = each
                 self.navigationController?.pushViewController(vc, animated: true)
 

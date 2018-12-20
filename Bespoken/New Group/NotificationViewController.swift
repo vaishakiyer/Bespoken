@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import QRCodeReader
 
 class NotificationViewController: UIViewController {
 
@@ -22,6 +23,13 @@ class NotificationViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
+    lazy var readerVC: QRCodeReaderViewController = {
+        let builder = QRCodeReaderViewControllerBuilder {
+            $0.reader = QRCodeReader(metadataObjectTypes: [.qr], captureDevicePosition: .back)
+        }
+        
+        return QRCodeReaderViewController(builder: builder)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +59,8 @@ class NotificationViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight  = 40
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "qrcode"), style: .plain, target: self, action: #selector(openQRScanner))
+        
       //  segmentButton.selectedSegmentIndex = 0
 //       if  segmentButton.selectedSegmentIndex == 0
 //       {
@@ -60,6 +70,12 @@ class NotificationViewController: UIViewController {
 //       else{
 //        allNotifications.removeAll()
 //        }
+    }
+    @objc func openQRScanner(){
+        readerVC.delegate = self
+        // Presents the readerVC as modal form sheet
+        readerVC.modalPresentationStyle = .formSheet
+        present(readerVC, animated: true, completion: nil)
     }
     
 
@@ -88,6 +104,26 @@ extension NotificationViewController : UITableViewDataSource{
     
     
 }
+extension NotificationViewController : QRCodeReaderViewControllerDelegate{
+    
+    func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
+        print(result.value)
+        
+        let productDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "")
+        //        productDetailVC.productId = result.value
+        self.navigationController?.pushViewController(productDetailVC!, animated: true)
+        reader.stopScanning()
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func readerDidCancel(_ reader: QRCodeReaderViewController) {
+        print("Action Cancelled")
+        dismiss(animated: true, completion: nil)
+    }
+    
+}
+
 extension NotificationViewController {
     func getNotificationsAPI() {
         Alamofire.request(Router.getNotifications()).responseJSON{
@@ -111,6 +147,7 @@ extension NotificationViewController {
 
             switch response.result {
             case .success(let JSON):
+                
                 print("success")
             case .failure(let error):
                 print("error")

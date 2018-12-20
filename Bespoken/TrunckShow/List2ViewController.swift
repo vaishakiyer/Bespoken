@@ -29,7 +29,9 @@ class List2ViewController: UIViewController {
         
         
         segment.sizeToFit()
-        segment.tintColor = UIColor(red:0.99, green:0.00, blue:0.25, alpha:1.00)
+        segment.tintColor = UIColor(red:0, green:0, blue:0, alpha:1.00)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         segment.selectedSegmentIndex = 1;
         segment.addTarget(self, action: #selector(segementChanged(sender:)), for: .allEvents)
         //segment.setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "ProximaNova-Light", size: 15)!], for: .normal)

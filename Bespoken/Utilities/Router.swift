@@ -32,11 +32,12 @@ enum Router: URLRequestConvertible{
     case getTheCards()
     case getTheCardsForEvent(eventID: String)
     case getStyleWords()
-    
+    case getProductBy(id: String)
+    case getEventBy(id: String)
     
     var method: Alamofire.HTTPMethod {
         switch self {
-        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems,.getThemeboardCards,.getAffinityCards,.postSwipedCards,.getTheCards,.getTheCardsForEvent,.getStyleWords:
+        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems,.getThemeboardCards,.getAffinityCards,.postSwipedCards,.getTheCards,.getTheCardsForEvent,.getStyleWords,.getProductBy,.getEventBy:
             return .post
         default:
             return .get
@@ -80,6 +81,10 @@ enum Router: URLRequestConvertible{
              return "getProducts"
         case .getStyleWords:
             return "getStyleWords"
+        case .getProductBy:
+            return "getProduct"
+        case .getEventBy:
+            return "getEvent"
         }
     }
     
@@ -134,6 +139,16 @@ enum Router: URLRequestConvertible{
             let parameters = ["event_id": eventID]
             return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
             
+        case .getEventBy(let id):
+            
+            let parameters = ["_id": id]
+            return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
+            
+        case .getProductBy(let id):
+            
+            let parameters = ["_id": id]
+            return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
+            
         default:
             return try Alamofire.JSONEncoding.default.encode(urlRequest, with: nil)
         }
@@ -143,31 +158,8 @@ enum Router: URLRequestConvertible{
 }
 
 
-struct DemoStruct: Codable {
-    var name,address : String?
-}
 
-// class ExecuteNetworkClass{
-//
-// func getRequest(){
-//
-// Alamofire.request(Router.configureURL(urlString: "user")).responseJSON { (response) in
-// switch response.result{
-//
-// case .success(let JSON):
-// print(JSON)
-//
-// let x = try? JSONDecoder().decode(DemoStruct.self, from: response.data!)
-// print(x!)
-//
-// case.failure(_):
-// break
-// }
-// }
-//
-// }
-//
-// }
+
 
 
 

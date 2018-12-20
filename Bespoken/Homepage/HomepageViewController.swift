@@ -70,7 +70,6 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //getStylewords()
         setup()
         optionCollection.isHidden = false
         ballButton.addTarget(self, action: #selector(startPulsating), for: .touchUpInside)
@@ -390,7 +389,14 @@ extension HomepageViewController{
                 }
             }
             animateCardAfterSwiping()
-            perform(#selector(loadInitialDummyAnimation), with: nil, afterDelay: 1.0)
+            
+            if let checkFirst = BSUserDefaults.getFirstTime(){
+                if checkFirst == true{
+                     perform(#selector(loadInitialDummyAnimation), with: nil, afterDelay: 1.0)
+                }
+                
+            }
+           
         }
         
     }
@@ -480,9 +486,20 @@ extension HomepageViewController{
 extension HomepageViewController : TinderCardDelegate{
     func cardTapped(card: TinderCard) {
         
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let nextVC = storyBoard.instantiateViewController(withIdentifier: "ProductCheckoutController") as? ProductCheckoutController
-        self.navigationController?.pushViewController(nextVC!, animated: true)
+        for items in myAllCards{
+            
+            if card.myCardId == items.id{
+                
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let nextVC = storyBoard.instantiateViewController(withIdentifier: "ProductCheckoutController") as? ProductCheckoutController
+                nextVC?.theProduct = items
+                
+                let nc = UINavigationController(rootViewController: nextVC!)
+                self.present(nc, animated: true, completion: nil)
+                
+            }
+            
+        }
         print("Card Tapped")
     }
     
@@ -841,7 +858,7 @@ extension HomepageViewController: AnimationCompletedDelegate{
     
     func animationCompleted() {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
             BSUserDefaults.setFirstTime(val: false)
              self.fetchUser()
         })

@@ -1325,8 +1325,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N5k-lj-HrP">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="576"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group 22" translatesAutoresizingMaskIntoConstraints="NO" id="g8q-OV-3DU">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group 22" translatesAutoresizingMaskIntoConstraints="NO" id="g8q-OV-3DU">
                                         <rect key="frame" x="78" y="60" width="219" height="365"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="365" id="FrK-dL-f7i"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Striped tank top,comfort fit, 100% viscose  " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IT0-v5-pyW">
                                         <rect key="frame" x="78" y="455" width="219" height="41"/>

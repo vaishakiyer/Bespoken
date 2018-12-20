@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ProductCheckoutController: UIViewController {
     
@@ -23,6 +24,7 @@ class ProductCheckoutController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
+    var theProduct : Product?
     //MARK: - Viewcontroller lifecycle
 
     
@@ -38,15 +40,39 @@ class ProductCheckoutController: UIViewController {
         
         nextButton.roundCorners(corners: .allCorners, radius: 24)
         nextButton.addTarget(self, action: #selector(goToMeasurement), for: .touchUpInside)
-        
+        createNav()
+        updateUI()
     }
     
+    func createNav(){
+        
+        self.navigationItem.title = "PRODUCT BAG"
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissController))
+    }
+    
+   @objc func dismissController(){
+        
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @objc func goToMeasurement(){
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let nextVC = storyBoard.instantiateViewController(withIdentifier: "MeasurementViewController") as? MeasurementViewController
         self.navigationController?.pushViewController(nextVC!, animated: true)
+        
+    }
+    
+    func updateUI(){
+        
+        if let url = URL(string: (theProduct?.images.first)!){
+             productImage.af_setImage(withURL: url)
+        }
+       
+        productDesc.text = theProduct?.description
+        productPrice.text = (theProduct?.currency)! + " " + (theProduct?.cost.description)!
         
     }
     /*

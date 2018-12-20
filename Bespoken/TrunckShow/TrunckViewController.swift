@@ -41,6 +41,7 @@ class TrunckViewController: UIViewController {
     var mySections = [String]()
     var myEvents = TrunckShow()
     var myGroupedEvents = [TrunckShow]()
+    var allProducts : [Product] = []
     var completeAnsHandler : ((_ value: String,_ trunckId: String) -> [UIViewController])!
     
     override func viewDidLoad() {
@@ -55,14 +56,11 @@ class TrunckViewController: UIViewController {
     func setup(){
     
         segment.sizeToFit()
-        segment.tintColor = UIColor(red:0.99, green:0.00, blue:0.25, alpha:1.00)
+        segment.tintColor = UIColor(red:1, green:1, blue:1, alpha:1.00)
         segment.selectedSegmentIndex = 0;
         segment.addTarget(self, action: #selector(segementChanged(sender:)), for: .allEvents)
-        //segment.setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "ProximaNova-Light", size: 15)!], for: .normal)
         self.navigationItem.titleView = segment
-        
-//        self.navigationItem.title = "EVENTS"
-//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    
         trunckCollection.delegate = self
         trunckCollection.dataSource = self
         trunckCollection.register(UINib(nibName: "TrunckViewCell", bundle: nil), forCellWithReuseIdentifier: "TrunckViewCell")
@@ -335,7 +333,16 @@ extension TrunckViewController: QRCodeReaderViewControllerDelegate,EnlargeImageD
         print(result.value)
         reader.stopScanning()
         
-        dismiss(animated: true, completion: nil)
+         let sentence = result.value
+        let words = sentence.byWords
+        
+        if words.first == "product"{
+            getProduct(prodId: (words.last?.description)!)
+        }else if words.first == "event"{
+            getEvent(eventId: (words.last?.description)!)
+        }
+        
+       // dismiss(animated: true, completion: nil)
     }
     
     func readerDidCancel(_ reader: QRCodeReaderViewController) {
@@ -388,5 +395,57 @@ extension TrunckViewController{
         
     }
     
+    
+    func getProduct(prodId: String){
+        
+        Alamofire.request(Router.getProductBy(id: prodId)).responseJSON { (response) in
+            
+            switch response.result{
+                
+            case .success(let JSON):
+                
+                print(JSON)
+                
+                 guard let jsonArray = JSON as? [NSDictionary] else {return}
+                
+                for item in jsonArray{
+                    
+                    let product = Product(json: item as! JSON)
+                    self.allProducts.append(product)
+                    
+                }
+                
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let nextVC = storyBoard.instantiateViewController(withIdentifier: "ProductCheckoutController") as? ProductCheckoutController
+                nextVC?.theProduct = self.allProducts.first!
+                let nc = UINavigationController(rootViewController: nextVC!)
+                self.readerVC.present(nc, animated: true, completion: nil)
+                
+            case .failure(let error):
+                
+                print(error.localizedDescription)
+                
+            }
+        }
+    }
+    
+    
+    func getEvent(eventId: String){
+        
+        Alamofire.request(Router.getEventBy(id: eventId)).responseJSON { (response) in
+            
+            switch response.result{
+                
+            case .success(let JSON):
+                
+                print(JSON)
+                
+            case .failure(let error):
+                
+                print(error.localizedDescription)
+                
+            }
+        }
+    }
     
 }

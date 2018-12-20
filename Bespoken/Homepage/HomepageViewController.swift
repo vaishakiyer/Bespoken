@@ -70,6 +70,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        myStyleStatement.isHidden = true
         setup()
         optionCollection.isHidden = false
         ballButton.addTarget(self, action: #selector(startPulsating), for: .touchUpInside)

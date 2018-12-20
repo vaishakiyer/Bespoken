@@ -50,7 +50,7 @@ class List2ViewController: UIViewController {
         case 0:
             
         self.presentHandler()
-            
+        self.dismiss(animated: true, completion: nil)
             
         default:
             

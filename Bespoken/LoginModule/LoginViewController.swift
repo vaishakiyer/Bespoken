@@ -70,12 +70,27 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
     
     //MARK: Intialisation
     
+    lazy var titleStackView: UIStackView = {
+        let titleLabel = UILabel()
+        titleLabel.textAlignment = .center
+        titleLabel.text = "Please choose a password "
+        let subtitleLabel = UILabel()
+        subtitleLabel.textAlignment = .center
+        subtitleLabel.text = "with atleast 8 characters"
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
+        stackView.axis = .vertical
+        return stackView
+    }()
+    
     func setup(){
         
         nextVC.delegate = self
         nextVC.passcodeType = .customAlphanumeric
         nextVC.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissTOPasscodeController))
         nextVC.style = .dark
+        nextVC.navigationItem.titleView = titleStackView
+        
+        
         
         firstTimeVC.delegate = self
         firstTimeVC.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissTOPasscodeController))
@@ -487,7 +502,6 @@ extension LoginViewController: TOPasscodeSettingsViewControllerDelegate,TOPassco
     func passcodeSettingsViewController(_ passcodeSettingsViewController: TOPasscodeSettingsViewController, didChangeToNewPasscode passcode: String, of type: TOPasscodeType) {
         
         print(passcode)
-        
         if passcode.count < 8{
             
             let alertControl = UIAlertController(title: "", message: "Choose a password with atleast 8 characters for unlocking the app", preferredStyle: .alert)

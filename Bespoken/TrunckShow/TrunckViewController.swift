@@ -87,7 +87,7 @@ class TrunckViewController: UIViewController {
             nextVC?.presentHandler = { () -> Void in
                 
                 self.segment.selectedSegmentIndex = 0
-                self.dismiss(animated: true, completion: nil)
+                
             }
             nc.modalPresentationStyle = .fullScreen
             self.present(nc, animated: true, completion: nil)

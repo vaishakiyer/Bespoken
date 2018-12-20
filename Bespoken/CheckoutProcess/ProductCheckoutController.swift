@@ -24,16 +24,9 @@ class ProductCheckoutController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
-    var theProduct : Product?{
-        didSet{
-            self.updateUI()
-        }
-    }
-    var theProductId : String?{
-        didSet{
-            self.getProductAPI(id : self.theProductId!)
-        }
-    }
+    var theProduct : Product?
+    var theProductId : String?
+    
     //MARK: - Viewcontroller lifecycle
 
     
@@ -51,6 +44,7 @@ class ProductCheckoutController: UIViewController {
         nextButton.addTarget(self, action: #selector(goToMeasurement), for: .touchUpInside)
         createNav()
         updateUI()
+        //getProductAPI(id : self.theProductId!)
     }
     
     func createNav(){

@@ -24,11 +24,7 @@ class ProductCheckoutController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
-    var theProduct : Product?{
-        didSet{
-            self.updateUI()
-        }
-    }
+    var theProduct : Product?
     var theProductId : String?{
         didSet{
             self.getProductAPI(id : self.theProductId!)
@@ -91,6 +87,7 @@ class ProductCheckoutController: UIViewController {
             case .success(let JSON):
                 let newProduct : Product = Product(json : JSON as! JSON)
                 self.theProduct = newProduct
+                self.setup()
             case .failure(let error):
                 print(error.localizedDescription)
                 

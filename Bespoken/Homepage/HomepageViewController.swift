@@ -24,6 +24,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var ballButton: UIButton!
     @IBOutlet weak var myStyleStatement: CurateStyle!
+    @IBOutlet weak var myInitialCurate: InitialCurate!
     
     @IBAction func pinPressed(_ sender: Any) {
         let vc = UIStoryboard(name: "main2", bundle: nil).instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
@@ -71,6 +72,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         super.viewDidLoad()
         
         myStyleStatement.isHidden = true
+         myInitialCurate.isHidden = true
         setup()
         optionCollection.isHidden = false
         ballButton.addTarget(self, action: #selector(startPulsating), for: .touchUpInside)
@@ -107,19 +109,29 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         playVideoInBackgroud()
         count = 0
         if currentLoadedCardsArray.count == 0 && checkUser != nil{
-        let halo = PulsingHaloLayer()
-        halo.position = viewTinderBackGround.center
-        view.layer.addSublayer(halo)
-        halo.start()
-        halo.haloLayerNumber = 3
-        halo.radius = 240
-        halo.backgroundColor = UIColor.black.cgColor
+            
+            if let checkFirstTIme = BSUserDefaults.getFirstTime(){
+                
+                if checkFirstTIme == false{
+                    
+                    let halo = PulsingHaloLayer()
+                    halo.position = viewTinderBackGround.center
+                    view.layer.addSublayer(halo)
+                    halo.start()
+                    halo.haloLayerNumber = 3
+                    halo.radius = 240
+                    halo.backgroundColor = UIColor.black.cgColor
+                    
+                }
+                
+            }
         }
     }
     
     
     func setup(){
-    
+        
+        myInitialCurate.delegate = self
         myStyleStatement.delegate = self
         controlFlow = FlowAnalysis(rawValue: "")
         ballButton.roundCorners(corners: .allCorners, radius: ballButton.frame.width / 2)
@@ -391,11 +403,12 @@ extension HomepageViewController{
             }
             animateCardAfterSwiping()
             
+            
             if let checkFirst = BSUserDefaults.getFirstTime(){
                 if checkFirst == true{
                      perform(#selector(loadInitialDummyAnimation), with: nil, afterDelay: 1.0)
                 }
-                
+
             }
            
         }
@@ -452,8 +465,9 @@ extension HomepageViewController{
                     
                     ballButton.isHidden = true
                     ballView.isHidden = true
-                    myStyleStatement.isHidden = false
-                    self.getStylewords()
+                    myStyleStatement.isHidden = true
+                    myInitialCurate.isHidden = false
+                    myInitialCurate.updateUI()
                 default:
                     break
                     
@@ -621,8 +635,8 @@ extension HomepageViewController{
                 
                 switch self.controlFlow{
                 case .Flow1_SelectBrand?:
-                    self.view.layer.sublayers?.removeLast()
-                   
+              //      self.view.layer.sublayers?.removeLast()
+                   break
                 case .Flow2_TrunckShow?:
                      break
                 case .Flow1_SelectGarment?:
@@ -855,15 +869,26 @@ extension HomepageViewController{
     }
 
 }
-extension HomepageViewController: AnimationCompletedDelegate{
+extension HomepageViewController: AnimationCompletedDelegate,InitialAnimationFinishDelegate{
+    func initiateTheFiveWords() {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
+            BSUserDefaults.setFirstTime(val: false)
+            self.myInitialCurate.isHidden = true
+            self.myStyleStatement.isHidden = false
+            self.getStylewords()
+        })
+    }
+    
     
     func animationCompleted() {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
-            BSUserDefaults.setFirstTime(val: false)
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(10), execute: {
+    
              self.fetchUser()
         })
         
     }
+    
     
 }

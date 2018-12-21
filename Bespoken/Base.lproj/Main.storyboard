@@ -306,12 +306,22 @@
                                                     <constraint firstAttribute="width" constant="375" id="dGH-hR-jJT"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBh-qr-dui" customClass="InitialCurate" customModule="Bespoken" customModuleProvider="target">
+                                                <rect key="frame" x="-10" y="21" width="375" height="375"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="375" id="3iq-Ql-HLW"/>
+                                                    <constraint firstAttribute="height" constant="375" id="E0n-G6-woW"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="yKm-E3-vPG" firstAttribute="centerX" secondItem="aX5-pc-eFP" secondAttribute="centerX" id="34H-lF-pUp"/>
                                             <constraint firstItem="3eR-8I-2Uy" firstAttribute="leading" secondItem="CoW-Fw-fX6" secondAttribute="leading" constant="-10" id="49C-Jc-raN"/>
                                             <constraint firstAttribute="bottom" secondItem="3eR-8I-2Uy" secondAttribute="bottom" constant="182" id="4ug-1a-mSb"/>
+                                            <constraint firstAttribute="trailing" secondItem="MBh-qr-dui" secondAttribute="trailing" constant="-6" id="DTs-dv-EdZ"/>
+                                            <constraint firstItem="yKm-E3-vPG" firstAttribute="top" secondItem="MBh-qr-dui" secondAttribute="bottom" constant="4" id="Gbf-Hf-K1f"/>
                                             <constraint firstItem="rQt-j4-gVp" firstAttribute="centerX" secondItem="yKm-E3-vPG" secondAttribute="centerX" id="HYj-oT-JMY"/>
                                             <constraint firstItem="yKm-E3-vPG" firstAttribute="leading" secondItem="CoW-Fw-fX6" secondAttribute="leading" constant="59" id="ISO-ee-7zV"/>
                                             <constraint firstItem="aX5-pc-eFP" firstAttribute="centerX" secondItem="CoW-Fw-fX6" secondAttribute="centerX" id="Ie5-5e-pJf"/>
@@ -320,6 +330,8 @@
                                             <constraint firstItem="3eR-8I-2Uy" firstAttribute="top" secondItem="CoW-Fw-fX6" secondAttribute="top" constant="21" id="YyK-rU-Sd5"/>
                                             <constraint firstAttribute="trailing" secondItem="3eR-8I-2Uy" secondAttribute="trailing" constant="-6" id="i3y-9N-YWh"/>
                                             <constraint firstItem="aX5-pc-eFP" firstAttribute="centerY" secondItem="CoW-Fw-fX6" secondAttribute="centerY" constant="-9" id="lOh-uJ-fXI"/>
+                                            <constraint firstItem="MBh-qr-dui" firstAttribute="top" secondItem="CoW-Fw-fX6" secondAttribute="top" constant="21" id="par-4k-UgZ"/>
+                                            <constraint firstItem="MBh-qr-dui" firstAttribute="leading" secondItem="CoW-Fw-fX6" secondAttribute="leading" constant="-10" id="yDo-AN-kgg"/>
                                             <constraint firstItem="yKm-E3-vPG" firstAttribute="top" secondItem="aX5-pc-eFP" secondAttribute="bottom" constant="95" id="yW6-fN-LUj"/>
                                         </constraints>
                                     </view>
@@ -395,6 +407,7 @@
                         <outlet property="ballView" destination="rQt-j4-gVp" id="ieN-qs-xMb"/>
                         <outlet property="bottomView" destination="pJH-fs-5MS" id="8jB-zd-kNc"/>
                         <outlet property="greenButton" destination="PFp-xk-Q2T" id="Oqd-g0-6yg"/>
+                        <outlet property="myInitialCurate" destination="MBh-qr-dui" id="eVS-7N-PF8"/>
                         <outlet property="myStyleStatement" destination="3eR-8I-2Uy" id="d2f-kV-vDT"/>
                         <outlet property="optionCollection" destination="yKm-E3-vPG" id="wDs-39-fAc"/>
                         <outlet property="redButton" destination="Nos-45-mJc" id="n7h-pQ-nxd"/>

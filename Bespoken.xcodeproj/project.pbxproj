@@ -37,6 +37,8 @@
 		A5082D8621A1838A005EBA41 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D8521A1838A005EBA41 /* Router.swift */; };
 		A511854621CA596800BADDEC /* CurateStyle.xib in Resources */ = {isa = PBXBuildFile; fileRef = A511854521CA596800BADDEC /* CurateStyle.xib */; };
 		A511854821CA644F00BADDEC /* CurateStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A511854721CA644F00BADDEC /* CurateStyle.swift */; };
+		A511854A21CC05B300BADDEC /* InitialCurate.xib in Resources */ = {isa = PBXBuildFile; fileRef = A511854921CC05B300BADDEC /* InitialCurate.xib */; };
+		A511854C21CC05D200BADDEC /* InitialCurate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A511854B21CC05D200BADDEC /* InitialCurate.swift */; };
 		A511931921A1BFB900453C89 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A511931821A1BFB900453C89 /* CustomTextField.swift */; };
 		A518546B21C956DD00184C48 /* List2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518546A21C956DD00184C48 /* List2ViewController.swift */; };
 		A518546E21C959B600184C48 /* List2CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518546C21C959B600184C48 /* List2CollectionCell.swift */; };
@@ -160,6 +162,8 @@
 		A5082D8521A1838A005EBA41 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A511854521CA596800BADDEC /* CurateStyle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurateStyle.xib; sourceTree = "<group>"; };
 		A511854721CA644F00BADDEC /* CurateStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurateStyle.swift; sourceTree = "<group>"; };
+		A511854921CC05B300BADDEC /* InitialCurate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialCurate.xib; sourceTree = "<group>"; };
+		A511854B21CC05D200BADDEC /* InitialCurate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialCurate.swift; sourceTree = "<group>"; };
 		A511931821A1BFB900453C89 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		A518546A21C956DD00184C48 /* List2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List2ViewController.swift; sourceTree = "<group>"; };
 		A518546C21C959B600184C48 /* List2CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List2CollectionCell.swift; sourceTree = "<group>"; };
@@ -395,6 +399,8 @@
 				A5B0C95B21A450760058A064 /* Homecenter1.swift */,
 				A511854521CA596800BADDEC /* CurateStyle.xib */,
 				A511854721CA644F00BADDEC /* CurateStyle.swift */,
+				A511854921CC05B300BADDEC /* InitialCurate.xib */,
+				A511854B21CC05D200BADDEC /* InitialCurate.swift */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -679,6 +685,7 @@
 				A5082D7D21A15905005EBA41 /* PersonalisationCell.xib in Resources */,
 				A594F5F921A14471001BD710 /* LaunchScreen.storyboard in Resources */,
 				A594F5F621A14471001BD710 /* Assets.xcassets in Resources */,
+				A511854A21CC05B300BADDEC /* InitialCurate.xib in Resources */,
 				A5B0C95A21A4473F0058A064 /* Homecenter1.xib in Resources */,
 				A5082D7921A15737005EBA41 /* PersonalisationHeader.xib in Resources */,
 				A5231BAE21A8645C00463AE4 /* PreviewImageCollectionViewCell.xib in Resources */,
@@ -844,6 +851,7 @@
 				011806AA21C28CBB001EA439 /* ProfileViewController.swift in Sources */,
 				A5F8FF4821B8536F00C38AC2 /* customVideoController.swift in Sources */,
 				A5B4192121B592920032F35C /* TrunckShow.swift in Sources */,
+				A511854C21CC05D200BADDEC /* InitialCurate.swift in Sources */,
 				A5FBD7A021BEC0E100638D5F /* SectionHeader.swift in Sources */,
 				A56CDF9D21ADB24000113997 /* MeasurementViewController.swift in Sources */,
 				A5082D8021A15A49005EBA41 /* OptionsViewCell.swift in Sources */,

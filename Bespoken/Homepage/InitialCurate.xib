@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialCurate" customModule="Bespoken" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="x2B-MK-rGl"/>
+                <outlet property="label1" destination="RAG-3S-3Tp" id="jVa-FG-0rB"/>
+                <outlet property="label2" destination="txR-vk-dKc" id="Piq-nJ-pRW"/>
+                <outlet property="label3" destination="qeX-rz-589" id="kWL-TP-uZA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Circle" translatesAutoresizingMaskIntoConstraints="NO" id="XTS-kp-bxD">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAG-3S-3Tp" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                    <rect key="frame" x="38" y="128" width="299" height="38"/>
+                    <attributedString key="attributedText"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txR-vk-dKc" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                    <rect key="frame" x="38" y="179" width="299" height="38"/>
+                    <attributedString key="attributedText"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeX-rz-589" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                    <rect key="frame" x="38" y="220" width="299" height="38"/>
+                    <attributedString key="attributedText"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="RAG-3S-3Tp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="128" id="194-2T-OVc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="qeX-rz-589" secondAttribute="bottom" constant="117" id="9xQ-QZ-CmD"/>
+                <constraint firstItem="txR-vk-dKc" firstAttribute="leading" secondItem="qeX-rz-589" secondAttribute="leading" id="GWd-fR-Lwt"/>
+                <constraint firstItem="txR-vk-dKc" firstAttribute="height" secondItem="RAG-3S-3Tp" secondAttribute="height" id="Iri-Ee-Jbh"/>
+                <constraint firstItem="txR-vk-dKc" firstAttribute="width" secondItem="RAG-3S-3Tp" secondAttribute="width" id="OIk-3i-3SS"/>
+                <constraint firstItem="txR-vk-dKc" firstAttribute="top" secondItem="RAG-3S-3Tp" secondAttribute="bottom" constant="13" id="OJA-QA-wKe"/>
+                <constraint firstItem="RAG-3S-3Tp" firstAttribute="leading" secondItem="txR-vk-dKc" secondAttribute="leading" id="RgD-Rl-QQz"/>
+                <constraint firstItem="RAG-3S-3Tp" firstAttribute="centerX" secondItem="XTS-kp-bxD" secondAttribute="centerX" id="RsC-K3-Rhi"/>
+                <constraint firstItem="XTS-kp-bxD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SE6-SI-jiz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="XTS-kp-bxD" secondAttribute="bottom" id="ZGl-We-pqa"/>
+                <constraint firstItem="qeX-rz-589" firstAttribute="height" secondItem="RAG-3S-3Tp" secondAttribute="height" id="byW-tb-6Be"/>
+                <constraint firstItem="XTS-kp-bxD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="fkd-WR-ee6"/>
+                <constraint firstItem="qeX-rz-589" firstAttribute="width" secondItem="RAG-3S-3Tp" secondAttribute="width" id="nZn-bd-JGU"/>
+                <constraint firstItem="qeX-rz-589" firstAttribute="top" secondItem="txR-vk-dKc" secondAttribute="bottom" constant="3" id="pgs-uF-WtC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XTS-kp-bxD" secondAttribute="trailing" id="tG9-aC-qds"/>
+                <constraint firstItem="RAG-3S-3Tp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="38" id="tsW-vl-EGv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="55.200000000000003" y="52.623688155922046"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Circle" width="1200" height="1200"/>
+    </resources>
+</document>

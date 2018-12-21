@@ -31,12 +31,12 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTa-WB-Yfk" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                    <rect key="frame" x="21" y="71" width="333" height="69"/>
+                    <rect key="frame" x="50" y="71" width="273" height="69"/>
                     <attributedString key="attributedText">
                         <fragment content="Alina Depicts you as creative">
                             <attributes>
                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="24" name="AmericanTypewriter-Semibold"/>
+                                <font key="NSFont" size="18" name="Rockwell-Bold"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
@@ -44,12 +44,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJq-PX-zKv">
-                    <rect key="frame" x="21" y="126" width="333" height="69"/>
+                    <rect key="frame" x="53.5" y="126" width="268" height="69"/>
                     <attributedString key="attributedText">
                         <fragment content="You Style is">
                             <attributes>
                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="24" name="Rockwell-Regular"/>
+                                <font key="NSFont" size="20" name="Rockwell-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
@@ -57,12 +57,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMj-NE-3Ye" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                    <rect key="frame" x="21" y="189" width="333" height="34"/>
+                    <rect key="frame" x="53.5" y="189" width="268" height="34"/>
                     <attributedString key="attributedText">
                         <fragment content="Flamboyant">
                             <attributes>
                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="24" name="Papyrus"/>
+                                <font key="NSFont" size="20" name="Rockwell-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
@@ -70,12 +70,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNG-Hw-CXf" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                    <rect key="frame" x="21" y="218" width="333" height="34"/>
+                    <rect key="frame" x="53.5" y="218" width="268" height="34"/>
                     <attributedString key="attributedText">
                         <fragment content="Fancy">
                             <attributes>
                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="24" name="Papyrus"/>
+                                <font key="NSFont" size="20" name="Rockwell-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
@@ -83,12 +83,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fr7-dg-rQw" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                    <rect key="frame" x="21" y="251" width="333" height="25"/>
+                    <rect key="frame" x="53.5" y="251" width="268" height="25"/>
                     <attributedString key="attributedText">
                         <fragment content="Gold">
                             <attributes>
                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" size="24" name="Papyrus"/>
+                                <font key="NSFont" size="20" name="Rockwell-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
@@ -96,12 +96,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5E-oD-blx" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                    <rect key="frame" x="21" y="275" width="333" height="32"/>
+                    <rect key="frame" x="53.5" y="275" width="268" height="32"/>
                     <attributedString key="attributedText">
                         <fragment content="Goddess">
                             <attributes>
-                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <font key="NSFont" size="24" name="Papyrus"/>
+                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="20" name="Rockwell-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
@@ -109,12 +109,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzv-19-3FG" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                    <rect key="frame" x="21" y="305" width="333" height="33"/>
+                    <rect key="frame" x="53.5" y="305" width="268" height="33"/>
                     <attributedString key="attributedText">
                         <fragment content="Diva">
                             <attributes>
-                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <font key="NSFont" size="27" name="Papyrus"/>
+                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="20" name="Rockwell-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
@@ -129,7 +129,7 @@
                 <constraint firstItem="Fr7-dg-rQw" firstAttribute="top" secondItem="ZNG-Hw-CXf" secondAttribute="bottom" constant="-1" id="1uF-l2-Ins"/>
                 <constraint firstItem="nMj-NE-3Ye" firstAttribute="centerX" secondItem="hJq-PX-zKv" secondAttribute="centerX" id="3tK-4R-9qa"/>
                 <constraint firstItem="nMj-NE-3Ye" firstAttribute="leading" secondItem="hJq-PX-zKv" secondAttribute="leading" id="9fE-Vn-qhF"/>
-                <constraint firstItem="hJq-PX-zKv" firstAttribute="width" secondItem="vTa-WB-Yfk" secondAttribute="width" id="C6C-Hy-H7L"/>
+                <constraint firstItem="hJq-PX-zKv" firstAttribute="width" secondItem="vTa-WB-Yfk" secondAttribute="width" constant="-5" id="C6C-Hy-H7L"/>
                 <constraint firstItem="f5E-oD-blx" firstAttribute="height" secondItem="nMj-NE-3Ye" secondAttribute="height" constant="-2" id="EOu-tG-0JE"/>
                 <constraint firstItem="Fr7-dg-rQw" firstAttribute="height" secondItem="nMj-NE-3Ye" secondAttribute="height" constant="-9" id="FOh-s9-3vN"/>
                 <constraint firstItem="nMj-NE-3Ye" firstAttribute="leading" secondItem="ZNG-Hw-CXf" secondAttribute="leading" id="GOp-N2-wfN"/>
@@ -138,7 +138,7 @@
                 <constraint firstItem="hJq-PX-zKv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IIb-u8-nFD"/>
                 <constraint firstItem="B7q-7r-agc" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="JOg-0o-d0S"/>
                 <constraint firstItem="f5E-oD-blx" firstAttribute="top" secondItem="Fr7-dg-rQw" secondAttribute="bottom" constant="-1" id="LNy-g2-eHk"/>
-                <constraint firstItem="vTa-WB-Yfk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MrU-jg-TTq"/>
+                <constraint firstItem="vTa-WB-Yfk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-1" id="MrU-jg-TTq"/>
                 <constraint firstItem="vTa-WB-Yfk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="71" id="QSh-tK-U3U"/>
                 <constraint firstItem="fzv-19-3FG" firstAttribute="top" secondItem="f5E-oD-blx" secondAttribute="bottom" constant="-2" id="Rjg-3i-Uw7"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="B7q-7r-agc" secondAttribute="bottom" id="SRH-Sg-QTh"/>

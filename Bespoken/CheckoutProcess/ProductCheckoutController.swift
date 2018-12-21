@@ -85,6 +85,7 @@ class ProductCheckoutController: UIViewController {
             case .success(let JSON):
                 let newProduct : Product = Product(json : JSON as! JSON)
                 self.theProduct = newProduct
+                self.setup()
             case .failure(let error):
                 print(error.localizedDescription)
                 

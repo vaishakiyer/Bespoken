@@ -23,7 +23,8 @@
                         <subviews>
                             <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GC6-gT-blv">
                                 <rect key="frame" x="0.0" y="0.0" width="164" height="30"/>
-                                <color key="backgroundColor" red="0.2416800261" green="0.23285830020000001" blue="0.24170550700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <attributedString key="attributedText">
                                     <fragment content="TRUNCK SHOW">
                                         <attributes>
@@ -36,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GC6-gT-blv" firstAttribute="top" secondItem="T8z-TG-75m" secondAttribute="top" id="QLH-FW-giE"/>
                             <constraint firstItem="GC6-gT-blv" firstAttribute="leading" secondItem="T8z-TG-75m" secondAttribute="leading" id="ZJT-u6-ekb"/>

@@ -64,18 +64,18 @@ public struct BSLoader {
             self.init(frame: CGRect(x: 0, y: 0, width: activityWidth, height: activityHeight))
             center = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
             autoresizingMask = [.flexibleTopMargin, .flexibleLeftMargin, .flexibleBottomMargin, .flexibleRightMargin]
-            backgroundColor = activityBackgroundColor
-            alpha = 1
+//            backgroundColor = activityBackgroundColor
+//            alpha = 1
 //            layer.cornerRadius = frame.width / 2
             
             let yPosition = frame.height/2 - 20
             
             addActivityView(yPosition)
-            addImageToBackground(image: image)
-            addTextLabel(yPosition + activityView.frame.size.height, text: text)
+//            addImageToBackground(image: image)
+//            addTextLabel(yPosition + activityView.frame.size.height, text: text)
             
             //Apply here Border & Shadow
-            checkActivityBackgroundColor()
+//            checkActivityBackgroundColor()
             
             guard disableUI else {
                 return
@@ -136,8 +136,8 @@ public struct BSLoader {
         
         fileprivate func showLoadingActivity() {
             addSubview(activityView)
-            addSubview(textLabel)
-            addSubview(backgroundImage)
+//            addSubview(textLabel)
+//            addSubview(backgroundImage)
             guard loadOverApplicationWindow else {
                 topMostViewController!.view.addSubview(self)
                 return
@@ -236,14 +236,14 @@ fileprivate extension BSLoader{
             // Separate creation from showing
             BSLoader.instance = LoadingResource(text: text, disableUI: disableUI, image: image)
             DispatchQueue.main.async {
-                if BSLoader.viewBackgroundDark {
-                    if BSLoader.backgroundView == nil {
-                        BSLoader.backgroundView = UIView(frame: UIApplication.shared.keyWindow!.frame)
-                    }
-                    BSLoader.backgroundView.backgroundColor = UIColor.black.withAlphaComponent(0)
-                    topMostViewController?.view.addSubview(BSLoader.backgroundView)
-                    UIView.animate(withDuration: 0.2, animations: {BSLoader.backgroundView.backgroundColor = BSLoader.backgroundView.backgroundColor?.withAlphaComponent(0)})
-                }
+//                if BSLoader.viewBackgroundDark {
+//                    if BSLoader.backgroundView == nil {
+//                        BSLoader.backgroundView = UIView(frame: UIApplication.shared.keyWindow!.frame)
+//                    }
+//                    BSLoader.backgroundView.backgroundColor = UIColor.black.withAlphaComponent(0)
+//                    topMostViewController?.view.addSubview(BSLoader.backgroundView)
+//                    UIView.animate(withDuration: 0.2, animations: {BSLoader.backgroundView.backgroundColor = BSLoader.backgroundView.backgroundColor?.withAlphaComponent(0)})
+//                }
                 BSLoader.instance?.showLoadingActivity()
             }
         }

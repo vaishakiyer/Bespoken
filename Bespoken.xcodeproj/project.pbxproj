@@ -95,6 +95,7 @@
 		A5B4191D21B50E000032F35C /* customTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B4191B21B50E000032F35C /* customTypeCell.xib */; };
 		A5B4191F21B539360032F35C /* welcomeGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5B4191E21B539350032F35C /* welcomeGif.gif */; };
 		A5B4192121B592920032F35C /* TrunckShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4192021B592920032F35C /* TrunckShow.swift */; };
+		A5BA918321CD3F2D00D4F10F /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA918221CD3F2D00D4F10F /* Attributes.swift */; };
 		A5BE55F021AEAB5800A8A285 /* ProductCheckoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BE55EF21AEAB5800A8A285 /* ProductCheckoutController.swift */; };
 		A5EB435C21B04E3E0056B24A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB435B21B04E3E0056B24A /* User.swift */; };
 		A5F8FF4821B8536F00C38AC2 /* customVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F8FF4721B8536F00C38AC2 /* customVideoController.swift */; };
@@ -232,6 +233,7 @@
 		A5B4191B21B50E000032F35C /* customTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customTypeCell.xib; sourceTree = "<group>"; };
 		A5B4191E21B539350032F35C /* welcomeGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = welcomeGif.gif; sourceTree = "<group>"; };
 		A5B4192021B592920032F35C /* TrunckShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrunckShow.swift; sourceTree = "<group>"; };
+		A5BA918221CD3F2D00D4F10F /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
 		A5BE55EF21AEAB5800A8A285 /* ProductCheckoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCheckoutController.swift; sourceTree = "<group>"; };
 		A5EB435B21B04E3E0056B24A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5F8FF4721B8536F00C38AC2 /* customVideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customVideoController.swift; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 				A5EB435B21B04E3E0056B24A /* User.swift */,
 				A5B4192021B592920032F35C /* TrunckShow.swift */,
 				A53B96EB21C002A10044C71A /* Location.swift */,
+				A5BA918221CD3F2D00D4F10F /* Attributes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -868,6 +871,7 @@
 				A5FA1A2D21A4617D00743D73 /* TinderSwipeControllerViewController.swift in Sources */,
 				A5231BA421A8432300463AE4 /* TrunckViewController.swift in Sources */,
 				01C58BF221C005F2001EF372 /* NotificationTableViewCell.swift in Sources */,
+				A5BA918321CD3F2D00D4F10F /* Attributes.swift in Sources */,
 				01E0040821C799F200393458 /* FileManager.swift in Sources */,
 				01E6F7FE21B6B90D0037970D /* CollectionsSearchResultsViewController.swift in Sources */,
 				A5231BAD21A8645C00463AE4 /* PreviewImageCollectionViewCell.swift in Sources */,

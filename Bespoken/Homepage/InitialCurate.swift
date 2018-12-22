@@ -57,6 +57,18 @@ class InitialCurate: UIView,LTMorphingLabelDelegate {
         label1.morphingEffect = .anvil
         label2.morphingEffect = .anvil
         label3.morphingEffect = .anvil
+        
+        label1.textColor = .white
+         label2.textColor = .white
+         label3.textColor = .white
+        
+        label1.textAlignment = .center
+        label2.textAlignment = .center
+        label3.textAlignment = .center
+        
+        label1.text = ""
+        label2.text = ""
+        label3.text = ""
     }
     
     func updateUI(){
@@ -70,7 +82,10 @@ class InitialCurate: UIView,LTMorphingLabelDelegate {
     func morphingDidComplete(_ label: LTMorphingLabel){
         
         if label == label3{
-            delegate?.initiateTheFiveWords()
+            if label3.text == "NOW"{
+                 delegate?.initiateTheFiveWords()
+            }
+           
         }
         
     }

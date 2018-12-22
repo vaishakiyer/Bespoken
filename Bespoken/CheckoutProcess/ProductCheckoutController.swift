@@ -44,6 +44,7 @@ class ProductCheckoutController: UIViewController {
         nextButton.addTarget(self, action: #selector(goToMeasurement), for: .touchUpInside)
         createNav()
         updateUI()
+        getAttributesOfAProduct()
         //getProductAPI(id : self.theProductId!)
     }
     
@@ -92,5 +93,26 @@ class ProductCheckoutController: UIViewController {
                 
             }
         })
+    }
+    
+    func getAttributesOfAProduct(){
+        
+        Alamofire.request(Router.getAttributesByProduct(id: theProduct?.id ?? "")).responseJSON { (response) in
+            
+            switch response.result{
+                
+            case .success(let JSON):
+                
+                print(JSON)
+                
+            case .failure(let error):
+                
+                print(error.localizedDescription)
+            }
+            
+            
+        }
+        
+        
     }
 }

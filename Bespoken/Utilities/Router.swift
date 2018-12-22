@@ -34,10 +34,11 @@ enum Router: URLRequestConvertible{
     case getStyleWords()
     case getProductBy(id: String)
     case getEventBy(id: String)
+    case getAttributesByProduct(id: String)
     
     var method: Alamofire.HTTPMethod {
         switch self {
-        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems,.getThemeboardCards,.getAffinityCards,.postSwipedCards,.getTheCards,.getTheCardsForEvent,.getStyleWords,.getProductBy,.getEventBy:
+        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems,.getThemeboardCards,.getAffinityCards,.postSwipedCards,.getTheCards,.getTheCardsForEvent,.getStyleWords,.getProductBy,.getEventBy,.getAttributesByProduct:
             return .post
         default:
             return .get
@@ -85,6 +86,8 @@ enum Router: URLRequestConvertible{
             return "getProduct"
         case .getEventBy:
             return "getEvent"
+        case .getAttributesByProduct:
+            return "getAttributesbyProduct"
         }
     }
     
@@ -147,6 +150,11 @@ enum Router: URLRequestConvertible{
         case .getProductBy(let id):
             
             let parameters = ["_id": id]
+            return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
+        
+        case .getAttributesByProduct(let id):
+            
+            let parameters = ["product": id]
             return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
             
         default:

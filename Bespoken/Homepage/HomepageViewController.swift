@@ -170,7 +170,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
                 
                 switch self.controlFlow{
                 case .Flow1_SelectGarment?:
-                    self.view.layer.sublayers?.removeLast()
+              //      self.view.layer.sublayers?.removeLast()
                     self.controlFlow = FlowAnalysis(rawValue: "ALL")
                 default:
                     break
@@ -463,6 +463,7 @@ extension HomepageViewController{
                 
                 case .Flow1_SelectGarment?:
                     
+                    self.view.layer.sublayers?.removeLast()
                     ballButton.isHidden = true
                     ballView.isHidden = true
                     myStyleStatement.isHidden = true
@@ -867,12 +868,13 @@ extension HomepageViewController{
         
         
     }
+    
 
 }
 extension HomepageViewController: AnimationCompletedDelegate,InitialAnimationFinishDelegate{
     func initiateTheFiveWords() {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
             BSUserDefaults.setFirstTime(val: false)
             self.myInitialCurate.isHidden = true
             self.myStyleStatement.isHidden = false

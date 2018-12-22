@@ -56,9 +56,12 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         didSet{
             if currentLoadedCardsArray.isEmpty{
                 self.greenButton.isEnabled = false
+                self.redButton.isEnabled = false
+                self.redButton.tintColor = UIColor.gray
             }
             else{
                 self.greenButton.isEnabled = true
+                self.redButton.isEnabled = true
             }
         }
     }

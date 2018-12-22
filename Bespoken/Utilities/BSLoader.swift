@@ -148,7 +148,7 @@ public struct BSLoader {
         fileprivate var fadeOutValue: CGFloat = 10.0
         
         fileprivate func hideActivity(){
-            checkBackgoundWasClear()
+//            checkBackgoundWasClear()
             guard showFadeOutAnimation else {
                 clearView()
                 return

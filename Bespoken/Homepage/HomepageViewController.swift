@@ -576,7 +576,7 @@ extension HomepageViewController{
                     self.updateUI(toHide: true)
                     BSUserDefaults.setFirstTime(val: true)
                 }else{
-                    
+                     BSUserDefaults.setFirstTime(val: false)
                     self.updateUI(toHide: false)
                     
                 }
@@ -796,6 +796,7 @@ extension HomepageViewController{
                     break
                 case .Flow2_TrunckShow?:
                     self.view.layer.sublayers?.removeLast()
+                    break
                 case .Flow1_SelectGarment?:
                     print("garment")
                 case .none:

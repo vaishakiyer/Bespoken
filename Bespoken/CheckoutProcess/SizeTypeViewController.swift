@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireImage
+import Alamofire
 
 class SizeTypeViewController: UIViewController {
 
@@ -95,9 +96,7 @@ class SizeTypeViewController: UIViewController {
     
     @objc func toBagController(){
     
-    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-    let nextVC = storyBoard.instantiateViewController(withIdentifier: "BagViewController") as? BagViewController
-    self.navigationController?.pushViewController(nextVC!, animated: true)
+             postTheAttributes()
 
     }
 
@@ -198,10 +197,70 @@ extension SizeTypeViewController: UICollectionViewDelegate,UICollectionViewDataS
        
     }
     
+}
+
+
+//MARK: - Network Operation
+
+extension SizeTypeViewController{
     
+    func postTheAttributes(){
+        
+        BSLoader.showLoading("", disableUI: true, image: "Group 376")
+        
+        var tempDict = [NSDictionary]()
+        
+        myOption.append(mySizeAnswer)
+        
+        tempDict.removeAll()
+        
+        for item in myOption{
+            
+            if let intVal = Int(item.answer!){
+                
+                if intVal > 0{
+                    let obj = NSMutableDictionary()
+                    obj["attribute"] = item.id
+                    obj["answer"] = item.answer
+                    tempDict.append(obj)
+                }
+                
+            }else{
+                
+                let obj = NSMutableDictionary()
+                obj["attribute"] = item.id
+                obj["answer"] = item.answer
+                tempDict.append(obj)
+                
+            }
+            
+        }
+        
+        print(tempDict)
+        
+        Alamofire.request(Router.postAttributes(prodId: currentProductId!, preferences: tempDict)).responseJSON{ (response) in
+            
+            BSLoader.hide()
+            
+            switch response.result{
+                
+            case .success(let json):
+                print(json)
+                
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let nextVC = storyBoard.instantiateViewController(withIdentifier: "BagViewController") as? BagViewController
+                self.navigationController?.pushViewController(nextVC!, animated: true)
+                
+            case .failure(let error):
+                
+                print(error.localizedDescription)
+            }
     
+        }
+        
+        
+    }
     
     
 }
-
 

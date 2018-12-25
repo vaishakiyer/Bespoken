@@ -9,6 +9,9 @@
 import UIKit
 import AlamofireImage
 import Alamofire
+
+var currentProductId: String? = ""
+
 class ProductCheckoutController: UIViewController {
     
     //MARK: - Making IB Outlets
@@ -54,6 +57,7 @@ class ProductCheckoutController: UIViewController {
         createNav()
         updateUI()
         getAttributesOfAProduct()
+        currentProductId = theProduct?.id
         //getProductAPI(id : self.theProductId!)
     }
     

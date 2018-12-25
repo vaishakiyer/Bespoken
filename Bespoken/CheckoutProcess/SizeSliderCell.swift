@@ -14,6 +14,7 @@ class SizeSliderCell: UICollectionViewCell {
     @IBOutlet weak var sliderValue: UILabel!
     @IBOutlet weak var mySlider: UISlider!
     
+    var valueHandler: ((_ val: String) -> Void)!
     
     let step :Float = 8
     
@@ -40,9 +41,10 @@ class SizeSliderCell: UICollectionViewCell {
         
         let roundedValue = (sender.value / step) * step
         sender.value = roundedValue
-      
+       
         sliderValue.text =  String(format: "%.1f", sender.value)
-        
+        let storeVal = String(format: "%.1f", sender.value)
+        self.valueHandler(storeVal)
     }
 
 }

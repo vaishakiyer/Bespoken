@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class SizeTypeViewController: UIViewController {
 
@@ -17,16 +18,18 @@ class SizeTypeViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var measuredByView: UIView!
     
+    var attributesNeeded = [Attributes]()
     
     var isSegmentChanged: Bool = false
-    let titleArray = ["BUST","WAIST","HIP","UPPER ARM","SHOULDER"]
-    var titleArray1 = ["NECKLINE","SLEEVE TYPE","LENGTH"]
-    var imgArray = ["Group 727","Group 728","Group 729"]
+    var isNextPressed : Bool = false
+    var myOption = [MeasurementAnswer]()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setup()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -39,7 +42,33 @@ class SizeTypeViewController: UIViewController {
         nextButton.roundCorners(corners: .allCorners, radius: 12)
         nextButton.addTarget(self, action: #selector(toBagController), for: .touchUpInside)
         segmentControl.addTarget(self, action: #selector(segmentChanged(sender:)), for: .allEvents)
-        measuredByView.isHidden = true
+        
+        self.navigationItem.title = "MEASUREMENT"
+        
+        switch isNextPressed {
+        case false:
+            isSegmentChanged = false
+            segmentControl.isHidden = false
+            nextButton.isHidden = true
+            measuredByView.isHidden = false
+        case true:
+            
+            measuredByView.isHidden = true
+            isSegmentChanged = true
+            segmentControl.isHidden = true
+            nextButton.isHidden = false
+            nextButton.setTitle("ADD TO BAG", for: .normal)
+            
+        }
+        
+         sizeCollection.reloadData()
+        
+        for val in attributesNeeded[1]{
+            var tempObj = MeasurementAnswer()
+            tempObj.id = val.id
+            myOption.append(tempObj)
+        }
+        
         
     }
     
@@ -49,12 +78,14 @@ class SizeTypeViewController: UIViewController {
         switch  sender.selectedSegmentIndex {
         case 0:
             isSegmentChanged = false
-            nextButton.setTitle("NEXT", for: .normal)
-            measuredByView.isHidden = true
+            nextButton.isHidden = true
+            measuredByView.isHidden = false
+            
         default:
             
-            measuredByView.isHidden = false
+            measuredByView.isHidden = true
             isSegmentChanged = true
+            nextButton.isHidden = false
             nextButton.setTitle("ADD TO BAG", for: .normal)
         }
         
@@ -86,9 +117,9 @@ extension SizeTypeViewController: UICollectionViewDelegate,UICollectionViewDataS
         
         switch isSegmentChanged {
         case true:
-            return titleArray1.count
+            return attributesNeeded[2].count
         default:
-             return titleArray.count
+             return attributesNeeded[1].count
         }
        
     }
@@ -98,23 +129,32 @@ extension SizeTypeViewController: UICollectionViewDelegate,UICollectionViewDataS
         
         switch isSegmentChanged {
         case true:
-            let cell = sizeCollection.dequeueReusableCell(withReuseIdentifier: "customTypeCell", for: indexPath) as?customTypeCell
+            let cell = sizeCollection.dequeueReusableCell(withReuseIdentifier: "customTypeCell", for: indexPath) as? customTypeCell
             
-            cell?.imgView.image = UIImage(named: imgArray[indexPath.item])
-            cell?.titleLabel.text = titleArray1[indexPath.item]
+            
+            if let url = URL(string: attributesNeeded[2][indexPath.item].image!){
+                  cell?.imgView.af_setImage(withURL: url)
+            }
+           
+            cell?.titleLabel.text = attributesNeeded[2][indexPath.item].text
             
             return cell!
         default:
             
             let cell = sizeCollection.dequeueReusableCell(withReuseIdentifier: "SizeSliderCell", for: indexPath) as? SizeSliderCell
             
-            cell?.titleLabel.text = titleArray[indexPath.item]
+            cell?.titleLabel.text = attributesNeeded[1][indexPath.item].text! + " (" + attributesNeeded[1][indexPath.item].units!.lowercased() + ")"
+            cell?.mySlider.minimumValue = (attributesNeeded[1][indexPath.item].range?.first)!
+            cell?.mySlider.maximumValue = (attributesNeeded[1][indexPath.item].range?.last)!
+            
+            cell?.valueHandler = { (value) -> Void in
+                self.attributesNeeded[1][indexPath.item].valueChosen = value
+                self.myOption[indexPath.item].answer = value
+            }
             return cell!
         }
        
     }
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -134,7 +174,8 @@ extension SizeTypeViewController: UICollectionViewDelegate,UICollectionViewDataS
         switch isSegmentChanged {
         case true:
             let popoverContent = self.storyboard?.instantiateViewController(withIdentifier: "customVideoController") as! customVideoController
-            
+            popoverContent.myChoices = attributesNeeded[2][indexPath.item].choices
+                
             popoverContent.modalPresentationStyle = .overCurrentContext
             
             self.present(popoverContent, animated: true, completion: nil)

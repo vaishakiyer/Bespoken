@@ -25,7 +25,7 @@ class CollectionsViewController: UIViewController {
     
     //MARK: - Stored Variables
     var items = [UIImage(named: "collection8") , UIImage(named: "collection2"), UIImage(named: "collection3") ,  UIImage(named: "collection4"), UIImage(named: "collection5"), UIImage(named: "collection6"), UIImage(named: "collection7"), UIImage(named: "collection1"), UIImage(named: "collection9")]
-    var hamburgerMenuItems = ["Home","Wishlist", "Bag","My Profile", "Notifications"]
+    var hamburgerMenuItems = ["Elegant","Creative", "Sensual", "Extravagant"]
     var allProducts : [Product] = []
 
     lazy var readerVC: QRCodeReaderViewController = {
@@ -39,6 +39,7 @@ class CollectionsViewController: UIViewController {
         
         let resultsController = self.storyboard?.instantiateViewController(withIdentifier: "CollectionsSearchResultsViewController") as! CollectionsSearchResultsViewController
         let searchController = UISearchController(searchResultsController: resultsController)
+        resultsController.searchBar = searchController.searchBar
         // Setup the Search Controller
         searchController.delegate = self
         searchController.searchResultsUpdater = resultsController
@@ -46,7 +47,7 @@ class CollectionsViewController: UIViewController {
         searchController.searchBar.placeholder = "Search "
         searchController.hidesNavigationBarDuringPresentation = true
         searchController.searchBar.showsBookmarkButton = true
-        searchController.searchBar.delegate = self
+        searchController.searchBar.delegate = resultsController
         searchController.searchBar.tintColor = UIColor.black
         searchController.searchBar.setImage(UIImage(named: "qrcode"), for: .bookmark, state: .normal)
         
@@ -174,7 +175,7 @@ class CollectionsViewController: UIViewController {
         self.shadowView.isHidden = true
         self.hamburgerMenuTableView.delegate = self
         self.hamburgerMenuTableView.dataSource = self
-        self.hamburgerMenuTableView.tableFooterView = nil
+        self.hamburgerMenuTableView.tableFooterView = UIView()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(openMenu))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
 //        self.navigationItem.rightBarButtonItem = searchButton
@@ -243,7 +244,6 @@ extension CollectionsViewController : UICollectionViewDelegate, UICollectionView
 
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
 }
 extension CollectionsViewController: PinterestLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView,
@@ -273,9 +273,43 @@ extension CollectionsViewController: CollectionsCollectionViewCellDelegate {
 
 extension CollectionsViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        switch section {
+        case 0:
+            return 0
+        case 1:
+            return 4
+        default:
+            return 0
+        }
     }
-    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
+        let label = UILabel()
+        label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
+        label.textColor = UIColor.black
+        let tap = UITapGestureRecognizer(target: self, action:#selector(self.handleTap))
+        tap.delegate = self
+        switch section {
+        case 0:
+            label.text = "Home"
+            headerView.addGestureRecognizer(tap)
+
+        case 1:
+            label.text = "Filter"
+        default:
+            print("out of index in section")
+        }
+
+        headerView.addSubview(label)
+        return headerView
+        
+    }
+    @objc func handleTap(){
+        self.dismiss(animated: true, completion: nil)
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.hamburgerMenuTableView.dequeueReusableCell(withIdentifier: "HamburgerMenuTableViewCell") as! UITableViewCell
         cell.textLabel?.text = self.hamburgerMenuItems[indexPath.row]
@@ -322,11 +356,6 @@ extension CollectionsViewController : QRCodeReaderViewControllerDelegate,Enlarge
         
         sender.presentFullScreenController(from: self)
     }
-    
-    
-    
-    
-    
     func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
         print(result.value)
         
@@ -362,4 +391,7 @@ extension CollectionsViewController{
           
         })
     }
+}
+extension CollectionsViewController : UIGestureRecognizerDelegate{
+    
 }

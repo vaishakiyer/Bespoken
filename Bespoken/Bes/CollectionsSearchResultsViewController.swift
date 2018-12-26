@@ -13,20 +13,9 @@ class CollectionsSearchResultsViewController: UIViewController , UISearchResults
     
     @IBOutlet weak var collectionViewTags: UICollectionView!
     @IBOutlet weak var collectionViewResults: UICollectionView!
-//    var items = [UIImage(named: "collection8") , UIImage(named: "collection2"), UIImage(named: "collection3") ,  UIImage(named: "collection4"), UIImage(named: "collection5"), UIImage(named: "collection6"), UIImage(named: "collection7"), UIImage(named: "collection1"), UIImage(named: "collection9")]
 
+    var searchBar : UISearchBar?
     var allProducts : [Product] = []
-//    {
-//        didSet{
-//            for each in allProducts{
-//                for tag in each.tags{
-//                    tagsArray.append(tag)
-//                }
-//            }
-//            self.collectionViewTags.reloadData()
-//        }
-//    }
-    
     var tagsArray : [String] = []
     var tagFlowLayout: UICollectionViewFlowLayout {
         get {
@@ -85,7 +74,11 @@ extension CollectionsSearchResultsViewController : UICollectionViewDelegateFlowL
 }
 
 extension CollectionsSearchResultsViewController : UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == collectionViewTags{
+            self.searchBar?.text = tagsArray[indexPath.row]
+    }
+}
 }
 extension CollectionsSearchResultsViewController : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -108,8 +101,8 @@ extension CollectionsSearchResultsViewController : UICollectionViewDataSource{
         else {
             let cell = self.collectionViewResults.dequeueReusableCell(withReuseIdentifier: "ResultsCollectionViewCell", for: indexPath) as! ResultsCollectionViewCell
             cell.delegate = self
-            cell.product = allProducts[indexPath.row]
             cell.indexPath = indexPath
+            cell.product = allProducts[indexPath.row]
             return cell
 
         }
@@ -130,17 +123,14 @@ extension CollectionsSearchResultsViewController: PinterestLayoutDelegate {
     }
     
 }
+extension CollectionsSearchResultsViewController : UISearchBarDelegate{
+    
+}
 extension CollectionsSearchResultsViewController : ResultsCollectionViewCellDelegate{
-    func didFinishLoadingImage(_ cell: UICollectionViewCell) {
         func didFinishLoadingImage(_ cell: UICollectionViewCell) {
-            
             let cell = cell as! ResultsCollectionViewCell
             self.collectionViewResults.reloadItems(at: [cell.indexPath!])
-            
         }
-    }
-    
-    
 }
 extension CollectionsSearchResultsViewController{
     func getResultsforSearchText(searchText : String) {
@@ -150,15 +140,19 @@ extension CollectionsSearchResultsViewController{
             case .success(let JSON):
                 self.allProducts.removeAll()
                 self.tagsArray.removeAll()
-
-                for each in (JSON as! [JSON]){
+                
+                let products : [JSON] = (JSON as! JSON)["products"] as! [JSON]
+                let recommendedTags : [String] = (JSON as! JSON)["recommended_tags"] as! [String]
+                for each in products{
                     var product = Product(json: each as JSON)
                     self.allProducts.append(product)
                 }
-                self.collectionViewTags.reloadData()
-                self.collectionViewResults.reloadData()
-                self.collectionViewResults.collectionViewLayout.invalidateLayout()
-
+                self.tagsArray = recommendedTags
+                DispatchQueue.main.async {
+                    self.collectionViewTags.reloadData()
+                    self.collectionViewResults.reloadData()
+                }
+         
                 print("product search api called for text \(searchText)")
                 print(self.allProducts.count)
             case .failure(let error):

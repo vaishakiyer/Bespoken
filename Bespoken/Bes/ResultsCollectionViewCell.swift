@@ -20,6 +20,7 @@ class ResultsCollectionViewCell: UICollectionViewCell {
     var delegate :ResultsCollectionViewCellDelegate?
     var indexPath : IndexPath?
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet var productTitle: UILabel!
     
     func updateCell() {
         
@@ -39,6 +40,9 @@ class ResultsCollectionViewCell: UICollectionViewCell {
             self.imageView.layer.shadowRadius = 5
             self.imageView.layer.shadowOpacity = 1
             self.imageView.layer.shadowOffset = CGSize.zero
+            self.imageView.layer.cornerRadius = 20 //self.imageView.frame.width/2
+            self.productTitle.text = self.product?.title
+            
         }
         )
     }

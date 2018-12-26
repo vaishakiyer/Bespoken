@@ -168,7 +168,6 @@ enum Router: URLRequestConvertible{
             let parameters = ["tag" : searchText]
             return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
         case .postAttributes(let id, let answers):
-            
             let parameters = [ "product" : id, "preferences" : answers] as [String : Any]
             return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
             

@@ -81,6 +81,17 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         stackView.axis = .vertical
         return stackView
     }()
+    lazy var titleStackViewFirst: UIStackView = {
+        let titleLabel = UILabel()
+        titleLabel.textAlignment = .center
+        titleLabel.text = "Enter passcode sent"
+        let subtitleLabel = UILabel()
+        subtitleLabel.textAlignment = .center
+        subtitleLabel.text = "to your email."
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
+        stackView.axis = .vertical
+        return stackView
+    }()
     
     func setup(){
         
@@ -94,8 +105,13 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         
         firstTimeVC.delegate = self
         firstTimeVC.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissTOPasscodeController))
-        
-        
+        firstTimeVC.navigationItem.titleView = titleStackViewFirst
+        firstTimeVC.navigationController?.navigationBar.isTranslucent = true
+        firstTimeVC.navigationController?.navigationBar.isHidden = false
+        firstTimeVC.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        firstTimeVC.navigationController?.navigationBar.shadowImage = UIImage()
+        firstTimeVC.navigationItem.leftBarButtonItem?.tintColor = UIColor.darkGray
+        firstTimeVC.navigationItem.rightBarButtonItem?.tintColor = UIColor.darkGray
         loginView.isHidden = true
         bottomLabel.isHidden = true
         bottomSignIn.isHidden = true

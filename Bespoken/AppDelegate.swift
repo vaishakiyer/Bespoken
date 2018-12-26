@@ -27,23 +27,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
 
-        if BSUserDefaults.getAccessToken() != nil{
+        if BSUserDefaults.getAccessToken() != nil {
             let vc = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController")
             let navController = UINavigationController(rootViewController: vc)
             window?.rootViewController = navController
-
         }else{
-
             let vc = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
             let navController = UINavigationController(rootViewController: vc)
             window?.rootViewController = navController
         }
-        
-        
-        
-        
-          
-        
         return true
     }
 

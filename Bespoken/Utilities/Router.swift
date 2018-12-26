@@ -35,10 +35,11 @@ enum Router: URLRequestConvertible{
     case getProductBy(id: String)
     case getEventBy(id: String)
     case getAttributesByProduct(id: String)
+    case ProductSearch(searchText : String)
     
     var method: Alamofire.HTTPMethod {
         switch self {
-        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems,.getThemeboardCards,.getAffinityCards,.postSwipedCards,.getTheCards,.getTheCardsForEvent,.getStyleWords,.getProductBy,.getEventBy,.getAttributesByProduct:
+        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems,.getThemeboardCards,.getAffinityCards,.postSwipedCards,.getTheCards,.getTheCardsForEvent,.getStyleWords,.getProductBy,.getEventBy,.getAttributesByProduct , .ProductSearch:
             return .post
         default:
             return .get
@@ -88,6 +89,8 @@ enum Router: URLRequestConvertible{
             return "getEvent"
         case .getAttributesByProduct:
             return "getAttributesbyProduct"
+        case .ProductSearch:
+            return "ProductSearch"
         }
     }
     
@@ -156,7 +159,9 @@ enum Router: URLRequestConvertible{
             
             let parameters = ["product": id]
             return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
-            
+        case .ProductSearch(let searchText):
+            let parameters = ["tag" : searchText]
+            return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
         default:
             return try Alamofire.JSONEncoding.default.encode(urlRequest, with: nil)
         }

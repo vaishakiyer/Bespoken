@@ -16,7 +16,11 @@ class ProfileTimelineTableViewCell: UITableViewCell {
     @IBOutlet var bottomLineView: UIView!
     
     
-    var indexPath : IndexPath?
+    var indexPath : IndexPath?{
+        didSet{
+            self.updateCell()
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

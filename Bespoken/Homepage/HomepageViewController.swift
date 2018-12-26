@@ -36,10 +36,10 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
             if each.id == currentLoadedCardsArray[0].myCardId{
                 vc.product = each
                 self.navigationController?.pushViewController(vc, animated: true)
-
             }
-            }}
-        
+            }
+            
+        }
     }
     //MARK: Declare Variables
     var allProducts : [Product] = []

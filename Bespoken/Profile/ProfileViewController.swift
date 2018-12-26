@@ -8,9 +8,11 @@
 
 import UIKit
 import YLProgressBar
+import Alamofire
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet var tableHeaderTitle: UILabel!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var logoutButton: UIButton!
     @IBOutlet var progressView: UIView!
@@ -28,6 +30,20 @@ class ProfileViewController: UIViewController {
         self.logoutButton.roundCorners(corners: UIRectCorner(arrayLiteral: .allCorners), radius: 20)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = nil
+ 
+        let styleWords = BSUserDefaults.getLoggedWords()
+        if styleWords == nil {
+            self.getStylewords()
+
+        }
+        var x  = ""
+        for i in styleWords ?? []{
+     
+            x = x + i + " - "
+            
+        }
+        tableHeaderTitle.text = x
         
 //        self.shadowView.dropShadow(color: UIColor.black, offSet: CGSize(width: 10, height: 10))
         let progressBar = YLProgressBar(frame: self.progressView.bounds)
@@ -50,7 +66,7 @@ extension ProfileViewController : UITableViewDelegate{
 }
 extension ProfileViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 4
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -62,5 +78,36 @@ extension ProfileViewController : UITableViewDataSource{
         return cell
     }
     
+    
+}
+extension ProfileViewController {
+    
+    func getStylewords(){
+        
+        Alamofire.request(Router.getStyleWords()).responseJSON { (response) in
+            
+            switch response.result{
+                
+            case .success(let JSON):
+                
+                print(JSON)
+                
+                guard let wordList = (JSON as? NSDictionary)?.value(forKey: "words") as? [String] else {return}
+                
+                BSUserDefaults.setLoggedWords(wordList)
+                
+                self.tableView.reloadData()
+                //   self.creativeLabel.text = labelValue
+                
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+            
+            
+        }
+        
+        
+    }
     
 }

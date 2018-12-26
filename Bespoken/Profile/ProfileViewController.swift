@@ -12,13 +12,29 @@ import Alamofire
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet var editProfileImageButton: UIButton!
     @IBOutlet var tableHeaderTitle: UILabel!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var logoutButton: UIButton!
     @IBOutlet var progressView: UIView!
     @IBOutlet var profileImage: UIImageView!
-    @IBOutlet var shadowView: UIView!
+    @IBAction func editProfileAction(_ sender: Any) {
+        let alertController =  UIAlertController(title: "Upload Profile Image", message: "", preferredStyle: .actionSheet)
+        let galleryAction = UIAlertAction(title: "Open Photos", style: .default, handler: {(action) in })
+        let cameraAction = UIAlertAction(title: "Open Camera", style: .default, handler: {(action) in })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+        alertController.addAction(galleryAction)
+        alertController.addAction(cameraAction)
+        alertController.addAction(cancelAction)
+
+        self.present(alertController, animated: true)
+    }
     @IBAction func logoutButtonPressed(_ sender: Any) {
+        BSUserDefaults.removeAll()
+        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewControllerNav") as! UINavigationController
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.window!.rootViewController = loginVC
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +46,13 @@ class ProfileViewController: UIViewController {
         self.logoutButton.roundCorners(corners: UIRectCorner(arrayLiteral: .allCorners), radius: 20)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.tableFooterView = nil
+        tableView.tableFooterView = UIView()
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.darkGray
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.darkGray
+        
  
         let styleWords = BSUserDefaults.getLoggedWords()
         if styleWords == nil {

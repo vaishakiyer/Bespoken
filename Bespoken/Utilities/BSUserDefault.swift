@@ -70,5 +70,9 @@ class BSUserDefaults{
         
          return sharedInstance.value(forKey: kFirstTime) as? Bool
     }
-    
+    class func removeAll(){
+        if let appDomain = Bundle.main.bundleIdentifier {
+            sharedInstance.removePersistentDomain(forName: appDomain)
+        }
+    }
 }

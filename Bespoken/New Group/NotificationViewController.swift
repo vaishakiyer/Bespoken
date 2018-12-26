@@ -18,11 +18,8 @@ class NotificationViewController: UIViewController {
     @IBOutlet weak var segmentButton: UISegmentedControl!
     
 //Mark :- Stored Variables
-    var allNotifications: [BSNotification] = []{
-        didSet{
-            self.tableView.reloadData()
-        }
-    }
+    var allNotifications: [BSNotification] = []
+    var allwishlistProducts : [Product] = []
     lazy var readerVC: QRCodeReaderViewController = {
         let builder = QRCodeReaderViewControllerBuilder {
             $0.reader = QRCodeReader(metadataObjectTypes: [.qr], captureDevicePosition: .back)
@@ -89,13 +86,13 @@ extension NotificationViewController : UITableViewDelegate {
 }
 extension NotificationViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allNotifications.count
+        return allwishlistProducts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "NotificationTableViewCell") as! NotificationTableViewCell
-        cell.titleLabel.text = allNotifications[indexPath.row].title
-        cell.notificationTextLabel.text = allNotifications[indexPath.row].text
+        cell.titleLabel.text = allwishlistProducts[indexPath.row].title
+//        cell.notificationTextLabel.text = allwishlistProducts[indexPath.row].text
         cell.imageView?.image = UIImage(named: allNotifications[indexPath.row].image!)
 
         return cell
@@ -140,15 +137,25 @@ extension NotificationViewController {
         }
     }
     func getWishlistItemsAPI(){
-//        BSLoader.showLoading("", disableUI: true, image: "Group 376")
-        Alamofire.request(Router.getNotifications()).responseJSON{
+        BSLoader.showLoading("", disableUI: true, image: "Group 376")
+        Alamofire.request(Router.getWishlistItems()).responseJSON{
             response in
-//            BSLoader.hide()
+            BSLoader.hide()
 
             switch response.result {
             case .success(let JSON):
+                self.allwishlistProducts.removeAll()
+                let products :[JSON] = (JSON as! [JSON])//["products"] as! [JSON] 
+                    for each in products {
+                        let newProd = Product(json: each)
+                        self.allwishlistProducts.append(newProd)
+                    }
                 
-                print("success")
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                print(response.request)
+                print("Wishlist Products cunt is \(self.allwishlistProducts.count)")
             case .failure(let error):
                 print("error")
             }

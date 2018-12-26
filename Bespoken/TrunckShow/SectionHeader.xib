@@ -40,6 +40,7 @@
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <connections>
                 <outlet property="outerView" destination="CHX-rH-UsC" id="KBB-AA-LLJ"/>
+                <outlet property="seatsLeft" destination="9pF-K3-zlX" id="kv6-Px-Rke"/>
             </connections>
             <point key="canvasLocation" x="-55.200000000000003" y="41.379310344827587"/>
         </collectionReusableView>

@@ -37,10 +37,10 @@ enum Router: URLRequestConvertible{
     case getAttributesByProduct(id: String)
     case ProductSearch(searchText : String)
     case postAttributes(prodId: String,preferences: [NSDictionary])
-    
+    case rsvpEvent(eventId: String,status: String)
     var method: Alamofire.HTTPMethod {
         switch self {
-        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems,.getThemeboardCards,.getAffinityCards,.postSwipedCards,.getTheCards,.getTheCardsForEvent,.getStyleWords,.getProductBy,.getEventBy,.getAttributesByProduct , .ProductSearch , .postAttributes:
+        case .inviteUser,.getQuestions,.signIn,.confirmUser,.getUser,.updateUser,.getEvents ,.getNotifications , .getWishlistItems,.getThemeboardCards,.getAffinityCards,.postSwipedCards,.getTheCards,.getTheCardsForEvent,.getStyleWords,.getProductBy,.getEventBy,.getAttributesByProduct , .ProductSearch , .postAttributes,.rsvpEvent:
             return .post
         default:
             return .get
@@ -94,6 +94,8 @@ enum Router: URLRequestConvertible{
             return "ProductSearch"
         case .postAttributes:
             return "createBooking"
+        case .rsvpEvent:
+            return "RsvpEvent"
         }
     }
     
@@ -168,6 +170,11 @@ enum Router: URLRequestConvertible{
         case .postAttributes(let id, let answers):
             
             let parameters = [ "product" : id, "preferences" : answers] as [String : Any]
+            return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
+            
+        case .rsvpEvent(let id,let status):
+            
+            let parameters = ["event": id, "status": status]
             return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
             
         default:

@@ -21,6 +21,7 @@ struct TrunckShowElement: Codable {
     let v: Int?
     let archived: Bool?
     let updatedDate: String?
+    let seatsAvailable,totalSeats : Int?
     let images: [JSONAny]?
     
     enum CodingKeys: String, CodingKey {
@@ -38,6 +39,8 @@ struct TrunckShowElement: Codable {
         case organizerEmail = "organizer_email"
         case organizerPhone = "organizer_phone"
         case organizerLogo = "organizer_logo"
+        case seatsAvailable = "seats_available"
+        case totalSeats = "total_seats"
         case v = "__v"
         case archived, updatedDate, images
     }

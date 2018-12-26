@@ -407,12 +407,12 @@ extension HomepageViewController{
             animateCardAfterSwiping()
             
             
-            if let checkFirst = BSUserDefaults.getFirstTime(){
-                if checkFirst == true{
-                     perform(#selector(loadInitialDummyAnimation), with: nil, afterDelay: 3.0)
-                }
-
-            }
+//            if let checkFirst = BSUserDefaults.getFirstTime(){
+//                if checkFirst == true{
+//                     perform(#selector(loadInitialDummyAnimation), with: nil, afterDelay: 3.0)
+//                }
+//
+//            }
            
         }
         

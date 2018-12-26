@@ -311,12 +311,6 @@ extension QuestionnaireController1{
                     
                     self.completeAnsHandler("F1Brand")
                 
-//                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//                    let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
-//                    nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Brand")
-//                    self.navigationController?.pushViewController(nextVC!, animated: true)
-                    
-                    
                 }else{
                     self.showAlert(message: "Could not update your preferences")
                 }

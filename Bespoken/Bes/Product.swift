@@ -28,6 +28,7 @@ class Product {
     var styletip : StyleTip?
     var tags : [String]
     var imageSizes : [String : CGSize] = [:]
+    var likes : Int?
     
     init(json: JSON) {
         self.id = json["_id"] as! String
@@ -45,7 +46,7 @@ class Product {
         self.archived = json["archived"] as! Bool
         self.description = json["description"] as! String
         self.attributes = json["attributes"] as! [String]
-        
+        self.likes = json["likes"] as? Int
     }
     
     

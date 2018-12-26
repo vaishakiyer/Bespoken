@@ -73,6 +73,28 @@ class TrunckViewController: UIViewController {
         innerView.isHidden = true
     }
     
+    func createNavbar(shouldHide: Bool){
+        
+        if shouldHide == false{
+            let rsvpButton = UIBarButtonItem(title: "RSVP", style: .plain, target: self, action: #selector(rsvpPressed))
+            rsvpButton.tintColor = .white
+        self.navigationItem.rightBarButtonItem = rsvpButton
+        }else{
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        }
+    }
+    
+    @objc func rsvpPressed(){
+        
+        if myGroupedEvents[selectedSection][selectedIndex].seatsAvailable! > 0{
+             createRSVP()
+        }else{
+            self.showAlert(message: "Oops!! \n There are no seats available currently. \n Please talk to the event coordinator for further info.")
+        }
+        
+       
+    }
+    
     @objc func segementChanged(sender: UISegmentedControl){
         
         switch sender.selectedSegmentIndex {
@@ -132,6 +154,7 @@ class TrunckViewController: UIViewController {
             layout.scrollDirection = .horizontal
         }
         
+        createNavbar(shouldHide: true)
         previewButtonPressed = false
         innerView.isHidden = true
         UIView.transition(with: trunckCollection, duration: 0.5, options: .transitionFlipFromRight, animations: {
@@ -204,6 +227,11 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
             if let startTime = myGroupedEvents[selectedSection][selectedIndex].endDate{
                 sectionHeader!.setDate = startTime
             }
+            
+            if let val = myGroupedEvents[selectedSection][selectedIndex].seatsAvailable{
+                 sectionHeader?.updateSeats(count: val)
+            }
+           
             
             return sectionHeader!
             
@@ -293,7 +321,7 @@ extension TrunckViewController: TrunckViewDelegate{
         previewButtonPressed = true
          addGestureToView()
         innerView.isHidden = false
-        
+        createNavbar(shouldHide: false)
         updateUI()
         
         UIView.transition(with: trunckCollection, duration: 0.5, options: .transitionFlipFromLeft, animations: {
@@ -439,6 +467,22 @@ extension TrunckViewController{
             case .success(let JSON):
                 
                 print(JSON)
+                let events = try? JSONDecoder().decode(TrunckShow.self, from: response.data!)
+                
+                if (events?[0].seatsAvailable!)! < 10{
+                    self.showAlert(message: "HURRY UP!.\n Last 3 seats are available")
+                }else{
+                    
+                    let message = "\n Please proceed to purchase the ticket \n\n" + "Available Seats: " + (events?[0].seatsAvailable!.description)!
+                    let titleLabel = (events?[0].title!)! + "\n" + (events?[0].location!)!
+                    let alertController = UIAlertController(title: titleLabel, message: message, preferredStyle: .alert)
+                    let proceed = UIAlertAction(title: "Proceed to pay", style: .default, handler: nil)
+                    let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                    alertController.addAction(proceed)
+                    alertController.addAction(cancel)
+                    self.readerVC.present(alertController, animated: true, completion: nil)
+                }
+                
                 
             case .failure(let error):
                 
@@ -447,5 +491,37 @@ extension TrunckViewController{
             }
         }
     }
+    
+    func createRSVP(){
+        
+        Alamofire.request(Router.rsvpEvent(eventId: myGroupedEvents[selectedSection][selectedIndex].id!, status: "YES")).responseJSON { (response) in
+            
+            switch response.result{
+                
+            case .success(let JSON):
+                
+             print(JSON)
+                
+             if let statusMessage = (JSON as? NSDictionary)?.value(forKeyPath: "data.result") as? String{
+                
+                if statusMessage == "success"{
+                    self.showAlert(message: "Congratulations!! \n\n You have been invited to the event successfully")
+                }
+                
+                }
+                
+            case .failure(let error):
+                
+                print(error.localizedDescription)
+                
+            }
+            
+            
+            
+        }
+        
+        
+    }
+    
     
 }

@@ -210,11 +210,14 @@ extension SizeTypeViewController{
         
         var tempDict = [NSDictionary]()
         
+        
         myOption.append(mySizeAnswer)
         
         tempDict.removeAll()
         
         for item in myOption{
+            
+            if item.answer != nil{
             
             if let intVal = Int(item.answer!){
                 
@@ -232,8 +235,8 @@ extension SizeTypeViewController{
                 obj["answer"] = item.answer
                 tempDict.append(obj)
                 
+              }
             }
-            
         }
         
         print(tempDict)

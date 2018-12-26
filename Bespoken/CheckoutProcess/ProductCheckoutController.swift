@@ -11,6 +11,7 @@ import AlamofireImage
 import Alamofire
 
 var currentProductId: String? = ""
+var currentProduct : Product?
 
 class ProductCheckoutController: UIViewController {
     
@@ -24,6 +25,7 @@ class ProductCheckoutController: UIViewController {
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var likeDislikeButton: UIButton!
+    @IBOutlet weak var noOflikes: UILabel!
     
     @IBOutlet weak var nextButton: UIButton!
     
@@ -57,7 +59,11 @@ class ProductCheckoutController: UIViewController {
         createNav()
         updateUI()
         getAttributesOfAProduct()
+        
+        noOflikes.text = theProduct?.likes?.description
         currentProductId = theProduct?.id
+        currentProduct = theProduct
+        
         //getProductAPI(id : self.theProductId!)
     }
     

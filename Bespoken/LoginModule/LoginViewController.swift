@@ -100,6 +100,8 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         nextVC.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissTOPasscodeController))
         nextVC.style = .dark
         nextVC.navigationItem.titleView = titleStackView
+        nextVC.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        nextVC.navigationController?.navigationBar.shadowImage = UIImage()
         
         
         

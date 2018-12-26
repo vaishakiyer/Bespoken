@@ -18,6 +18,8 @@ class SizeTypeViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var measuredByView: UIView!
+    @IBOutlet weak var stylistSwitch: UISwitch!
+    
     
     var attributesNeeded = [Attributes]()
     
@@ -36,6 +38,9 @@ class SizeTypeViewController: UIViewController {
     
     func setup(){
         
+        
+        stylistSwitch.isOn = false
+        stylistSwitch.setOn(false, animated: true)
         sizeCollection.delegate = self
         sizeCollection.dataSource = self
         sizeCollection.register(UINib(nibName: "SizeSliderCell", bundle: nil), forCellWithReuseIdentifier: "SizeSliderCell")
@@ -72,6 +77,43 @@ class SizeTypeViewController: UIViewController {
         
         
     }
+    
+    
+    @IBAction func switchToggled(_ sender: UISwitch) {
+        
+        switch sender.isOn {
+        case true:
+            
+            stylistSwitch.setOn(true, animated: true)
+            let alertControl = UIAlertController(title: "Please enter the designer Code", message: "", preferredStyle: .alert)
+            
+            alertControl.addTextField(configurationHandler: { (textField) in
+                textField.placeholder = "Enter Stylist Code"
+                textField.keyboardType = .numberPad
+            })
+
+            let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+                let firstTextField = alertControl.textFields![0] as UITextField
+                print(firstTextField)
+            })
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (weak) in
+                self.stylistSwitch.setOn(false, animated: true)
+                self.stylistSwitch.isOn = false
+            }
+            alertControl.addAction(saveAction)
+            alertControl.addAction(cancelAction)
+            
+            self.present(alertControl, animated: true, completion: nil)
+            
+        case false:
+            
+            stylistSwitch.setOn(false, animated: true)
+        }
+        
+        
+    }
+    
     
     @objc func segmentChanged(sender: UISegmentedControl){
         
@@ -210,11 +252,14 @@ extension SizeTypeViewController{
         
         var tempDict = [NSDictionary]()
         
+        
         myOption.append(mySizeAnswer)
         
         tempDict.removeAll()
         
         for item in myOption{
+            
+            if item.answer != nil{
             
             if let intVal = Int(item.answer!){
                 
@@ -232,8 +277,8 @@ extension SizeTypeViewController{
                 obj["answer"] = item.answer
                 tempDict.append(obj)
                 
+              }
             }
-            
         }
         
         print(tempDict)

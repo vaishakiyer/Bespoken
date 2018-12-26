@@ -75,6 +75,7 @@
 		A56CDF9D21ADB24000113997 /* MeasurementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56CDF9C21ADB24000113997 /* MeasurementViewController.swift */; };
 		A56D7F1821C28C2800E03671 /* BagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D7F1721C28C2800E03671 /* BagViewController.swift */; };
 		A5779BDF21A5AFEB001CE009 /* BSLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5779BDE21A5AFEB001CE009 /* BSLoader.swift */; };
+		A585079E21D3C78D001D6D6B /* playVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585079D21D3C78D001D6D6B /* playVideoController.swift */; };
 		A594F5EC21A1446F001BD710 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A594F5EB21A1446F001BD710 /* AppDelegate.swift */; };
 		A594F5F121A1446F001BD710 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A594F5EF21A1446F001BD710 /* Main.storyboard */; };
 		A594F5F421A1446F001BD710 /* Bespoken.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A594F5F221A1446F001BD710 /* Bespoken.xcdatamodeld */; };
@@ -207,6 +208,7 @@
 		A56CDF9C21ADB24000113997 /* MeasurementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementViewController.swift; sourceTree = "<group>"; };
 		A56D7F1721C28C2800E03671 /* BagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagViewController.swift; sourceTree = "<group>"; };
 		A5779BDE21A5AFEB001CE009 /* BSLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSLoader.swift; sourceTree = "<group>"; };
+		A585079D21D3C78D001D6D6B /* playVideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playVideoController.swift; sourceTree = "<group>"; };
 		A594F5E821A1446F001BD710 /* Bespoken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bespoken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A594F5EB21A1446F001BD710 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A594F5F021A1446F001BD710 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 				A5F8FF4921B853FC00C38AC2 /* customVideoCell.swift */,
 				A5F8FF4A21B853FC00C38AC2 /* customVideoCell.xib */,
 				A56D7F1721C28C2800E03671 /* BagViewController.swift */,
+				A585079D21D3C78D001D6D6B /* playVideoController.swift */,
 			);
 			path = CheckoutProcess;
 			sourceTree = "<group>";
@@ -860,6 +863,7 @@
 				A5082D8021A15A49005EBA41 /* OptionsViewCell.swift in Sources */,
 				A511854821CA644F00BADDEC /* CurateStyle.swift in Sources */,
 				A5B0C95C21A450760058A064 /* Homecenter1.swift in Sources */,
+				A585079E21D3C78D001D6D6B /* playVideoController.swift in Sources */,
 				01A8A10921CB91300017B86F /* ProfileTimelineTableViewCell.swift in Sources */,
 				A5A38A8021A18ED500ED1088 /* Swift+Gif.swift in Sources */,
 				011463D321C57D3B003DF072 /* ProductDetailViewController.swift in Sources */,

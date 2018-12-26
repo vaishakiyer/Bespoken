@@ -20,6 +20,7 @@ class SectionHeader: UICollectionReusableView {
     }
     
 
+    @IBOutlet weak var seatsLeft: UILabel!
     @IBOutlet weak var outerView: UIView!
      var headerView : HeaderView?
     
@@ -106,6 +107,11 @@ class SectionHeader: UICollectionReusableView {
         }
     }
     
-    
+    func updateSeats(count: Int){
+        
+        seatsLeft.text = "SEATS LEFT: " + count.description
+        
+        
+    }
     
 }

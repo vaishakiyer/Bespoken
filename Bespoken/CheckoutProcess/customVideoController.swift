@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class customVideoController: UIViewController {
 
     @IBOutlet weak var myCollection: UICollectionView!
     @IBOutlet weak var outerView: UIView!
     
-    let dummyArr = ["Group 718","Group 719","Group 720"]
+    var myChoices = [Choice]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,13 +51,17 @@ class customVideoController: UIViewController {
 
 extension customVideoController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return myChoices.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell =  myCollection.dequeueReusableCell(withReuseIdentifier: "customVideoCell", for: indexPath) as? customVideoCell
         
-        cell?.imgView.image = UIImage(named: dummyArr[indexPath.row])
+        
+        if let url = URL(string: myChoices[indexPath.item].image!){
+             cell?.imgView.af_setImage(withURL: url)
+        }
+       
         return cell!
     }
     

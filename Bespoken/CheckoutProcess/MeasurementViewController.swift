@@ -8,6 +8,14 @@
 
 import UIKit
 
+struct MeasurementAnswer {
+    
+    var id : String?
+    var answer : String?
+}
+
+var mySizeAnswer = MeasurementAnswer()
+
 class MeasurementViewController: UIViewController {
 
     //MARK: - IBOutlets
@@ -16,8 +24,8 @@ class MeasurementViewController: UIViewController {
     
     @IBOutlet weak var customiseButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
-    
-    
+    var allAttributesCollected = [Attributes]()
+    var shouldReload : Bool = true
     //MARK: - Viewcontroller Lifecycle
     
     override func viewDidLoad() {
@@ -36,8 +44,18 @@ class MeasurementViewController: UIViewController {
      measTypeCollection.register(UINib(nibName: "sizeChartCell", bundle: nil), forCellWithReuseIdentifier: "sizeChartCell")
     customiseButton.roundCorners(corners: .allCorners, radius: 24)
     nextButton.roundCorners(corners: .allCorners, radius: 24)
-        nextButton.addTarget(self, action: #selector(launchSizeController), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(launchSizeController1), for: .touchUpInside)
         customiseButton.addTarget(self, action: #selector(launchSizeController), for: .touchUpInside)
+        
+    }
+    
+    @objc func launchSizeController1(){
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = storyBoard.instantiateViewController(withIdentifier: "SizeTypeViewController") as? SizeTypeViewController
+        nextVC?.attributesNeeded = allAttributesCollected
+        nextVC?.isNextPressed = true
+        self.navigationController?.pushViewController(nextVC!, animated: true)
         
     }
     
@@ -46,6 +64,8 @@ class MeasurementViewController: UIViewController {
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let nextVC = storyBoard.instantiateViewController(withIdentifier: "SizeTypeViewController") as? SizeTypeViewController
+        nextVC?.attributesNeeded = allAttributesCollected
+        nextVC?.isNextPressed = false
         self.navigationController?.pushViewController(nextVC!, animated: true)
 
         
@@ -65,13 +85,37 @@ class MeasurementViewController: UIViewController {
 
 extension MeasurementViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        
+        return allAttributesCollected[0][section].choices.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
         let cell =  measTypeCollection.dequeueReusableCell(withReuseIdentifier: "sizeChartCell", for: indexPath) as? sizeChartCell
+        cell?.delegate = self
         
+        cell?.sizeType.text = allAttributesCollected[0][indexPath.section].choices[indexPath.row].text
+        cell?.sizeBtn1.setTitle(allAttributesCollected[0][indexPath.section].choices[indexPath.row].measurementOptions?.first, for: .normal)
+        cell?.sizeBtn2.setTitle(allAttributesCollected[0][indexPath.section].choices[indexPath.row].measurementOptions?.last, for: .normal)
+        
+        
+        if allAttributesCollected[0][indexPath.section].choices[indexPath.row].isValSelected == true{
+            cell?.sizeBtn1.backgroundColor = UIColor.lightGray
+            cell?.sizeBtn2.backgroundColor = UIColor(red: 111/255, green: 113/255, blue: 121/255, alpha: 1.0)
+            mySizeAnswer.id = allAttributesCollected[0][indexPath.section].choices[indexPath.row].id
+            mySizeAnswer.answer = allAttributesCollected[0][indexPath.section].choices[indexPath.row].measurementOptions?.first
+            
+        }else if allAttributesCollected[0][indexPath.section].choices[indexPath.row].isValSelected2 == true{
+            cell?.sizeBtn2.backgroundColor = UIColor.lightGray
+            cell?.sizeBtn1.backgroundColor = UIColor(red: 111/255, green: 113/255, blue: 121/255, alpha: 1.0)
+            
+            mySizeAnswer.id = allAttributesCollected[0][indexPath.section].choices[indexPath.row].id
+            mySizeAnswer.answer = allAttributesCollected[0][indexPath.section].choices[indexPath.row].measurementOptions?.last
+            
+        }else{
+             cell?.sizeBtn2.backgroundColor = UIColor(red: 111/255, green: 113/255, blue: 121/255, alpha: 1.0)
+             cell?.sizeBtn1.backgroundColor = UIColor(red: 111/255, green: 113/255, blue: 121/255, alpha: 1.0)
+        }
         
         return cell!
         
@@ -88,6 +132,62 @@ extension MeasurementViewController: UICollectionViewDelegate,UICollectionViewDa
         return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         
     }
+    
+    
+    
+}
+
+extension MeasurementViewController: ButtonTouchDelegate{
+    
+    func button1Pressed(sender: sizeChartCell) {
+        
+        shouldReload = false
+        
+        guard let indexPath = measTypeCollection.indexPath(for: sender) else {
+            return
+        }
+        
+        if allAttributesCollected[0][indexPath.section].choices[indexPath.row].isValSelected == true{
+            
+            allAttributesCollected[0][indexPath.section].choices[indexPath.row].isValSelected = false
+        }else{
+            
+            for index in 0..<allAttributesCollected[0][indexPath.section].choices.count{
+                allAttributesCollected[0][indexPath.section].choices[index].isValSelected = false
+                allAttributesCollected[0][indexPath.section].choices[index].isValSelected2 = false
+            }
+            allAttributesCollected[0][indexPath.section].choices[indexPath.row].isValSelected = true
+        }
+        
+       measTypeCollection.reloadData()
+        
+    }
+    
+    func button2Pressed(sender: sizeChartCell) {
+        
+         shouldReload = false
+        
+        guard let indexPath = measTypeCollection.indexPath(for: sender) else {
+            return
+        }
+        
+        if allAttributesCollected[0][indexPath.section].choices[indexPath.row].isValSelected2 == true{
+            
+            allAttributesCollected[0][indexPath.section].choices[indexPath.row].isValSelected2 = false
+        }else{
+            
+            for index in 0..<allAttributesCollected[0][indexPath.section].choices.count{
+                allAttributesCollected[0][indexPath.section].choices[index].isValSelected = false
+                allAttributesCollected[0][indexPath.section].choices[index].isValSelected2 = false
+            }
+            allAttributesCollected[0][indexPath.section].choices[indexPath.row].isValSelected2 = true
+        }
+        
+        measTypeCollection.reloadData()
+        
+        
+    }
+    
     
     
     

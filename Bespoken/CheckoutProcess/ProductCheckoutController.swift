@@ -9,6 +9,9 @@
 import UIKit
 import AlamofireImage
 import Alamofire
+
+var currentProductId: String? = ""
+
 class ProductCheckoutController: UIViewController {
     
     //MARK: - Making IB Outlets
@@ -24,8 +27,17 @@ class ProductCheckoutController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
+    //MARK: - Declare Variables
+    
     var theProduct : Product?
     var theProductId : String?
+    var prodAttributes = Attributes()
+    
+    var sizeAttribute = Attributes()
+    var measAttribute = Attributes()
+    var typeAttribute = Attributes()
+    
+    var allAttributesObject = [Attributes]()
     
     //MARK: - Viewcontroller lifecycle
 
@@ -45,6 +57,7 @@ class ProductCheckoutController: UIViewController {
         createNav()
         updateUI()
         getAttributesOfAProduct()
+        currentProductId = theProduct?.id
         //getProductAPI(id : self.theProductId!)
     }
     
@@ -65,6 +78,7 @@ class ProductCheckoutController: UIViewController {
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let nextVC = storyBoard.instantiateViewController(withIdentifier: "MeasurementViewController") as? MeasurementViewController
+        nextVC?.allAttributesCollected = allAttributesObject
         self.navigationController?.pushViewController(nextVC!, animated: true)
         
     }
@@ -102,9 +116,39 @@ class ProductCheckoutController: UIViewController {
             switch response.result{
                 
             case .success(let JSON):
-                
                 print(JSON)
                 
+                guard let jsonArray = JSON as? [NSDictionary] else {return}
+                
+                for val in jsonArray{
+                    
+                    let attObj = Attribute(json: val)
+                    self.prodAttributes.append(attObj)
+                }
+                
+                for items in self.prodAttributes{
+                    
+                    switch items.attrType{
+                        
+                    case "NUMBER":
+                        self.measAttribute.append(items)
+                        break
+                    case "CHOICE":
+                        self.typeAttribute.append(items)
+                        break
+                    case "SIZE":
+                        self.sizeAttribute.append(items)
+                        break
+                    default:
+                        break
+                        
+                    }
+                }
+                
+                self.allAttributesObject.append(self.sizeAttribute)
+                self.allAttributesObject.append(self.measAttribute)
+                self.allAttributesObject.append(self.typeAttribute)
+        
             case .failure(let error):
                 
                 print(error.localizedDescription)

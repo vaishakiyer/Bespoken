@@ -50,6 +50,20 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe3-kc-8Qo">
+                                        <rect key="frame" x="0.0" y="62" width="63.5" height="45"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8C-Bz-4OS">
+                                        <rect key="frame" x="67" y="62" width="63.5" height="45"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -60,10 +74,18 @@
                                     <constraint firstItem="Ww9-za-Fl6" firstAttribute="leading" secondItem="fZN-lo-Ig0" secondAttribute="trailing" constant="3" id="GHa-rj-Rc8"/>
                                     <constraint firstItem="HhI-le-Skh" firstAttribute="top" secondItem="6OG-Oh-c5H" secondAttribute="top" id="KC7-ew-vix"/>
                                     <constraint firstAttribute="width" secondItem="HhI-le-Skh" secondAttribute="width" constant="-2" id="KFt-vk-MoX"/>
+                                    <constraint firstItem="qe3-kc-8Qo" firstAttribute="leading" secondItem="fZN-lo-Ig0" secondAttribute="leading" id="L2P-2W-j2w"/>
                                     <constraint firstAttribute="trailing" secondItem="Ww9-za-Fl6" secondAttribute="trailing" constant="-2" id="Mcr-Sw-2jd"/>
                                     <constraint firstAttribute="trailing" secondItem="HhI-le-Skh" secondAttribute="trailing" constant="-2" id="P9O-Dz-HIp"/>
+                                    <constraint firstItem="G8C-Bz-4OS" firstAttribute="top" secondItem="HhI-le-Skh" secondAttribute="bottom" id="alM-Dd-Kml"/>
+                                    <constraint firstItem="qe3-kc-8Qo" firstAttribute="bottom" secondItem="fZN-lo-Ig0" secondAttribute="bottom" id="cvv-7H-hSi"/>
                                     <constraint firstItem="fZN-lo-Ig0" firstAttribute="baseline" secondItem="Ww9-za-Fl6" secondAttribute="baseline" id="em2-UA-QY5"/>
                                     <constraint firstAttribute="bottom" secondItem="fZN-lo-Ig0" secondAttribute="bottom" id="hez-vb-uxk"/>
+                                    <constraint firstItem="qe3-kc-8Qo" firstAttribute="width" secondItem="fZN-lo-Ig0" secondAttribute="width" id="lxe-ab-LJ9"/>
+                                    <constraint firstItem="G8C-Bz-4OS" firstAttribute="leading" secondItem="fZN-lo-Ig0" secondAttribute="trailing" constant="3.5" id="m3x-hH-ll4"/>
+                                    <constraint firstItem="qe3-kc-8Qo" firstAttribute="width" secondItem="G8C-Bz-4OS" secondAttribute="width" id="nY8-AF-9Ve"/>
+                                    <constraint firstItem="qe3-kc-8Qo" firstAttribute="height" secondItem="G8C-Bz-4OS" secondAttribute="height" id="trg-H4-MbE"/>
+                                    <constraint firstItem="qe3-kc-8Qo" firstAttribute="height" secondItem="fZN-lo-Ig0" secondAttribute="height" id="z4x-PV-5gh"/>
                                     <constraint firstItem="fZN-lo-Ig0" firstAttribute="firstBaseline" secondItem="Ww9-za-Fl6" secondAttribute="firstBaseline" id="z8k-yR-Hp2"/>
                                 </constraints>
                             </view>
@@ -91,6 +113,8 @@
             <size key="customSize" width="148" height="127"/>
             <connections>
                 <outlet property="innerView" destination="6OG-Oh-c5H" id="8eF-EC-gcB"/>
+                <outlet property="sizeBtn1" destination="qe3-kc-8Qo" id="2N7-Ww-go3"/>
+                <outlet property="sizeBtn2" destination="G8C-Bz-4OS" id="1bL-Kw-PIP"/>
                 <outlet property="sizeNum1" destination="fZN-lo-Ig0" id="oPw-Pn-lB7"/>
                 <outlet property="sizeNum2" destination="Ww9-za-Fl6" id="YFM-pb-V64"/>
                 <outlet property="sizeType" destination="HhI-le-Skh" id="Yvs-Fl-MNz"/>

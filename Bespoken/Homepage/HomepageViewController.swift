@@ -75,7 +75,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         super.viewDidLoad()
         
         myStyleStatement.isHidden = true
-         myInitialCurate.isHidden = true
+        myInitialCurate.isHidden = true
         setup()
         optionCollection.isHidden = false
         ballButton.addTarget(self, action: #selector(startPulsating), for: .touchUpInside)
@@ -409,7 +409,7 @@ extension HomepageViewController{
             
             if let checkFirst = BSUserDefaults.getFirstTime(){
                 if checkFirst == true{
-                     perform(#selector(loadInitialDummyAnimation), with: nil, afterDelay: 1.0)
+                     perform(#selector(loadInitialDummyAnimation), with: nil, afterDelay: 3.0)
                 }
 
             }
@@ -576,7 +576,7 @@ extension HomepageViewController{
                     self.updateUI(toHide: true)
                     BSUserDefaults.setFirstTime(val: true)
                 }else{
-                    
+                     BSUserDefaults.setFirstTime(val: false)
                     self.updateUI(toHide: false)
                     
                 }
@@ -796,6 +796,7 @@ extension HomepageViewController{
                     break
                 case .Flow2_TrunckShow?:
                     self.view.layer.sublayers?.removeLast()
+                    break
                 case .Flow1_SelectGarment?:
                     print("garment")
                 case .none:

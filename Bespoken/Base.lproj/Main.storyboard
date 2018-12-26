@@ -1004,7 +1004,7 @@
                                 <cells/>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="In2-vf-XwF">
-                                <rect key="frame" x="70" y="546" width="240" height="62"/>
+                                <rect key="frame" x="70" y="581" width="240" height="62"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kvd-et-c2U">
                                         <rect key="frame" x="95.5" y="25" width="51" height="31"/>
@@ -1056,8 +1056,8 @@
                             <constraint firstItem="Zma-ZJ-f1x" firstAttribute="trailing" secondItem="In2-vf-XwF" secondAttribute="trailing" constant="65" id="OYc-na-zJj"/>
                             <constraint firstItem="9nH-Qa-7bo" firstAttribute="top" secondItem="Vya-7W-afg" secondAttribute="bottom" constant="78" id="ZNQ-7h-ZnA"/>
                             <constraint firstItem="Zma-ZJ-f1x" firstAttribute="trailing" secondItem="Vya-7W-afg" secondAttribute="trailing" constant="16" id="ZwZ-Yt-cQ3"/>
-                            <constraint firstItem="9nH-Qa-7bo" firstAttribute="top" secondItem="In2-vf-XwF" secondAttribute="bottom" constant="9" id="aBp-gO-XaC"/>
-                            <constraint firstItem="In2-vf-XwF" firstAttribute="top" secondItem="Vya-7W-afg" secondAttribute="bottom" constant="7" id="c1S-Pv-4ka"/>
+                            <constraint firstItem="9nH-Qa-7bo" firstAttribute="top" secondItem="In2-vf-XwF" secondAttribute="bottom" constant="-26" id="aBp-gO-XaC"/>
+                            <constraint firstItem="In2-vf-XwF" firstAttribute="top" secondItem="Vya-7W-afg" secondAttribute="bottom" constant="42" id="c1S-Pv-4ka"/>
                             <constraint firstItem="Vya-7W-afg" firstAttribute="top" secondItem="58f-d9-G7v" secondAttribute="bottom" constant="25" id="eF3-HK-Rnv"/>
                             <constraint firstItem="9nH-Qa-7bo" firstAttribute="leading" secondItem="Zma-ZJ-f1x" secondAttribute="leading" constant="65" id="emi-4M-V6X"/>
                             <constraint firstItem="Vya-7W-afg" firstAttribute="centerX" secondItem="OcR-AT-8G4" secondAttribute="centerX" id="f61-oD-1QR"/>

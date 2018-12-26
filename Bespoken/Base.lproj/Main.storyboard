@@ -1001,6 +1001,9 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="onTintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="switchToggled:" destination="8Tu-zt-26w" eventType="valueChanged" id="3QJ-2e-i6N"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measured by" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8d-9h-hhe">
                                         <rect key="frame" x="75.5" y="1" width="89" height="18"/>
@@ -1061,6 +1064,7 @@
                         <outlet property="nextButton" destination="9nH-Qa-7bo" id="ddw-Rp-d8b"/>
                         <outlet property="segmentControl" destination="58f-d9-G7v" id="s9l-sb-vyk"/>
                         <outlet property="sizeCollection" destination="Vya-7W-afg" id="5Rd-QC-ARO"/>
+                        <outlet property="stylistSwitch" destination="kvd-et-c2U" id="uaO-Q9-HxV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qvO-Pe-lkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1112,6 +1116,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43R-Xy-VRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2269.5999999999999" y="1016.9415292353824"/>
+        </scene>
+        <!--Play Video Controller-->
+        <scene sceneID="9Q4-uR-1qD">
+            <objects>
+                <viewController storyboardIdentifier="playVideoController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SdW-VR-res" customClass="playVideoController" customModule="Bespoken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0st-bd-1CP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 704" translatesAutoresizingMaskIntoConstraints="NO" id="qTs-gn-vSr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GZf-9b-eon">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GZf-9b-eon" firstAttribute="width" secondItem="qTs-gn-vSr" secondAttribute="width" id="1lh-TV-qmq"/>
+                            <constraint firstItem="qTs-gn-vSr" firstAttribute="leading" secondItem="q9t-dc-Fhk" secondAttribute="leading" id="EqG-5d-Bb3"/>
+                            <constraint firstItem="q9t-dc-Fhk" firstAttribute="bottom" secondItem="qTs-gn-vSr" secondAttribute="bottom" id="KJh-ua-IeK"/>
+                            <constraint firstItem="GZf-9b-eon" firstAttribute="top" secondItem="q9t-dc-Fhk" secondAttribute="top" constant="-64" id="PfO-fi-nCt"/>
+                            <constraint firstItem="q9t-dc-Fhk" firstAttribute="trailing" secondItem="qTs-gn-vSr" secondAttribute="trailing" id="SaJ-az-9GW"/>
+                            <constraint firstItem="GZf-9b-eon" firstAttribute="height" secondItem="qTs-gn-vSr" secondAttribute="height" id="WaI-ZI-GX5"/>
+                            <constraint firstItem="q9t-dc-Fhk" firstAttribute="trailing" secondItem="GZf-9b-eon" secondAttribute="trailing" id="dcV-J3-rXB"/>
+                            <constraint firstItem="q9t-dc-Fhk" firstAttribute="bottom" secondItem="GZf-9b-eon" secondAttribute="bottom" id="onT-wl-bYB"/>
+                            <constraint firstItem="qTs-gn-vSr" firstAttribute="top" secondItem="q9t-dc-Fhk" secondAttribute="top" constant="-64" id="vy9-qo-cUd"/>
+                            <constraint firstItem="GZf-9b-eon" firstAttribute="leading" secondItem="q9t-dc-Fhk" secondAttribute="leading" id="we2-8Q-pAD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q9t-dc-Fhk"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="backgroundImg" destination="qTs-gn-vSr" id="s86-eh-i8t"/>
+                        <outlet property="videoBackground" destination="GZf-9b-eon" id="7l9-pu-Aqg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HrT-gh-Sad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2493.5999999999999" y="1843.6281859070466"/>
         </scene>
         <!--Bag View Controller-->
         <scene sceneID="u41-hz-srK">

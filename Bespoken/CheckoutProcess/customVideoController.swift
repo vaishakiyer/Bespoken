@@ -75,6 +75,14 @@ extension customVideoController: UICollectionViewDelegate,UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let videoVC = storyBoard.instantiateViewController(withIdentifier: "playVideoController") as? playVideoController
+        videoVC?.imageUrl = myChoices[indexPath.item].image
+        videoVC?.videoUrl = myChoices[indexPath.item].video
+        
+        let nc = UINavigationController(rootViewController: videoVC!)
+        self.present(nc, animated: true, completion: nil)
     }
     
     

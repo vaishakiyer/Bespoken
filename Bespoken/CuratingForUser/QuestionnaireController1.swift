@@ -133,8 +133,8 @@ class QuestionnaireController1: UIViewController {
         }else if nextCountPress == 2{
             
             titleArray = ["ANGULAR & SLIM","LEAN STRUCTURE","IDEAL HOURGLASS","FULL & CURVY","TALL & PROPRTIONATE","STRONG BONE STRUCTURE"]
-            title1.text = "MY OCCASION"
-            title2.text = "DRESSING"
+            title1.text = "MY BODY"
+            title2.text = "TYPE"
              optionCollection.reloadData()
             
         }else{
@@ -182,8 +182,8 @@ class QuestionnaireController1: UIViewController {
             title2.text = ""
         }else if nextCountPress == 2{
             
-            title1.text = "MY OCCASION"
-            title2.text = "DRESSING"
+            title1.text = "MY BODY"
+            title2.text = "TYPE"
         }
         
         

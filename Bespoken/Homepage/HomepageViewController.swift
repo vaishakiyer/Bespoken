@@ -394,7 +394,7 @@ extension HomepageViewController{
             let capCount = (cardSetType1.count > MAX_BUFFER_SIZE) ? MAX_BUFFER_SIZE : cardSetType1.count
             
             for (i,value) in cardSetType1.enumerated() {
-                let newCard = createTinderCard(at: i,value: value.title!, description: value.desc!, cardId: value.cardId!, imageAdded: value.image!)
+                let newCard = createTinderCard(at: i,value: value.title!, description: value.desc!, cardId: value.cardId!, imageAdded: value.image ?? "")
                 allCardsArray.append(newCard)
                 if i < capCount {
                     currentLoadedCardsArray.append(newCard)

@@ -79,6 +79,10 @@ class CurateStyle: UIView,LTMorphingLabelDelegate{
         
         word1.text = words[0]
         word2.text = words[1]
+//        word3.text = "GOLD"
+//        word4.text = "GODDESS"
+//        word5.text = "DIVA"
+//        titleLabel.text = "ALINA depicts you as \(words[0])"
         if words.count > 2{
              word3.text = words[2]
         }else if words.count > 3{

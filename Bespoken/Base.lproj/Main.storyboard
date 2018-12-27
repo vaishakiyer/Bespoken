@@ -63,8 +63,8 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekr-jV-Zsr">
                                                     <rect key="frame" x="58" y="37.5" width="305" height="43"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -99,33 +99,33 @@
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f53-WY-6ZC">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tFx-z4-jQj">
-                                                        <size key="itemSize" width="50" height="50"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="25" id="tFx-z4-jQj">
+                                                        <size key="itemSize" width="80" height="80"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WishlistCollectionViewCell" id="U7U-9g-VxN" customClass="WishlistCollectionViewCell" customModule="Bespoken" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="17.5" width="50" height="50"/>
+                                                            <rect key="frame" x="0.0" y="2.5" width="80" height="80"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Du9-Uq-95b">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                                         <subviews>
-                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xlJ-nI-eIK">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xlJ-nI-eIK">
+                                                                                <rect key="frame" x="8" y="8" width="64" height="64"/>
                                                                             </imageView>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
-                                                                            <constraint firstItem="xlJ-nI-eIK" firstAttribute="top" secondItem="Du9-Uq-95b" secondAttribute="top" id="4JG-EG-gXV"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="xlJ-nI-eIK" secondAttribute="trailing" id="fHv-oR-SXh"/>
-                                                                            <constraint firstItem="xlJ-nI-eIK" firstAttribute="leading" secondItem="Du9-Uq-95b" secondAttribute="leading" id="lSb-Mk-Cgc"/>
-                                                                            <constraint firstAttribute="bottom" secondItem="xlJ-nI-eIK" secondAttribute="bottom" id="xpu-Nb-Z87"/>
+                                                                            <constraint firstItem="xlJ-nI-eIK" firstAttribute="top" secondItem="Du9-Uq-95b" secondAttribute="top" constant="8" id="4JG-EG-gXV"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="xlJ-nI-eIK" secondAttribute="trailing" constant="8" id="fHv-oR-SXh"/>
+                                                                            <constraint firstItem="xlJ-nI-eIK" firstAttribute="leading" secondItem="Du9-Uq-95b" secondAttribute="leading" constant="8" id="lSb-Mk-Cgc"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="xlJ-nI-eIK" secondAttribute="bottom" constant="8" id="xpu-Nb-Z87"/>
                                                                         </constraints>
                                                                     </view>
                                                                 </subviews>

@@ -101,6 +101,29 @@ extension NotificationViewController : UITableViewDataSource{
             return 1
         }
     }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if segmentButton.selectedSegmentIndex == 0{
+        return 50
+        }
+        else {
+            return 0
+        }
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if segmentButton.selectedSegmentIndex == 0{
+        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
+        let label = UILabel()
+        label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
+        label.textColor = UIColor.black
+        
+        label.text = "Vaishak's Wishlist "
+        label.adjustsFontSizeToFitWidth = true
+        headerView.addSubview(label)
+            return headerView}
+        else{
+        return nil
+        }
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if segmentButton.selectedSegmentIndex == 0 {

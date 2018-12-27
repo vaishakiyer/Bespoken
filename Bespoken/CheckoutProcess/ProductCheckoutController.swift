@@ -117,8 +117,11 @@ class ProductCheckoutController: UIViewController {
     
     func getAttributesOfAProduct(){
         
+        BSLoader.showLoading("", disableUI: true, image: "Group 376")
+
         Alamofire.request(Router.getAttributesByProduct(id: theProduct?.id ?? "")).responseJSON { (response) in
             
+            BSLoader.hide()
             switch response.result{
                 
             case .success(let JSON):

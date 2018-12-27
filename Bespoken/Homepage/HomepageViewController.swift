@@ -49,7 +49,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     var checkUser : User?
     var controlFlow : FlowAnalysis?
     var shouldPulsate : Bool = false
-    
+    var isProductCards : Bool = false
     var count : Int = 0
     var currentIndex = 0
     var currentLoadedCardsArray = [TinderCard](){
@@ -615,6 +615,7 @@ extension HomepageViewController{
 
     func getThemeCards(){
      
+        isProductCards = false
         Alamofire.request(Router.getThemeboardCards()).responseJSON { (respomse) in
             
             switch respomse.result{
@@ -664,6 +665,7 @@ extension HomepageViewController{
     
     func getAffinityCards(){
         
+        isProductCards = false
         Alamofire.request(Router.getAffinityCards()).responseJSON { (respomse) in
             
             switch respomse.result{
@@ -706,6 +708,7 @@ extension HomepageViewController{
     
     func getTheProducts(){
         
+        isProductCards = true
         Alamofire.request(Router.getTheCards()).responseJSON { (response) in
             
             switch response.result{
@@ -821,7 +824,7 @@ extension HomepageViewController{
 
     func swipePrimaryCards(direction: String, id: String){
      
-        Alamofire.request(Router.postSwipedCards(direction: direction, cardId: id, isProduct: false)).responseJSON { (response) in
+        Alamofire.request(Router.postSwipedCards(direction: direction, cardId: id, isProduct: isProductCards)).responseJSON { (response) in
             
             
             switch response.result{
@@ -889,9 +892,17 @@ extension HomepageViewController: AnimationCompletedDelegate,InitialAnimationFin
     
     func animationCompleted() {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(10), execute: {
-    
-             self.fetchUser()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(8), execute: {
+            
+            let alertController = UIAlertController(title: "Your Products are loaded and ready to be displayed", message: "\n Please press OK to proceed", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: { (weak) in
+                 self.fetchUser()
+            })
+            
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+            
         })
         
     }

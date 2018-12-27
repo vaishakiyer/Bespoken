@@ -31,7 +31,9 @@ class PersonalisationCell: UITableViewCell {
         optionCollection.register(UINib(nibName: "OptionsViewCell", bundle: nil), forCellWithReuseIdentifier: "OptionsViewCell")
         optionCollection.delegate = self
         optionCollection.dataSource = self
-        // Initialization code
+        if let layout = optionCollection.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = .vertical
+        }        // Initialization code
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -88,7 +90,9 @@ extension PersonalisationCell: UICollectionViewDataSource,UICollectionViewDelega
         
         if segmentIndex != nil && segmentIndex == 2{
             
-            return UIEdgeInsets(top: 30, left: self.frame.width / 2 - 60, bottom: 30, right: self.frame.width / 2 - 60)
+//            return UIEdgeInsets(top: 30, left: self.frame.width / 2 - 60, bottom: 30, right: self.frame.width / 2 - 60)
+            return UIEdgeInsets(top: 15, left: 30, bottom: 15, right: 30)
+
             
         }else{
             return UIEdgeInsets(top: 15, left: 30, bottom: 15, right: 30)

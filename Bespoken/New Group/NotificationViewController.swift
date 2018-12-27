@@ -54,9 +54,10 @@ class NotificationViewController: UIViewController {
         self.title = "Notifications and Wishlist"
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.rowHeight = UITableView.automaticDimension
+//        self.tableView.rowHeight = UITableView.automaticDimension
 
-        self.tableView.estimatedRowHeight  = 40
+//        self.tableView.estimatedRowHeight  = 40
+        self.tableView.tableFooterView = UIView()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "qrcode"), style: .plain, target: self, action: #selector(openQRScanner))
         self.getWishlistItemsAPI()
         self.getNotificationsAPI()
@@ -125,9 +126,16 @@ extension NotificationViewController : UITableViewDataSource{
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if segmentButton.selectedSegmentIndex == 0{
+            return 100
+        }
+        else {return 60}
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if segmentButton.selectedSegmentIndex == 0 {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "WishlistTableViewCell") as! WishlistTableViewCell
+            cell.delegate = self
             cell.wishlistProducts = self.allwishlistProducts
             return cell
         }
@@ -167,6 +175,14 @@ extension NotificationViewController : QRCodeReaderViewControllerDelegate{
 }
 extension NotificationViewController : UICollectionViewDelegate{
     
+}
+extension NotificationViewController: WishlistCollectionViewDelegate{
+    func didSelectWishlistProduct(product: Product) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProductCheckoutController") as! ProductCheckoutController
+        vc.theProduct = product
+        
+        self.navigationController!.present(UINavigationController(rootViewController: vc), animated: true)
+    }
 }
 extension NotificationViewController {
     func getNotificationsAPI() {

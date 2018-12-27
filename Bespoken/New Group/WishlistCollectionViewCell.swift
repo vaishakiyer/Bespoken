@@ -20,7 +20,7 @@ class WishlistCollectionViewCell: UICollectionViewCell {
     func updateCell() {
         
         self.imageView.af_setImage(withURL: (URL(string: product!.images[0])!),  imageTransition: .crossDissolve(1), completion : nil)
-        self.imageView.layer.cornerRadius = 25
+        self.imageView.layer.cornerRadius = 50
         self.imageView.layer.shadowColor = UIColor.lightGray.cgColor
         self.imageView.layer.shadowRadius = 5
         self.imageView.layer.shadowOpacity = 1

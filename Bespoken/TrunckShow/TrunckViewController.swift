@@ -463,7 +463,6 @@ extension TrunckViewController{
         Alamofire.request(Router.getEventBy(id: eventId)).responseJSON { (response) in
             
             switch response.result{
-                
             case .success(let JSON):
                 
                 print(JSON)

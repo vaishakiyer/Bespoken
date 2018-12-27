@@ -22,12 +22,16 @@ class CollectionsCollectionViewCell: UICollectionViewCell {
     var delegate :CollectionsCollectionViewCellDelegate?
     var indexPath : IndexPath?
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet var productTitle: UILabel!
     
     func updateCell() {
-        
+        self.productTitle.text = self.product?.title
+
         self.imageView.af_setImage(withURL: (URL(string: product!.images[0])!),  imageTransition: .crossDissolve(1), completion: {(resopnse) in
             switch resopnse.result {
             case .success(let value):
+                self.productTitle.text = self.product?.title
+
                 if self.product?.imageSizes[(self.product?.images[0])!] == nil{
                     self.product?.imageSizes[self.product!.images[0]] = CGSize(width : value.size.width , height : value.size.height)
                 self.delegate!.didFinishLoadingImage(self)

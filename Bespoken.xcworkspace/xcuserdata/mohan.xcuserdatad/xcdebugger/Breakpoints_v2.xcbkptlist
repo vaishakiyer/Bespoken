@@ -145,38 +145,6 @@
             endingLineNumber = "299"
             landmarkName = "getEvents()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bespoken.TrunckViewController.buttonPreviewPressed(sender: Bespoken.TrunckViewCell) -&gt; ()"
-                  moduleName = "Bespoken"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mohan/Desktop/Bespoken%2022:12/Bespoken/Bespoken/TrunckShow/TrunckViewController.swift"
-                  timestampString = "567531672.066268"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "299"
-                  endingLineNumber = "299"
-                  offsetFromSymbolStart = "1507">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Bespoken.TrunckViewController.buttonPreviewPressed(sender: Bespoken.TrunckViewCell) -&gt; ()"
-                  moduleName = "Bespoken"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mohan/Desktop/Bespoken%2022:12/Bespoken/Bespoken/TrunckShow/TrunckViewController.swift"
-                  timestampString = "567531672.069163"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "301"
-                  endingLineNumber = "301"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -186,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bespoken/Bes/CollectionsViewController.swift"
-            timestampString = "567533439.387187"
+            timestampString = "567533800.213051"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "252"
@@ -250,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bespoken/Profile/ProfileViewController.swift"
-            timestampString = "567533439.389071"
+            timestampString = "567533800.213192"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
@@ -266,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bespoken/Bes/ResultsCollectionViewCell.swift"
-            timestampString = "567533439.3893321"
+            timestampString = "567533800.213267"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -314,7 +282,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bespoken/Bes/CollectionsSearchResultsViewController.swift"
-            timestampString = "567533439.389518"
+            timestampString = "567533800.213352"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "116"
@@ -330,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bespoken/Bes/ResultsCollectionViewCell.swift"
-            timestampString = "567533439.3896199"
+            timestampString = "567533800.213448"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -346,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bespoken/Bes/ResultsCollectionViewCell.swift"
-            timestampString = "567533439.389697"
+            timestampString = "567533800.213515"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -362,7 +330,7 @@
                   moduleName = "Bespoken"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mohan/Desktop/Bespoken%2022:12/Bespoken/Bespoken/Bes/ResultsCollectionViewCell.swift"
-                  timestampString = "567531672.122329"
+                  timestampString = "567544987.311741"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -377,7 +345,7 @@
                   moduleName = "Bespoken"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mohan/Desktop/Bespoken%2022:12/Bespoken/Bespoken/Bes/ResultsCollectionViewCell.swift"
-                  timestampString = "567531672.124989"
+                  timestampString = "567544987.316393"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -394,7 +362,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bespoken/Bes/CollectionsSearchResultsViewController.swift"
-            timestampString = "567533439.38977"
+            timestampString = "567533800.213567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
@@ -410,7 +378,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bespoken/Bes/CollectionsSearchResultsViewController.swift"
-            timestampString = "567533439.389865"
+            timestampString = "567533800.2136199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "155"
@@ -426,12 +394,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bespoken/Bes/CollectionsViewController.swift"
-            timestampString = "567533439.3899699"
+            timestampString = "567533800.2136821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "311"
             endingLineNumber = "311"
             landmarkName = "handleTap()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bespoken/New Group/NotificationViewController.swift"
+            timestampString = "567587236.18371"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

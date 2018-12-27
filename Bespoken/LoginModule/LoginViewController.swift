@@ -204,7 +204,7 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         
         usernameField.addImageAndPlaceHolder(img: "Group377", placeHolder: "HOW MAY I CALL YOU")
         emailPassField.addImageAndPlaceHolder(img: "Group381", placeHolder: "EMAIL ID")
-        passwordField.addImageAndPlaceHolder(img: "Group382", placeHolder: "PHONENUMBER")
+        passwordField.addImageAndPlaceHolder(img: "Group382", placeHolder: "PHONE NUMBER")
     }
     
     func customiseSignButton(){

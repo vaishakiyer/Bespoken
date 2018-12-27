@@ -17,7 +17,7 @@ class NotificationViewController: UIViewController {
     
     @IBOutlet weak var segmentButton: UISegmentedControl!
     
-//Mark :- Stored Variables
+    //Mark :- Stored Variables
     var allNotifications: [BSNotification] = []
     var allwishlistProducts : [Product] = []
     lazy var readerVC: QRCodeReaderViewController = {
@@ -38,8 +38,8 @@ class NotificationViewController: UIViewController {
         if  segmentButton.selectedSegmentIndex == 1
         {
             getNotificationsAPI()
-            allNotifications.append(BSNotification("NEW COLLECTION ARRIVAL", "Checkout our new SpringLines! Order Now For delivery in Spring weather- in 10 to 14 days !", "redCircleFill"))
-            allNotifications.append(BSNotification("NEW COLLECTION ARRIVAL", "Checkout our new SpringLines! Order Now For delivery in Spring weather- in 10 to 14 days !, Checkout our new SpringLines! Order Now For delivery in Spring weather- in 10 to 14 days !", "redCircleFill"))
+//            allNotifications.append(BSNotification("NEW COLLECTION ARRIVAL", "Checkout our new SpringLines! Order Now For delivery in Spring weather- in 10 to 14 days !", "redCircleFill"))
+//            allNotifications.append(BSNotification("NEW COLLECTION ARRIVAL", "Checkout our new SpringLines! Order Now For delivery in Spring weather- in 10 to 14 days !, Checkout our new SpringLines! Order Now For delivery in Spring weather- in 10 to 14 days !", "redCircleFill"))
         }
         else{
 //            allNotifications.removeAll()
@@ -55,9 +55,11 @@ class NotificationViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.rowHeight = UITableView.automaticDimension
+
         self.tableView.estimatedRowHeight  = 40
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "qrcode"), style: .plain, target: self, action: #selector(openQRScanner))
-        
+        self.getWishlistItemsAPI()
+        self.getNotificationsAPI()
       //  segmentButton.selectedSegmentIndex = 0
 //       if  segmentButton.selectedSegmentIndex == 0
 //       {
@@ -86,16 +88,36 @@ extension NotificationViewController : UITableViewDelegate {
 }
 extension NotificationViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allwishlistProducts.count
+        if segmentButton.selectedSegmentIndex == 0{
+            return 1
+        }else{
+            return allNotifications.count
+        }
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if segmentButton.selectedSegmentIndex == 0{
+            return 1
+        }else{
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if segmentButton.selectedSegmentIndex == 0 {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "WishlistTableViewCell") as! WishlistTableViewCell
+            cell.wishlistProducts = self.allwishlistProducts
+            return cell
+        }
+        else{
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "NotificationTableViewCell") as! NotificationTableViewCell
-        cell.titleLabel.text = allwishlistProducts[indexPath.row].title
+        if segmentButton.selectedSegmentIndex == 1{
+        cell.titleLabel.text = allNotifications[indexPath.row].message
+        cell.timeLabel.text = allNotifications[indexPath.row].updatedDate
+        }
 //        cell.notificationTextLabel.text = allwishlistProducts[indexPath.row].text
-        cell.imageView?.image = UIImage(named: allNotifications[indexPath.row].image!)
-
+//        cell.imageView?.image = UIImage(named: allNotifications[indexPath.row].image!)
         return cell
+        }
     }
     
     
@@ -120,7 +142,9 @@ extension NotificationViewController : QRCodeReaderViewControllerDelegate{
     }
     
 }
-
+extension NotificationViewController : UICollectionViewDelegate{
+    
+}
 extension NotificationViewController {
     func getNotificationsAPI() {
         Alamofire.request(Router.getNotifications()).responseJSON{
@@ -128,6 +152,16 @@ extension NotificationViewController {
 
             switch response.result {
             case .success(let JSON):
+                self.allNotifications.removeAll()
+                if let notif = JSON as? [JSON]{
+                    for each in notif{
+                        let newNotif = BSNotification(with: each)
+                        self.allNotifications.append(newNotif)
+                    }
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
                 print("success")
             case .failure(let error):
                 print("error")
@@ -162,3 +196,4 @@ extension NotificationViewController {
         }
     }
 }
+

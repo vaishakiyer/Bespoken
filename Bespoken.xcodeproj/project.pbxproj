@@ -24,6 +24,8 @@
 		01E6F7FF21B6B90D0037970D /* CollectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F7FB21B6B90D0037970D /* CollectionsViewController.swift */; };
 		01E6F80021B6B90D0037970D /* CollectionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F7FC21B6B90D0037970D /* CollectionsCollectionViewCell.swift */; };
 		01E6F80121B6B90D0037970D /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F7FD21B6B90D0037970D /* PinterestLayout.swift */; };
+		01F01D6321D4A766002D90EE /* WishlistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F01D6221D4A766002D90EE /* WishlistCollectionViewCell.swift */; };
+		01F01D6521D4A77A002D90EE /* WishlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F01D6421D4A77A002D90EE /* WishlistTableViewCell.swift */; };
 		2EC3A1B0B0228A10DA14E6A8 /* Pods_BespokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A201198E5A08F3A4F75217 /* Pods_BespokenTests.framework */; };
 		80EA6BCEAAFAB58873C7D718 /* Pods_BespokenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53B970A21C00F7F0044C71A /* Pods_BespokenTests.framework */; };
 		A5082D7521A14CB2005EBA41 /* PersonalisationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5082D7421A14CB2005EBA41 /* PersonalisationController.swift */; };
@@ -148,6 +150,8 @@
 		01E6F7FB21B6B90D0037970D /* CollectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionsViewController.swift; sourceTree = "<group>"; };
 		01E6F7FC21B6B90D0037970D /* CollectionsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionsCollectionViewCell.swift; sourceTree = "<group>"; };
 		01E6F7FD21B6B90D0037970D /* PinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		01F01D6221D4A766002D90EE /* WishlistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistCollectionViewCell.swift; sourceTree = "<group>"; };
+		01F01D6421D4A77A002D90EE /* WishlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableViewCell.swift; sourceTree = "<group>"; };
 		107A8BF0781E91576F8853CB /* Pods_Bespoken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bespoken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12597359F8E0B0226F55CED8 /* Pods-Bespoken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bespoken.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bespoken/Pods-Bespoken.release.xcconfig"; sourceTree = "<group>"; };
 		4D5D832EFF52A32467B5D289 /* Pods-BespokenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BespokenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BespokenTests/Pods-BespokenTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -309,6 +313,8 @@
 				01C58BF021C005F2001EF372 /* BSNotification.swift */,
 				01C58BEF21C005F2001EF372 /* NotificationTableViewCell.swift */,
 				01C58BF121C005F2001EF372 /* NotificationViewController.swift */,
+				01F01D6221D4A766002D90EE /* WishlistCollectionViewCell.swift */,
+				01F01D6421D4A77A002D90EE /* WishlistTableViewCell.swift */,
 			);
 			name = NotificationAndWishlist;
 			path = "New Group";
@@ -838,6 +844,7 @@
 				A518546B21C956DD00184C48 /* List2ViewController.swift in Sources */,
 				A53D597221AF144A009F993F /* Questionnaire.swift in Sources */,
 				A5FA1A3221A4747E00743D73 /* TinderCard.swift in Sources */,
+				01F01D6521D4A77A002D90EE /* WishlistTableViewCell.swift in Sources */,
 				A5082D8621A1838A005EBA41 /* Router.swift in Sources */,
 				011806A821C27D84001EA439 /* ResultsCollectionViewCell.swift in Sources */,
 				A5EB435C21B04E3E0056B24A /* User.swift in Sources */,
@@ -878,6 +885,7 @@
 				A5BA918321CD3F2D00D4F10F /* Attributes.swift in Sources */,
 				01E0040821C799F200393458 /* FileManager.swift in Sources */,
 				01E6F7FE21B6B90D0037970D /* CollectionsSearchResultsViewController.swift in Sources */,
+				01F01D6321D4A766002D90EE /* WishlistCollectionViewCell.swift in Sources */,
 				A5231BAD21A8645C00463AE4 /* PreviewImageCollectionViewCell.swift in Sources */,
 				A53B96EC21C002A20044C71A /* Location.swift in Sources */,
 				A53D596C21AEED62009F993F /* sizeChartCell.swift in Sources */,

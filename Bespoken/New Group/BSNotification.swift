@@ -8,12 +8,14 @@
 
 import Foundation
 class BSNotification {
-    var title : String?
-    var text : String?
-    var image : String?
-    init(_ title : String , _ text : String, _ image : String?) {
-        self.title = title
-        self.text = text
-        self.image = image!
+    var message : String?
+    var updatedDate : String?
+    init(_ message : String , _ updatedDate : String) {
+        self.message = message
+        self.updatedDate = updatedDate
+    }
+    init(with json : JSON) {
+        self.message = json["message"] as? String
+        self.updatedDate = json["updatedDate"] as? String
     }
 }

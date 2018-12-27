@@ -67,7 +67,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Alina" width="245" height="82"/>
+        <image name="Alina" width="81.666664123535156" height="26"/>
         <image name="Circle" width="1200" height="1200"/>
     </resources>
 </document>

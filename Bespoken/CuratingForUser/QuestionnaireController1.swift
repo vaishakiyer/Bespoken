@@ -126,15 +126,15 @@ class QuestionnaireController1: UIViewController {
         }else if nextCountPress == 1{
             
             titleArray = ["WEDDING PARTY","BRIDAL TROUSSEAU","COCKTAIL","SEASONAL","RESORT","DAY"]
-            title1.text = "MY OCCASION DRESSING"
-            title2.text = "OPTION ARE"
+            title1.text = "I VALUE"
+            title2.text = ""
              optionCollection.reloadData()
             
         }else if nextCountPress == 2{
             
             titleArray = ["ANGULAR & SLIM","LEAN STRUCTURE","IDEAL HOURGLASS","FULL & CURVY","TALL & PROPRTIONATE","STRONG BONE STRUCTURE"]
-            title1.text = "MY BODY"
-            title2.text = "TYPE IS"
+            title1.text = "MY OCCASION"
+            title2.text = "DRESSING"
              optionCollection.reloadData()
             
         }else{
@@ -147,19 +147,21 @@ class QuestionnaireController1: UIViewController {
         
        
         
-        if nextCountPress < myQuestions.count - 1 {
-            if myQuestions[nextCountPress + 1].tab == 0{
+        if nextCountPress < answered.count - 1 {
+        
             nextCountPress += 1
-            }else{
-                
-                updateUserPreferences()
-                
-//                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//                let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
-//                nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Brand")
-//                self.navigationController?.pushViewController(nextVC!, animated: true)
-                
-            }
+//            if myQuestions[nextCountPress + 1].tab == 0{
+//            nextCountPress += 1
+//            }else{
+//
+//                updateUserPreferences()
+//
+////                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+////                let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
+////                nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Brand")
+////                self.navigationController?.pushViewController(nextVC!, animated: true)
+//
+//            }
         }else{
             
             updateUserPreferences()
@@ -176,12 +178,12 @@ class QuestionnaireController1: UIViewController {
         
         if nextCountPress == 1{
            
-            title1.text = "MY OCCASION DRESSING"
-            title2.text = "OPTION ARE"
+            title1.text = "I VALUE"
+            title2.text = ""
         }else if nextCountPress == 2{
             
-            title1.text = "MY BODY"
-            title2.text = "TYPE IS"
+            title1.text = "MY OCCASION"
+            title2.text = "DRESSING"
         }
         
         

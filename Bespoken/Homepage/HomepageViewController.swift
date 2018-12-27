@@ -708,6 +708,7 @@ extension HomepageViewController{
     
     func getTheProducts(){
         
+        self.count += 1
         isProductCards = true
         Alamofire.request(Router.getTheCards()).responseJSON { (response) in
             

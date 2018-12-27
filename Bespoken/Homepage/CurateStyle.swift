@@ -59,11 +59,11 @@ class CurateStyle: UIView,LTMorphingLabelDelegate{
          word4.delegate = self
          word5.delegate = self
         
-        word1.morphingDuration = 8
-        word2.morphingDuration = 8
-        word3.morphingDuration = 8
-        word4.morphingDuration = 8
-        word5.morphingDuration = 8
+        word1.morphingDuration = 4
+        word2.morphingDuration = 4
+        word3.morphingDuration = 4
+        word4.morphingDuration = 4
+        word5.morphingDuration = 4
         
         
         word1.morphingEffect = .anvil

@@ -21,9 +21,9 @@ class WishlistTableViewCell: UITableViewCell {
         // Initialization code
         self.wishlistCollectionView.delegate = self
         self.wishlistCollectionView.dataSource = self
-        if  self.wishlistCollectionView.collectionViewLayout == UICollectionViewFlowLayout{
-            self.wishlistCollectionView.collectionViewLayou
-        }
+//        if  self.wishlistCollectionView.collectionViewLayout = UICollectionViewFlowLayout{
+//            self.wishlistCollectionView.collectionViewLayout
+//        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

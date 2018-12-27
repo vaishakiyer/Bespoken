@@ -30,8 +30,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oHa-Nu-AwV">
+                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oHa-Nu-AwV">
                                 <rect key="frame" x="8" y="40" width="124" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="PdD-rx-DlJ"/>
+                                    <constraint firstAttribute="width" constant="124" id="nPT-1P-BAg"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

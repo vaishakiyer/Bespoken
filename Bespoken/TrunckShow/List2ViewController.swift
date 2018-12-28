@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import QRCodeReader
 
 class List2ViewController: UIViewController {
 
@@ -16,8 +17,21 @@ class List2ViewController: UIViewController {
     var mySections = [String]()
     var myEvents = TrunckShow()
     var myGroupedEvents = [TrunckShow]()
+    
+    var allProducts : [Product] = []
     let segment: UISegmentedControl = UISegmentedControl(items: ["First", "Second"])
     var presentHandler: (() -> Void)!
+    var playHandler : ((_ prodId: String) -> Void)!
+    
+    
+    
+    lazy var readerVC: QRCodeReaderViewController = {
+        let builder = QRCodeReaderViewControllerBuilder {
+            $0.reader = QRCodeReader(metadataObjectTypes: [.qr], captureDevicePosition: .back)
+        }
+        
+        return QRCodeReaderViewController(builder: builder)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +46,9 @@ class List2ViewController: UIViewController {
         segment.tintColor = UIColor(red:0, green:0, blue:0, alpha:1.00)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        segment.selectedSegmentIndex = 1;
+        segment.selectedSegmentIndex = 1
+        segment.setTitle("C A R D S", forSegmentAt: 0)
+        segment.setTitle("L I S T", forSegmentAt: 1)
         segment.addTarget(self, action: #selector(segementChanged(sender:)), for: .allEvents)
         //segment.setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "ProximaNova-Light", size: 15)!], for: .normal)
         self.navigationItem.titleView = segment
@@ -86,7 +102,7 @@ extension List2ViewController: UICollectionViewDelegateFlowLayout,UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
        
-            return CGSize(width: self.view.frame.width, height: 50)
+            return CGSize(width: self.view.frame.width, height: 0)
         
     }
     
@@ -111,6 +127,7 @@ extension List2ViewController: UICollectionViewDelegateFlowLayout,UICollectionVi
             cell!.backImage.af_setImage(withURL: url)
         }
         
+        cell?.delegate = self
         cell?.titleLabel.text = myGroupedEvents[indexPath.section][indexPath.item].title
        
         return cell!
@@ -118,20 +135,139 @@ extension List2ViewController: UICollectionViewDelegateFlowLayout,UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-        return UIEdgeInsets(top: 30, left: 0, bottom: 30, right: 0)
+        return UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         
-            return CGSize(width: self.view.frame.width, height: 70)
+            return CGSize(width: 320, height: 70)
     
     }
     
     
 }
 
+//MARK: - TruckDelegates
+
+extension List2ViewController: TrunckViewDelegate,QRCodeReaderViewControllerDelegate{
+    
+    func buttonPreviewPressed(sender: List2CollectionCell) {
+        
+        
+        guard let tappedIndex  = trunckCollection.indexPath(for: sender) else {return}
+        
+        self.dismiss(animated: true, completion: nil)
+
+       let prodId = myGroupedEvents[tappedIndex.section][tappedIndex.row].id
+        self.playHandler(prodId!)
+    }
+    
+    func scanButtonPressed(sender: List2CollectionCell){
+        
+        readerVC.delegate = self
+        // Presents the readerVC as modal form sheet
+        readerVC.modalPresentationStyle = .formSheet
+        present(readerVC, animated: true, completion: nil)
+        
+    }
+    
+    func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
+        print(result.value)
+        reader.stopScanning()
+        
+        let sentence = result.value
+        let words = sentence.byWords
+        
+        if words.first == "product"{
+            getProduct(prodId: (words.last?.description)!)
+        }else if words.first == "event"{
+            getEvent(eventId: (words.last?.description)!)
+        }
+        
+        // dismiss(animated: true, completion: nil)
+    }
+    
+    func readerDidCancel(_ reader: QRCodeReaderViewController) {
+        print("Action Cancelled")
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+}
+
+
+//MARK: - Network Operation
+
 extension List2ViewController{
+    
+    func getProduct(prodId: String){
+        
+        Alamofire.request(Router.getProductBy(id: prodId)).responseJSON { (response) in
+            
+            switch response.result{
+                
+            case .success(let JSON):
+                
+                print(JSON)
+                
+                guard let jsonArray = JSON as? [NSDictionary] else {return}
+                
+                for item in jsonArray{
+                    
+                    let product = Product(json: item as! JSON)
+                    self.allProducts.append(product)
+                    
+                }
+                
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let nextVC = storyBoard.instantiateViewController(withIdentifier: "ProductCheckoutController") as? ProductCheckoutController
+                nextVC?.theProduct = self.allProducts.first!
+                let nc = UINavigationController(rootViewController: nextVC!)
+                self.readerVC.present(nc, animated: true, completion: nil)
+                
+            case .failure(let error):
+                
+                print(error.localizedDescription)
+                
+            }
+        }
+    }
+    
+    
+    func getEvent(eventId: String){
+        
+        Alamofire.request(Router.getEventBy(id: eventId)).responseJSON { (response) in
+            
+            switch response.result{
+            case .success(let JSON):
+                
+                print(JSON)
+                let events = try? JSONDecoder().decode(TrunckShow.self, from: response.data!)
+                
+                if (events?[0].seatsAvailable!)! < 10{
+                    self.showAlert(message: "HURRY UP!.\n Last 3 seats are available")
+                }else{
+                    
+                    let message = "\n Please proceed to purchase the ticket \n\n" + "Available Seats: " + (events?[0].seatsAvailable!.description)!
+                    let titleLabel = (events?[0].title!)! + "\n" + (events?[0].location!)!
+                    let alertController = UIAlertController(title: titleLabel, message: message, preferredStyle: .alert)
+                    let proceed = UIAlertAction(title: "Proceed to pay", style: .default, handler: nil)
+                    let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                    alertController.addAction(proceed)
+                    alertController.addAction(cancel)
+                    self.readerVC.present(alertController, animated: true, completion: nil)
+                }
+                
+                
+            case .failure(let error):
+                
+                print(error.localizedDescription)
+                
+            }
+        }
+    }
+    
     
     func getEvents(){
         

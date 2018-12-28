@@ -15,7 +15,8 @@ class customVideoController: UIViewController {
     @IBOutlet weak var outerView: UIView!
     
     var myChoices = [Choice]()
-    
+    var selectedIndex: Int = 0
+    var optionHandler : ((_ optionIndex: Int) -> Void)!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +37,7 @@ class customVideoController: UIViewController {
     @objc func tapRecognised(){
     
         self.dismiss(animated: true, completion: nil)
+        self.optionHandler(selectedIndex)
     }
     /*
     // MARK: - Navigation
@@ -62,6 +64,12 @@ extension customVideoController: UICollectionViewDelegate,UICollectionViewDataSo
              cell?.imgView.af_setImage(withURL: url)
         }
        
+        if myChoices[indexPath.row].isValSelected == true{
+            cell?.backgroundColor = UIColor.black
+        }else{
+            cell?.backgroundColor = UIColor.white
+        }
+        
         return cell!
     }
     
@@ -76,13 +84,27 @@ extension customVideoController: UICollectionViewDelegate,UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
         
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let videoVC = storyBoard.instantiateViewController(withIdentifier: "playVideoController") as? playVideoController
-        videoVC?.imageUrl = myChoices[indexPath.item].image
-        videoVC?.videoUrl = myChoices[indexPath.item].video
+        if  myChoices[indexPath.row].isValSelected == true{
+             myChoices[indexPath.row].isValSelected = false
+        }else{
+            
+            for index in 0 ..< myChoices.count{
+                myChoices[index].isValSelected = false
+            }
+            
+            selectedIndex = indexPath.row
+            myChoices[indexPath.row].isValSelected = true
+        }
         
-        let nc = UINavigationController(rootViewController: videoVC!)
-        self.present(nc, animated: true, completion: nil)
+        
+        myCollection.reloadData()
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let videoVC = storyBoard.instantiateViewController(withIdentifier: "playVideoController") as? playVideoController
+//        videoVC?.imageUrl = myChoices[indexPath.item].image
+//        videoVC?.videoUrl = myChoices[indexPath.item].video
+//
+//        let nc = UINavigationController(rootViewController: videoVC!)
+//        self.present(nc, animated: true, completion: nil)
     }
     
     

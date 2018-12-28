@@ -59,6 +59,9 @@ class TrunckViewController: UIViewController {
         segment.tintColor = UIColor(red:1, green:1, blue:1, alpha:1.00)
         segment.selectedSegmentIndex = 0;
         segment.addTarget(self, action: #selector(segementChanged(sender:)), for: .allEvents)
+        segment.setTitle("C A R D S", forSegmentAt: 0)
+        segment.setTitle("L I S T", forSegmentAt: 1)
+        
         self.navigationItem.titleView = segment
     
         trunckCollection.delegate = self
@@ -69,31 +72,30 @@ class TrunckViewController: UIViewController {
          trunckCollection.register(UINib(nibName: "eventsHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "eventsHeader")
         trunckCollection.register(UINib(nibName: "PreviewImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PreviewImageCollectionViewCell")
         getEvents()
-        innerView.roundCorners(corners: .allCorners, radius: 12)
-        innerView.isHidden = true
+     
     }
     
-    func createNavbar(shouldHide: Bool){
-        
-        if shouldHide == false{
-            let rsvpButton = UIBarButtonItem(title: "RSVP", style: .plain, target: self, action: #selector(rsvpPressed))
-            rsvpButton.tintColor = .white
-        self.navigationItem.rightBarButtonItem = rsvpButton
-        }else{
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-        }
-    }
+//    func createNavbar(shouldHide: Bool){
+//
+//        if shouldHide == false{
+//            let rsvpButton = UIBarButtonItem(title: "RSVP", style: .plain, target: self, action: #selector(rsvpPressed))
+//            rsvpButton.tintColor = .white
+//        self.navigationItem.rightBarButtonItem = rsvpButton
+//        }else{
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+//        }
+//    }
     
-    @objc func rsvpPressed(){
-        
-        if myGroupedEvents[selectedSection][selectedIndex].seatsAvailable! > 0{
-             createRSVP()
-        }else{
-            self.showAlert(message: "Oops!! \n There are no seats available currently. \n Please talk to the event coordinator for further info.")
-        }
-        
-       
-    }
+//    @objc func rsvpPressed(){
+//
+//        if myGroupedEvents[selectedSection][selectedIndex].seatsAvailable! > 0{
+//             createRSVP()
+//        }else{
+//            self.showAlert(message: "Oops!! \n There are no seats available currently. \n Please talk to the event coordinator for further info.")
+//        }
+//
+//
+//    }
     
     @objc func segementChanged(sender: UISegmentedControl){
         
@@ -111,6 +113,14 @@ class TrunckViewController: UIViewController {
                 self.segment.selectedSegmentIndex = 0
                 
             }
+            
+            nextVC?.playHandler = { (prodId) -> Void in
+                
+                
+                self.completeAnsHandler("F2TrunckShow",prodId)
+                
+            }
+            
             nc.modalPresentationStyle = .fullScreen
             self.present(nc, animated: true, completion: nil)
         }
@@ -141,34 +151,34 @@ class TrunckViewController: UIViewController {
         
     }
     
-    func addGestureToView(){
-        tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        self.view.addGestureRecognizer(tap)
-        
-    }
-    
-    @objc func handleTap(){
-        
-        
-        if let layout = trunckCollection.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.scrollDirection = .horizontal
-        }
-        
-        createNavbar(shouldHide: true)
-        previewButtonPressed = false
-        innerView.isHidden = true
-        UIView.transition(with: trunckCollection, duration: 0.5, options: .transitionFlipFromRight, animations: {
-            //Do the data reload here
-            self.trunckCollection.performBatchUpdates({
-                let indexSet = IndexSet(integersIn: 0...0)
-                self.trunckCollection.reloadSections(indexSet)
-            }, completion: nil)
-            
-        }, completion: nil)
-        
-        
-        self.view.removeGestureRecognizer(tap)
-    }
+//    func addGestureToView(){
+//        tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+//        self.view.addGestureRecognizer(tap)
+//
+//    }
+//
+//    @objc func handleTap(){
+//
+//
+//        if let layout = trunckCollection.collectionViewLayout as? UICollectionViewFlowLayout {
+//            layout.scrollDirection = .horizontal
+//        }
+//
+//        createNavbar(shouldHide: true)
+//        previewButtonPressed = false
+//        innerView.isHidden = true
+//        UIView.transition(with: trunckCollection, duration: 0.5, options: .transitionFlipFromRight, animations: {
+//            //Do the data reload here
+//            self.trunckCollection.performBatchUpdates({
+//                let indexSet = IndexSet(integersIn: 0...0)
+//                self.trunckCollection.reloadSections(indexSet)
+//            }, completion: nil)
+//
+//        }, completion: nil)
+//
+//
+//        self.view.removeGestureRecognizer(tap)
+//    }
 
     /*
     // MARK: - Navigation
@@ -265,12 +275,15 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
         }else{
             
             let cell = trunckCollection.dequeueReusableCell(withReuseIdentifier: "TrunckViewCell", for: indexPath) as? TrunckViewCell
-            
+            cell?.delegate = self
             if let url = URL(string: myGroupedEvents[indexPath.section][indexPath.item].bannerImage!){
                 cell!.bkgImage.af_setImage(withURL: url)
             }
             
-            cell!.delegate = self
+            if let endTime = myGroupedEvents[indexPath.section][indexPath.item].endDate{
+                cell?.updateCountDown(setDate: endTime)
+            }
+            
             return cell!
         }
         
@@ -279,75 +292,91 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        
-        self.completeAnsHandler("F2TrunckShow",myGroupedEvents[indexPath.section][indexPath.row].id!)
-       // self.navigationController?.popViewController(animated: true)
-
-        
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//
+//
+//        self.completeAnsHandler("F2TrunckShow",myGroupedEvents[indexPath.section][indexPath.row].id!)
+//       // self.navigationController?.popViewController(animated: true)
+//
+//
+//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if previewButtonPressed == true{
             return CGSize(width: self.view.frame.width, height: 390)
         }else{
-            return CGSize(width: self.view.frame.width - 20, height: 550)
+            return CGSize(width: self.view.frame.width, height: self.view.frame.height)
         }
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-        return UIEdgeInsets(top: 0, left: self.view.frame.width / 2 - 145, bottom: 0, right: self.view.frame.width / 2 - 145)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
+    
     
     
 }
 
-extension TrunckViewController: TrunckViewDelegate{
-    
-    func buttonPreviewPressed(sender: TrunckViewCell) {
+extension TrunckViewController: RSVPDelegate{
+    func rsvpPressed(sender: TrunckViewCell) {
         
-        guard let tappedIndex  = trunckCollection.indexPath(for: sender) else {return}
+        guard let tappedIndex = trunckCollection.indexPath(for: sender) else { return}
         
-        if let layout = trunckCollection.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.scrollDirection = .vertical
+        if myGroupedEvents[tappedIndex.section][tappedIndex.row].seatsAvailable! > 0{
+            createRSVP()
+        }else{
+            self.showAlert(message: "Oops!! \n There are no seats available currently. \n Please talk to the event coordinator for further info.")
         }
-        
-        selectedIndex = tappedIndex.item
-        selectedSection = tappedIndex.section
-        previewButtonPressed = true
-         addGestureToView()
-        innerView.isHidden = false
-        createNavbar(shouldHide: false)
-        updateUI()
-        
-        UIView.transition(with: trunckCollection, duration: 0.5, options: .transitionFlipFromLeft, animations: {
-            //Do the data reload here
-            self.trunckCollection.performBatchUpdates({
-                let indexSet = IndexSet(integersIn: 0...0)
-                self.trunckCollection.reloadSections(indexSet)
-            }, completion: nil)
-            
-        }, completion: nil)
-
-    }
-    
-    func scanButtonPressed(sender: TrunckViewCell){
-        
-        readerVC.delegate = self
-        // Presents the readerVC as modal form sheet
-        readerVC.modalPresentationStyle = .formSheet
-        present(readerVC, animated: true, completion: nil)
-        
     }
     
     
 }
 
-extension TrunckViewController: QRCodeReaderViewControllerDelegate,EnlargeImageDelegate{
+//extension TrunckViewController: TrunckViewDelegate{
+//
+//    func buttonPreviewPressed(sender: TrunckViewCell) {
+//
+//        guard let tappedIndex  = trunckCollection.indexPath(for: sender) else {return}
+//
+//        if let layout = trunckCollection.collectionViewLayout as? UICollectionViewFlowLayout {
+//            layout.scrollDirection = .vertical
+//        }
+//
+//        selectedIndex = tappedIndex.item
+//        selectedSection = tappedIndex.section
+//        previewButtonPressed = true
+//         addGestureToView()
+//        innerView.isHidden = false
+//        createNavbar(shouldHide: false)
+//        updateUI()
+//
+//        UIView.transition(with: trunckCollection, duration: 0.5, options: .transitionFlipFromLeft, animations: {
+//            //Do the data reload here
+//            self.trunckCollection.performBatchUpdates({
+//                let indexSet = IndexSet(integersIn: 0...0)
+//                self.trunckCollection.reloadSections(indexSet)
+//            }, completion: nil)
+//
+//        }, completion: nil)
+//
+//    }
+//
+//    func scanButtonPressed(sender: TrunckViewCell){
+//
+//        readerVC.delegate = self
+//        // Presents the readerVC as modal form sheet
+//        readerVC.modalPresentationStyle = .formSheet
+//        present(readerVC, animated: true, completion: nil)
+//
+//    }
+//
+//
+//}
+
+extension TrunckViewController:EnlargeImageDelegate{
     func openImage(sender: ImageSlideshow) {
         
         sender.presentFullScreenController(from: self)
@@ -357,26 +386,26 @@ extension TrunckViewController: QRCodeReaderViewControllerDelegate,EnlargeImageD
     
     
     
-    func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
-        print(result.value)
-        reader.stopScanning()
-        
-         let sentence = result.value
-        let words = sentence.byWords
-        
-        if words.first == "product"{
-            getProduct(prodId: (words.last?.description)!)
-        }else if words.first == "event"{
-            getEvent(eventId: (words.last?.description)!)
-        }
-        
-       // dismiss(animated: true, completion: nil)
-    }
-    
-    func readerDidCancel(_ reader: QRCodeReaderViewController) {
-        print("Action Cancelled")
-         dismiss(animated: true, completion: nil)
-    }
+//    func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
+//        print(result.value)
+//        reader.stopScanning()
+//
+//         let sentence = result.value
+//        let words = sentence.byWords
+//
+//        if words.first == "product"{
+//            getProduct(prodId: (words.last?.description)!)
+//        }else if words.first == "event"{
+//            getEvent(eventId: (words.last?.description)!)
+//        }
+//
+//       // dismiss(animated: true, completion: nil)
+//    }
+//
+//    func readerDidCancel(_ reader: QRCodeReaderViewController) {
+//        print("Action Cancelled")
+//         dismiss(animated: true, completion: nil)
+//    }
     
 }
 
@@ -423,73 +452,6 @@ extension TrunckViewController{
         
     }
     
-    
-    func getProduct(prodId: String){
-        
-        Alamofire.request(Router.getProductBy(id: prodId)).responseJSON { (response) in
-            
-            switch response.result{
-                
-            case .success(let JSON):
-                
-                print(JSON)
-                
-                 guard let jsonArray = JSON as? [NSDictionary] else {return}
-                
-                for item in jsonArray{
-                    
-                    let product = Product(json: item as! JSON)
-                    self.allProducts.append(product)
-                    
-                }
-                
-                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                let nextVC = storyBoard.instantiateViewController(withIdentifier: "ProductCheckoutController") as? ProductCheckoutController
-                nextVC?.theProduct = self.allProducts.first!
-                let nc = UINavigationController(rootViewController: nextVC!)
-                self.readerVC.present(nc, animated: true, completion: nil)
-                
-            case .failure(let error):
-                
-                print(error.localizedDescription)
-                
-            }
-        }
-    }
-    
-    
-    func getEvent(eventId: String){
-        
-        Alamofire.request(Router.getEventBy(id: eventId)).responseJSON { (response) in
-            
-            switch response.result{
-            case .success(let JSON):
-                
-                print(JSON)
-                let events = try? JSONDecoder().decode(TrunckShow.self, from: response.data!)
-                
-                if (events?[0].seatsAvailable!)! < 10{
-                    self.showAlert(message: "HURRY UP!.\n Last 3 seats are available")
-                }else{
-                    
-                    let message = "\n Please proceed to purchase the ticket \n\n" + "Available Seats: " + (events?[0].seatsAvailable!.description)!
-                    let titleLabel = (events?[0].title!)! + "\n" + (events?[0].location!)!
-                    let alertController = UIAlertController(title: titleLabel, message: message, preferredStyle: .alert)
-                    let proceed = UIAlertAction(title: "Proceed to pay", style: .default, handler: nil)
-                    let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                    alertController.addAction(proceed)
-                    alertController.addAction(cancel)
-                    self.readerVC.present(alertController, animated: true, completion: nil)
-                }
-                
-                
-            case .failure(let error):
-                
-                print(error.localizedDescription)
-                
-            }
-        }
-    }
     
     func createRSVP(){
         

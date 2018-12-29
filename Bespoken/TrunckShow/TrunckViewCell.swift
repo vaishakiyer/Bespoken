@@ -24,6 +24,7 @@ class TrunckViewCell: UICollectionViewCell {
     @IBOutlet weak var countdownLabel: CountdownLabel!
     @IBOutlet weak var rsvpButton: UIButton!
     @IBOutlet weak var gifView: UIImageView!
+    @IBOutlet weak var inviteImage: UIImageView!
     
     
     var delegate : RSVPDelegate?

@@ -33,7 +33,7 @@
                                     <constraint firstAttribute="height" constant="272" id="50O-uN-sNv"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DummyImage" translatesAutoresizingMaskIntoConstraints="NO" id="5vy-DQ-8Qh">
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unknown" translatesAutoresizingMaskIntoConstraints="NO" id="5vy-DQ-8Qh">
                                 <rect key="frame" x="37" y="68" width="301" height="132"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -123,6 +123,7 @@
                 <outlet property="countdownLabel" destination="z1L-GT-Ia1" id="dB8-gk-UvL"/>
                 <outlet property="daysLeft" destination="333-JN-oKN" id="6db-KE-1cA"/>
                 <outlet property="gifView" destination="ejV-kQ-VpL" id="3Dx-4J-jwk"/>
+                <outlet property="inviteImage" destination="5vy-DQ-8Qh" id="Jv4-4L-yOG"/>
                 <outlet property="outerView" destination="nyo-QC-wSr" id="JgJ-aK-Jl6"/>
                 <outlet property="rsvpButton" destination="Q1E-0L-2fD" id="4g1-Lk-Egx"/>
             </connections>
@@ -131,8 +132,8 @@
     </objects>
     <resources>
         <image name="Circle" width="1200" height="1200"/>
-        <image name="DummyImage" width="374" height="152"/>
         <image name="Mask Group 22" width="235" height="365"/>
         <image name="Text Stroke" width="500" height="500"/>
+        <image name="Unknown" width="773" height="400"/>
     </resources>
 </document>

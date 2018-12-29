@@ -26,6 +26,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     @IBOutlet weak var myStyleStatement: CurateStyle!
     @IBOutlet weak var myInitialCurate: InitialCurate!
     
+    var currentId : String? = ""
     @IBAction func pinPressed(_ sender: Any) {
         let vc = UIStoryboard(name: "main2", bundle: nil).instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
         if currentLoadedCardsArray.isEmpty{
@@ -101,8 +102,10 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
             view.layer.addSublayer(halo)
         }else{
             if count < 2{
-            view.layer.sublayers!.removeLast()
-                getTheProducts()
+                 view.layer.addSublayer(halo)
+            }else if count < 3{
+              view.layer.sublayers!.removeLast()
+             //   getTheProducts()
             }
     
         }
@@ -115,7 +118,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         super.viewWillAppear(animated)
         playVideoInBackgroud()
         count = 0
-        if currentLoadedCardsArray.count == 0 && checkUser != nil{
+        if currentLoadedCardsArray.count == 0{
             
             if let checkFirstTIme = BSUserDefaults.getFirstTime(){
                 
@@ -185,26 +188,9 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
                 // Put your code which should be executed with a delay here
             })
             
-            getTheProducts()
-//            if let checkFirstTime = BSUserDefaults.getFirstTime(){
-//
-//                if checkFirstTime == true{
-//
-//                    getStylewords()
-//                }else{
-//                    if count > 0 && count < 2{
-//                         self.getTheProducts()
-//                    }
-//
-//
-//                }
-//
-//            }else{
-//                self.getTheProducts()
-//            }
-            
- 
-              //loadCardValues()
+     
+
+       //     getTheProducts()
         }
        
     
@@ -333,24 +319,22 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
 
                 nextVC?.completeAnsHandler = { (value,id) -> [UIViewController] in
 
+                   
                     self.controlFlow = FlowAnalysis(rawValue: value)
                     self.getProductForEvents(id: id)
-
+                   
 
                     let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
+
                     
-                    let vc = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController")
-                    let navController = UINavigationController(rootViewController: vc)
-                    UIApplication.shared.keyWindow?.rootViewController = navController
-//                    return  self.navigationController!.popToViewController( viewControllers[viewControllers.count - 1], animated: true)!
-//                    for  i in viewControllers{
-//                        if i is HomepageViewController{
-//                            return  self.navigationController!.popToViewController( i, animated: true)!
-//                        }
-//
-//                    }
+                    for  i in viewControllers{
+                        if i is HomepageViewController{
+                            return  self.navigationController!.popToViewController( i, animated: true)!
+                        }
+
+                    }
                     return viewControllers
-//                    return (self.navigationController?.popViewController(animated: true))!
+//
 
 
                 }
@@ -769,6 +753,8 @@ extension HomepageViewController{
     
     func getProductForEvents(id: String){
         
+        
+        isProductCards = true
         Alamofire.request(Router.getTheCardsForEvent(eventID: id)).responseJSON { (response) in
             
             switch response.result{
@@ -779,13 +765,14 @@ extension HomepageViewController{
                 
                 self.allCardsArray.removeAll()
                 self.cardSetType1.removeAll()
-                
+                self.allProducts.removeAll()
                 guard let jsonArray = JSON as? [NSDictionary] else {return}
                 
                 for items in jsonArray{
                     
                     let product = Product(json: items as! JSON)
                     self.myAllCards.append(product)
+                     self.allProducts.append(product)
                     
                     var themeCard = ThemeCards()
                     
@@ -800,6 +787,7 @@ extension HomepageViewController{
                     
                 }
                 
+                 self.count = 0
                 self.shouldPulsate = false
                 self.loadCardValues()
                 
@@ -903,14 +891,17 @@ extension HomepageViewController: AnimationCompletedDelegate,InitialAnimationFin
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(8), execute: {
             
-            let alertController = UIAlertController(title: "Your Products are loaded and ready to be displayed", message: "\n Please press OK to proceed", preferredStyle: .alert)
             
-            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: { (weak) in
-                 self.fetchUser()
-            })
+            self.fetchUser()
             
-            alertController.addAction(okAction)
-            self.present(alertController, animated: true, completion: nil)
+//            let alertController = UIAlertController(title: "Your Products are loaded and ready to be displayed", message: "\n Please press OK to proceed", preferredStyle: .alert)
+//
+//            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: { (weak) in
+//
+//            })
+//
+//            alertController.addAction(okAction)
+//            self.present(alertController, animated: true, completion: nil)
             
         })
         

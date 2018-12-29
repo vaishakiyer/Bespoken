@@ -43,7 +43,7 @@ class TrunckViewController: UIViewController {
     var myGroupedEvents = [TrunckShow]()
     var allProducts : [Product] = []
     var completeAnsHandler : ((_ value: String,_ trunckId: String) -> [UIViewController])!
-    
+    var isCalled : Bool? = false
     override func viewDidLoad() {
         super.viewDidLoad()
          setup()
@@ -56,11 +56,12 @@ class TrunckViewController: UIViewController {
     func setup(){
     
         segment.sizeToFit()
-        segment.tintColor = UIColor(red:1, green:1, blue:1, alpha:1.00)
+        segment.tintColor = UIColor(red:0, green:0, blue:0, alpha:1.00)
         segment.selectedSegmentIndex = 0;
-        segment.addTarget(self, action: #selector(segementChanged(sender:)), for: .allEvents)
         segment.setTitle("C A R D S", forSegmentAt: 0)
         segment.setTitle("L I S T", forSegmentAt: 1)
+        segment.addTarget(self, action: #selector(segementChanged(sender:)), for: .allEvents)
+       
         
         self.navigationItem.titleView = segment
     
@@ -75,58 +76,58 @@ class TrunckViewController: UIViewController {
      
     }
     
-//    func createNavbar(shouldHide: Bool){
-//
-//        if shouldHide == false{
-//            let rsvpButton = UIBarButtonItem(title: "RSVP", style: .plain, target: self, action: #selector(rsvpPressed))
-//            rsvpButton.tintColor = .white
-//        self.navigationItem.rightBarButtonItem = rsvpButton
-//        }else{
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-//        }
-//    }
-    
-//    @objc func rsvpPressed(){
-//
-//        if myGroupedEvents[selectedSection][selectedIndex].seatsAvailable! > 0{
-//             createRSVP()
-//        }else{
-//            self.showAlert(message: "Oops!! \n There are no seats available currently. \n Please talk to the event coordinator for further info.")
-//        }
-//
-//
-//    }
-    
     @objc func segementChanged(sender: UISegmentedControl){
         
         switch sender.selectedSegmentIndex {
         case 0:
             
             break
+        
+        case 1:
+            
+            
+            self.callOnce()
+             isCalled = true
+            
+            break
         default:
             
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let nextVC = storyBoard.instantiateViewController(withIdentifier: "List2ViewController") as? List2ViewController
-            let nc = UINavigationController(rootViewController: nextVC!)
-            nextVC?.presentHandler = { () -> Void in
-                
-                self.segment.selectedSegmentIndex = 0
-                
-            }
-            
-            nextVC?.playHandler = { (prodId) -> Void in
-                
-                
-                self.completeAnsHandler("F2TrunckShow",prodId)
-                
-            }
-            
-            nc.modalPresentationStyle = .fullScreen
-            self.present(nc, animated: true, completion: nil)
+           break
         }
         
         
         
+    }
+    
+    func callOnce(){
+        
+        if isCalled == false{
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = storyBoard.instantiateViewController(withIdentifier: "List2ViewController") as? List2ViewController
+        
+        nextVC?.presentHandler = { () -> Void in
+            
+            let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
+            
+            for  i in viewControllers{
+                if i is TrunckViewController{
+                      self.navigationController!.popToViewController( i, animated: true)
+                }
+            }
+            self.isCalled = false
+            self.segment.selectedSegmentIndex = 0
+            
+        }
+        
+        nextVC?.playHandler = { (prodId) -> Void in
+            
+            self.completeAnsHandler("F2TrunckShow",prodId)
+            
+        }
+        
+        
+        self.navigationController?.pushViewController(nextVC!, animated: true)
+        }
     }
     
     func updateUI() {
@@ -276,9 +277,14 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
             
             let cell = trunckCollection.dequeueReusableCell(withReuseIdentifier: "TrunckViewCell", for: indexPath) as? TrunckViewCell
             cell?.delegate = self
-            if let url = URL(string: myGroupedEvents[indexPath.section][indexPath.item].bannerImage!){
+            if let url = URL(string: myGroupedEvents[indexPath.section][indexPath.item].mainImage!){
                 cell!.bkgImage.af_setImage(withURL: url)
             }
+            
+            if let url = URL(string: myGroupedEvents[indexPath.section][indexPath.item].bannerImage!){
+                cell!.inviteImage.af_setImage(withURL: url)
+            }
+            
             
             if let endTime = myGroupedEvents[indexPath.section][indexPath.item].endDate{
                 cell?.updateCountDown(setDate: endTime)
@@ -291,15 +297,7 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
         
     }
     
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//
-//
-//        self.completeAnsHandler("F2TrunckShow",myGroupedEvents[indexPath.section][indexPath.row].id!)
-//       // self.navigationController?.popViewController(animated: true)
-//
-//
-//    }
+
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -335,77 +333,12 @@ extension TrunckViewController: RSVPDelegate{
     
 }
 
-//extension TrunckViewController: TrunckViewDelegate{
-//
-//    func buttonPreviewPressed(sender: TrunckViewCell) {
-//
-//        guard let tappedIndex  = trunckCollection.indexPath(for: sender) else {return}
-//
-//        if let layout = trunckCollection.collectionViewLayout as? UICollectionViewFlowLayout {
-//            layout.scrollDirection = .vertical
-//        }
-//
-//        selectedIndex = tappedIndex.item
-//        selectedSection = tappedIndex.section
-//        previewButtonPressed = true
-//         addGestureToView()
-//        innerView.isHidden = false
-//        createNavbar(shouldHide: false)
-//        updateUI()
-//
-//        UIView.transition(with: trunckCollection, duration: 0.5, options: .transitionFlipFromLeft, animations: {
-//            //Do the data reload here
-//            self.trunckCollection.performBatchUpdates({
-//                let indexSet = IndexSet(integersIn: 0...0)
-//                self.trunckCollection.reloadSections(indexSet)
-//            }, completion: nil)
-//
-//        }, completion: nil)
-//
-//    }
-//
-//    func scanButtonPressed(sender: TrunckViewCell){
-//
-//        readerVC.delegate = self
-//        // Presents the readerVC as modal form sheet
-//        readerVC.modalPresentationStyle = .formSheet
-//        present(readerVC, animated: true, completion: nil)
-//
-//    }
-//
-//
-//}
 
 extension TrunckViewController:EnlargeImageDelegate{
     func openImage(sender: ImageSlideshow) {
         
         sender.presentFullScreenController(from: self)
     }
-    
-    
-    
-    
-    
-//    func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
-//        print(result.value)
-//        reader.stopScanning()
-//
-//         let sentence = result.value
-//        let words = sentence.byWords
-//
-//        if words.first == "product"{
-//            getProduct(prodId: (words.last?.description)!)
-//        }else if words.first == "event"{
-//            getEvent(eventId: (words.last?.description)!)
-//        }
-//
-//       // dismiss(animated: true, completion: nil)
-//    }
-//
-//    func readerDidCancel(_ reader: QRCodeReaderViewController) {
-//        print("Action Cancelled")
-//         dismiss(animated: true, completion: nil)
-//    }
     
 }
 

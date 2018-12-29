@@ -46,11 +46,11 @@ class List2ViewController: UIViewController {
         segment.tintColor = UIColor(red:0, green:0, blue:0, alpha:1.00)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
         segment.selectedSegmentIndex = 1
         segment.setTitle("C A R D S", forSegmentAt: 0)
         segment.setTitle("L I S T", forSegmentAt: 1)
         segment.addTarget(self, action: #selector(segementChanged(sender:)), for: .allEvents)
-        //segment.setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "ProximaNova-Light", size: 15)!], for: .normal)
         self.navigationItem.titleView = segment
         getEvents()
         trunckCollection.delegate = self
@@ -64,9 +64,8 @@ class List2ViewController: UIViewController {
         
         switch sender.selectedSegmentIndex {
         case 0:
-            
+        
         self.presentHandler()
-        self.dismiss(animated: true, completion: nil)
             
         default:
             
@@ -141,7 +140,7 @@ extension List2ViewController: UICollectionViewDelegateFlowLayout,UICollectionVi
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         
-            return CGSize(width: 320, height: 70)
+            return CGSize(width: 320, height: 180)
     
     }
     
@@ -157,7 +156,6 @@ extension List2ViewController: TrunckViewDelegate,QRCodeReaderViewControllerDele
         
         guard let tappedIndex  = trunckCollection.indexPath(for: sender) else {return}
         
-        self.dismiss(animated: true, completion: nil)
 
        let prodId = myGroupedEvents[tappedIndex.section][tappedIndex.row].id
         self.playHandler(prodId!)

@@ -30,6 +30,7 @@ class List2CollectionCell: UICollectionViewCell {
         outerView.roundCorners(corners: .allCorners, radius: 16)
         playButton.addTarget(self, action: #selector(previewPressed), for: .touchUpInside)
         scannerButton.addTarget(self, action: #selector(scanPressed), for: .touchUpInside)
+        titleLabel.isHidden = true
         // Initialization code
     }
     

@@ -137,7 +137,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     
     func setup(){
-        
+        ballButton.imageView?.image = BSUserDefaults.getProfilePic()
         myInitialCurate.delegate = self
         myStyleStatement.delegate = self
         controlFlow = FlowAnalysis(rawValue: "")
@@ -149,6 +149,10 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         getQuestions()
         fetchUser()
         
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        let profilePic : UIImage = BSUserDefaults.getProfilePic()
+        ballButton.setImage(profilePic, for: .normal)
     }
     
     func updateUI(toHide: Bool){
@@ -372,9 +376,6 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
                             }
             
                             self.navigationController?.pushViewController(nextVC!, animated: true)
-            
-            
-            
         }
         
  

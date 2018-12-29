@@ -151,6 +151,14 @@ class CollectionsViewController: UIViewController {
             }
         }
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        
+        if searchController.isActive == true {
+            
+            searchController.isActive = false
+            
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initializeView()
@@ -176,6 +184,7 @@ class CollectionsViewController: UIViewController {
         self.hamburgerMenuTableView.delegate = self
         self.hamburgerMenuTableView.dataSource = self
         self.hamburgerMenuTableView.tableFooterView = UIView()
+        self.hamburgerMenuTableView.separatorStyle = .none
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(openMenu))
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
 //        self.navigationItem.rightBarButtonItem = searchButton
@@ -239,10 +248,10 @@ extension CollectionsViewController : UICollectionViewDelegate, UICollectionView
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = UIStoryboard(name: "main2", bundle: nil).instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
-        vc.product = allProducts[indexPath.row]
-
-        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "ProductCheckoutController") as! ProductCheckoutController
+        vc.theProduct = allProducts[indexPath.row]
+        let navVC = UINavigationController(rootViewController: vc)
+        self.navigationController?.present(navVC, animated: true)
     }
 }
 extension CollectionsViewController: PinterestLayoutDelegate {
@@ -285,27 +294,51 @@ extension CollectionsViewController : UITableViewDelegate, UITableViewDataSource
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
-        let label = UILabel()
-        label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
-        label.textColor = UIColor.black
-        let tap = UITapGestureRecognizer(target: self, action:#selector(self.handleTap))
-        tap.delegate = self
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 80))
+//        let label = UILabel()
+//        label.adjustsFontSizeToFitWidth = true
+//        label.adjustsFontForContentSizeCategory = true
+//
+//        label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
+//        label.textColor = UIColor.black
+//        let tap = UITapGestureRecognizer(target: self, action:#selector(self.handleTap))
+//        tap.delegate = self
+//        switch section {
+//        case 0:
+//            label.text = "Home"
+//            headerView.addGestureRecognizer(tap)
+//
+//        case 1:
+//            label.text = "Filter"
+//        default:
+//            print("out of index in section")
+//        }
+//
+//        headerView.addSubview(label)
+//        return headerView
+//
+//    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 0:
-            label.text = "Home"
-            headerView.addGestureRecognizer(tap)
-
-        case 1:
-            label.text = "Filter"
-        default:
-            print("out of index in section")
-        }
-
-        headerView.addSubview(label)
-        return headerView
+                    case 0:
+                        return "Home"
+                    case 1:
+                        return "Filter"
+                    default:
+                        print("out of index in section")
+                        return "Error"
+                    }
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+            let tap = UITapGestureRecognizer(target: self, action:#selector(self.handleTap))
+            tap.delegate = self
+            let headerView = UITableViewHeaderFooterView()
+            if section == 0 {
+                headerView.addGestureRecognizer(tap)
+            }
         
+            return headerView
     }
     @objc func handleTap(){
         self.dismiss(animated: true, completion: nil)
@@ -313,10 +346,13 @@ extension CollectionsViewController : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.hamburgerMenuTableView.dequeueReusableCell(withIdentifier: "HamburgerMenuTableViewCell") as! UITableViewCell
         cell.textLabel?.text = self.hamburgerMenuItems[indexPath.row]
+        cell.textLabel?.adjustsFontSizeToFitWidth = true
+        cell.textLabel?.font = UIFont(name: "Helvetica", size: 16)
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.dismiss(animated: true, completion: nil)
+//        self.hideMenu()
+        self.collectionView.reloadData()
     }
     
 

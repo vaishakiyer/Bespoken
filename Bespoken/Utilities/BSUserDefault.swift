@@ -11,6 +11,7 @@ import UIKit
 
 private let kAccessToken = "kAccessToken"
 private let kUser = "kUser"
+private let kProfilePic = "kProfilePic"
 private let kLoggedName = "kName"
 private let kWords = "kWords"
 private let kFirstTime = "kFirstTime"
@@ -50,6 +51,18 @@ class BSUserDefaults{
         sharedInstance.set(try? NSKeyedArchiver.archivedData(withRootObject: userDict, requiringSecureCoding: true), forKey: kUser)
         sharedInstance.synchronize()
     }
+    class func setProfilePic(_ profileImage: UIImage) {
+        sharedInstance.set(try? NSKeyedArchiver.archivedData(withRootObject: profileImage, requiringSecureCoding: true), forKey: kProfilePic)
+        sharedInstance.synchronize()
+    }
+    class func getProfilePic() -> UIImage {
+        if let data = Foundation.UserDefaults.standard.object(forKey: kProfilePic) as? Data{
+        let object = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as! UIImage
+        return object!
+        }
+        return UIImage(named: "profilePic")!
+    }
+
     
     class func setLoggedWords(_ words: [String]){
         sharedInstance.set(words, forKey: kWords)

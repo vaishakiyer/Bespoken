@@ -34,6 +34,7 @@ class CollectionsCollectionViewCell: UICollectionViewCell {
 
                 if self.product?.imageSizes[(self.product?.images[0])!] == nil{
                     self.product?.imageSizes[self.product!.images[0]] = CGSize(width : value.size.width , height : value.size.height)
+                    self.productTitle.text = self.product?.title
                 self.delegate!.didFinishLoadingImage(self)
                     print(self.product?.imageSizes[self.product!.images[0]])
                 }
@@ -42,8 +43,9 @@ class CollectionsCollectionViewCell: UICollectionViewCell {
             
         }
         self.imageView.layer.shadowColor = UIColor.lightGray.cgColor
-        self.imageView.layer.shadowRadius = 5
-        self.imageView.layer.shadowOpacity = 1
+        self.imageView.layer.shadowRadius = 10
+        self.imageView.layer.shadowOpacity = 10
+            self.imageView.layer.cornerRadius = 20
         self.imageView.layer.shadowOffset = CGSize.zero
     }
     )

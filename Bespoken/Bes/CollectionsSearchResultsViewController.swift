@@ -78,6 +78,15 @@ extension CollectionsSearchResultsViewController : UICollectionViewDelegate{
         if collectionView == collectionViewTags{
             self.searchBar?.text = tagsArray[indexPath.row]
     }
+        else{
+//            self.dismiss(animated: false) 
+            let vc = self.storyboard!.instantiateViewController(withIdentifier: "ProductCheckoutController") as! ProductCheckoutController
+                vc.theProduct = self.allProducts[indexPath.row]
+            let navVC = UINavigationController(rootViewController: vc)
+            self.presentingViewController!.present(navVC, animated: true)
+            self.present(navVC, animated: true)
+
+        }
 }
 }
 extension CollectionsSearchResultsViewController : UICollectionViewDataSource{
@@ -94,7 +103,7 @@ extension CollectionsSearchResultsViewController : UICollectionViewDataSource{
         
         if collectionView == collectionViewTags{
         let cell = self.collectionViewTags.dequeueReusableCell(withReuseIdentifier: "TagsCollectionViewCell", for: indexPath) as! TagsCollectionViewCell
-        cell.tagLabel.text = tagsArray[indexPath.row]
+        cell.tagLabel.text = tagsArray[indexPath.row].uppercased()
             return cell
 
         }

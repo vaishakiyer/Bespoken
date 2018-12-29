@@ -30,7 +30,7 @@ class Homecenter1: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
-        contentView.roundCorners(corners: .allCorners, radius: firstImageView.frame.width / 2)
+//        contentView.roundCorners(corners: .allCorners, radius: firstImageView.frame.width / 2)
         
        
         

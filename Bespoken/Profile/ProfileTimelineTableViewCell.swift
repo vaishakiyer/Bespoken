@@ -33,6 +33,10 @@ class ProfileTimelineTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func updateCell(){
+        self.circleView.isHidden = true
+        self.topLineView.isHidden = true
+        self.bottomLineView.isHidden = true
+
         self.circleView.layer.cornerRadius = self.circleView.frame.width/2
         if self.indexPath?.row == 0{
             self.topLineView.isHidden = true

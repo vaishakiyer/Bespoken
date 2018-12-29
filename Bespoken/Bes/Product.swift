@@ -82,7 +82,7 @@ struct StyleTip {
         let videoStoragePath = video!.appendingPathComponent(self.cardId! + ".mp4")
         localVideoURL = videoStoragePath
         print(localVideoURL)
-
+        
         Alamofire.download(url!, method: .get, parameters: nil) { (_, _) -> (destinationURL: URL, options: DownloadRequest.DownloadOptions) in
             return (videoStoragePath, .createIntermediateDirectories)
             }.response { (response) in

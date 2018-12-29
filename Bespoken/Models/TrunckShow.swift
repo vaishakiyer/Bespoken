@@ -15,7 +15,7 @@ struct TrunckShowElement: Codable {
     let description: String?
     let startTime, endTime: Double?
     let city, location: String?
-    let bannerImage: String?
+    let bannerImage,mainImage: String?
     let category, organizerName, organizerEmail, organizerPhone: String?
     let organizerLogo: String?
     let v: Int?
@@ -34,6 +34,7 @@ struct TrunckShowElement: Codable {
         case endTime = "end_time"
         case city, location
         case bannerImage = "banner_image"
+        case mainImage = "main_image"
         case category
         case organizerName = "organizer_name"
         case organizerEmail = "organizer_email"

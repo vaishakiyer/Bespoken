@@ -7,12 +7,10 @@
 //
 
 import UIKit
+import CountdownLabel
 
-protocol TrunckViewDelegate{
-    
-    func buttonPreviewPressed(sender: TrunckViewCell)
-    func scanButtonPressed(sender: TrunckViewCell)
-    
+protocol RSVPDelegate {
+    func rsvpPressed(sender: TrunckViewCell)
 }
 
 class TrunckViewCell: UICollectionViewCell {
@@ -22,28 +20,54 @@ class TrunckViewCell: UICollectionViewCell {
     @IBOutlet weak var scannerButton: UIButton!
     @IBOutlet weak var bkgImage: UIImageView!
     
-    var delegate : TrunckViewDelegate?
+    @IBOutlet weak var daysLeft: UILabel!
+    @IBOutlet weak var countdownLabel: CountdownLabel!
+    @IBOutlet weak var rsvpButton: UIButton!
+    @IBOutlet weak var gifView: UIImageView!
+    @IBOutlet weak var inviteImage: UIImageView!
+    
+    
+    var delegate : RSVPDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-//        scannerView.layer.borderWidth = 0.5
-//        scannerView.layer.borderColor = UIColor.white.cgColor
-//        scannerView.roundCorners(corners: .allCorners, radius: 6)
+
         outerView.roundCorners(corners: .allCorners, radius: 24)
-        
-        previewButton.addTarget(self, action: #selector(previewPressed), for: .touchUpInside)
-        
-        scannerButton.addTarget(self, action: #selector(scanPressed), for: .touchUpInside)
+        rsvpButton.roundCorners(corners: .allCorners, radius: 8)
+        rsvpButton.addTarget(self, action: #selector(rsvpClicked), for: .touchUpInside)
+      //  gifView.loadGif(name: "Ciclewithbubbles")
+
         // Initialization code
     }
     
     
-   @objc func previewPressed(){
-        delegate?.buttonPreviewPressed(sender: self)
+    @objc func rsvpClicked(){
+        delegate?.rsvpPressed(sender: self)
     }
+    
+    func updateCountDown(setDate: String){
+        
+      //  gifView.loadGif(name: "Ciclewithbubbles")
+        let releaseDateFormatter = DateFormatter()
+        releaseDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        
+        let formatedEndDate = releaseDateFormatter.date(from: setDate)!  as Date
+        let customDate = formatedEndDate as? NSDate
+        let currentDate = Date()
+        let components = Set<Calendar.Component>([.day,.hour])
+        let differenceOfDate = Calendar.current.dateComponents(components, from: currentDate, to: formatedEndDate)
+        
+        daysLeft.text = (differenceOfDate.day?.description)! + " DAYS TO GO"
+        print (differenceOfDate)
+        
+        countdownLabel.timeFormat = "dd   HH  mm   ss"
+        countdownLabel.setCountDownDate(targetDate: customDate!)
+        countdownLabel.animationType = .Scale
+        countdownLabel.start()
+       
 
-    @objc func scanPressed(){
-        delegate?.scanButtonPressed(sender: self)
+        
     }
+    
+
 }

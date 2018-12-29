@@ -50,6 +50,7 @@
 		A5231BAA21A84FBE00463AE4 /* TrunckViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5231BA821A84FBE00463AE4 /* TrunckViewCell.xib */; };
 		A5231BAD21A8645C00463AE4 /* PreviewImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5231BAB21A8645C00463AE4 /* PreviewImageCollectionViewCell.swift */; };
 		A5231BAE21A8645C00463AE4 /* PreviewImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5231BAC21A8645C00463AE4 /* PreviewImageCollectionViewCell.xib */; };
+		A523810621D674EF0093F24A /* Ciclewithbubbles.gif in Resources */ = {isa = PBXBuildFile; fileRef = A523810521D674EF0093F24A /* Ciclewithbubbles.gif */; };
 		A529D5C821A2E9B5005A221A /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529D5C721A2E9B5005A221A /* HomepageViewController.swift */; };
 		A529D5CD21A2FE9B005A221A /* HomePageOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529D5CB21A2FE9B005A221A /* HomePageOptionCell.swift */; };
 		A529D5CE21A2FE9B005A221A /* HomePageOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A529D5CC21A2FE9B005A221A /* HomePageOptionCell.xib */; };
@@ -179,6 +180,7 @@
 		A5231BA821A84FBE00463AE4 /* TrunckViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrunckViewCell.xib; sourceTree = "<group>"; };
 		A5231BAB21A8645C00463AE4 /* PreviewImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		A5231BAC21A8645C00463AE4 /* PreviewImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		A523810521D674EF0093F24A /* Ciclewithbubbles.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Ciclewithbubbles.gif; sourceTree = "<group>"; };
 		A529D5C721A2E9B5005A221A /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		A529D5CB21A2FE9B005A221A /* HomePageOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageOptionCell.swift; sourceTree = "<group>"; };
 		A529D5CC21A2FE9B005A221A /* HomePageOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageOptionCell.xib; sourceTree = "<group>"; };
@@ -539,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				A5B4191E21B539350032F35C /* welcomeGif.gif */,
+				A523810521D674EF0093F24A /* Ciclewithbubbles.gif */,
 				A5B0C95521A443FF0058A064 /* videoplayback.mp4 */,
 			);
 			path = "LocalGifs+Videos";
@@ -700,6 +703,7 @@
 				A511854A21CC05B300BADDEC /* InitialCurate.xib in Resources */,
 				A5B0C95A21A4473F0058A064 /* Homecenter1.xib in Resources */,
 				A5082D7921A15737005EBA41 /* PersonalisationHeader.xib in Resources */,
+				A523810621D674EF0093F24A /* Ciclewithbubbles.gif in Resources */,
 				A5231BAE21A8645C00463AE4 /* PreviewImageCollectionViewCell.xib in Resources */,
 				A5B4191F21B539360032F35C /* welcomeGif.gif in Resources */,
 				A5FBD7A921BED28000638D5F /* HeaderView.xib in Resources */,
@@ -745,6 +749,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/CircleProgressView/CircleProgressView.framework",
+				"${BUILT_PRODUCTS_DIR}/CountdownLabel/CountdownLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/PulsingHalo/PulsingHalo.framework",
@@ -760,6 +765,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleProgressView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountdownLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PulsingHalo.framework",

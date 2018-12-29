@@ -3,6 +3,7 @@ PODS:
   - AlamofireImage (3.4.1):
     - Alamofire (~> 4.7)
   - CircleProgressView (1.2.0)
+  - CountdownLabel (4.0.1)
   - ImageSlideshow (1.7.0):
     - ImageSlideshow/Core (= 1.7.0)
   - ImageSlideshow/Alamofire (1.7.0):
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.7)
   - AlamofireImage (~> 3.4)
   - CircleProgressView
+  - CountdownLabel
   - ImageSlideshow (~> 1.6)
   - ImageSlideshow/Alamofire
   - LTMorphingLabel
@@ -34,6 +36,7 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - CircleProgressView
+    - CountdownLabel
     - ImageSlideshow
     - LTMorphingLabel
     - PulsingHalo
@@ -46,6 +49,7 @@ SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
   CircleProgressView: 6b5b091d59dc5e5d2fda84e637a40498cdc39937
+  CountdownLabel: c9975e3f329140b5e7d1f45cd63b1300badd1712
   ImageSlideshow: f8eec5e37a980f60923b585ff23b0e140fd24018
   LTMorphingLabel: e6047354486aa4ba52d36ccc40be8874b50e1ef1
   PulsingHalo: 64938e4bd3893b823abdf01478084cd92445af2b
@@ -54,6 +58,6 @@ SPEC CHECKSUMS:
   TOPasscodeViewController: 03b5df3762a7be1511102093c644a42275bddf24
   YLProgressBar: 365b6c5e934be18b661f79413db33c993c8e8251
 
-PODFILE CHECKSUM: e176184676b6d5c073058c018ac470b8db5738b0
+PODFILE CHECKSUM: 460a62ad59198e095adc0898b4cf4b693bd49b47
 
 COCOAPODS: 1.5.3

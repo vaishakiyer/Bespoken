@@ -216,7 +216,22 @@ extension SizeTypeViewController: UICollectionViewDelegate,UICollectionViewDataS
         case true:
             let popoverContent = self.storyboard?.instantiateViewController(withIdentifier: "customVideoController") as! customVideoController
             popoverContent.myChoices = attributesNeeded[2][indexPath.item].choices
+            popoverContent.optionHandler = { (optionIndex) -> Void in
                 
+                var option = MeasurementAnswer()
+                option.id = self.attributesNeeded[2][indexPath.item].choices[optionIndex].id
+                option.answer = self.attributesNeeded[2][indexPath.item].choices[optionIndex].text
+                self.myOption.append(option)
+                for (index,vals) in self.myOption.enumerated(){
+                    if vals.id == option.id{
+                        self.myOption[index].answer = option.answer
+                    }
+                    
+                }
+              
+              //  self.myOption = self.myOption.unique(by: {($0.answer != nil)})
+                
+            }
             popoverContent.modalPresentationStyle = .overCurrentContext
             
             self.present(popoverContent, animated: true, completion: nil)

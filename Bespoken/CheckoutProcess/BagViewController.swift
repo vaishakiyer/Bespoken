@@ -15,6 +15,7 @@ class BagViewController: UIViewController {
     @IBOutlet weak var innerView2: UIView!
     @IBOutlet weak var innerView3: UIView!
     @IBOutlet weak var checkoutButton: UIButton!
+    @IBOutlet weak var productDemo: UIButton!
     
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

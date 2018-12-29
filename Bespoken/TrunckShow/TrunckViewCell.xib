@@ -131,7 +131,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Circle" width="1200" height="1200"/>
+        <image name="Circle" width="16" height="16"/>
         <image name="Mask Group 22" width="235" height="365"/>
         <image name="Text Stroke" width="500" height="500"/>
         <image name="Unknown" width="773" height="400"/>

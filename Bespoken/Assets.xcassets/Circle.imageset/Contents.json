@@ -2,13 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Circle.png"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "Group 4.png",
-      "unassigned" : true,
-      "scale" : "2x"
+      "filename" : "Group 4.png"
     }
   ],
   "info" : {

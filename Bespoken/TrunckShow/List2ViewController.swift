@@ -41,15 +41,15 @@ class List2ViewController: UIViewController {
     
     func setup(){
         
-        
+        segment.removeBorders()
         segment.sizeToFit()
         segment.tintColor = UIColor(red:0, green:0, blue:0, alpha:1.00)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         segment.selectedSegmentIndex = 1
-        segment.setTitle("C A R D S", forSegmentAt: 0)
-        segment.setTitle("L I S T", forSegmentAt: 1)
+        segment.setTitle("R S V P", forSegmentAt: 0)
+        segment.setTitle("E V E N T S", forSegmentAt: 1)
         segment.addTarget(self, action: #selector(segementChanged(sender:)), for: .allEvents)
         self.navigationItem.titleView = segment
         getEvents()

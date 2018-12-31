@@ -35,6 +35,7 @@ class TrunckViewCell: UICollectionViewCell {
         outerView.roundCorners(corners: .allCorners, radius: 24)
         rsvpButton.roundCorners(corners: .allCorners, radius: 8)
         rsvpButton.addTarget(self, action: #selector(rsvpClicked), for: .touchUpInside)
+        inviteImage.roundCorners(corners: .allCorners, radius: 16)
       //  gifView.loadGif(name: "Ciclewithbubbles")
 
         // Initialization code

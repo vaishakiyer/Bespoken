@@ -55,7 +55,7 @@ class QuestionnaireController1: UIViewController {
         
         for items in myQuestions{
            
-            if items.tab == 0{
+            if items.tab == 0 || items.tab == 2{
             let ans = PostAnswers(question: items.id!)
             answered.append(ans)
             }
@@ -126,8 +126,10 @@ class QuestionnaireController1: UIViewController {
         }else if nextCountPress == 1{
             
             titleArray = ["WEDDING PARTY","BRIDAL TROUSSEAU","COCKTAIL","SEASONAL","RESORT","DAY"]
-            title1.text = "I VALUE"
-            title2.text = ""
+            
+            title1.text = "MY OCCASSION DRESSING"
+            title2.text = "OPTIONS ARE"
+            
              optionCollection.reloadData()
             
         }else if nextCountPress == 2{
@@ -137,7 +139,12 @@ class QuestionnaireController1: UIViewController {
             title2.text = "TYPE"
              optionCollection.reloadData()
             
-        }else{
+        }else if nextCountPress == 3{
+            title1.text = "I VALUE"
+            title2.text = ""
+            optionCollection.reloadData()
+        }
+        else{
             self.navigationController?.popViewController(animated: true)
         }
         
@@ -150,18 +157,7 @@ class QuestionnaireController1: UIViewController {
         if nextCountPress < answered.count - 1 {
         
             nextCountPress += 1
-//            if myQuestions[nextCountPress + 1].tab == 0{
-//            nextCountPress += 1
-//            }else{
-//
-//                updateUserPreferences()
-//
-////                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-////                let nextVC = storyBoard.instantiateViewController(withIdentifier: "TinderSwipeControllerViewController") as? TinderSwipeControllerViewController
-////                nextVC?.controlFLow = FlowAnalysis(rawValue: "F1Brand")
-////                self.navigationController?.pushViewController(nextVC!, animated: true)
-//
-//            }
+
         }else{
             
             updateUserPreferences()
@@ -178,12 +174,16 @@ class QuestionnaireController1: UIViewController {
         
         if nextCountPress == 1{
            
-            title1.text = "I VALUE"
-            title2.text = ""
+            title1.text = "MY OCCASSION DRESSING"
+            title2.text = "OPTIONS ARE"
+
         }else if nextCountPress == 2{
             
             title1.text = "MY BODY"
             title2.text = "TYPE"
+        }else if nextCountPress == 3{
+            title1.text = "I VALUE"
+            title2.text = ""
         }
         
         
@@ -232,7 +232,7 @@ extension QuestionnaireController1: UICollectionViewDelegateFlowLayout,UICollect
              cell?.imageView.af_setImage(withURL: url)
         }
        
-        cell?.titleText.text = myQuestions[nextCountPress].options?[indexPath.row].text
+        cell?.titleText.text = myQuestions[nextCountPress].options?[indexPath.row].text?.uppercased()
         return cell!
         
     }
@@ -271,7 +271,7 @@ extension QuestionnaireController1: UICollectionViewDelegateFlowLayout,UICollect
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 140, height: 110)
+        return CGSize(width: 145, height: 130)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

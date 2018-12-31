@@ -74,8 +74,6 @@ class SizeTypeViewController: UIViewController {
             tempObj.id = val.id
             myOption.append(tempObj)
         }
-        
-        
     }
     
     
@@ -85,8 +83,7 @@ class SizeTypeViewController: UIViewController {
         case true:
             
             stylistSwitch.setOn(true, animated: true)
-            let alertControl = UIAlertController(title: "Please enter the designer Code", message: "", preferredStyle: .alert)
-            
+            let alertControl = UIAlertController(title: "Please enter the Stylist Code", message: "", preferredStyle: .alert)
             alertControl.addTextField(configurationHandler: { (textField) in
                 textField.placeholder = "Enter Stylist Code"
                 textField.keyboardType = .numberPad

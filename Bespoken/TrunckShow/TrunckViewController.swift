@@ -55,11 +55,12 @@ class TrunckViewController: UIViewController {
     
     func setup(){
     
+        segment.removeBorders()
         segment.sizeToFit()
         segment.tintColor = UIColor(red:0, green:0, blue:0, alpha:1.00)
         segment.selectedSegmentIndex = 0;
-        segment.setTitle("C A R D S", forSegmentAt: 0)
-        segment.setTitle("L I S T", forSegmentAt: 1)
+        segment.setTitle("R S V P", forSegmentAt: 0)
+        segment.setTitle("E V E N T S", forSegmentAt: 1)
         segment.addTarget(self, action: #selector(segementChanged(sender:)), for: .allEvents)
        
         

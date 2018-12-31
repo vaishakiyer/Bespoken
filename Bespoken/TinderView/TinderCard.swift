@@ -89,6 +89,7 @@ class TinderCard: UIView {
         labelText.attributedText = attributedText
         labelText.numberOfLines = 2
         addSubview(labelText)
+        labelText.isHidden = true
         
         imageViewStatus = UIImageView(frame: CGRect(x: (frame.size.width / 2) - 37.5, y: 25, width: 75, height: 75))
         imageViewStatus.alpha = 0

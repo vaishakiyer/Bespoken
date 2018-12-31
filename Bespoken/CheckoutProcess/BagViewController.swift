@@ -17,6 +17,10 @@ class BagViewController: UIViewController {
     @IBOutlet weak var checkoutButton: UIButton!
     @IBOutlet weak var productDemo: UIButton!
     
+    
+    @IBOutlet weak var commentsView: UITextView!
+    @IBOutlet weak var submitView: UIButton!
+    
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var numberOfLikes: UILabel!
@@ -32,7 +36,14 @@ class BagViewController: UIViewController {
         innerView1.dropShadow(color: .darkGray, offSet: .zero)
          innerView2.dropShadow(color: .darkGray, offSet: .zero)
          innerView3.dropShadow(color: .darkGray, offSet: .zero)
-         checkoutButton.roundCorners(corners: .allCorners, radius: 16)
+         productImage.roundCorners(corners: .allCorners, radius: 16)
+         checkoutButton.roundCorners(corners: .allCorners, radius: 24)
+         productDemo.roundCorners(corners: .allCorners, radius: 24)
+        
+        commentsView.layer.borderColor = UIColor.lightGray.cgColor
+        commentsView.layer.borderWidth = 1.0
+        commentsView.layer.cornerRadius = 5.0
+        submitView.roundCorners(corners: .allCorners, radius: 16)
          updateUI()
         // Do any additional setup after loading the view.
     }

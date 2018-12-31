@@ -189,6 +189,9 @@ class CollectionsViewController: UIViewController {
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
 //        self.navigationItem.rightBarButtonItem = searchButton
         self.title = "Collections"
+        let motifView = UIImageView(image: UIImage(named: "Motif"))
+        motifView.contentMode = .scaleAspectFill
+        self.navigationItem.titleView = motifView
     }
   @objc  func openSearch() {
         let resultsController = self.storyboard?.instantiateViewController(withIdentifier: "CollectionsSearchResultsViewController") as! CollectionsSearchResultsViewController
@@ -351,7 +354,7 @@ extension CollectionsViewController : UITableViewDelegate, UITableViewDataSource
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.hideMenu()
+        self.hideMenu()
         self.collectionView.reloadData()
     }
     

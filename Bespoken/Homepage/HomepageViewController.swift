@@ -44,7 +44,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     }
     //MARK: Declare Variables
     var allProducts : [Product] = []
-    var listArray = ["EVENTS","COLLECTION","PERSONALISATION"]
+    var listArray = ["EVENTS","PERSONALISATION","COLLECTION"]
     let videoPlay = VideoBackground()
     let halo = PulsingHaloLayer()
     var checkUser : User?
@@ -116,7 +116,7 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        playVideoInBackgroud()
+//        playVideoInBackgroud()
         count = 0
         if currentLoadedCardsArray.count == 0{
             
@@ -140,6 +140,8 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
     
     
     func setup(){
+        self.redButton.isHidden = true
+        self.greenButton.isHidden = true
         ballButton.imageView?.image = BSUserDefaults.getProfilePic()
         myInitialCurate.delegate = self
         myStyleStatement.delegate = self
@@ -224,11 +226,14 @@ class HomepageViewController: UIViewController,CAAnimationDelegate {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "profile"), style: .plain, target: self, action: #selector(openProfile))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Path 842"), style: .plain, target: self, action: #selector(openNotification))
         self.navigationController?.navigationBar.isHidden = false
+        let motifView = UIImageView(image: UIImage(named: "Motif_white"))
+        motifView.contentMode = .scaleAspectFill
+        self.navigationItem.titleView = motifView
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.darkGray
-        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.darkGray
-
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
+        self.navigationController!.navigationBar.backgroundColor = .clear
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
     }
@@ -303,13 +308,13 @@ extension HomepageViewController: UICollectionViewDelegate,UICollectionViewDataS
         
         if checkUser?.preferences?.count != 0{
             
-            if indexPath.item == 2{
+            if indexPath.item == 1{
                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                 let nextVC = storyBoard.instantiateViewController(withIdentifier: "PersonalisationController") as? PersonalisationController
                 
                 self.navigationController?.pushViewController(nextVC!, animated: true)
             }
-            else if indexPath.item == 1{
+            else if indexPath.item == 2{
         
                             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                             let nextVC = storyBoard.instantiateViewController(withIdentifier: "CollectionsViewController") as! UINavigationController

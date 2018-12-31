@@ -66,11 +66,7 @@ extension CollectionsSearchResultsViewController : UICollectionViewDelegateFlowL
             let cellSize : CGSize = CGSize(width: 100.0, height:  30.0)
             return cellSize
 //        }
-       
-
     }
-    
-    
 }
 
 extension CollectionsSearchResultsViewController : UICollectionViewDelegate{
@@ -84,7 +80,8 @@ extension CollectionsSearchResultsViewController : UICollectionViewDelegate{
                 vc.theProduct = self.allProducts[indexPath.row]
             let navVC = UINavigationController(rootViewController: vc)
             self.presentingViewController!.present(navVC, animated: true)
-            self.present(navVC, animated: true)
+//            self.present(navVC, animated: true)
+            self.navigationController?.pushViewController(navVC, animated: true)
 
         }
 }

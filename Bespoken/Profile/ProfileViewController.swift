@@ -62,6 +62,7 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     func setup()  {
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         self.profileImage.image = BSUserDefaults.getProfilePic().af_imageRoundedIntoCircle()
         self.logoutButton.roundCorners(corners: UIRectCorner(arrayLiteral: .allCorners), radius: 20)
         tableView.delegate = self

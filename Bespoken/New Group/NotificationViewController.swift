@@ -45,11 +45,7 @@ class NotificationViewController: UIViewController {
 //            allNotifications.removeAll()
             getWishlistItemsAPI()
         }
-        
-
     }
-    
-    
     func initializeView()  {
         self.title = "Notifications and Wishlist"
         self.tableView.delegate = self
@@ -57,8 +53,10 @@ class NotificationViewController: UIViewController {
 //        self.tableView.rowHeight = UITableView.automaticDimension
 
 //        self.tableView.estimatedRowHeight  = 40
+        self.segmentButton.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: UIBarMetrics(rawValue: 0)!)
         self.tableView.tableFooterView = UIView()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "qrcode"), style: .plain, target: self, action: #selector(openQRScanner))
+        self.navigationController?.navigationBar.tintColor = UIColor.black
         self.getWishlistItemsAPI()
         self.getNotificationsAPI()
       //  segmentButton.selectedSegmentIndex = 0
@@ -77,11 +75,7 @@ class NotificationViewController: UIViewController {
         readerVC.modalPresentationStyle = .formSheet
         present(readerVC, animated: true, completion: nil)
     }
-    
-
-
 }
-
 //Mark : - Table View functions
 extension NotificationViewController : UITableViewDelegate {
     

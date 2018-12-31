@@ -60,10 +60,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1E-0L-2fD">
-                                        <rect key="frame" x="103.5" y="125" width="58" height="28"/>
+                                        <rect key="frame" x="100" y="129" width="72" height="17"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="28" id="UDe-md-PBj"/>
+                                            <constraint firstAttribute="height" constant="17" id="UDe-md-PBj"/>
+                                            <constraint firstAttribute="width" constant="72" id="oFL-9r-DR6"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <state key="normal" title="R S V P">
@@ -74,8 +75,8 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="333-JN-oKN" firstAttribute="leading" secondItem="KF6-pa-3rt" secondAttribute="leading" constant="20" id="0CR-zc-ERz"/>
-                                    <constraint firstItem="Q1E-0L-2fD" firstAttribute="top" secondItem="z1L-GT-Ia1" secondAttribute="bottom" constant="19" id="AjN-X2-6gV"/>
-                                    <constraint firstItem="Q1E-0L-2fD" firstAttribute="centerX" secondItem="z1L-GT-Ia1" secondAttribute="centerX" id="BGf-Xk-L1S"/>
+                                    <constraint firstItem="Q1E-0L-2fD" firstAttribute="top" secondItem="z1L-GT-Ia1" secondAttribute="bottom" constant="23" id="AjN-X2-6gV"/>
+                                    <constraint firstItem="Q1E-0L-2fD" firstAttribute="centerX" secondItem="z1L-GT-Ia1" secondAttribute="centerX" constant="3.5" id="BGf-Xk-L1S"/>
                                     <constraint firstItem="z1L-GT-Ia1" firstAttribute="top" secondItem="333-JN-oKN" secondAttribute="bottom" constant="1" id="Cyl-pd-9XL"/>
                                     <constraint firstAttribute="trailing" secondItem="z1L-GT-Ia1" secondAttribute="trailing" constant="20" id="EZd-6y-4ng"/>
                                     <constraint firstAttribute="bottom" secondItem="XnR-O1-6yK" secondAttribute="bottom" id="PZy-iA-N1n"/>
@@ -131,7 +132,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Circle" width="16" height="16"/>
+        <image name="Circle" width="1200" height="1200"/>
         <image name="Mask Group 22" width="235" height="365"/>
         <image name="Text Stroke" width="500" height="500"/>
         <image name="Unknown" width="773" height="400"/>

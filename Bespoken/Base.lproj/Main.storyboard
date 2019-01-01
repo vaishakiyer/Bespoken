@@ -339,7 +339,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aX5-pc-eFP">
                                                 <rect key="frame" x="154.5" y="255" width="50" height="50"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="MJf-TF-YYe"/>
                                                     <constraint firstAttribute="height" constant="50" id="uQw-i9-4FZ"/>
@@ -1884,8 +1884,9 @@
                                     <action selector="logoutButtonPressed:" destination="yWT-WT-qDK" eventType="touchUpInside" id="d1f-J7-4FN"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="aYo-8q-8Ni">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="aYo-8q-8Ni">
                                 <rect key="frame" x="125" y="85" width="125" height="125"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="Ncm-ts-fIM"/>
                                     <constraint firstAttribute="height" constant="125" id="uYl-k6-XaS"/>
@@ -2006,12 +2007,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tE3-bm-Yzt">
-                                <rect key="frame" x="250" y="191" width="21" height="19"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tE3-bm-Yzt">
+                                <rect key="frame" x="250" y="185" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="19" id="DbJ-Ks-QwN"/>
-                                    <constraint firstAttribute="width" constant="21" id="phG-CL-XfF"/>
+                                    <constraint firstAttribute="height" constant="25" id="DbJ-Ks-QwN"/>
+                                    <constraint firstAttribute="width" constant="25" id="phG-CL-XfF"/>
                                 </constraints>
+                                <color key="tintColor" red="1" green="0.21667054250000001" blue="0.41954005090000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="EditIcon"/>
                                 <connections>
                                     <action selector="editProfileAction:" destination="yWT-WT-qDK" eventType="touchUpInside" id="l5q-bk-rM6"/>
@@ -2061,7 +2063,7 @@
     </scenes>
     <resources>
         <image name="Bangalore" width="250" height="250"/>
-        <image name="EditIcon" width="37.5" height="37.5"/>
+        <image name="EditIcon" width="180" height="180"/>
         <image name="Group 1" width="117" height="118"/>
         <image name="Group 3" width="23" height="81"/>
         <image name="Group 544" width="26" height="26"/>
@@ -2071,6 +2073,7 @@
         <image name="Mask Group 22" width="235" height="365"/>
         <image name="Mask Group 67" width="95" height="102.5"/>
         <image name="pinGray" width="11.5" height="40.5"/>
+        <image name="profile" width="16.5" height="20"/>
         <image name="profilePic" width="960" height="960"/>
         <image name="settingsGray" width="58.5" height="59"/>
     </resources>

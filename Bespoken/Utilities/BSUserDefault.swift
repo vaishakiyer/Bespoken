@@ -60,7 +60,7 @@ class BSUserDefaults{
         let object = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as! UIImage
         return object!
         }
-        return UIImage(named: "profilePic")!
+        return UIImage(named: "profile")!
     }
 
     

@@ -63,12 +63,16 @@ class ProfileViewController: UIViewController {
     }
     func setup()  {
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.profileImage.image = BSUserDefaults.getProfilePic().af_imageRoundedIntoCircle()
+        self.profileImage.image = BSUserDefaults.getProfilePic()
+        self.profileImage.roundCorners(corners: .allCorners, radius: profileImage.frame.width / 2)
+        self.editProfileImageButton.tintColor = UIColor.white
         self.logoutButton.roundCorners(corners: UIRectCorner(arrayLiteral: .allCorners), radius: 20)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         self.progressBar.setProgress(0.8, animated: true)
+        self.progressBar.layer.cornerRadius = 10
+        self.progressBar.clipsToBounds = true
         self.createNav()
         
  
@@ -84,6 +88,7 @@ class ProfileViewController: UIViewController {
     }
     
     func createNav() {
+        
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()

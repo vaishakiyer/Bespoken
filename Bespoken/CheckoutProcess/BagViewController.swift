@@ -47,7 +47,9 @@ class BagViewController: UIViewController {
          updateUI()
         self.navigationItem.leftBarButtonItem =   UIBarButtonItem(image: UIImage(named: "BackMotif_white"), style: .done, target: self, action: #selector(dismissController))
         self.navigationController?.navigationBar.tintColor = .black
-        
+        let motifView = UIImageView(image: UIImage(named: "Motif"))
+        motifView.contentMode = .scaleAspectFill
+        self.navigationItem.titleView = motifView
         // Do any additional setup after loading the view.
     }
     

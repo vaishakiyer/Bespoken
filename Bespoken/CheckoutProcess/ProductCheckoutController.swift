@@ -74,6 +74,10 @@ class ProductCheckoutController: UIViewController {
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationItem.leftBarButtonItem =   UIBarButtonItem(image: UIImage(named: "BackMotif_white"), style: .done, target: self, action: #selector(dismissController))
         self.navigationController?.navigationBar.tintColor = .black
+        let motifView = UIImageView(image: UIImage(named: "Motif"))
+        motifView.contentMode = .scaleAspectFill
+        self.navigationItem.titleView = motifView
+
     }
     
    @objc func dismissController(){

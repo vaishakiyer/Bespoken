@@ -59,6 +59,10 @@ class List2ViewController: UIViewController {
         trunckCollection.register(UINib(nibName: "eventsHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "eventsHeader")
         self.navigationItem.leftBarButtonItem =   UIBarButtonItem(image: UIImage(named: "BackMotif_white"), style: .done, target: self, action: #selector(backPressed))
         self.navigationController?.navigationBar.tintColor = .black
+        let motifView = UIImageView(image: UIImage(named: "Motif"))
+        motifView.contentMode = .scaleAspectFill
+        self.navigationItem.titleView = motifView
+
     }
     @objc func backPressed(){
         self.navigationController?.popViewController(animated: true)

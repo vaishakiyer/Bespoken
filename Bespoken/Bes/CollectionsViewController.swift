@@ -27,7 +27,8 @@ class CollectionsViewController: UIViewController {
     var items = [UIImage(named: "collection8") , UIImage(named: "collection2"), UIImage(named: "collection3") ,  UIImage(named: "collection4"), UIImage(named: "collection5"), UIImage(named: "collection6"), UIImage(named: "collection7"), UIImage(named: "collection1"), UIImage(named: "collection9")]
     var hamburgerMenuItems = ["Elegant","Creative", "Sensual", "Extravagant"]
     var allProducts : [Product] = []
-
+    var allPersonalisationQuestions = myQuestions
+    var tab2Questions : [QuestionnaireElement] = []
     lazy var readerVC: QRCodeReaderViewController = {
         let builder = QRCodeReaderViewControllerBuilder {
             $0.reader = QRCodeReader(metadataObjectTypes: [.qr], captureDevicePosition: .back)
@@ -173,7 +174,7 @@ class CollectionsViewController: UIViewController {
 
     }
     func initializeView()  {
-        
+        sortIntoTabs()
         self.navigationItem.hidesSearchBarWhenScrolling = false
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -211,6 +212,26 @@ class CollectionsViewController: UIViewController {
         searchController.hidesNavigationBarDuringPresentation = false
 //self.present(searchController, animated: true, completion: nil)
     }
+    func sortIntoTabs() {
+        for i in allPersonalisationQuestions{
+            switch i.tab{
+            case 2:
+                tab2Questions.append(i)
+            default:
+                print("")
+                
+            }
+        }
+        self.hamburgerMenuItems.removeAll()
+        for each in tab2Questions{
+            for opt in each.options ?? []{
+                self.hamburgerMenuItems.append(opt.text!)
+            }
+        }
+        self.hamburgerMenuTableView.reloadData()
+    }
+    
+
     
 
 }
@@ -289,7 +310,7 @@ extension CollectionsViewController : UITableViewDelegate, UITableViewDataSource
         case 0:
             return 0
         case 1:
-            return 4
+            return self.hamburgerMenuItems.count
         default:
             return 0
         }

@@ -46,7 +46,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJq-PX-zKv">
                     <rect key="frame" x="53.5" y="126" width="268" height="69"/>
                     <attributedString key="attributedText">
-                        <fragment content="You Style is">
+                        <fragment content="Your Style is">
                             <attributes>
                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="20" name="Rockwell-Regular"/>

@@ -71,7 +71,10 @@ class QuestionnaireController1: UIViewController {
         self.navigationItem.rightBarButtonItem =   UIBarButtonItem(image: UIImage(named: "NextMotif_white"), style: .done, target: self, action: #selector(nextPressed))
         self.navigationItem.leftBarButtonItem =   UIBarButtonItem(image: UIImage(named: "BackMotif_white"), style: .done, target: self, action: #selector(backPressed))
         self.navigationController?.navigationBar.tintColor = .black
-        
+        let motifView = UIImageView(image: UIImage(named: "Motif"))
+        motifView.contentMode = .scaleAspectFill
+        self.navigationItem.titleView = motifView
+
 //        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: leftButton, style: .plain, target: self, action: #selector(backPressed))
 //        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "NEXT", style: .plain, target: self, action: #selector(nextPressed))
     }

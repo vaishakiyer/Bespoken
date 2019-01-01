@@ -54,10 +54,6 @@ class PersonalisationController: UIViewController {
     func sortIntoTabs() {
         for i in allPersonalisationQuestions{
             switch i.tab{
-            case 0:
-                tab0Questions.append(i)
-            case 1:
-                tab1Questions.append(i)
             case 2:
                 tab2Questions.append(i)
             default:

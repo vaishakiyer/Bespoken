@@ -175,7 +175,15 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         if flag {
             
              print("Animation finished")
-            
+//            self.GifView.isHidden = true
+            self.GifView.image = UIImage(named: "Group 704")
+            self.GifView.backgroundColor = .black
+            var bgView : UIImageView = UIImageView(frame: self.GifView.frame)
+            bgView.image = UIImage(named: "Group 704")
+            self.view.addSubview(bgView)
+            self.view.sendSubviewToBack(bgView)
+  
+            self.GifView.removeFromSuperview()
             UIView.transition(with: loginView, duration: 1, options: .transitionFlipFromTop, animations: {
                 self.loginView.isHidden = false
                 self.bottomLabel.isHidden = false
@@ -193,7 +201,16 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
     
     
     func createNavBar(){
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.backgroundColor = .clear
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+
+        let motifView = UIImageView(image: UIImage(named: "Motif_white"))
+        motifView.contentMode = .scaleAspectFill
+        self.navigationItem.titleView = motifView
     }
     
     func createTextField(){
@@ -271,32 +288,22 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
         
         self.view.endEditing(true)
         if Reachability.isConnectedToNetwork(){
-                    }
+            switch isFlipped {
+            case false:
+                self.loginIsPressedSignUp()
+                break
+            case true:
+                signInPressed()
+                break
+            }
+        }
         else{
             let alertCont = UIAlertController(title: "Alert", message: "No Internet Connection detected", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: {ok in self.dismiss(animated: true, completion: nil)  })
             alertCont.addAction(okAction)
-            self.present(alertCont, animated: true)            }
-        switch isFlipped {
-        case false:
-            let alertCont = UIAlertController(title: "Congrats", message: "You will get a passcode to the registered email. Please enter it in the next step", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: {ok in self.loginIsPressedSignUp()  })
-            alertCont.addAction(okAction)
             self.present(alertCont, animated: true)
-//            loginIsPressedSignUp()
-         //   let nc = UINavigationController.init(rootViewController: self.firstTimeVC)
-         //   self.present(nc, animated: true, completion: nil)
-            
-            break
-        case true:
-            
-            signInPressed()
-            break
         }
-        
-        
-        
-    
+
     }
     
     
@@ -410,7 +417,11 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
 //                }
                 
                 let nc = UINavigationController.init(rootViewController: self.firstTimeVC)
-                self.present(nc, animated: true, completion: nil)
+                let alertCont = UIAlertController(title: "Congrats", message: "You will get a passcode to the registered email. Please enter it in the next step", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Ok", style: .default, handler: {ok in self.present(nc, animated: true, completion: nil)  })
+                alertCont.addAction(okAction)
+                self.present(alertCont, animated: true)
+                
                 
                 
                 

@@ -153,11 +153,11 @@ class CollectionsViewController: UIViewController {
     }
     override func viewDidDisappear(_ animated: Bool) {
         
-        if searchController.isActive == true {
-            
-            searchController.isActive = false
-            
-        }
+//        if searchController.isActive == true {
+//            
+//            searchController.isActive = false
+//            
+//        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()

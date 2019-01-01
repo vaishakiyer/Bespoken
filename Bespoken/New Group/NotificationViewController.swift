@@ -50,6 +50,11 @@ class NotificationViewController: UIViewController {
         self.title = "Notifications and Wishlist"
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "BackMotif_white"), style: .done, target: self, action: #selector(backPressed))
+        let motifView = UIImageView(image: UIImage(named: "Motif"))
+        motifView.contentMode = .scaleAspectFill
+        self.navigationItem.titleView = motifView
 //        self.tableView.rowHeight = UITableView.automaticDimension
 
 //        self.tableView.estimatedRowHeight  = 40
@@ -68,6 +73,9 @@ class NotificationViewController: UIViewController {
 //       else{
 //        allNotifications.removeAll()
 //        }
+    }
+    @objc func backPressed(){
+        self.navigationController?.popViewController(animated: true)
     }
     @objc func openQRScanner(){
         readerVC.delegate = self
@@ -122,7 +130,7 @@ extension NotificationViewController : UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if segmentButton.selectedSegmentIndex == 0{
-            return 100
+            return 200
         }
         else {return 60}
     }

@@ -74,7 +74,12 @@ class TrunckViewController: UIViewController {
          trunckCollection.register(UINib(nibName: "eventsHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "eventsHeader")
         trunckCollection.register(UINib(nibName: "PreviewImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PreviewImageCollectionViewCell")
         getEvents()
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "BackMotif_white"), style: .done, target: self, action: #selector(backPressed))
      
+    }
+    @objc func backPressed(){
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc func segementChanged(sender: UISegmentedControl){
@@ -266,6 +271,7 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
             cell?.imageList.removeAll()
             cell!.delegate = self
             if let urls = URL(string: myGroupedEvents[indexPath.section][selectedIndex].bannerImage!){
+                print(urls)
                 
                cell!.imageList.append(AlamofireSource(url: urls))
              //   cell!.previewImage.af_setImage(withURL: url)

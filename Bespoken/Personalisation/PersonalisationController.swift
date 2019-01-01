@@ -69,6 +69,15 @@ class PersonalisationController: UIViewController {
     
     func createNavbar(){
         self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "BackMotif_white"), style: .done, target: self, action: #selector(backPressed))
+        let motifView = UIImageView(image: UIImage(named: "Motif"))
+        motifView.contentMode = .scaleAspectFill
+        self.navigationItem.titleView = motifView
+
+    }
+   @objc func backPressed(){
+        self.navigationController?.popViewController(animated: true)
     }
     
     func tableviewCustomisation(){

@@ -114,10 +114,10 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Du9-Uq-95b">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xlJ-nI-eIK">
-                                                                                <rect key="frame" x="12" y="12" width="106" height="106"/>
+                                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xlJ-nI-eIK">
+                                                                                <rect key="frame" x="12" y="12" width="126" height="126"/>
                                                                             </imageView>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

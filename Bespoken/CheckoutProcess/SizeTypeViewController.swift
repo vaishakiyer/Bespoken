@@ -48,6 +48,8 @@ class SizeTypeViewController: UIViewController {
         nextButton.roundCorners(corners: .allCorners, radius: 12)
         nextButton.addTarget(self, action: #selector(toBagController), for: .touchUpInside)
         segmentControl.addTarget(self, action: #selector(segmentChanged(sender:)), for: .allEvents)
+        self.navigationItem.leftBarButtonItem =   UIBarButtonItem(image: UIImage(named: "BackMotif_white"), style: .done, target: self, action: #selector(dismissController))
+        self.navigationController?.navigationBar.tintColor = .black
         
         self.navigationItem.title = "MEASUREMENT"
         
@@ -75,7 +77,9 @@ class SizeTypeViewController: UIViewController {
             myOption.append(tempObj)
         }
     }
-    
+    @objc func dismissController(){
+        self.navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func switchToggled(_ sender: UISwitch) {
         

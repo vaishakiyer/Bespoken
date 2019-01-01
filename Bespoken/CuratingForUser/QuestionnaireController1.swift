@@ -68,9 +68,12 @@ class QuestionnaireController1: UIViewController {
     }
     
     func createNavBar(leftButton: String){
+        self.navigationItem.rightBarButtonItem =   UIBarButtonItem(image: UIImage(named: "NextMotif_white"), style: .done, target: self, action: #selector(nextPressed))
+        self.navigationItem.leftBarButtonItem =   UIBarButtonItem(image: UIImage(named: "BackMotif_white"), style: .done, target: self, action: #selector(backPressed))
+        self.navigationController?.navigationBar.tintColor = .black
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: leftButton, style: .plain, target: self, action: #selector(backPressed))
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "NEXT", style: .plain, target: self, action: #selector(nextPressed))
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: leftButton, style: .plain, target: self, action: #selector(backPressed))
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "NEXT", style: .plain, target: self, action: #selector(nextPressed))
     }
     
     
@@ -223,7 +226,7 @@ extension QuestionnaireController1: UICollectionViewDelegateFlowLayout,UICollect
         
         if myQuestions[nextCountPress].options?[indexPath.row].archived == true{
             
-           cell?.innerView.backgroundColor = UIColor.black
+           cell?.innerView.backgroundColor = UIColor.darkGray
         }else{
            
             cell?.innerView.backgroundColor = UIColor.white

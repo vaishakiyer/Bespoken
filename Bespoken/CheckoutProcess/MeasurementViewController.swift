@@ -46,7 +46,12 @@ class MeasurementViewController: UIViewController {
     nextButton.roundCorners(corners: .allCorners, radius: 24)
         nextButton.addTarget(self, action: #selector(launchSizeController1), for: .touchUpInside)
         customiseButton.addTarget(self, action: #selector(launchSizeController), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem =   UIBarButtonItem(image: UIImage(named: "BackMotif_white"), style: .done, target: self, action: #selector(dismissController))
+        self.navigationController?.navigationBar.tintColor = .black
         
+    }
+    @objc func dismissController(){
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc func launchSizeController1(){

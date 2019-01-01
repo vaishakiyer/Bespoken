@@ -45,10 +45,15 @@ class BagViewController: UIViewController {
         commentsView.layer.cornerRadius = 5.0
         submitView.roundCorners(corners: .allCorners, radius: 16)
          updateUI()
+        self.navigationItem.leftBarButtonItem =   UIBarButtonItem(image: UIImage(named: "BackMotif_white"), style: .done, target: self, action: #selector(dismissController))
+        self.navigationController?.navigationBar.tintColor = .black
+        
         // Do any additional setup after loading the view.
     }
     
-    
+    @objc func dismissController(){
+        self.navigationController?.popViewController(animated: true)
+    }
     func updateUI(){
         
         if let url = URL(string: (currentProduct?.images.first)!){

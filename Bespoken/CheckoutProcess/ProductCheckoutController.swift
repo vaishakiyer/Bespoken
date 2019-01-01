@@ -72,7 +72,8 @@ class ProductCheckoutController: UIViewController {
         self.navigationItem.title = "PRODUCT BAG"
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissController))
+        self.navigationItem.leftBarButtonItem =   UIBarButtonItem(image: UIImage(named: "BackMotif_white"), style: .done, target: self, action: #selector(dismissController))
+        self.navigationController?.navigationBar.tintColor = .black
     }
     
    @objc func dismissController(){

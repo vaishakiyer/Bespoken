@@ -65,7 +65,7 @@ extension customVideoController: UICollectionViewDelegate,UICollectionViewDataSo
         }
        
         if myChoices[indexPath.row].isValSelected == true{
-            cell?.backgroundColor = UIColor.black
+            cell?.backgroundColor = UIColor.darkGray
         }else{
             cell?.backgroundColor = UIColor.white
         }

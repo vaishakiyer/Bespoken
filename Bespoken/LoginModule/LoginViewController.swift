@@ -361,12 +361,24 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
                         let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
                         
                         let nc = UINavigationController(rootViewController: nextVC1!)
-                        self.nextVC.present(nc, animated: true, completion: nil)
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { // in half a second...
+                            
+                             self.nextVC.present(nc, animated: true, completion: nil)
+                        }
+                       
+                       
                     }else{
                         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                         let nextVC1 = storyBoard.instantiateViewController(withIdentifier: "HomepageViewController") as? HomepageViewController
                         let nc = UINavigationController(rootViewController: nextVC1!)
-                        self.present(nc, animated: true, completion: nil)
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { // in half a second...
+                            
+                            self.present(nc, animated: true, completion: nil)
+
+                        }
+                      
                     }
                    
                     

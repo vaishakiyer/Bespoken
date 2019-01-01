@@ -57,7 +57,11 @@ class List2ViewController: UIViewController {
         trunckCollection.dataSource = self
         trunckCollection.register(UINib(nibName: "List2CollectionCell", bundle: nil), forCellWithReuseIdentifier: "List2CollectionCell")
         trunckCollection.register(UINib(nibName: "eventsHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "eventsHeader")
-        
+        self.navigationItem.leftBarButtonItem =   UIBarButtonItem(image: UIImage(named: "BackMotif_white"), style: .done, target: self, action: #selector(backPressed))
+        self.navigationController?.navigationBar.tintColor = .black
+    }
+    @objc func backPressed(){
+        self.navigationController?.popViewController(animated: true)
     }
    
     @objc func segementChanged(sender: UISegmentedControl){

@@ -36,6 +36,12 @@ class ProductDetailViewController: UIViewController {
         bdescription.text = product!.description
         loadingIndicator.startAnimating()
         loaderView.addSubview(loadingIndicator)
+        self.navigationItem.leftBarButtonItem =   UIBarButtonItem(image: UIImage(named: "BackMotif_white"), style: .done, target: self, action: #selector(dismissController))
+        self.navigationController?.navigationBar.tintColor = .black
+    }
+    
+    @objc func dismissController(){
+        self.navigationController?.popViewController(animated: true)
     }
 
     func playVideo(){

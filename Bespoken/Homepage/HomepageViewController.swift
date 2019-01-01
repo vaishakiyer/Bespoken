@@ -899,16 +899,7 @@ extension HomepageViewController: AnimationCompletedDelegate,InitialAnimationFin
             
             
             self.fetchUser()
-            
-//            let alertController = UIAlertController(title: "Your Products are loaded and ready to be displayed", message: "\n Please press OK to proceed", preferredStyle: .alert)
-//
-//            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: { (weak) in
-//
-//            })
-//
-//            alertController.addAction(okAction)
-//            self.present(alertController, animated: true, completion: nil)
-            
+                        
         })
         
     }

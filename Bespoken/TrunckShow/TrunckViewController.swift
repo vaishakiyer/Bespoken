@@ -36,8 +36,8 @@ class TrunckViewController: UIViewController {
         return QRCodeReaderViewController(builder: builder)
     }()
     var previewButtonPressed: Bool? = false
-    var selectedIndex: Int!
-    var selectedSection : Int!
+    var selectedIndex: Int! = 0
+    var selectedSection : Int! = 0
     var mySections = [String]()
     var myEvents = TrunckShow()
     var myGroupedEvents = [TrunckShow]()
@@ -62,7 +62,7 @@ class TrunckViewController: UIViewController {
         segment.setTitle("R S V P", forSegmentAt: 0)
         segment.setTitle("E V E N T S", forSegmentAt: 1)
         segment.addTarget(self, action: #selector(segementChanged(sender:)), for: .allEvents)
-       
+        pageControl.pageIndicatorTintColor = .gray
         
         self.navigationItem.titleView = segment
     
@@ -225,6 +225,7 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         
         pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+        selectedIndex = pageControl?.currentPage
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
@@ -311,7 +312,7 @@ extension TrunckViewController: UICollectionViewDelegate,UICollectionViewDataSou
         if previewButtonPressed == true{
             return CGSize(width: self.view.frame.width, height: 390)
         }else{
-            return CGSize(width: self.view.frame.width, height: self.view.frame.height)
+            return CGSize(width: self.trunckCollection.bounds.width, height: self.trunckCollection.bounds.height)
         }
     }
     

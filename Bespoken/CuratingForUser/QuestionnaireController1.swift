@@ -223,7 +223,7 @@ extension QuestionnaireController1: UICollectionViewDelegateFlowLayout,UICollect
         
         if myQuestions[nextCountPress].options?[indexPath.row].archived == true{
             
-           cell?.innerView.backgroundColor = UIColor.groupTableViewBackground
+           cell?.innerView.backgroundColor = UIColor.black
         }else{
            
             cell?.innerView.backgroundColor = UIColor.white

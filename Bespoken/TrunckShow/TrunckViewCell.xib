@@ -99,8 +99,11 @@
                             <constraint firstItem="KF6-pa-3rt" firstAttribute="leading" secondItem="nyo-QC-wSr" secondAttribute="leading" constant="55" id="AP8-vp-Lbt"/>
                             <constraint firstItem="5vy-DQ-8Qh" firstAttribute="centerX" secondItem="db1-4U-i91" secondAttribute="centerX" id="RSb-2b-aKr"/>
                             <constraint firstItem="db1-4U-i91" firstAttribute="top" secondItem="nyo-QC-wSr" secondAttribute="top" id="SRR-H7-8Yu"/>
+                            <constraint firstItem="ejV-kQ-VpL" firstAttribute="centerX" secondItem="nyo-QC-wSr" secondAttribute="centerX" id="Soj-4f-1UZ"/>
+                            <constraint firstItem="db1-4U-i91" firstAttribute="width" secondItem="nyo-QC-wSr" secondAttribute="width" id="bx4-7o-35r"/>
                             <constraint firstItem="ejV-kQ-VpL" firstAttribute="leading" secondItem="db1-4U-i91" secondAttribute="leading" constant="37" id="byj-Hl-Gbw"/>
                             <constraint firstAttribute="bottom" secondItem="db1-4U-i91" secondAttribute="bottom" id="hUD-uP-80N"/>
+                            <constraint firstItem="db1-4U-i91" firstAttribute="height" secondItem="nyo-QC-wSr" secondAttribute="height" id="lMP-4m-ayf"/>
                             <constraint firstAttribute="trailing" secondItem="db1-4U-i91" secondAttribute="trailing" id="lu2-DW-oyc"/>
                             <constraint firstItem="KF6-pa-3rt" firstAttribute="centerX" secondItem="nyo-QC-wSr" secondAttribute="centerX" id="pbD-qK-07M"/>
                             <constraint firstItem="db1-4U-i91" firstAttribute="leading" secondItem="nyo-QC-wSr" secondAttribute="leading" id="rpl-hM-cll"/>
@@ -114,8 +117,10 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="nyo-QC-wSr" secondAttribute="bottom" id="0J2-pe-yf9"/>
                 <constraint firstItem="nyo-QC-wSr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0UO-tR-0Fl"/>
+                <constraint firstItem="nyo-QC-wSr" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="24P-ey-coE"/>
                 <constraint firstAttribute="trailing" secondItem="nyo-QC-wSr" secondAttribute="trailing" id="cuq-63-lV5"/>
                 <constraint firstItem="nyo-QC-wSr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="knv-9i-TKF"/>
+                <constraint firstItem="nyo-QC-wSr" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="sd6-JG-IfP"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="403" height="591"/>

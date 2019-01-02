@@ -26,7 +26,7 @@
                                 <color key="backgroundColor" red="1" green="0.21667054250000001" blue="0.41954005090000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Circle" translatesAutoresizingMaskIntoConstraints="NO" id="ejV-kQ-VpL">
-                                <rect key="frame" x="37" y="280" width="301" height="272"/>
+                                <rect key="frame" x="37" y="240" width="301" height="272"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="301" id="4Yl-uw-li5"/>
@@ -41,7 +41,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KF6-pa-3rt">
-                                <rect key="frame" x="55" y="332" width="265" height="161"/>
+                                <rect key="frame" x="55" y="297" width="265" height="161"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Text Stroke" translatesAutoresizingMaskIntoConstraints="NO" id="XnR-O1-6yK">
                                         <rect key="frame" x="15" y="0.0" width="235" height="161"/>
@@ -95,7 +95,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="KF6-pa-3rt" secondAttribute="trailing" constant="55" id="0A4-KW-z8W"/>
                             <constraint firstItem="5vy-DQ-8Qh" firstAttribute="top" secondItem="nyo-QC-wSr" secondAttribute="top" constant="68" id="1xD-5K-dkH"/>
-                            <constraint firstItem="ejV-kQ-VpL" firstAttribute="top" secondItem="5vy-DQ-8Qh" secondAttribute="bottom" constant="80" id="6Ea-4g-KdL"/>
+                            <constraint firstItem="ejV-kQ-VpL" firstAttribute="top" secondItem="5vy-DQ-8Qh" secondAttribute="bottom" constant="40" id="6Ea-4g-KdL"/>
                             <constraint firstItem="KF6-pa-3rt" firstAttribute="leading" secondItem="nyo-QC-wSr" secondAttribute="leading" constant="55" id="AP8-vp-Lbt"/>
                             <constraint firstItem="5vy-DQ-8Qh" firstAttribute="centerX" secondItem="db1-4U-i91" secondAttribute="centerX" id="RSb-2b-aKr"/>
                             <constraint firstItem="db1-4U-i91" firstAttribute="top" secondItem="nyo-QC-wSr" secondAttribute="top" id="SRR-H7-8Yu"/>
@@ -109,7 +109,7 @@
                             <constraint firstItem="db1-4U-i91" firstAttribute="leading" secondItem="nyo-QC-wSr" secondAttribute="leading" id="rpl-hM-cll"/>
                             <constraint firstItem="5vy-DQ-8Qh" firstAttribute="leading" secondItem="nyo-QC-wSr" secondAttribute="leading" constant="37" id="sbe-j5-y7j"/>
                             <constraint firstItem="ejV-kQ-VpL" firstAttribute="trailing" secondItem="db1-4U-i91" secondAttribute="trailing" constant="-37" id="sta-p5-bQ0"/>
-                            <constraint firstItem="KF6-pa-3rt" firstAttribute="top" secondItem="nyo-QC-wSr" secondAttribute="top" constant="332" id="zSe-Em-BTg"/>
+                            <constraint firstItem="KF6-pa-3rt" firstAttribute="top" secondItem="nyo-QC-wSr" secondAttribute="top" constant="297" id="zSe-Em-BTg"/>
                         </constraints>
                     </view>
                 </subviews>

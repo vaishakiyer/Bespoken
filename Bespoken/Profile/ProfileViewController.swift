@@ -43,7 +43,7 @@ class ProfileViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 
         alertController.addAction(galleryAction)
-        alertController.addAction(cameraAction)
+       // alertController.addAction(cameraAction)
         alertController.addAction(cancelAction)
 
         self.present(alertController, animated: true)

@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         locManager.requestWhenInUseAuthorization()
-//        createNav()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)

@@ -13,6 +13,7 @@ PODS:
   - LTMorphingLabel (0.5.9)
   - PulsingHalo (0.2.8)
   - QRCodeReader.swift (9.0.1)
+  - SCLAlertView (0.8)
   - SwiftVideoBackground (3.1.0)
   - TOPasscodeViewController (0.0.2)
   - YLProgressBar (3.10.2)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - LTMorphingLabel
   - PulsingHalo
   - QRCodeReader.swift (~> 9.0.1)
+  - SCLAlertView
   - SwiftVideoBackground (~> 3.0)
   - TOPasscodeViewController
   - YLProgressBar
@@ -41,6 +43,7 @@ SPEC REPOS:
     - LTMorphingLabel
     - PulsingHalo
     - QRCodeReader.swift
+    - SCLAlertView
     - SwiftVideoBackground
     - TOPasscodeViewController
     - YLProgressBar
@@ -54,10 +57,11 @@ SPEC CHECKSUMS:
   LTMorphingLabel: e6047354486aa4ba52d36ccc40be8874b50e1ef1
   PulsingHalo: 64938e4bd3893b823abdf01478084cd92445af2b
   QRCodeReader.swift: 96292a5612fbc2fd9a0b26f93fa5164c8d02f59d
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SwiftVideoBackground: 628408dbd5eb20b5f82f394aac9615d29aecb2f6
   TOPasscodeViewController: 03b5df3762a7be1511102093c644a42275bddf24
   YLProgressBar: 365b6c5e934be18b661f79413db33c993c8e8251
 
-PODFILE CHECKSUM: 460a62ad59198e095adc0898b4cf4b693bd49b47
+PODFILE CHECKSUM: b574eda98bf12c82af85147348d0880087e31c52
 
 COCOAPODS: 1.5.3

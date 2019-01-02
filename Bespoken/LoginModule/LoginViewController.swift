@@ -10,6 +10,7 @@
 import UIKit
 import TOPasscodeViewController
 import Alamofire
+import SCLAlertView
 
 
 class UserCredentials {
@@ -364,7 +365,7 @@ class LoginViewController: UIViewController,CAAnimationDelegate {
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { // in half a second...
                             
-                             self.nextVC.present(nc, animated: true, completion: nil)
+                             self.firstTimeVC.present(nc, animated: true, completion: nil)
                         }
                        
                        
@@ -563,8 +564,48 @@ extension LoginViewController: TOPasscodeSettingsViewControllerDelegate,TOPassco
     
     func didInputCorrectPasscode(in passcodeViewController: TOPasscodeViewController) {
         
-        let nc = UINavigationController.init(rootViewController: nextVC)
-        passcodeViewController.present(nc, animated: true, completion: nil)
+        let appearance = SCLAlertView.SCLAppearance(
+            kTextFieldHeight: 60,showCloseButton:false, showCircularIcon: false,
+            hideWhenBackgroundViewIsTapped: true,circleBackgroundColor: .black,contentViewColor: .white, contentViewBorderColor: .black, titleColor: .black
+        )
+        
+        
+        let alert = SCLAlertView(appearance: appearance)
+        let txt = alert.addTextField("Password")
+        let txt2 = alert.addTextField("Confirm Password")
+        _ = alert.addButton("DONE", backgroundColor: .black, textColor: .white, showTimeout: nil) {
+        
+            if txt.text != txt2.text{
+                
+                let alertControl = UIAlertController(title: "Error", message: "Password Does not match. Please enter again", preferredStyle: .alert)
+                txt.text = ""
+                txt2.text = ""
+                let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertControl.addAction(okAction)
+                passcodeViewController.present(alertControl, animated: true, completion: nil)
+                
+            }else{
+            
+            if txt.text!.count < 8{
+                
+                let alertControl = UIAlertController(title: "", message: "Choose a password with atleast 8 characters for unlocking the app", preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertControl.addAction(okAction)
+                passcodeViewController.present(alertControl, animated: true, completion: nil)
+                
+            }else{
+                self.loginInfo.password = txt.text
+                self.confirmUser()
+            }
+          }
+        }
+        
+        _ = alert.showEdit("Choose Password", subTitle:"Choose a password with atleast 8 characters for unlocking the app.")
+        
+        
+//        let nc = UINavigationController.init(rootViewController: nextVC)
+//        passcodeViewController.present(nc, animated: true, completion: nil)
     }
     
     func passcodeViewController(_ passcodeViewController: TOPasscodeViewController, isCorrectCode code: String) -> Bool {

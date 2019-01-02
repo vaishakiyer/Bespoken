@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bespoken/LoginModule/LoginViewController.swift"
-            timestampString = "567542536.5597939"
+            timestampString = "568149993.2793911"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "251"
-            endingLineNumber = "251"
-            landmarkName = "createChangedOnFlip()"
-            landmarkType = "7">
+            startingLineNumber = "252"
+            endingLineNumber = "252"
+            landmarkName = "LoginViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
